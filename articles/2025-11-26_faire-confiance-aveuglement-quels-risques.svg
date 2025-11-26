@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgConfiance" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgConfiance)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Playfair Display, serif" font-size="20" fill="#ffffff" font-weight="600">Le cout de la confiance aveugle</text>
+
+  <!-- Comfort zone (left) -->
+  <g transform="translate(50, 60)">
+    <rect width="300" height="170" rx="12" fill="#276749" opacity="0.3"/>
+    <text x="150" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#48bb78" font-weight="600">LES AVANTAGES</text>
+
+    <rect x="15" y="50" width="270" height="35" rx="6" fill="#2d3748"/>
+    <text x="25" y="73" font-family="Inter, sans-serif" font-size="11" fill="#48bb78" font-weight="500">Economie cognitive</text>
+    <text x="200" y="73" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Moins de fatigue mentale</text>
+
+    <rect x="15" y="95" width="270" height="35" rx="6" fill="#2d3748"/>
+    <text x="25" y="118" font-family="Inter, sans-serif" font-size="11" fill="#48bb78" font-weight="500">Integration sociale</text>
+    <text x="200" y="118" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Relations facilitees</text>
+
+    <rect x="15" y="140" width="270" height="35" rx="6" fill="#2d3748"/>
+    <text x="25" y="163" font-family="Inter, sans-serif" font-size="11" fill="#48bb78" font-weight="500">Serenite</text>
+    <text x="200" y="163" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Moins d'anxiete</text>
+  </g>
+
+  <!-- Blind spots (right) -->
+  <g transform="translate(450, 60)">
+    <rect width="300" height="170" rx="12" fill="#c53030" opacity="0.2"/>
+    <text x="150" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#fc8181" font-weight="600">LES ANGLES MORTS</text>
+
+    <rect x="15" y="50" width="270" height="35" rx="6" fill="#2d3748"/>
+    <text x="25" y="73" font-family="Inter, sans-serif" font-size="11" fill="#fc8181" font-weight="500">Decisions financieres</text>
+    <text x="200" y="73" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Bulles, inflation...</text>
+
+    <rect x="15" y="95" width="270" height="35" rx="6" fill="#2d3748"/>
+    <text x="25" y="118" font-family="Inter, sans-serif" font-size="11" fill="#fc8181" font-weight="500">Decisions de sante</text>
+    <text x="200" y="118" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Patient passif</text>
+
+    <rect x="15" y="140" width="270" height="35" rx="6" fill="#2d3748"/>
+    <text x="25" y="163" font-family="Inter, sans-serif" font-size="11" fill="#fc8181" font-weight="500">Decisions de vie</text>
+    <text x="200" y="163" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Conseils perimes</text>
+  </g>
+
+  <!-- Examples -->
+  <g transform="translate(50, 250)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="12" fill="#ffffff" font-weight="600">Exemples de croyances couteuses :</text>
+
+    <rect x="0" y="15" width="220" height="50" rx="8" fill="#744210" opacity="0.5"/>
+    <text x="10" y="35" font-family="Inter, sans-serif" font-size="10" fill="#fbd38d">"L'immobilier ne baisse jamais"</text>
+    <text x="10" y="52" font-family="Inter, sans-serif" font-size="9" fill="#ffffff">→ Espagne 2008 : -40%</text>
+
+    <rect x="235" y="15" width="220" height="50" rx="8" fill="#744210" opacity="0.5"/>
+    <text x="245" y="35" font-family="Inter, sans-serif" font-size="10" fill="#fbd38d">"Les retraites sont garanties"</text>
+    <text x="245" y="52" font-family="Inter, sans-serif" font-size="9" fill="#ffffff">→ Ratio 4:1 (1960) → 1,2:1 (2050)</text>
+
+    <rect x="470" y="15" width="220" height="50" rx="8" fill="#744210" opacity="0.5"/>
+    <text x="480" y="35" font-family="Inter, sans-serif" font-size="10" fill="#fbd38d">"L'inflation est maitrisee"</text>
+    <text x="480" y="52" font-family="Inter, sans-serif" font-size="9" fill="#ffffff">→ 2022 : jusqu'a 10% en Europe</text>
+  </g>
+
+  <!-- Bottom message -->
+  <rect x="150" y="340" width="500" height="80" rx="10" fill="#1a202c" stroke="#805ad5" stroke-width="2"/>
+  <text x="400" y="370" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#ffffff" font-weight="600">La question n'est pas "faut-il faire confiance ?"</text>
+  <text x="400" y="395" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#d6bcfa">mais "jusqu'ou faire confiance sans verifier ?"</text>
+
+  <!-- Source -->
+  <text x="400" y="440" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#718096">Le scepticisme sain : verifier ce qui vous concerne directement</text>
+</svg>
