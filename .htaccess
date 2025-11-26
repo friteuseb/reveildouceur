@@ -2,14 +2,11 @@
 # RÉVEIL DOUCEUR - Configuration Apache
 # ================================================
 
-# Activer le directory listing pour /articles/
-<Directory "/articles">
-    Options +Indexes
-    IndexOptions FancyIndexing HTMLTable NameWidth=*
-</Directory>
-
 # Page 404 personnalisée
 ErrorDocument 404 /404.html
+
+# Activer le listing pour le dossier articles (si nécessaire)
+# Note: Le listing est géré par JavaScript, pas besoin d'Apache
 
 # Forcer HTTPS (décommenter si nécessaire)
 # RewriteEngine On
