@@ -1,0 +1,11 @@
+# Robots.txt pour Réveil Douceur
+# https://reveildouceur.fr/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://reveildouceur.fr/sitemap.xml
+
+# Ressources à ne pas indexer
+Disallow: /404.html

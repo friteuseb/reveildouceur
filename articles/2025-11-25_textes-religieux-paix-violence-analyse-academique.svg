@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="religionBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5D5A72"/>
+      <stop offset="100%" style="stop-color:#3D3A52"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#religionBg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="680" cy="100" r="100" fill="#FFFFFF" opacity="0.03"/>
+  <circle cx="120" cy="370" r="80" fill="#FFFFFF" opacity="0.03"/>
+
+  <!-- Open book representation -->
+  <g transform="translate(400, 130)">
+    <!-- Left page -->
+    <path d="M-80,50 L-80,-30 Q-40,-40 0,-30 L0,50 Q-40,45 -80,50" fill="#F5F0E6" opacity="0.9"/>
+    <!-- Right page -->
+    <path d="M80,50 L80,-30 Q40,-40 0,-30 L0,50 Q40,45 80,50" fill="#EDE8DE" opacity="0.9"/>
+    <!-- Spine -->
+    <line x1="0" y1="-30" x2="0" y2="50" stroke="#3D3A52" stroke-width="2"/>
+    <!-- Text lines on left page -->
+    <line x1="-65" y1="-10" x2="-15" y2="-10" stroke="#3D3A52" stroke-width="1" opacity="0.3"/>
+    <line x1="-65" y1="5" x2="-15" y2="5" stroke="#3D3A52" stroke-width="1" opacity="0.3"/>
+    <line x1="-65" y1="20" x2="-15" y2="20" stroke="#3D3A52" stroke-width="1" opacity="0.3"/>
+    <line x1="-65" y1="35" x2="-35" y2="35" stroke="#3D3A52" stroke-width="1" opacity="0.3"/>
+    <!-- Text lines on right page -->
+    <line x1="15" y1="-10" x2="65" y2="-10" stroke="#3D3A52" stroke-width="1" opacity="0.3"/>
+    <line x1="15" y1="5" x2="65" y2="5" stroke="#3D3A52" stroke-width="1" opacity="0.3"/>
+    <line x1="15" y1="20" x2="65" y2="20" stroke="#3D3A52" stroke-width="1" opacity="0.3"/>
+    <line x1="15" y1="35" x2="45" y2="35" stroke="#3D3A52" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Religious symbols (simplified and respectful) -->
+  <g transform="translate(180, 100)" opacity="0.4">
+    <!-- Cross -->
+    <line x1="0" y1="-20" x2="0" y2="20" stroke="#C9A87C" stroke-width="4"/>
+    <line x1="-12" y1="-5" x2="12" y2="-5" stroke="#C9A87C" stroke-width="4"/>
+  </g>
+
+  <g transform="translate(620, 100)" opacity="0.4">
+    <!-- Crescent -->
+    <path d="M-15,0 A18,18 0 1,1 -15,1 A12,12 0 1,0 -15,0" fill="#C9A87C"/>
+  </g>
+
+  <g transform="translate(150, 180)" opacity="0.4">
+    <!-- Om symbol simplified -->
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="30" fill="#C9A87C" text-anchor="middle">ॐ</text>
+  </g>
+
+  <g transform="translate(650, 180)" opacity="0.4">
+    <!-- Dharma wheel simplified -->
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#C9A87C" stroke-width="2"/>
+    <circle cx="0" cy="0" r="4" fill="#C9A87C"/>
+    <line x1="0" y1="-15" x2="0" y2="15" stroke="#C9A87C" stroke-width="1.5"/>
+    <line x1="-15" y1="0" x2="15" y2="0" stroke="#C9A87C" stroke-width="1.5"/>
+  </g>
+
+  <!-- Magnifying glass for analysis -->
+  <g transform="translate(700, 350)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#C9A87C" stroke-width="3"/>
+    <line x1="14" y1="14" x2="28" y2="28" stroke="#C9A87C" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Balance scale representing objectivity -->
+  <g transform="translate(100, 130)" opacity="0.5">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="-25" y1="0" x2="25" y2="0" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="-25" cy="5" r="8" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="25" cy="5" r="8" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+
+  <!-- Title area -->
+  <text x="400" y="280" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Textes religieux et violence</text>
+  <text x="400" y="320" font-family="Georgia, serif" font-size="22" fill="#C9A87C" text-anchor="middle">Ce que dit la recherche académique</text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" opacity="0.7" text-anchor="middle">Une approche méthodologique comparative</text>
+
+  <!-- Bottom accent -->
+  <rect x="300" y="400" width="200" height="4" rx="2" fill="#C9A87C"/>
+</svg>

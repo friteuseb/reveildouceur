@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgBio" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5016"/>
+      <stop offset="100%" style="stop-color:#4a7c23"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgBio)"/>
+
+  <!-- VS divider -->
+  <text x="400" y="240" text-anchor="middle" font-family="Playfair Display, serif" font-size="60" fill="#ffffff" font-weight="bold" opacity="0.3">VS</text>
+
+  <!-- Left side: Supermarket bio -->
+  <rect x="50" y="100" width="280" height="200" rx="10" fill="#ffffff" opacity="0.1"/>
+  <text x="190" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#ffffff" font-weight="600">BIO SUPERMARCHÉ</text>
+
+  <!-- Airplane icon -->
+  <path d="M100 200 L150 180 L200 200 L150 220 Z" fill="#ff6b6b" opacity="0.8"/>
+  <text x="190" y="260" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#ffffff" opacity="0.8">18 000 km parcourus</text>
+  <text x="190" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ff6b6b">1,5 kg CO2</text>
+
+  <!-- Right side: Local -->
+  <rect x="470" y="100" width="280" height="200" rx="10" fill="#ffffff" opacity="0.1"/>
+  <text x="610" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#ffffff" font-weight="600">LOCAL MARAÎCHER</text>
+
+  <!-- Bicycle icon approximation -->
+  <circle cx="580" cy="200" r="20" fill="none" stroke="#4ade80" stroke-width="3"/>
+  <circle cx="640" cy="200" r="20" fill="none" stroke="#4ade80" stroke-width="3"/>
+  <path d="M580 200 L610 170 L640 200" stroke="#4ade80" stroke-width="3" fill="none"/>
+
+  <text x="610" y="260" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#ffffff" opacity="0.8">20 km parcourus</text>
+  <text x="610" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#4ade80">0,1 kg CO2</text>
+
+  <!-- Bottom comparison -->
+  <text x="400" y="380" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#ffffff" font-weight="600">Local de saison > Bio hors saison ?</text>
+  <text x="400" y="410" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#ffffff" opacity="0.7">Source : ADEME - Bilans carbone alimentaires</text>
+</svg>

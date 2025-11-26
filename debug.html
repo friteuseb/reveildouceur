@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Debug - Réveil Douceur</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #1a1a1a; color: #0f0; }
+    .ok { color: #0f0; }
+    .error { color: #f00; }
+    .warn { color: #ff0; }
+    pre { background: #333; padding: 10px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Debug Réveil Douceur</h1>
+  <div id="output"></div>
+
+  <script>
+    const out = document.getElementById('output');
+
+    function log(msg, type = 'ok') {
+      out.innerHTML += `<p class="${type}">${msg}</p>`;
+    }
+
+    async function debug() {
+      log('=== Test de chargement des articles ===');
+
+      // Test 1: Fetch index.json
+      log('1. Tentative de charger /articles/index.json...');
+      try {
+        const res = await fetch('/articles/index.json');
+        log(`   Status: ${res.status} ${res.statusText}`);
+        if (res.ok) {
+          const data = await res.json();
+          log(`   ✓ Fichiers trouvés: ${JSON.stringify(data)}`, 'ok');
+
+          // Test 2: Charger le premier article
+          if (data.length > 0) {
+            log(`2. Tentative de charger /articles/${data[0]}...`);
+            const artRes = await fetch(`/articles/${data[0]}`);
+            log(`   Status: ${artRes.status} ${artRes.statusText}`);
+            if (artRes.ok) {
+              const html = await artRes.text();
+              log(`   ✓ Article chargé (${html.length} caractères)`, 'ok');
+
+              // Extraire titre
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              const h1 = doc.querySelector('h1');
+              if (h1) {
+                let title = h1.textContent;
+                if (title.includes('\t')) title = title.split('\t')[0];
+                log(`   ✓ Titre extrait: "${title}"`, 'ok');
+              }
+
+              // Extraire excerpt
+              const p = doc.querySelector('p');
+              if (p) {
+                const excerpt = p.textContent.substring(0, 100) + '...';
+                log(`   ✓ Extrait: "${excerpt}"`, 'ok');
+              }
+            } else {
+              log(`   ✗ Erreur chargement article`, 'error');
+            }
+          }
+        } else {
+          log(`   ✗ index.json non trouvé`, 'error');
+        }
+      } catch (e) {
+        log(`   ✗ Erreur: ${e.message}`, 'error');
+      }
+
+      // Test 3: Config
+      log('3. Vérification config.js...');
+      if (typeof SITE_CONFIG !== 'undefined') {
+        log(`   ✓ SITE_CONFIG chargé`, 'ok');
+        log(`   Path articles: ${SITE_CONFIG?.articles?.path || '/articles/'}`);
+      } else {
+        log(`   ✗ SITE_CONFIG non défini`, 'error');
+      }
+
+      // Test 4: Directory listing direct
+      log('4. Test directory listing /articles/...');
+      try {
+        const dirRes = await fetch('/articles/');
+        log(`   Status: ${dirRes.status}`);
+        const dirHtml = await dirRes.text();
+        log(`   Contenu (100 premiers chars):`);
+        log(`   <pre>${dirHtml.substring(0, 200).replace(/</g, '&lt;')}</pre>`);
+      } catch (e) {
+        log(`   ✗ Erreur: ${e.message}`, 'error');
+      }
+
+      log('=== Fin du debug ===');
+    }
+
+    debug();
+  </script>
+  <script src="/js/config.js"></script>
+</body>
+</html>

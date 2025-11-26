@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgLib" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgLib)"/>
+
+  <!-- Balance scale -->
+  <line x1="400" y1="80" x2="400" y2="180" stroke="#c9a87c" stroke-width="4"/>
+  <circle cx="400" cy="75" r="10" fill="#c9a87c"/>
+
+  <!-- Balance beam -->
+  <line x1="200" y1="180" x2="600" y2="180" stroke="#c9a87c" stroke-width="6"/>
+
+  <!-- Left pan (France) -->
+  <ellipse cx="200" cy="260" rx="100" ry="30" fill="#c9a87c" opacity="0.3"/>
+  <line x1="200" y1="180" x2="200" y2="230" stroke="#c9a87c" stroke-width="3"/>
+  <rect x="140" y="280" width="120" height="80" rx="5" fill="#0055A4"/>
+  <rect x="140" y="280" width="40" height="80" fill="#0055A4"/>
+  <rect x="180" y="280" width="40" height="80" fill="#ffffff"/>
+  <rect x="220" y="280" width="40" height="80" fill="#EF4135"/>
+  <text x="200" y="390" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#ffffff">France</text>
+  <text x="200" y="410" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#4ade80">21e RSF</text>
+
+  <!-- Right pan (China/Russia) -->
+  <ellipse cx="600" cy="260" rx="100" ry="30" fill="#c9a87c" opacity="0.3"/>
+  <line x1="600" y1="180" x2="600" y2="230" stroke="#c9a87c" stroke-width="3"/>
+  <rect x="540" y="280" width="55" height="40" rx="3" fill="#DE2910"/>
+  <rect x="605" y="280" width="55" height="40" rx="3" fill="#ffffff"/>
+  <rect x="605" y="290" width="55" height="10" fill="#0039A6"/>
+  <rect x="605" y="310" width="55" height="10" fill="#D52B1E"/>
+  <text x="600" y="350" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#ffffff">Chine / Russie</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ff6b6b">162e-172e RSF</text>
+
+  <!-- Question mark -->
+  <text x="400" y="420" text-anchor="middle" font-family="Playfair Display, serif" font-size="24" fill="#ffffff" font-weight="600">Et si on comparait vraiment ?</text>
+</svg>

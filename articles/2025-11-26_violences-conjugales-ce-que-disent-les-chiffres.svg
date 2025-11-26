@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgViolence" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3436"/>
+      <stop offset="100%" style="stop-color:#4a5568"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgViolence)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Playfair Display, serif" font-size="18" fill="#ffffff" font-weight="600">Violences conjugales : prevalence mondiale (OMS 2021)</text>
+  <text x="400" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0">% de femmes ayant subi des violences d'un partenaire (vie entiere)</text>
+
+  <!-- Bar chart -->
+  <g transform="translate(80, 80)">
+    <!-- Oceania -->
+    <text x="0" y="15" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Oceanie (hors AU/NZ)</text>
+    <rect x="180" y="5" width="294" height="18" rx="3" fill="#e53e3e"/>
+    <text x="480" y="18" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">49%</text>
+
+    <!-- South Asia -->
+    <text x="0" y="45" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Asie du Sud</text>
+    <rect x="180" y="35" width="210" height="18" rx="3" fill="#ed8936"/>
+    <text x="396" y="48" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">35%</text>
+
+    <!-- Sub-Saharan Africa -->
+    <text x="0" y="75" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Afrique subsaharienne</text>
+    <rect x="180" y="65" width="198" height="18" rx="3" fill="#dd6b20"/>
+    <text x="384" y="78" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">33%</text>
+
+    <!-- MENA -->
+    <text x="0" y="105" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Afrique Nord / Moyen-Orient</text>
+    <rect x="180" y="95" width="186" height="18" rx="3" fill="#d69e2e"/>
+    <text x="372" y="108" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">31%</text>
+
+    <!-- Latin America -->
+    <text x="0" y="135" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Amerique latine / Caraibes</text>
+    <rect x="180" y="125" width="150" height="18" rx="3" fill="#ecc94b"/>
+    <text x="336" y="138" font-family="Inter, sans-serif" font-size="11" fill="#1a202c" font-weight="600">25%</text>
+
+    <!-- East Asia -->
+    <text x="0" y="165" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Asie de l'Est</text>
+    <rect x="180" y="155" width="120" height="18" rx="3" fill="#48bb78"/>
+    <text x="306" y="168" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">20%</text>
+
+    <!-- Eastern Europe -->
+    <text x="0" y="195" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Europe de l'Est</text>
+    <rect x="180" y="185" width="120" height="18" rx="3" fill="#38a169"/>
+    <text x="306" y="198" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">20%</text>
+
+    <!-- North America -->
+    <text x="0" y="225" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Amerique du Nord</text>
+    <rect x="180" y="215" width="102" height="18" rx="3" fill="#319795"/>
+    <text x="288" y="228" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">17%</text>
+
+    <!-- Western Europe -->
+    <text x="0" y="255" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Europe de l'Ouest</text>
+    <rect x="180" y="245" width="96" height="18" rx="3" fill="#3182ce"/>
+    <text x="282" y="258" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">16%</text>
+
+    <!-- Australia/NZ -->
+    <text x="0" y="285" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Australie / Nouvelle-Zelande</text>
+    <rect x="180" y="275" width="96" height="18" rx="3" fill="#4299e1"/>
+    <text x="282" y="288" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">16%</text>
+  </g>
+
+  <!-- World average line -->
+  <line x1="342" y1="80" x2="342" y2="375" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+  <text x="342" y="390" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Moyenne mondiale : 27%</text>
+
+  <!-- Key insight boxes -->
+  <rect x="550" y="100" width="220" height="70" rx="8" fill="#1a202c" opacity="0.9"/>
+  <text x="660" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#e53e3e" font-weight="600">1 femme sur 4</text>
+  <text x="660" y="145" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">dans le monde a subi des</text>
+  <text x="660" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">violences d'un partenaire</text>
+
+  <rect x="550" y="185" width="220" height="70" rx="8" fill="#1a202c" opacity="0.9"/>
+  <text x="660" y="210" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4299e1" font-weight="600">Facteurs associes :</text>
+  <text x="660" y="228" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Education, autonomie economique,</text>
+  <text x="660" y="243" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">cadre legal, normes sociales</text>
+
+  <rect x="550" y="270" width="220" height="55" rx="8" fill="#1a202c" opacity="0.9"/>
+  <text x="660" y="295" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#48bb78" font-weight="600">Les normes evoluent</text>
+  <text x="660" y="313" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Ecart 2e generation quasi nul</text>
+
+  <!-- Source -->
+  <text x="400" y="435" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#718096">Source : OMS - Violence against women prevalence estimates, 2021</text>
+</svg>

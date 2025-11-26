@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgPollution" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgPollution)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" fill="#ffffff" font-weight="600">4 facons de compter, 4 classements differents</text>
+
+  <!-- Method 1: Total emissions -->
+  <g transform="translate(50, 70)">
+    <rect width="160" height="160" rx="10" fill="#2d3748" opacity="0.9"/>
+    <text x="80" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ed8936" font-weight="600">EMISSIONS TOTALES</text>
+
+    <rect x="20" y="45" width="120" height="18" rx="3" fill="#e53e3e"/>
+    <text x="25" y="58" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Chine 31%</text>
+
+    <rect x="20" y="68" width="50" height="18" rx="3" fill="#ed8936"/>
+    <text x="25" y="81" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">USA 12%</text>
+
+    <rect x="20" y="91" width="35" height="18" rx="3" fill="#dd6b20"/>
+    <text x="25" y="104" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Inde 8%</text>
+
+    <rect x="20" y="114" width="30" height="18" rx="3" fill="#48bb78"/>
+    <text x="25" y="127" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">UE 7,5%</text>
+
+    <text x="80" y="150" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">N°1 : Chine</text>
+  </g>
+
+  <!-- Method 2: Per capita -->
+  <g transform="translate(230, 70)">
+    <rect width="160" height="160" rx="10" fill="#2d3748" opacity="0.9"/>
+    <text x="80" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#9f7aea" font-weight="600">PAR HABITANT</text>
+
+    <rect x="20" y="45" width="120" height="18" rx="3" fill="#e53e3e"/>
+    <text x="25" y="58" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Qatar 35,6t</text>
+
+    <rect x="20" y="68" width="80" height="18" rx="3" fill="#ed8936"/>
+    <text x="25" y="81" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Koweit 24,3t</text>
+
+    <rect x="20" y="91" width="50" height="18" rx="3" fill="#dd6b20"/>
+    <text x="25" y="104" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">USA 14t</text>
+
+    <rect x="20" y="114" width="30" height="18" rx="3" fill="#48bb78"/>
+    <text x="25" y="127" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Chine 8,9t</text>
+
+    <text x="80" y="150" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">N°1 : Pays du Golfe</text>
+  </g>
+
+  <!-- Method 3: Historical -->
+  <g transform="translate(410, 70)">
+    <rect width="160" height="160" rx="10" fill="#2d3748" opacity="0.9"/>
+    <text x="80" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4299e1" font-weight="600">HISTORIQUE (1850-2021)</text>
+
+    <rect x="20" y="45" width="120" height="18" rx="3" fill="#e53e3e"/>
+    <text x="25" y="58" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">USA 24,6%</text>
+
+    <rect x="20" y="68" width="65" height="18" rx="3" fill="#ed8936"/>
+    <text x="25" y="81" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Chine 13,7%</text>
+
+    <rect x="20" y="91" width="45" height="18" rx="3" fill="#dd6b20"/>
+    <text x="25" y="104" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Russie 8,7%</text>
+
+    <rect x="20" y="114" width="40" height="18" rx="3" fill="#48bb78"/>
+    <text x="25" y="127" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">UE ~22%</text>
+
+    <text x="80" y="150" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">N°1 : Etats-Unis</text>
+  </g>
+
+  <!-- Method 4: Consumption -->
+  <g transform="translate(590, 70)">
+    <rect width="160" height="160" rx="10" fill="#2d3748" opacity="0.9"/>
+    <text x="80" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#48bb78" font-weight="600">CONSOMMATION</text>
+
+    <text x="80" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Inclut les importations</text>
+
+    <rect x="20" y="70" width="70" height="18" rx="3" fill="#ed8936"/>
+    <text x="25" y="83" font-family="Inter, sans-serif" font-size="9" fill="#ffffff">USA +15%</text>
+
+    <rect x="20" y="93" width="60" height="18" rx="3" fill="#ed8936"/>
+    <text x="25" y="106" font-family="Inter, sans-serif" font-size="9" fill="#ffffff">UE +20%</text>
+
+    <rect x="20" y="116" width="50" height="18" rx="3" fill="#48bb78"/>
+    <text x="25" y="129" font-family="Inter, sans-serif" font-size="9" fill="#ffffff">Chine -10%</text>
+
+    <text x="80" y="150" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Les importateurs montent</text>
+  </g>
+
+  <!-- Bottom message -->
+  <rect x="150" y="260" width="500" height="80" rx="10" fill="#1a202c" opacity="0.95"/>
+  <text x="400" y="290" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#ffffff" font-weight="600">Qui pollue vraiment ?</text>
+  <text x="400" y="315" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#a0aec0">Ca depend de la question qu'on pose.</text>
+
+  <!-- Legend icons -->
+  <g transform="translate(100, 360)">
+    <circle cx="20" cy="20" r="15" fill="#e53e3e" opacity="0.8"/>
+    <text x="20" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">1</text>
+    <text x="45" y="25" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">Premier dans ce classement</text>
+  </g>
+
+  <g transform="translate(350, 360)">
+    <circle cx="20" cy="20" r="15" fill="#48bb78" opacity="0.8"/>
+    <text x="45" y="25" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">Position plus favorable</text>
+  </g>
+
+  <g transform="translate(550, 360)">
+    <circle cx="20" cy="20" r="15" fill="#ed8936" opacity="0.8"/>
+    <text x="45" y="25" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">Position intermediaire</text>
+  </g>
+
+  <!-- Source -->
+  <text x="400" y="435" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#718096">Sources : Global Carbon Project, Our World in Data, AIE</text>
+</svg>

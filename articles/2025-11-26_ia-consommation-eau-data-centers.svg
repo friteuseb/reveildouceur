@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgWater" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2027"/>
+      <stop offset="50%" style="stop-color:#203a43"/>
+      <stop offset="100%" style="stop-color:#2c5364"/>
+    </linearGradient>
+    <linearGradient id="waterCold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#0099cc"/>
+    </linearGradient>
+    <linearGradient id="waterHot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b"/>
+      <stop offset="100%" style="stop-color:#ee5a5a"/>
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a5568"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#00d4ff"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff6b6b"/>
+    </marker>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ffffff" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgWater)"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Playfair Display, serif" font-size="20" fill="#ffffff" font-weight="600">Cycle de refroidissement des data centers IA</text>
+
+  <!-- STEP 1: Water source -->
+  <g id="waterSource">
+    <ellipse cx="80" cy="280" rx="55" ry="25" fill="#0099cc" opacity="0.6"/>
+    <ellipse cx="80" cy="275" rx="45" ry="20" fill="#00d4ff" opacity="0.4"/>
+    <text x="80" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="500">SOURCE</text>
+    <text x="80" y="333" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#87ceeb">Nappe / Riviere</text>
+    <circle cx="80" cy="355" r="12" fill="#00d4ff" opacity="0.3"/>
+    <text x="80" y="359" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">1</text>
+  </g>
+
+  <!-- STEP 2: Pump station -->
+  <g id="pump">
+    <rect x="160" y="230" width="50" height="60" rx="5" fill="#4a5568"/>
+    <circle cx="185" cy="260" r="15" fill="#2d3748" stroke="#00d4ff" stroke-width="2"/>
+    <path d="M175 260 L195 260 M185 250 L185 270" stroke="#00d4ff" stroke-width="2"/>
+    <text x="185" y="305" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">POMPE</text>
+    <circle cx="185" cy="320" r="12" fill="#00d4ff" opacity="0.3"/>
+    <text x="185" y="324" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">2</text>
+  </g>
+
+  <!-- Pipe from source to pump -->
+  <path d="M135 280 L160 260" stroke="url(#waterCold)" stroke-width="6" fill="none" marker-end="url(#arrowBlue)"/>
+
+  <!-- STEP 3: Data Center with servers -->
+  <g id="datacenter">
+    <rect x="280" y="140" width="180" height="170" rx="8" fill="url(#serverGrad)" stroke="#718096" stroke-width="2"/>
+    <text x="370" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ffffff" font-weight="600">DATA CENTER</text>
+
+    <!-- Server racks with heat -->
+    <rect x="295" y="175" width="35" height="80" rx="3" fill="#1a202c"/>
+    <rect x="300" y="182" width="25" height="6" fill="#4ade80"/>
+    <rect x="300" y="192" width="25" height="6" fill="#4ade80"/>
+    <rect x="300" y="202" width="25" height="6" fill="#22c55e"/>
+    <rect x="300" y="212" width="25" height="6" fill="#4ade80"/>
+    <rect x="300" y="222" width="25" height="6" fill="#22c55e"/>
+    <rect x="300" y="232" width="25" height="6" fill="#4ade80"/>
+
+    <rect x="340" y="175" width="35" height="80" rx="3" fill="#1a202c"/>
+    <rect x="345" y="182" width="25" height="6" fill="#4ade80"/>
+    <rect x="345" y="192" width="25" height="6" fill="#22c55e"/>
+    <rect x="345" y="202" width="25" height="6" fill="#4ade80"/>
+    <rect x="345" y="212" width="25" height="6" fill="#4ade80"/>
+    <rect x="345" y="222" width="25" height="6" fill="#22c55e"/>
+    <rect x="345" y="232" width="25" height="6" fill="#4ade80"/>
+
+    <rect x="385" y="175" width="35" height="80" rx="3" fill="#1a202c"/>
+    <rect x="390" y="182" width="25" height="6" fill="#22c55e"/>
+    <rect x="390" y="192" width="25" height="6" fill="#4ade80"/>
+    <rect x="390" y="202" width="25" height="6" fill="#4ade80"/>
+    <rect x="390" y="212" width="25" height="6" fill="#22c55e"/>
+    <rect x="390" y="222" width="25" height="6" fill="#4ade80"/>
+    <rect x="390" y="232" width="25" height="6" fill="#4ade80"/>
+
+    <rect x="430" y="175" width="20" height="80" rx="3" fill="#1a202c"/>
+    <rect x="433" y="182" width="14" height="6" fill="#4ade80"/>
+    <rect x="433" y="192" width="14" height="6" fill="#4ade80"/>
+
+    <!-- Heat waves -->
+    <text x="312" y="270" font-family="Inter, sans-serif" font-size="16" fill="#ff6b6b" opacity="0.8">~</text>
+    <text x="357" y="275" font-family="Inter, sans-serif" font-size="14" fill="#ff6b6b" opacity="0.7">~</text>
+    <text x="402" y="268" font-family="Inter, sans-serif" font-size="15" fill="#ff6b6b" opacity="0.75">~</text>
+
+    <!-- Cooling system inside -->
+    <rect x="295" y="280" width="155" height="20" rx="3" fill="#2d3748"/>
+    <text x="372" y="294" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#00d4ff">ECHANGEUR THERMIQUE</text>
+
+    <circle cx="370" cy="340" r="12" fill="#00d4ff" opacity="0.3"/>
+    <text x="370" y="344" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">3</text>
+  </g>
+
+  <!-- Pipe from pump to datacenter (cold water IN) -->
+  <path d="M210 250 L270 250 L270 290 L280 290" stroke="url(#waterCold)" stroke-width="6" fill="none"/>
+  <text x="245" y="240" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#00d4ff">Eau froide</text>
+  <text x="245" y="252" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#87ceeb">~15°C</text>
+
+  <!-- STEP 4: Cooling tower -->
+  <g id="coolingTower">
+    <path d="M540 180 L520 310 L600 310 L580 180 Z" fill="#4a5568" stroke="#718096" stroke-width="2"/>
+    <ellipse cx="560" cy="180" rx="25" ry="8" fill="#5a6778"/>
+    <rect x="535" y="310" width="50" height="20" rx="3" fill="#2d3748"/>
+    <text x="560" y="345" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">TOUR DE</text>
+    <text x="560" y="357" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">REFROIDISSEMENT</text>
+
+    <!-- Steam coming out -->
+    <ellipse cx="545" cy="155" rx="15" ry="8" fill="#ffffff" opacity="0.3"/>
+    <ellipse cx="560" cy="145" rx="18" ry="10" fill="#ffffff" opacity="0.25"/>
+    <ellipse cx="575" cy="150" rx="14" ry="7" fill="#ffffff" opacity="0.3"/>
+    <ellipse cx="555" cy="130" rx="12" ry="6" fill="#ffffff" opacity="0.2"/>
+    <ellipse cx="570" cy="125" rx="10" ry="5" fill="#ffffff" opacity="0.15"/>
+
+    <circle cx="560" cy="375" r="12" fill="#00d4ff" opacity="0.3"/>
+    <text x="560" y="379" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">4</text>
+  </g>
+
+  <!-- Pipe from datacenter to cooling tower (hot water) -->
+  <path d="M460 290 L490 290 L490 250 L520 250" stroke="url(#waterHot)" stroke-width="6" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="490" y="240" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#ff6b6b">Eau chaude</text>
+  <text x="490" y="252" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#ffaaaa">~40°C</text>
+
+  <!-- STEP 5: Evaporation and clouds -->
+  <g id="evaporation">
+    <!-- Clouds in sky -->
+    <ellipse cx="650" cy="70" rx="45" ry="22" fill="#ffffff" opacity="0.25"/>
+    <ellipse cx="690" cy="60" rx="35" ry="18" fill="#ffffff" opacity="0.2"/>
+    <ellipse cx="720" cy="75" rx="30" ry="15" fill="#ffffff" opacity="0.22"/>
+    <ellipse cx="680" cy="45" rx="25" ry="12" fill="#ffffff" opacity="0.18"/>
+
+    <text x="680" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">NUAGES</text>
+
+    <circle cx="680" cy="115" r="12" fill="#00d4ff" opacity="0.3"/>
+    <text x="680" y="119" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">5</text>
+  </g>
+
+  <!-- Evaporation arrows -->
+  <path d="M560 130 C580 100, 620 80, 650 70" stroke="#ffffff" stroke-width="2" fill="none" stroke-dasharray="5,3" opacity="0.5" marker-end="url(#arrowWhite)"/>
+
+  <!-- STEP 6: Rain -->
+  <g id="rain">
+    <!-- Rain drops -->
+    <path d="M740 130 Q745 145, 740 160" stroke="#00d4ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M755 150 Q760 165, 755 180" stroke="#00d4ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M725 170 Q730 185, 725 200" stroke="#00d4ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M745 200 Q750 215, 745 230" stroke="#00d4ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M760 220 Q765 235, 760 250" stroke="#00d4ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M730 240 Q735 255, 730 270" stroke="#00d4ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <text x="745" y="290" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#00d4ff">PLUIE</text>
+
+    <circle cx="745" cy="305" r="12" fill="#00d4ff" opacity="0.3"/>
+    <text x="745" y="309" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">6</text>
+  </g>
+
+  <!-- Return to source (cycle completion) -->
+  <path d="M730 320 C750 380, 600 420, 400 420 C200 420, 100 380, 80 320" stroke="#00d4ff" stroke-width="2" fill="none" stroke-dasharray="8,4" opacity="0.4"/>
+  <text x="400" y="435" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#87ceeb" opacity="0.8">Retour aux nappes et rivieres</text>
+
+  <!-- Legend box -->
+  <rect x="20" y="50" width="130" height="75" rx="6" fill="#1a202c" opacity="0.9"/>
+  <text x="85" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" font-weight="600">BILAN</text>
+  <rect x="30" y="80" width="10" height="10" fill="#00d4ff"/>
+  <text x="45" y="89" font-family="Inter, sans-serif" font-size="9" fill="#ffffff">Eau froide ~15°C</text>
+  <rect x="30" y="95" width="10" height="10" fill="#ff6b6b"/>
+  <text x="45" y="104" font-family="Inter, sans-serif" font-size="9" fill="#ffffff">Eau chaude ~40°C</text>
+  <text x="85" y="120" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#4ade80" font-weight="bold">90-95% restituee</text>
+
+</svg>
