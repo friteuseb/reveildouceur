@@ -351,21 +351,11 @@
     }
   }
 
-  async function findThumbnail(basePath, filename) {
+  function findThumbnail(basePath, filename) {
     const baseName = filename.replace('.html', '');
-    const formats = CONFIG.articles.thumbnailFormats;
-
-    for (const format of formats) {
-      const url = `${basePath}${baseName}.${format}`;
-      try {
-        const response = await fetch(url, { method: 'HEAD' });
-        if (response.ok) return url;
-      } catch {
-        continue;
-      }
-    }
-
-    return CONFIG.articles.defaultThumbnail;
+    // On assume que le SVG existe toujours avec le même nom que le HTML
+    // Fallback via onerror dans l'img si le fichier n'existe pas
+    return `${basePath}${baseName}.svg`;
   }
 
   async function fetchArticleMetadata(filename) {
@@ -380,7 +370,7 @@
       const excerpt = extractExcerpt(htmlContent);
       const date = extractDate(filename, htmlContent);
       const isRaw = isRawArticle(htmlContent);
-      const thumbnail = await findThumbnail(CONFIG.articles.path, filename);
+      const thumbnail = findThumbnail(CONFIG.articles.path, filename);
 
       return {
         filename,
@@ -504,7 +494,7 @@
       }
 
       // Chercher thumbnail
-      const thumbnail = await findThumbnail(CONFIG.articles.path, filename);
+      const thumbnail = findThumbnail(CONFIG.articles.path, filename);
 
       // Construire l'affichage
       container.innerHTML = `

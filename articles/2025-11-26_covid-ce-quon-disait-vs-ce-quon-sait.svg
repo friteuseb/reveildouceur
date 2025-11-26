@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgCovid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgCovid)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Playfair Display, serif" font-size="20" fill="#ffffff" font-weight="600">COVID : evolution des declarations officielles</text>
+
+  <!-- Timeline arrow -->
+  <line x1="100" y1="80" x2="700" y2="80" stroke="#4a5568" stroke-width="3"/>
+  <polygon points="700,75 715,80 700,85" fill="#4a5568"/>
+  <text x="100" y="70" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">2020</text>
+  <text x="400" y="70" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">2021-2022</text>
+  <text x="650" y="70" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">2023+</text>
+
+  <!-- Masks -->
+  <g transform="translate(50, 100)">
+    <rect width="220" height="90" rx="8" fill="#c53030" opacity="0.3"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#fc8181" font-weight="600">MASQUES</text>
+    <text x="110" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Mars 2020 : "inutiles"</text>
+    <text x="110" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Été 2020 : obligatoires</text>
+    <text x="110" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Cochrane 2023 : efficacité</text>
+    <text x="110" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">"faible ou nulle"</text>
+  </g>
+
+  <!-- Origin -->
+  <g transform="translate(290, 100)">
+    <rect width="220" height="90" rx="8" fill="#d69e2e" opacity="0.3"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#fbd38d" font-weight="600">ORIGINE DU VIRUS</text>
+    <text x="110" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">2020 : "complotisme"</text>
+    <text x="110" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">→ censure des reseaux</text>
+    <text x="110" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">2023 : FBI/DOE estiment</text>
+    <text x="110" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">fuite labo "probable"</text>
+  </g>
+
+  <!-- Transmission -->
+  <g transform="translate(530, 100)">
+    <rect width="220" height="90" rx="8" fill="#805ad5" opacity="0.3"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#d6bcfa" font-weight="600">TRANSMISSION</text>
+    <text x="110" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">2021 : "les vaccines</text>
+    <text x="110" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">ne transmettent pas"</text>
+    <text x="110" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">2022 : Pfizer admet</text>
+    <text x="110" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">non teste sur transmission</text>
+  </g>
+
+  <!-- Side effects -->
+  <g transform="translate(50, 210)">
+    <rect width="220" height="90" rx="8" fill="#38a169" opacity="0.3"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#9ae6b4" font-weight="600">EFFETS SECONDAIRES</text>
+    <text x="110" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">2021 : "rares et benins"</text>
+    <text x="110" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Evoquer = "antivax"</text>
+    <text x="110" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Maintenant : myocardites,</text>
+    <text x="110" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">thromboses reconnus</text>
+  </g>
+
+  <!-- Efficacy -->
+  <g transform="translate(290, 210)">
+    <rect width="220" height="90" rx="8" fill="#3182ce" opacity="0.3"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#90cdf4" font-weight="600">EFFICACITE</text>
+    <text x="110" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">2020 : "95%, 2 doses"</text>
+    <text x="110" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Puis : 3e, 4e dose...</text>
+    <text x="110" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Protection declinante</text>
+    <text x="110" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">en quelques mois</text>
+  </g>
+
+  <!-- Question -->
+  <g transform="translate(530, 210)">
+    <rect width="220" height="90" rx="8" fill="#1a202c" stroke="#ed8936" stroke-width="2"/>
+    <text x="110" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ed8936" font-weight="600">LA QUESTION</text>
+    <text x="110" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Pourquoi ceux qui</text>
+    <text x="110" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">posaient ces questions</text>
+    <text x="110" y="76" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">etaient-ils censures ?</text>
+  </g>
+
+  <!-- Bottom message -->
+  <rect x="150" y="320" width="500" height="70" rx="10" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+  <text x="400" y="350" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#ffffff" font-weight="600">Ce que cet article ne dit PAS :</text>
+  <text x="400" y="375" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">❌ COVID n'existe pas | ❌ Vaccins dangereux pour tous | ❌ Tout est complot</text>
+
+  <!-- Lesson -->
+  <text x="400" y="420" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#48bb78" font-style="italic">"La confiance se merite, et le doute est sain"</text>
+
+  <!-- Source -->
+  <text x="400" y="442" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#718096">Sources : Cochrane, FBI, Parlement UE, EMA, archives medias</text>
+</svg>

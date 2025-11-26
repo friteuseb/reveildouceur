@@ -38,7 +38,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/style.css">
@@ -70,40 +70,74 @@
   <!-- Skip Link (accessibilité) -->
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-  <!-- Header (chargé dynamiquement) -->
-  <div id="header-include"></div>
+  <!-- Header -->
+  <?php include 'includes/header.php'; ?>
 
   <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <h1 class="hero__title">Réveil Douceur</h1>
-        <p class="hero__subtitle">
-          Et si on se posait les bonnes questions ?
+      <div class="hero__background">
+        <div class="hero__gradient"></div>
+        <div class="hero__pattern"></div>
+      </div>
+      <div class="container hero__content">
+        <p class="hero__intro">
+          Vous avez parfois l'impression que quelque chose ne colle pas ?
+          Que les explications sont trop simples ?
         </p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Et si on se posait</span>
+          <span class="hero__title-accent">les bonnes questions ?</span>
+        </h1>
+        <p class="hero__subtitle">
+          Un espace de réflexion basé sur des sources vérifiables.
+          Ni alarmisme, ni complotisme. Juste des faits et des questions.
+        </p>
+        <div class="hero__actions">
+          <a href="#articles-section" class="btn btn--primary btn--lg">
+            Lire les articles
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </a>
+          <a href="/a-propos.php" class="btn btn--outline btn--lg">Notre démarche</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-number" id="article-count">15+</span>
+            <span class="hero__stat-label">Articles</span>
+          </div>
+          <div class="hero__stat-separator"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">100%</span>
+            <span class="hero__stat-label">Sourcé</span>
+          </div>
+          <div class="hero__stat-separator"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">0</span>
+            <span class="hero__stat-label">Publicité</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Démarche Section -->
     <section class="demarche">
       <div class="container">
-        <div class="demarche__intro">
-          <h2 class="demarche__title">Bienvenue dans un espace différent</h2>
-          <p class="demarche__text">
-            Vous avez parfois l'impression que quelque chose ne colle pas. Que les explications
-            officielles sont trop simples. Que certaines questions restent sans réponse.
-            <strong>Vous n'êtes pas seul.</strong>
-          </p>
-          <p class="demarche__text">
-            Mais entre le conformisme aveugle et les théories farfelues, il existe un chemin :
-            celui de la <em>curiosité éclairée</em>. C'est ce que nous proposons ici.
+        <div class="demarche__header">
+          <span class="demarche__label">Notre approche</span>
+          <h2 class="demarche__title">Un espace de réflexion différent</h2>
+          <p class="demarche__subtitle">
+            Entre le conformisme aveugle et les théories farfelues,
+            nous proposons un chemin : celui de la <em>curiosité éclairée</em>.
           </p>
         </div>
 
         <div class="demarche__pillars">
           <div class="pillar">
+            <div class="pillar__number">01</div>
             <div class="pillar__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8"/>
                 <path d="M21 21l-4.35-4.35"/>
                 <path d="M11 8v6M8 11h6"/>
@@ -117,8 +151,9 @@
           </div>
 
           <div class="pillar">
+            <div class="pillar__number">02</div>
             <div class="pillar__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
                 <path d="M8 7h8M8 11h8M8 15h5"/>
@@ -132,10 +167,11 @@
           </div>
 
           <div class="pillar">
+            <div class="pillar__number">03</div>
             <div class="pillar__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-                <path d="M12 12L8 8"/>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
               </svg>
             </div>
             <h3 class="pillar__title">Nuance et complexité</h3>
@@ -147,19 +183,29 @@
         </div>
 
         <div class="demarche__cta">
-          <p>
-            <strong>Notre promesse :</strong> vous ne trouverez ici ni alarmisme, ni complotisme,
-            ni moralisation. Juste des faits, des questions, et l'invitation à réfléchir.
-          </p>
-          <a href="/a-propos.html" class="btn btn--secondary">En savoir plus sur notre démarche</a>
+          <div class="demarche__cta-content">
+            <p>
+              <strong>Notre promesse :</strong> vous ne trouverez ici ni alarmisme, ni complotisme,
+              ni moralisation. Juste des faits, des questions, et l'invitation à réfléchir.
+            </p>
+            <a href="/a-propos.php" class="btn btn--secondary">En savoir plus sur notre démarche</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Articles Section -->
-    <section class="articles-section">
+    <section class="articles-section" id="articles-section">
       <div class="container">
-        <h2 class="articles-section__title">Derniers articles</h2>
+        <div class="articles-section__header">
+          <div class="articles-section__title-group">
+            <span class="articles-section__label">Explorer</span>
+            <h2 class="articles-section__title">Derniers articles</h2>
+          </div>
+          <p class="articles-section__description">
+            Des analyses sourcées sur les sujets qui comptent. Économie, santé, société, médias...
+          </p>
+        </div>
         <div id="articles-grid" class="articles-grid">
           <!-- Les articles sont chargés dynamiquement par JavaScript -->
           <div class="loader">
@@ -170,8 +216,8 @@
     </section>
   </main>
 
-  <!-- Footer (chargé dynamiquement) -->
-  <div id="footer-include"></div>
+  <!-- Footer -->
+  <?php include 'includes/footer.php'; ?>
 
   <!-- Scripts -->
   <script src="/js/app.js"></script>
