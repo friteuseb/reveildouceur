@@ -350,30 +350,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
                   id="topic"
                   name="topic"
                   class="suggestion-form__input"
-                  placeholder="Ex: Pourquoi les prix de l'immobilier ont-ils autant augmenté ?"
+                  placeholder="Ex: Pourquoi les prix de l'immobilier ont-ils autant augmenté ? Qui finance vraiment les partis politiques ?"
                   required
                   minlength="5"
                   maxlength="500"
-                  rows="2"
+                  rows="3"
                 ></textarea>
               </div>
-              <div class="suggestion-form__email">
-                <label for="suggest-email" class="sr-only">Votre email (optionnel)</label>
-                <input
-                  type="email"
-                  id="suggest-email"
-                  name="email"
-                  class="suggestion-form__input suggestion-form__input--email"
-                  placeholder="Email (optionnel, pour être notifié)"
-                  maxlength="255"
-                >
+              <div class="suggestion-form__row">
+                <div class="suggestion-form__email">
+                  <label for="suggest-email" class="sr-only">Votre email (optionnel)</label>
+                  <input
+                    type="email"
+                    id="suggest-email"
+                    name="email"
+                    class="suggestion-form__input"
+                    placeholder="Email (optionnel)"
+                    maxlength="255"
+                  >
+                </div>
+                <button type="submit" class="btn btn--primary suggestion-form__submit">
+                  Proposer ce sujet
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                  </svg>
+                </button>
               </div>
-              <button type="submit" class="btn btn--primary suggestion-form__submit">
-                Envoyer
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-                </svg>
-              </button>
             </div>
           </form>
         </div>
