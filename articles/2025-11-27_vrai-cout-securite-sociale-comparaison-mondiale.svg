@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="18" font-weight="600">LE VRAI COÛT DE VOTRE PROTECTION SOCIALE</text>
+  <text x="400" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">Comparaison internationale - Coût annuel santé pour un salarié médian</text>
+
+  <!-- France breakdown on left -->
+  <g transform="translate(30, 75)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">FRANCE : DU SUPER-BRUT AU NET</text>
+
+    <!-- Stacked bar showing salary breakdown -->
+    <rect x="0" y="15" width="200" height="30" rx="4" fill="#48bb78"/>
+    <text x="100" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">3 250 € Super-brut</text>
+
+    <rect x="0" y="50" width="154" height="25" rx="4" fill="#4299e1"/>
+    <text x="77" y="67" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">2 500 € Brut</text>
+
+    <rect x="0" y="80" width="120" height="25" rx="4" fill="#ed8936"/>
+    <text x="60" y="97" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">1 950 € Net</text>
+
+    <!-- Arrow showing difference -->
+    <line x1="210" y1="30" x2="210" y2="92" stroke="#e53e3e" stroke-width="2"/>
+    <polygon points="210,30 205,40 215,40" fill="#e53e3e"/>
+    <polygon points="210,92 205,82 215,82" fill="#e53e3e"/>
+    <text x="225" y="55" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10" font-weight="600">-1 300 €</text>
+    <text x="225" y="68" fill="#e53e3e" font-family="Inter, sans-serif" font-size="9">/mois</text>
+    <text x="225" y="82" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">(40%)</text>
+
+    <!-- Breakdown by branch -->
+    <text x="0" y="125" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Répartition mensuelle :</text>
+
+    <rect x="0" y="135" width="80" height="18" rx="3" fill="#38b2ac"/>
+    <text x="40" y="148" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">Santé 420€</text>
+
+    <rect x="85" y="135" width="95" height="18" rx="3" fill="#9f7aea"/>
+    <text x="132" y="148" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">Retraite 550€</text>
+
+    <rect x="185" y="135" width="55" height="18" rx="3" fill="#4299e1"/>
+    <text x="212" y="148" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">Autres</text>
+  </g>
+
+  <!-- Country comparison bars -->
+  <g transform="translate(310, 75)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">COÛT ANNUEL SANTÉ PAR PAYS</text>
+
+    <!-- France -->
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="20" height="20" rx="2" fill="#0055A4"/>
+      <rect x="20" y="0" width="20" height="20" rx="0" fill="#ffffff"/>
+      <rect x="40" y="0" width="20" height="20" rx="2" fill="#EF4135"/>
+      <text x="70" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">France</text>
+      <rect x="150" y="2" width="200" height="16" rx="3" fill="#38b2ac"/>
+      <text x="360" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">~5 000 € + mutuelle</text>
+    </g>
+
+    <!-- Germany -->
+    <g transform="translate(0, 50)">
+      <rect x="0" y="0" width="60" height="20" rx="2" fill="#000000"/>
+      <rect x="0" y="7" width="60" height="6" fill="#DD0000"/>
+      <rect x="0" y="13" width="60" height="7" rx="2" fill="#FFCE00"/>
+      <text x="70" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Allemagne</text>
+      <rect x="150" y="2" width="196" height="16" rx="3" fill="#4299e1"/>
+      <text x="356" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">~4 900 €</text>
+    </g>
+
+    <!-- Switzerland -->
+    <g transform="translate(0, 80)">
+      <rect x="0" y="0" width="60" height="20" rx="2" fill="#D52B1E"/>
+      <rect x="25" y="5" width="10" height="10" fill="#ffffff"/>
+      <rect x="22" y="8" width="16" height="4" fill="#ffffff"/>
+      <text x="70" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Suisse</text>
+      <rect x="150" y="2" width="220" height="16" rx="3" fill="#ed8936"/>
+      <text x="380" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">~5 500 €</text>
+    </g>
+
+    <!-- USA -->
+    <g transform="translate(0, 110)">
+      <rect x="0" y="0" width="60" height="20" rx="2" fill="#B22234"/>
+      <rect x="0" y="3" width="60" height="2" fill="#ffffff"/>
+      <rect x="0" y="7" width="60" height="2" fill="#ffffff"/>
+      <rect x="0" y="11" width="60" height="2" fill="#ffffff"/>
+      <rect x="0" y="15" width="60" height="2" fill="#ffffff"/>
+      <rect x="0" y="0" width="25" height="11" fill="#3C3B6E"/>
+      <text x="70" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">USA</text>
+      <rect x="150" y="2" width="320" height="16" rx="3" fill="#e53e3e"/>
+      <text x="480" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">~13 000 €</text>
+    </g>
+
+    <!-- International insurance -->
+    <g transform="translate(0, 140)">
+      <circle cx="30" cy="10" r="10" fill="#48bb78" stroke="#ffffff" stroke-width="1"/>
+      <text x="30" y="14" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8" font-weight="600">INT</text>
+      <text x="70" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Assurance privée</text>
+      <rect x="150" y="2" width="80" height="16" rx="3" fill="#48bb78"/>
+      <rect x="232" y="2" width="40" height="16" rx="3" fill="#48bb78" opacity="0.5"/>
+      <text x="290" y="14" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">1 500 - 3 000 €</text>
+    </g>
+  </g>
+
+  <!-- Key insights boxes -->
+  <g transform="translate(30, 265)">
+    <rect x="0" y="0" width="230" height="80" rx="6" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="600">AVANTAGE FRANCE</text>
+    <text x="15" y="42" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Reste à charge :</text>
+    <text x="140" y="42" fill="#48bb78" font-family="Inter, sans-serif" font-size="12" font-weight="700">~8%</text>
+    <text x="15" y="58" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">vs 15% moyenne UE</text>
+    <text x="15" y="72" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Pas de questionnaire médical</text>
+  </g>
+
+  <g transform="translate(280, 265)">
+    <rect x="0" y="0" width="230" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="11" font-weight="600">INCONVÉNIENT FRANCE</text>
+    <text x="15" y="42" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Liberté de choix :</text>
+    <text x="150" y="42" fill="#ed8936" font-family="Inter, sans-serif" font-size="12" font-weight="700">Aucune</text>
+    <text x="15" y="58" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Contrairement à Suisse/Allemagne</text>
+    <text x="15" y="72" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Coût réel invisible (super-brut)</text>
+  </g>
+
+  <g transform="translate(530, 265)">
+    <rect x="0" y="0" width="230" height="80" rx="6" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="11" font-weight="600">LE PROBLÈME</text>
+    <text x="15" y="42" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Déficit Sécu 2025 :</text>
+    <text x="160" y="42" fill="#e53e3e" font-family="Inter, sans-serif" font-size="12" font-weight="700">-23 Md€</text>
+    <text x="15" y="58" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">On dépense plus qu'on ne cotise</text>
+    <text x="15" y="72" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Pérennité du modèle ?</text>
+  </g>
+
+  <!-- Bottom summary -->
+  <rect x="30" y="360" width="740" height="70" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="400" y="385" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">CONCLUSION</text>
+  <text x="400" y="405" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Le système français n'est ni le moins cher, ni le plus cher. Mais c'est le seul où vous ne voyez jamais le vrai prix.</text>
+  <text x="400" y="420" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="600">~15 600 €/an de cotisations totales (santé + retraite + chômage) pour un salarié médian</text>
+
+  <!-- Watermark -->
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>
