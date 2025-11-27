@@ -1,34 +1,13 @@
 {
   "categories": {
-    "economie": {
-      "label": "Économie",
-      "color": "#3182ce"
-    },
-    "medias": {
-      "label": "Médias",
-      "color": "#805ad5"
-    },
-    "technologie": {
-      "label": "Technologie",
-      "color": "#00b5d8"
-    },
-    "environnement": {
-      "label": "Environnement",
-      "color": "#38a169"
-    },
-    "societe": {
-      "label": "Société",
-      "color": "#dd6b20"
-    },
-    "sante": {
-      "label": "Santé",
-      "color": "#e53e3e"
-    },
-    "geopolitique": {
-      "label": "Géopolitique",
-      "color": "#667eea"
-    }
-  },
+  "economie": { "label": "Économie", "color": "#3182ce" },
+  "medias": { "label": "Médias", "color": "#805ad5" },
+  "technologie": { "label": "Technologie", "color": "#00b5d8" },
+  "environnement": { "label": "Environnement", "color": "#38a169" },
+  "societe": { "label": "Société", "color": "#dd6b20" },
+  "sante": { "label": "Santé", "color": "#e53e3e" },
+  "geopolitique": { "label": "Géopolitique", "color": "#667eea" }
+},
   "articles": [
     { "file": "2025-11-27_vrai-cout-securite-sociale-comparaison-mondiale.html", "category": "economie" },
     { "file": "2025-11-27_voiture-electrique-bilan-carbone-reel.html", "category": "environnement" },
