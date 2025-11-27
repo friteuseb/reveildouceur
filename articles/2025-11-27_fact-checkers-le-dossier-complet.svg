@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="22" font-weight="600">FACT-CHECKERS : LE DOSSIER COMPLET</text>
+  <text x="400" y="52" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">Financement • Erreurs documentées • Qui vérifie les vérificateurs</text>
+
+  <!-- Three columns -->
+  <!-- Column 1: Funding -->
+  <g transform="translate(40, 75)">
+    <rect x="0" y="0" width="230" height="175" rx="8" fill="#2d3748" stroke="#4299e1" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="28" rx="8" fill="#4299e1"/>
+    <rect x="0" y="20" width="230" height="8" fill="#4299e1"/>
+    <text x="115" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">QUI FINANCE ?</text>
+
+    <text x="15" y="48" fill="#4299e1" font-family="Inter, sans-serif" font-size="10" font-weight="600">MÉDIAS PARENTS</text>
+    <text x="15" y="62" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Le Monde → Les Décodeurs</text>
+    <text x="15" y="74" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Libération → CheckNews</text>
+
+    <text x="15" y="92" fill="#4299e1" font-family="Inter, sans-serif" font-size="10" font-weight="600">META (FACEBOOK)</text>
+    <text x="15" y="106" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Contrats 100-500k€/an</text>
+    <text x="15" y="118" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">AFP, 20 Minutes partenaires</text>
+
+    <text x="15" y="136" fill="#4299e1" font-family="Inter, sans-serif" font-size="10" font-weight="600">ÉTAT / FONDATIONS</text>
+    <text x="15" y="150" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">AFP: 130M€ compensation</text>
+    <text x="15" y="162" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Soros, Gates, Google...</text>
+  </g>
+
+  <!-- Column 2: Errors -->
+  <g transform="translate(285, 75)">
+    <rect x="0" y="0" width="230" height="175" rx="8" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="28" rx="8" fill="#e53e3e"/>
+    <rect x="0" y="20" width="230" height="8" fill="#e53e3e"/>
+    <text x="115" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">ERREURS DOCUMENTÉES</text>
+
+    <text x="15" y="48" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10" font-weight="600">ORIGINE COVID</text>
+    <text x="15" y="62" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">"Faux" en 2020 → "Possible"</text>
+    <text x="15" y="74" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">en 2023 (FBI, DoE)</text>
+
+    <text x="15" y="92" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10" font-weight="600">MASQUES</text>
+    <text x="15" y="106" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">"Inutiles" début 2020</text>
+    <text x="15" y="118" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">→ "Recommandés" ensuite</text>
+
+    <text x="15" y="136" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10" font-weight="600">BIAIS SÉLECTION</text>
+    <text x="15" y="150" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Étude 2021: corrélation</text>
+    <text x="15" y="162" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">orientation média/sujets</text>
+  </g>
+
+  <!-- Column 3: Who checks -->
+  <g transform="translate(530, 75)">
+    <rect x="0" y="0" width="230" height="175" rx="8" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="28" rx="8" fill="#ed8936"/>
+    <rect x="0" y="20" width="230" height="8" fill="#ed8936"/>
+    <text x="115" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">QUI VÉRIFIE ?</text>
+
+    <text x="15" y="48" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="600">IFCN (POYNTER)</text>
+    <text x="15" y="62" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Certifie les fact-checkers</text>
+    <text x="15" y="74" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Vérifie processus, pas résultats</text>
+
+    <text x="15" y="92" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="600">FINANCEMENT IFCN</text>
+    <text x="15" y="106" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Knight, Google, Facebook...</text>
+    <text x="15" y="118" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Mêmes financeurs que FC</text>
+
+    <text x="15" y="136" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="600">PROBLÈME</text>
+    <text x="15" y="150" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Pas de contrôle indépendant</text>
+    <text x="15" y="162" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">des conclusions</text>
+  </g>
+
+  <!-- French fact-checkers list -->
+  <g transform="translate(40, 265)">
+    <text x="0" y="12" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">PRINCIPAUX FACT-CHECKERS FRANÇAIS</text>
+
+    <rect x="0" y="22" width="140" height="35" rx="4" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="70" y="38" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="10" font-weight="600">AFP Factuel</text>
+    <text x="70" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Partenaire Meta</text>
+
+    <rect x="150" y="22" width="140" height="35" rx="4" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="220" y="38" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="10" font-weight="600">Les Décodeurs</text>
+    <text x="220" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Le Monde</text>
+
+    <rect x="300" y="22" width="140" height="35" rx="4" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="370" y="38" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="600">CheckNews</text>
+    <text x="370" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Libération</text>
+
+    <rect x="450" y="22" width="140" height="35" rx="4" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="520" y="38" text-anchor="middle" fill="#f687b3" font-family="Inter, sans-serif" font-size="10" font-weight="600">20 Min Fake Off</text>
+    <text x="520" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Partenaire Meta</text>
+
+    <rect x="600" y="22" width="140" height="35" rx="4" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="670" y="38" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="600">Vrai ou Fake</text>
+    <text x="670" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Franceinfo</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="40" y="340" width="720" height="85" rx="8" fill="#2d3748" stroke="#718096" stroke-width="1"/>
+  <text x="400" y="363" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">CE QU'IL FAUT RETENIR</text>
+
+  <!-- Two columns in bottom box -->
+  <text x="60" y="385" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="600">✓ CE QU'ILS FONT BIEN</text>
+  <text x="60" y="400" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Vérification images/vidéos</text>
+  <text x="60" y="412" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Décryptage des chiffres manipulés</text>
+
+  <text x="420" y="385" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10" font-weight="600">✗ LES LIMITES</text>
+  <text x="420" y="400" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Pas de neutralité structurelle</text>
+  <text x="420" y="412" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Biais de sélection documenté</text>
+
+  <!-- Watermark -->
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>

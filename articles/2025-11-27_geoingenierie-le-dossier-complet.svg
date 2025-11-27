@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#4a6fa5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="22" font-weight="600">GÉOINGÉNIERIE : LE DOSSIER COMPLET</text>
+  <text x="400" y="52" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">Rapports officiels • Expériences documentées • Vrai vs Faux</text>
+
+  <!-- Three columns -->
+  <!-- Column 1: Official -->
+  <g transform="translate(40, 75)">
+    <rect x="0" y="0" width="230" height="180" rx="8" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="28" rx="8" fill="#48bb78"/>
+    <rect x="0" y="20" width="230" height="8" fill="#48bb78"/>
+    <text x="115" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">CE QUI EST OFFICIEL</text>
+
+    <text x="15" y="50" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="600">GIEC AR6</text>
+    <text x="15" y="63" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Chapitres sur CDR et SRM</text>
+
+    <text x="15" y="83" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="600">Maison Blanche 2023</text>
+    <text x="15" y="96" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Plan recherche 5 ans sur SRM</text>
+
+    <text x="15" y="116" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="600">OMM</text>
+    <text x="15" y="129" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">50+ pays ensemencement nuages</text>
+
+    <text x="15" y="149" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="600">Programme Chine</text>
+    <text x="15" y="162" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">35 000 employés, 5.5M km²</text>
+  </g>
+
+  <!-- Column 2: Timeline -->
+  <g transform="translate(285, 75)">
+    <rect x="0" y="0" width="230" height="180" rx="8" fill="#2d3748" stroke="#4299e1" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="28" rx="8" fill="#4299e1"/>
+    <rect x="0" y="20" width="230" height="8" fill="#4299e1"/>
+    <text x="115" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">CHRONOLOGIE</text>
+
+    <!-- Timeline -->
+    <line x1="30" y1="45" x2="30" y2="170" stroke="#4a5568" stroke-width="2"/>
+
+    <circle cx="30" cy="55" r="5" fill="#4299e1"/>
+    <text x="45" y="52" fill="#ffffff" font-family="Inter, sans-serif" font-size="9" font-weight="600">1946</text>
+    <text x="45" y="63" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Premier cloud seeding</text>
+
+    <circle cx="30" cy="85" r="5" fill="#4299e1"/>
+    <text x="45" y="82" fill="#ffffff" font-family="Inter, sans-serif" font-size="9" font-weight="600">1962-83</text>
+    <text x="45" y="93" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Project Stormfury (ouragans)</text>
+
+    <circle cx="30" cy="115" r="5" fill="#e53e3e"/>
+    <text x="45" y="112" fill="#ffffff" font-family="Inter, sans-serif" font-size="9" font-weight="600">1967-72</text>
+    <text x="45" y="123" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Op. Popeye (Vietnam, secret)</text>
+
+    <circle cx="30" cy="145" r="5" fill="#ed8936"/>
+    <text x="45" y="142" fill="#ffffff" font-family="Inter, sans-serif" font-size="9" font-weight="600">1976</text>
+    <text x="45" y="153" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Convention ENMOD (ONU)</text>
+
+    <circle cx="30" cy="170" r="5" fill="#9f7aea"/>
+    <text x="45" y="167" fill="#ffffff" font-family="Inter, sans-serif" font-size="9" font-weight="600">2024</text>
+    <text x="45" y="178" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">SCoPEx, MCB (recherche)</text>
+  </g>
+
+  <!-- Column 3: True vs False -->
+  <g transform="translate(530, 75)">
+    <rect x="0" y="0" width="230" height="180" rx="8" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="28" rx="8" fill="#ed8936"/>
+    <rect x="0" y="20" width="230" height="8" fill="#ed8936"/>
+    <text x="115" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">DOCUMENTÉ vs NON PROUVÉ</text>
+
+    <!-- Documented -->
+    <text x="15" y="48" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="600">✓ DOCUMENTÉ</text>
+    <text x="15" y="62" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">• Ensemencement (50+ pays)</text>
+    <text x="15" y="74" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">• Programmes secrets passés</text>
+    <text x="15" y="86" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">• Recherche SRM universitaire</text>
+    <text x="15" y="98" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">• Impact contrails sur climat</text>
+
+    <line x1="15" y1="108" x2="215" y2="108" stroke="#4a5568" stroke-width="1"/>
+
+    <!-- Not proven -->
+    <text x="15" y="122" fill="#e53e3e" font-family="Inter, sans-serif" font-size="9" font-weight="600">✗ NON PROUVÉ</text>
+    <text x="15" y="136" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">• Épandage mondial secret</text>
+    <text x="15" y="148" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">• Avions commerciaux modifiés</text>
+    <text x="15" y="160" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">• Toxines dans traînées</text>
+    <text x="15" y="172" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">• 76/77 experts: pas de preuve</text>
+  </g>
+
+  <!-- Key stats bar -->
+  <g transform="translate(40, 270)">
+    <rect x="0" y="0" width="170" height="65" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="85" y="25" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="22" font-weight="700">80 ans</text>
+    <text x="85" y="45" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">d'ensemencement</text>
+    <text x="85" y="57" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">documenté</text>
+  </g>
+
+  <g transform="translate(230, 270)">
+    <rect x="0" y="0" width="170" height="65" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="85" y="25" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="22" font-weight="700">50+</text>
+    <text x="85" y="45" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">pays pratiquent</text>
+    <text x="85" y="57" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">officiellement</text>
+  </g>
+
+  <g transform="translate(420, 270)">
+    <rect x="0" y="0" width="170" height="65" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="85" y="25" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="22" font-weight="700">57%</text>
+    <text x="85" y="45" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">impact climat aviation</text>
+    <text x="85" y="57" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">= contrails</text>
+  </g>
+
+  <g transform="translate(610, 270)">
+    <rect x="0" y="0" width="150" height="65" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="75" y="25" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="22" font-weight="700">76/77</text>
+    <text x="75" y="45" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">experts : pas de</text>
+    <text x="75" y="57" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">programme secret</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="40" y="355" width="720" height="70" rx="8" fill="#2d3748" stroke="#718096" stroke-width="1"/>
+  <text x="400" y="378" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">LA NUANCE ESSENTIELLE</text>
+  <text x="400" y="398" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">La modification climatique existe officiellement depuis 80 ans. Des programmes secrets ont existé et ont été déclassifiés.</text>
+  <text x="400" y="413" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Mais l'existence de faits documentés ne valide pas automatiquement les théories sans preuves.</text>
+
+  <!-- Watermark -->
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>
