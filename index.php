@@ -222,6 +222,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
       </div>
     </section>
 
+    <!-- Articles Section -->
+    <section class="articles-section" id="articles-section">
+      <div class="container">
+        <div class="articles-section__header">
+          <div class="articles-section__title-group">
+            <span class="articles-section__label">Explorer</span>
+            <h2 class="articles-section__title">Derniers articles</h2>
+          </div>
+          <p class="articles-section__description">
+            Des analyses sourcées sur les sujets qui comptent. Économie, santé, société, médias...
+          </p>
+        </div>
+        <div id="articles-grid" class="articles-grid">
+          <!-- Les articles sont chargés dynamiquement par JavaScript -->
+          <div class="loader">
+            <div class="loader__spinner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Démarche Section -->
     <section class="demarche">
       <div class="container">
@@ -290,27 +311,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
               ni moralisation. Juste des faits, des questions, et l'invitation à réfléchir.
             </p>
             <a href="/a-propos.php" class="btn btn--secondary">En savoir plus sur notre démarche</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Articles Section -->
-    <section class="articles-section" id="articles-section">
-      <div class="container">
-        <div class="articles-section__header">
-          <div class="articles-section__title-group">
-            <span class="articles-section__label">Explorer</span>
-            <h2 class="articles-section__title">Derniers articles</h2>
-          </div>
-          <p class="articles-section__description">
-            Des analyses sourcées sur les sujets qui comptent. Économie, santé, société, médias...
-          </p>
-        </div>
-        <div id="articles-grid" class="articles-grid">
-          <!-- Les articles sont chargés dynamiquement par JavaScript -->
-          <div class="loader">
-            <div class="loader__spinner"></div>
           </div>
         </div>
       </div>
