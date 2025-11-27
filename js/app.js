@@ -377,9 +377,9 @@
 
   function findThumbnail(basePath, filename) {
     const baseName = filename.replace('.html', '');
-    // On assume que le SVG existe toujours avec le même nom que le HTML
-    // Fallback via onerror dans l'img si le fichier n'existe pas
-    return `${basePath}${baseName}.svg`;
+    // Utiliser les illustrations PNG Mœbius
+    // Fallback sur SVG via onerror si le PNG n'existe pas
+    return `/images/illustrations/${baseName}.png`;
   }
 
   async function fetchArticleMetadata(filename) {
