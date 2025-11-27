@@ -223,12 +223,15 @@ main {
 
 /* Google Translate widget */
 #google_translate_element {
-  font-size: 0;
+  display: inline-block;
 }
 
 #google_translate_element .goog-te-gadget {
   font-family: inherit;
-  font-size: 0;
+}
+
+#google_translate_element .goog-te-gadget > span {
+  display: none; /* Hide "Powered by Google" */
 }
 
 #google_translate_element .goog-te-gadget-simple {
@@ -249,8 +252,7 @@ main {
 }
 
 /* Hide Google Translate banner */
-.goog-te-banner-frame,
-.skiptranslate {
+.goog-te-banner-frame {
   display: none !important;
 }
 
