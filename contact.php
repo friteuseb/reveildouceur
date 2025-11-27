@@ -32,7 +32,6 @@ $formData = ['name' => '', 'email' => '', 'subject' => '', 'message' => ''];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Vérification honeypot (champ caché qui doit rester vide)
     if (!empty($_POST['website'])) {
-        // Bot détecté, on fait semblant que ça a marché
         $message = "Votre message a été envoyé. Nous vous répondrons dans les plus brefs délais.";
         $messageType = 'success';
     }
@@ -50,81 +49,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     elseif (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
         $message = "Erreur de sécurité. Veuillez rafraîchir la page et réessayer.";
         $messageType = 'error';
-    } else {
-            // Récupération et nettoyage des données
-            $formData['name'] = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
-            $formData['email'] = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL) ?? '');
-            $formData['subject'] = trim(filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
-            $formData['message'] = trim(filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
+    }
+    // Formulaire valide, on traite
+    else {
+        // Récupération et nettoyage des données
+        $formData['name'] = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
+        $formData['email'] = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL) ?? '');
+        $formData['subject'] = trim(filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
+        $formData['message'] = trim(filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
 
-            // Validation
-            $errors = [];
+        // Validation
+        $errors = [];
+        if (strlen($formData['name']) < 2) {
+            $errors[] = "Le nom doit contenir au moins 2 caractères.";
+        }
+        if (!filter_var($formData['email'], FILTER_VALIDATE_EMAIL)) {
+            $errors[] = "L'adresse email n'est pas valide.";
+        }
+        if (strlen($formData['subject']) < 3) {
+            $errors[] = "Le sujet doit contenir au moins 3 caractères.";
+        }
+        if (strlen($formData['message']) < 10) {
+            $errors[] = "Le message doit contenir au moins 10 caractères.";
+        }
 
-            if (strlen($formData['name']) < 2) {
-                $errors[] = "Le nom doit contenir au moins 2 caractères.";
-            }
+        if (!empty($errors)) {
+            $message = implode('<br>', $errors);
+            $messageType = 'error';
+        } else {
+            // Envoi de l'email
+            $configFile = __DIR__ . '/config/mail.php';
 
-            if (!filter_var($formData['email'], FILTER_VALIDATE_EMAIL)) {
-                $errors[] = "L'adresse email n'est pas valide.";
-            }
-
-            if (strlen($formData['subject']) < 3) {
-                $errors[] = "Le sujet doit contenir au moins 3 caractères.";
-            }
-
-            if (strlen($formData['message']) < 10) {
-                $errors[] = "Le message doit contenir au moins 10 caractères.";
-            }
-
-            if (!empty($errors)) {
-                $message = implode('<br>', $errors);
+            if (!file_exists($configFile)) {
+                $message = "Configuration email manquante. Contactez l'administrateur.";
                 $messageType = 'error';
             } else {
-                // Envoi de l'email
-                $configFile = __DIR__ . '/config/mail.php';
+                $config = require $configFile;
+                require_once __DIR__ . '/includes/Mailer.php';
 
-                if (!file_exists($configFile)) {
-                    $message = "Configuration email manquante. Contactez l'administrateur.";
-                    $messageType = 'error';
+                $mailer = new Mailer($config['smtp']);
+
+                $emailSubject = "[Réveil Douceur] " . $formData['subject'];
+                $emailBody = "Nouveau message depuis le formulaire de contact\n";
+                $emailBody .= "==========================================\n\n";
+                $emailBody .= "Nom : " . $formData['name'] . "\n";
+                $emailBody .= "Email : " . $formData['email'] . "\n";
+                $emailBody .= "Sujet : " . $formData['subject'] . "\n\n";
+                $emailBody .= "Message :\n" . $formData['message'] . "\n\n";
+                $emailBody .= "==========================================\n";
+                $emailBody .= "Envoyé le " . date('d/m/Y à H:i') . "\n";
+                $emailBody .= "IP : " . ($_SERVER['REMOTE_ADDR'] ?? 'inconnue') . "\n";
+
+                $sent = $mailer->send(
+                    $config['recipient']['email'],
+                    $config['recipient']['name'],
+                    $emailSubject,
+                    $emailBody
+                );
+
+                if ($sent) {
+                    $message = "Votre message a été envoyé. Nous vous répondrons dans les plus brefs délais.";
+                    $messageType = 'success';
+                    $formData = ['name' => '', 'email' => '', 'subject' => '', 'message' => ''];
+                    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                    $_SESSION['contact_count']++;
                 } else {
-                    $config = require $configFile;
-                    require_once __DIR__ . '/includes/Mailer.php';
-
-                    $mailer = new Mailer($config['smtp']);
-
-                    $emailSubject = "[Réveil Douceur] " . $formData['subject'];
-                    $emailBody = "Nouveau message depuis le formulaire de contact\n";
-                    $emailBody .= "==========================================\n\n";
-                    $emailBody .= "Nom : " . $formData['name'] . "\n";
-                    $emailBody .= "Email : " . $formData['email'] . "\n";
-                    $emailBody .= "Sujet : " . $formData['subject'] . "\n\n";
-                    $emailBody .= "Message :\n" . $formData['message'] . "\n\n";
-                    $emailBody .= "==========================================\n";
-                    $emailBody .= "Envoyé le " . date('d/m/Y à H:i') . "\n";
-                    $emailBody .= "IP : " . ($_SERVER['REMOTE_ADDR'] ?? 'inconnue') . "\n";
-
-                    $sent = $mailer->send(
-                        $config['recipient']['email'],
-                        $config['recipient']['name'],
-                        $emailSubject,
-                        $emailBody
-                    );
-
-                    if ($sent) {
-                        $message = "Votre message a été envoyé. Nous vous répondrons dans les plus brefs délais.";
-                        $messageType = 'success';
-                        // Réinitialiser le formulaire
-                        $formData = ['name' => '', 'email' => '', 'subject' => '', 'message' => ''];
-                        // Régénérer le token CSRF
-                        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-                        // Incrémenter le compteur rate limiting
-                        $_SESSION['contact_count']++;
-                    } else {
-                        $message = "Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard.";
-                        $messageType = 'error';
-                        // Log l'erreur (optionnel)
-                        error_log("Erreur Mailer: " . $mailer->getLastError());
-                    }
+                    $message = "Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard.";
+                    $messageType = 'error';
+                    error_log("Erreur Mailer: " . $mailer->getLastError());
                 }
             }
         }
