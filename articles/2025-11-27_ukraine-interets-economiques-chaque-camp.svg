@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Ukrainian flag colors as accent -->
+  <rect x="0" y="0" width="800" height="4" fill="#0057B8"/>
+  <rect x="0" y="4" width="800" height="4" fill="#FFD700"/>
+
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="18" font-weight="600">UKRAINE : LES INTÉRÊTS ÉCONOMIQUES EN JEU</text>
+  <text x="400" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">Ce que chaque camp veut vraiment</text>
+
+  <!-- Ukraine resources -->
+  <g transform="translate(50, 75)">
+    <rect x="0" y="0" width="220" height="130" rx="6" fill="#2d3748" stroke="#FFD700" stroke-width="2"/>
+    <text x="110" y="22" text-anchor="middle" fill="#FFD700" font-family="Inter, sans-serif" font-size="11" font-weight="600">RICHESSES UKRAINIENNES</text>
+
+    <text x="15" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• 5e exportateur mondial de blé</text>
+    <text x="15" y="60" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• 32M ha de terres fertiles</text>
+    <text x="15" y="75" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Lithium, titane, uranium</text>
+    <text x="15" y="90" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• 1 000 Md m³ de gaz</text>
+    <text x="15" y="105" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Transit gaz russe → Europe</text>
+    <text x="15" y="120" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Reconstruction : 411 Md$ (BM)</text>
+  </g>
+
+  <!-- USA interests -->
+  <g transform="translate(290, 75)">
+    <rect x="0" y="0" width="220" height="130" rx="6" fill="#2d3748" stroke="#3C3B6E" stroke-width="2"/>
+    <text x="110" y="22" text-anchor="middle" fill="#B22234" font-family="Inter, sans-serif" font-size="11" font-weight="600">INTÉRÊTS USA</text>
+
+    <text x="15" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• BlackRock : conseille reconstruction</text>
+    <text x="15" y="60" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Accord avril 2025 : accès minerais</text>
+    <text x="15" y="75" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• +100 Md$ d'aide (→ armes US)</text>
+    <text x="15" y="90" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Affaiblir la Russie</text>
+    <text x="15" y="105" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Ventes d'armes records</text>
+    <text x="15" y="120" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Lockheed, RTX, Northrop...</text>
+  </g>
+
+  <!-- Russia interests -->
+  <g transform="translate(530, 75)">
+    <rect x="0" y="0" width="220" height="130" rx="6" fill="#2d3748" stroke="#D52B1E" stroke-width="2"/>
+    <text x="110" y="22" text-anchor="middle" fill="#D52B1E" font-family="Inter, sans-serif" font-size="11" font-weight="600">INTÉRÊTS RUSSIE</text>
+
+    <text x="15" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Contrôle transit gaz</text>
+    <text x="15" y="60" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Accès mer Noire (Crimée)</text>
+    <text x="15" y="75" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Terres fertiles du Sud/Donbass</text>
+    <text x="15" y="90" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Minerais du Donbass</text>
+    <text x="15" y="105" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Bloquer l'expansion OTAN</text>
+    <text x="15" y="120" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Zone tampon stratégique</text>
+  </g>
+
+  <!-- EU interests -->
+  <g transform="translate(50, 225)">
+    <rect x="0" y="0" width="220" height="95" rx="6" fill="#2d3748" stroke="#003399" stroke-width="2"/>
+    <text x="110" y="22" text-anchor="middle" fill="#FFCC00" font-family="Inter, sans-serif" font-size="11" font-weight="600">INTÉRÊTS EUROPE</text>
+
+    <text x="15" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Fin dépendance gaz russe</text>
+    <text x="15" y="60" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">  (40% → 8% en 2022-2023)</text>
+    <text x="15" y="75" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Marché 40M consommateurs</text>
+    <text x="15" y="90" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Main-d'œuvre ukrainienne</text>
+  </g>
+
+  <!-- BlackRock box -->
+  <g transform="translate(290, 225)">
+    <rect x="0" y="0" width="220" height="95" rx="6" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+    <text x="110" y="22" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="600">BLACKROCK & CO</text>
+
+    <text x="15" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Accord avec Zelensky (2022)</text>
+    <text x="15" y="60" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• + JPMorgan, McKinsey</text>
+    <text x="15" y="75" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Fonds de reconstruction</text>
+    <text x="15" y="90" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">10 000 Md$ sous gestion</text>
+  </g>
+
+  <!-- Arms industry -->
+  <g transform="translate(530, 225)">
+    <rect x="0" y="0" width="220" height="95" rx="6" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="110" y="22" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="11" font-weight="600">INDUSTRIE ARMEMENT</text>
+
+    <text x="15" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Contrats records</text>
+    <text x="15" y="60" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• Aide USA → achats d'armes US</text>
+    <text x="15" y="75" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">• BlackRock actionnaire</text>
+    <text x="15" y="90" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Guerre = profits</text>
+  </g>
+
+  <!-- Bottom question -->
+  <g transform="translate(50, 340)">
+    <rect x="0" y="0" width="700" height="85" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
+    <text x="350" y="22" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="12" font-weight="600">LES VRAIES QUESTIONS</text>
+
+    <text x="20" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">• Qui a intérêt à ce que la guerre dure ?</text>
+    <text x="360" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">• Qui possèdera l'Ukraine d'après-guerre ?</text>
+    <text x="20" y="65" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">• L'aide est-elle désintéressée ?</text>
+    <text x="360" y="65" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">• Les Ukrainiens ont-ils leur mot à dire ?</text>
+
+    <text x="350" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">La guerre n'est jamais uniquement idéologique</text>
+  </g>
+
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>

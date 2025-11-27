@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <text x="400" y="30" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="18" font-weight="600">QUI DÉSINFORME VRAIMENT ?</text>
+  <text x="400" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">Reuters Digital News Report 2024 + Ipsos</text>
+
+  <!-- Trust gauge -->
+  <g transform="translate(50, 75)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">CONFIANCE DANS LES MÉDIAS</text>
+
+    <rect x="0" y="15" width="300" height="25" rx="4" fill="#4a5568"/>
+    <rect x="0" y="15" width="93" height="25" rx="4" fill="#e53e3e"/>
+    <text x="150" y="33" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">France : 31%</text>
+
+    <text x="0" y="58" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">38e sur 47 pays étudiés</text>
+    <text x="0" y="73" fill="#48bb78" font-family="Inter, sans-serif" font-size="10">Finlande : 69% | Hongrie : 23%</text>
+  </g>
+
+  <!-- Where people get info -->
+  <g transform="translate(400, 75)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">SOURCES D'INFORMATION</text>
+
+    <rect x="0" y="15" width="144" height="40" rx="4" fill="#4299e1"/>
+    <text x="72" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">48%</text>
+    <text x="72" y="52" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">Médias/Journalistes</text>
+
+    <rect x="154" y="15" width="156" height="40" rx="4" fill="#9f7aea"/>
+    <text x="232" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">52%</text>
+    <text x="232" y="52" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">Influenceurs/Politiques</text>
+
+    <text x="0" y="73" fill="#ed8936" font-family="Inter, sans-serif" font-size="9">Hugo Décrypte > Le Monde + Figaro + Libé réunis</text>
+  </g>
+
+  <!-- The paradox -->
+  <g transform="translate(50, 175)">
+    <rect x="0" y="0" width="700" height="90" rx="8" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+    <text x="350" y="22" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="12" font-weight="600">LE PARADOXE DE LA DÉSINFORMATION (Ipsos 2024)</text>
+
+    <g transform="translate(30, 35)">
+      <text x="0" y="15" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">"Je sais distinguer le vrai du faux"</text>
+      <text x="250" y="15" fill="#48bb78" font-family="Inter, sans-serif" font-size="14" font-weight="700">74%</text>
+    </g>
+
+    <g transform="translate(30, 55)">
+      <text x="0" y="15" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">"Les autres Français en sont capables"</text>
+      <text x="250" y="15" fill="#e53e3e" font-family="Inter, sans-serif" font-size="14" font-weight="700">32%</text>
+    </g>
+
+    <g transform="translate(380, 45)">
+      <text x="0" y="15" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Adhèrent à au moins 1 fake news :</text>
+      <text x="220" y="15" fill="#e53e3e" font-family="Inter, sans-serif" font-size="16" font-weight="700">66%</text>
+    </g>
+  </g>
+
+  <!-- Sources of disinfo -->
+  <g transform="translate(50, 290)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">PRINCIPALES SOURCES DE DÉSINFORMATION (Reuters)</text>
+
+    <rect x="0" y="15" width="160" height="35" rx="4" fill="#e53e3e"/>
+    <text x="80" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">Influenceurs</text>
+
+    <rect x="170" y="15" width="160" height="35" rx="4" fill="#ed8936"/>
+    <text x="250" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">Politiques</text>
+
+    <rect x="340" y="15" width="160" height="35" rx="4" fill="#9f7aea"/>
+    <text x="420" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">États étrangers</text>
+
+    <rect x="510" y="15" width="160" height="35" rx="4" fill="#4299e1"/>
+    <text x="590" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">Médias (biais)</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <g transform="translate(50, 370)">
+    <rect x="0" y="0" width="700" height="55" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="350" y="22" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">LA VRAIE QUESTION</text>
+    <text x="350" y="42" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Qui décide ce qui est "vrai" ? Faire confiance aveuglément à quiconque est risqué.</text>
+  </g>
+
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>

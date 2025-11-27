@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <text x="400" y="30" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="20" font-weight="600">FRAUDE FISCALE VS FRAUDE SOCIALE</text>
+  <text x="400" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="12">Les vrais chiffres - Sources officielles</text>
+
+  <!-- Main comparison bars -->
+  <g transform="translate(50, 80)">
+    <text x="0" y="0" fill="#e53e3e" font-family="Inter, sans-serif" font-size="14" font-weight="600">FRAUDE FISCALE</text>
+    <text x="0" y="20" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">(Solidaires Finances Publiques, 2018)</text>
+    <rect x="0" y="30" width="650" height="50" rx="6" fill="#e53e3e"/>
+    <text x="325" y="62" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="24" font-weight="700">80 à 100 MILLIARDS €/an</text>
+  </g>
+
+  <g transform="translate(50, 175)">
+    <text x="0" y="0" fill="#4299e1" font-family="Inter, sans-serif" font-size="14" font-weight="600">FRAUDE SOCIALE</text>
+    <text x="0" y="20" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">(Haut Conseil protection sociale, 2024)</text>
+    <rect x="0" y="30" width="85" height="50" rx="6" fill="#4299e1"/>
+    <text x="42" y="62" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="18" font-weight="700">13 Md€</text>
+    <text x="100" y="62" fill="#a0aec0" font-family="Inter, sans-serif" font-size="12">← 6 à 8 fois moins</text>
+  </g>
+
+  <!-- Breakdown of social fraud -->
+  <g transform="translate(50, 270)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">DÉTAIL DE LA FRAUDE SOCIALE (13 Md€)</text>
+
+    <rect x="0" y="15" width="200" height="30" rx="4" fill="#9f7aea"/>
+    <text x="100" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">Employeurs : 7-8 Md€</text>
+
+    <rect x="210" y="15" width="90" height="30" rx="4" fill="#ed8936"/>
+    <text x="255" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">Pros santé : 1-2 Md€</text>
+
+    <rect x="310" y="15" width="120" height="30" rx="4" fill="#48bb78"/>
+    <text x="370" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">Allocataires : 4-5 Md€</text>
+
+    <text x="0" y="65" fill="#ed8936" font-family="Inter, sans-serif" font-size="11" font-weight="600">→ La majorité n'est PAS le fait des allocataires</text>
+  </g>
+
+  <!-- RSA specific -->
+  <g transform="translate(500, 270)">
+    <rect x="0" y="0" width="250" height="75" rx="6" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="125" y="22" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="11" font-weight="600">FRAUDE AU RSA</text>
+    <text x="125" y="45" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="20" font-weight="700">1,5 Md€</text>
+    <text x="125" y="65" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">= 1,5% de la fraude fiscale</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <g transform="translate(50, 365)">
+    <rect x="0" y="0" width="700" height="65" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
+    <text x="350" y="22" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="11" font-weight="600">LE PARADOXE</text>
+    <text x="350" y="42" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">De quelle fraude parle-t-on le plus dans les médias et le débat politique ?</text>
+    <text x="350" y="57" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">La fraude fiscale pourrait combler 4× le déficit de la Sécurité sociale</text>
+  </g>
+
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>

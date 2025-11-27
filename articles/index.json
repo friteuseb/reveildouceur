@@ -9,6 +9,12 @@
     "technologie": { "label": "Technologie", "color": "#4299e1" }
   },
   "articles": [
+    { "file": "2025-11-27_ukraine-interets-economiques-chaque-camp.html", "category": "geopolitique" },
+    { "file": "2025-11-27_nucleaire-francais-danger-ou-solution.html", "category": "environnement" },
+    { "file": "2025-11-27_voiture-electrique-bilan-carbone-reel.html", "category": "environnement" },
+    { "file": "2025-11-27_qui-desinforme-vraiment-chiffres.html", "category": "medias" },
+    { "file": "2025-11-27_paradoxe-bonheur-feminin-etudes.html", "category": "societe" },
+    { "file": "2025-11-27_fraude-fiscale-vs-sociale-vrais-chiffres.html", "category": "economie" },
     { "file": "2025-11-27_vrai-cout-securite-sociale-comparaison-mondiale.html", "category": "economie" },
     { "file": "2025-11-27_systeme-sante-francais-equation-impossible.html", "category": "sante" },
     { "file": "2025-11-27_france-usa-souverainete-a-geometrie-variable.html", "category": "geopolitique" },

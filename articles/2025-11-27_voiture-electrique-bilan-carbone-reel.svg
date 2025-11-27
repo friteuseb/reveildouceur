@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <text x="400" y="30" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="18" font-weight="600">VOITURE ÉLECTRIQUE : LE VRAI BILAN CARBONE</text>
+  <text x="400" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">Cycle de vie complet - ADEME 2024</text>
+
+  <!-- Manufacturing comparison -->
+  <g transform="translate(50, 75)">
+    <text x="0" y="0" fill="#e53e3e" font-family="Inter, sans-serif" font-size="12" font-weight="600">À LA FABRICATION : VE pollue PLUS</text>
+
+    <rect x="0" y="15" width="180" height="35" rx="4" fill="#ed8936"/>
+    <text x="90" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">Thermique : 6,7 t CO₂</text>
+
+    <rect x="200" y="15" width="280" height="35" rx="4" fill="#e53e3e"/>
+    <text x="340" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">VE (50kWh) : 10,5 t CO₂ (+56%)</text>
+
+    <text x="0" y="68" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">La batterie = 35% des émissions totales</text>
+  </g>
+
+  <!-- Usage comparison -->
+  <g transform="translate(50, 160)">
+    <text x="0" y="0" fill="#48bb78" font-family="Inter, sans-serif" font-size="12" font-weight="600">À L'USAGE : VE pollue BEAUCOUP MOINS</text>
+
+    <rect x="0" y="15" width="250" height="35" rx="4" fill="#e53e3e"/>
+    <text x="125" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">Thermique : 200-250 g/km</text>
+
+    <rect x="270" y="15" width="50" height="35" rx="4" fill="#48bb78"/>
+    <text x="295" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">VE FR</text>
+    <text x="295" y="65" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9">20 g/km</text>
+
+    <rect x="330" y="15" width="80" height="35" rx="4" fill="#ed8936"/>
+    <text x="370" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">VE DE</text>
+    <text x="370" y="65" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="9">80 g/km</text>
+
+    <rect x="420" y="15" width="100" height="35" rx="4" fill="#e53e3e" opacity="0.7"/>
+    <text x="470" y="37" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">VE Pologne</text>
+    <text x="470" y="65" text-anchor="middle" fill="#fc8181" font-family="Inter, sans-serif" font-size="9">130 g/km</text>
+  </g>
+
+  <!-- Breakeven point -->
+  <g transform="translate(50, 250)">
+    <rect x="0" y="0" width="350" height="80" rx="6" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+    <text x="175" y="22" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="600">POINT D'ÉQUILIBRE</text>
+
+    <text x="20" y="45" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">En France :</text>
+    <text x="120" y="45" fill="#48bb78" font-family="Inter, sans-serif" font-size="12" font-weight="700">20 000 km</text>
+    <text x="200" y="45" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">(~18 mois)</text>
+
+    <text x="20" y="65" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Sur 200 000 km :</text>
+    <text x="140" y="65" fill="#48bb78" font-family="Inter, sans-serif" font-size="12" font-weight="700">2-3× moins de CO₂</text>
+  </g>
+
+  <!-- Mix électrique importance -->
+  <g transform="translate(420, 250)">
+    <rect x="0" y="0" width="330" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+    <text x="165" y="22" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="11" font-weight="600">TOUT DÉPEND DU MIX ÉLECTRIQUE</text>
+
+    <text x="20" y="45" fill="#48bb78" font-family="Inter, sans-serif" font-size="10">France (nucléaire) : 45 g/kWh ✓</text>
+    <text x="20" y="62" fill="#ed8936" font-family="Inter, sans-serif" font-size="10">Allemagne : 300 g/kWh ~</text>
+    <text x="180" y="62" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10">Pologne : 650 g/kWh ✗</text>
+  </g>
+
+  <!-- Bottom conclusion -->
+  <g transform="translate(50, 355)">
+    <rect x="0" y="0" width="700" height="70" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="350" y="22" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">CONCLUSION</text>
+    <text x="350" y="42" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="11">En France : VE = 2-3× moins polluant sur cycle de vie complet</text>
+    <text x="350" y="58" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Mais le plus écologique reste : vélo, train, moins de voitures</text>
+  </g>
+
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>
