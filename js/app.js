@@ -294,21 +294,35 @@
   // Chargement des articles
   // ========================================
 
+  // Variable globale pour stocker les catégories
+  let categoriesData = {};
+  let articlesWithCategories = [];
+
   async function fetchDirectoryListing(path) {
     // Méthode 1: Essayer de charger index.json (le plus fiable)
     try {
       const jsonResponse = await fetch(path + 'index.json');
       if (jsonResponse.ok) {
-        const files = await jsonResponse.json();
-        console.log('Articles chargés depuis index.json:', files);
-        const ignoreList = CONFIG.articles?.ignoreFiles || [];
-        const filtered = files.filter(f => {
-          if (ignoreList.includes(f)) return false;
-          if (f.includes('template')) return false;
-          return f.endsWith('.html');
-        });
-        console.log('Articles filtrés:', filtered);
-        return filtered;
+        const data = await jsonResponse.json();
+
+        // Nouveau format avec catégories
+        if (data.categories && data.articles) {
+          categoriesData = data.categories;
+          articlesWithCategories = data.articles;
+          console.log('Articles chargés depuis index.json (nouveau format):', data.articles.length);
+          return data.articles.map(a => a.file);
+        }
+
+        // Ancien format (array de strings) - compatibilité
+        if (Array.isArray(data)) {
+          console.log('Articles chargés depuis index.json (ancien format):', data);
+          const ignoreList = CONFIG.articles?.ignoreFiles || [];
+          return data.filter(f => {
+            if (ignoreList.includes(f)) return false;
+            if (f.includes('template')) return false;
+            return f.endsWith('.html');
+          });
+        }
       }
     } catch (e) {
       console.log('index.json non trouvé ou erreur:', e.message);
@@ -329,7 +343,6 @@
       const htmlFiles = links
         .map(a => {
           const href = a.getAttribute('href');
-          // Aussi vérifier le texte du lien (Python http.server)
           const text = a.textContent;
           return href || text;
         })
@@ -349,6 +362,17 @@
       console.error('Erreur lecture répertoire:', error);
       return [];
     }
+  }
+
+  function getArticleCategory(filename) {
+    const articleData = articlesWithCategories.find(a => a.file === filename);
+    if (articleData && articleData.category && categoriesData[articleData.category]) {
+      return {
+        id: articleData.category,
+        ...categoriesData[articleData.category]
+      };
+    }
+    return null;
   }
 
   function findThumbnail(basePath, filename) {
@@ -371,6 +395,7 @@
       const date = extractDate(filename, htmlContent);
       const isRaw = isRawArticle(htmlContent);
       const thumbnail = findThumbnail(CONFIG.articles.path, filename);
+      const category = getArticleCategory(filename);
 
       return {
         filename,
@@ -380,7 +405,8 @@
         excerpt,
         date,
         thumbnail,
-        isRaw
+        isRaw,
+        category
       };
     } catch (error) {
       console.error(`Erreur chargement ${filename}:`, error);
@@ -406,9 +432,12 @@
 
   function createArticleCard(article) {
     const formattedDate = formatDate(article.date);
+    const categoryBadge = article.category
+      ? `<span class="article-card__category" style="background-color: ${article.category.color}">${article.category.label}</span>`
+      : '';
 
     return `
-      <article class="article-card">
+      <article class="article-card" data-category="${article.category?.id || ''}">
         <div class="article-card__image">
           <a href="${article.url}" aria-label="Lire ${article.title}">
             <img
@@ -420,7 +449,10 @@
           </a>
         </div>
         <div class="article-card__content">
-          <time class="article-card__date" datetime="${article.date.toISOString()}">${formattedDate}</time>
+          <div class="article-card__meta">
+            ${categoryBadge}
+            <time class="article-card__date" datetime="${article.date.toISOString()}">${formattedDate}</time>
+          </div>
           <h2 class="article-card__title">
             <a href="${article.url}">${article.title}</a>
           </h2>
@@ -436,7 +468,56 @@
     `;
   }
 
+  // Variable pour stocker le filtre actif
+  let activeFilter = null;
+  let allArticles = [];
+
+  function createCategoryFilters() {
+    if (Object.keys(categoriesData).length === 0) return '';
+
+    const filterButtons = Object.entries(categoriesData)
+      .map(([id, cat]) => `
+        <button class="category-filter" data-category="${id}" style="--cat-color: ${cat.color}">
+          ${cat.label}
+        </button>
+      `).join('');
+
+    return `
+      <div class="category-filters">
+        <button class="category-filter category-filter--active" data-category="">Tous</button>
+        ${filterButtons}
+      </div>
+    `;
+  }
+
+  function filterArticles(categoryId) {
+    activeFilter = categoryId || null;
+
+    // Mettre à jour les boutons actifs
+    document.querySelectorAll('.category-filter').forEach(btn => {
+      const isActive = btn.dataset.category === (categoryId || '');
+      btn.classList.toggle('category-filter--active', isActive);
+    });
+
+    // Filtrer les cartes
+    document.querySelectorAll('.article-card').forEach(card => {
+      const cardCategory = card.dataset.category;
+      const shouldShow = !categoryId || cardCategory === categoryId;
+      card.style.display = shouldShow ? '' : 'none';
+    });
+  }
+
+  function initCategoryFilters() {
+    document.querySelectorAll('.category-filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterArticles(btn.dataset.category);
+      });
+    });
+  }
+
   function renderArticles(articles, container) {
+    allArticles = articles;
+
     if (articles.length === 0) {
       container.innerHTML = `
         <div class="empty-state">
@@ -447,7 +528,17 @@
       return;
     }
 
-    container.innerHTML = articles.map(createArticleCard).join('');
+    const filtersHTML = createCategoryFilters();
+    const articlesHTML = articles.map(createArticleCard).join('');
+
+    container.innerHTML = `
+      ${filtersHTML}
+      <div class="articles-grid__cards">
+        ${articlesHTML}
+      </div>
+    `;
+
+    initCategoryFilters();
   }
 
   function showLoader(container) {
