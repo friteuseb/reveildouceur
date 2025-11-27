@@ -51,15 +51,30 @@
 
         <h2>Données collectées</h2>
         <p>
-          <strong>Ce site ne collecte aucune donnée personnelle.</strong>
+          Ce site collecte un minimum de données, uniquement via le formulaire de contact :
         </p>
         <ul>
           <li>Pas de cookies de tracking</li>
           <li>Pas d'outil d'analyse d'audience (Google Analytics, Matomo, etc.)</li>
-          <li>Pas de formulaire de collecte de données</li>
           <li>Pas de système de commentaires</li>
           <li>Pas de newsletter</li>
         </ul>
+
+        <h2>Formulaire de contact</h2>
+        <p>
+          Lorsque vous utilisez notre formulaire de contact, les données suivantes sont collectées :
+        </p>
+        <ul>
+          <li>Nom</li>
+          <li>Adresse email</li>
+          <li>Sujet et contenu de votre message</li>
+          <li>Adresse IP (à des fins de sécurité)</li>
+        </ul>
+        <p>
+          Ces données sont <strong>uniquement transmises par email</strong> à l'administrateur du site
+          pour répondre à votre demande. Elles ne sont pas stockées dans une base de données
+          et ne sont jamais partagées avec des tiers.
+        </p>
 
         <h2>Cookies</h2>
         <p>

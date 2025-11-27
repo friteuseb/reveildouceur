@@ -52,7 +52,8 @@
         $current_page = basename($_SERVER['PHP_SELF']);
         $nav_items = [
           ['href' => '/', 'file' => 'index.php', 'label' => 'Accueil'],
-          ['href' => '/a-propos.php', 'file' => 'a-propos.php', 'label' => 'À propos']
+          ['href' => '/a-propos.php', 'file' => 'a-propos.php', 'label' => 'À propos'],
+          ['href' => '/contact.php', 'file' => 'contact.php', 'label' => 'Contact']
         ];
         foreach ($nav_items as $item):
           $is_active = ($current_page === $item['file']) ? ' nav__link--active' : '';

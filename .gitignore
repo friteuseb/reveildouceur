@@ -16,3 +16,6 @@ Thumbs.db
 
 # Local development
 .ddev/
+
+# Configuration sensible (credentials)
+config/mail.php

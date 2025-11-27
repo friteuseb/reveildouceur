@@ -1,0 +1,25 @@
+<?php
+/**
+ * Configuration SMTP pour l'envoi d'emails
+ *
+ * INSTRUCTIONS:
+ * 1. Copiez ce fichier en config/mail.php
+ * 2. Remplissez les informations SMTP
+ * 3. Le fichier config/mail.php est ignoré par git (credentials sensibles)
+ */
+
+return [
+    'smtp' => [
+        'host' => 'smtp-relay.brevo.com',
+        'port' => 587,
+        'username' => 'votre-email@example.com',
+        'password' => 'votre-cle-smtp',
+        'encryption' => 'tls',
+        'from_email' => 'contact@reveildouceur.fr',
+        'from_name' => 'Réveil Douceur',
+    ],
+    'recipient' => [
+        'email' => 'destinataire@example.com',
+        'name' => 'Nom du destinataire',
+    ],
+];

@@ -13,6 +13,7 @@
       <ul class="footer__links">
         <li><a href="/" class="footer__link">Accueil</a></li>
         <li><a href="/a-propos.php" class="footer__link">À propos</a></li>
+        <li><a href="/contact.php" class="footer__link">Contact</a></li>
       </ul>
     </div>
 
