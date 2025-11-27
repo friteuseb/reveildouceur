@@ -46,3 +46,6 @@ ErrorDocument 404 /404.php
 # Types MIME
 AddType image/webp .webp
 AddType image/svg+xml .svg
+
+# Traiter les fichiers .html comme PHP (pour les articles avec includes)
+AddHandler application/x-httpd-php .html
