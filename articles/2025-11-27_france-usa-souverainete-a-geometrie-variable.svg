@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="20" font-weight="600">FRANCE-USA : SOUVERAINETÉ À GÉOMÉTRIE VARIABLE</text>
+  <text x="400" y="52" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">Affaires documentées et rapports de force</text>
+
+  <!-- Flags -->
+  <g transform="translate(100, 75)">
+    <!-- French flag -->
+    <rect x="0" y="0" width="20" height="40" fill="#0055A4"/>
+    <rect x="20" y="0" width="20" height="40" fill="#ffffff"/>
+    <rect x="40" y="0" width="20" height="40" fill="#EF4135"/>
+  </g>
+
+  <g transform="translate(640, 75)">
+    <!-- US flag simplified -->
+    <rect x="0" y="0" width="60" height="40" fill="#B22234"/>
+    <rect x="0" y="5" width="60" height="3" fill="#ffffff"/>
+    <rect x="0" y="11" width="60" height="3" fill="#ffffff"/>
+    <rect x="0" y="17" width="60" height="3" fill="#ffffff"/>
+    <rect x="0" y="23" width="60" height="3" fill="#ffffff"/>
+    <rect x="0" y="29" width="60" height="3" fill="#ffffff"/>
+    <rect x="0" y="35" width="60" height="3" fill="#ffffff"/>
+    <rect x="0" y="0" width="25" height="22" fill="#3C3B6E"/>
+  </g>
+
+  <!-- Arrow from France to USA -->
+  <line x1="180" y1="95" x2="620" y2="95" stroke="#e53e3e" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <text x="400" y="88" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10" font-weight="600">+12 MILLIARDS $ D'AMENDES</text>
+
+  <!-- Main cases boxes -->
+  <!-- Alstom -->
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="220" height="130" rx="8" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <rect x="0" y="0" width="220" height="28" rx="8" fill="#e53e3e"/>
+    <rect x="0" y="20" width="220" height="8" fill="#e53e3e"/>
+    <text x="110" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">AFFAIRE ALSTOM</text>
+
+    <text x="15" y="50" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">2014 : Vente à General Electric</text>
+    <text x="15" y="68" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Cadre français emprisonné aux USA</text>
+    <text x="15" y="82" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Amende : 772 millions $</text>
+    <text x="15" y="96" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Turbines nucléaires françaises</text>
+    <text x="15" y="110" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">  → propriété américaine</text>
+    <text x="15" y="124" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="600">Validé par E. Macron (min. Économie)</text>
+  </g>
+
+  <!-- BNP Paribas -->
+  <g transform="translate(290, 140)">
+    <rect x="0" y="0" width="220" height="130" rx="8" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <rect x="0" y="0" width="220" height="28" rx="8" fill="#e53e3e"/>
+    <rect x="0" y="20" width="220" height="8" fill="#e53e3e"/>
+    <text x="110" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">BNP PARIBAS</text>
+
+    <text x="15" y="50" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">2014 : Record d'amende</text>
+    <text x="15" y="68" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Amende : 8,9 milliards $</text>
+    <text x="15" y="82" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Motif : transactions en $ avec</text>
+    <text x="15" y="96" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">  Cuba, Iran, Soudan</text>
+    <text x="15" y="110" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="600">Actes légaux en droit français</text>
+    <text x="15" y="124" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Mais illégaux en droit US...</text>
+  </g>
+
+  <!-- NSA -->
+  <g transform="translate(530, 140)">
+    <rect x="0" y="0" width="220" height="130" rx="8" fill="#2d3748" stroke="#4299e1" stroke-width="2"/>
+    <rect x="0" y="0" width="220" height="28" rx="8" fill="#4299e1"/>
+    <rect x="0" y="20" width="220" height="8" fill="#4299e1"/>
+    <text x="110" y="19" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600">ÉCOUTES NSA</text>
+
+    <text x="15" y="50" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">2015 : WikiLeaks révèle</text>
+    <text x="15" y="68" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Chirac sur écoute</text>
+    <text x="15" y="82" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Sarkozy sur écoute</text>
+    <text x="15" y="96" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">• Hollande sur écoute</text>
+    <text x="15" y="110" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="600">Réaction française :</text>
+    <text x="15" y="124" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">"Inacceptable" puis... rien</text>
+  </g>
+
+  <!-- Bottom stats -->
+  <g transform="translate(50, 295)">
+    <rect x="0" y="0" width="160" height="75" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="80" y="22" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="22" font-weight="700">12+ Md$</text>
+    <text x="80" y="42" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">amendes US sur</text>
+    <text x="80" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">entreprises françaises</text>
+    <text x="80" y="68" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">(BNP, Alstom, SocGen...)</text>
+  </g>
+
+  <g transform="translate(230, 295)">
+    <rect x="0" y="0" width="160" height="75" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="80" y="22" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="22" font-weight="700">3</text>
+    <text x="80" y="42" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">présidents français</text>
+    <text x="80" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">espionnés par la NSA</text>
+    <text x="80" y="68" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">(Chirac, Sarkozy, Hollande)</text>
+  </g>
+
+  <g transform="translate(410, 295)">
+    <rect x="0" y="0" width="160" height="75" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="80" y="22" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="22" font-weight="700">2009</text>
+    <text x="80" y="42" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">retour dans le</text>
+    <text x="80" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">commandement OTAN</text>
+    <text x="80" y="68" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">(sorti par De Gaulle en 1966)</text>
+  </g>
+
+  <g transform="translate(590, 295)">
+    <rect x="0" y="0" width="160" height="75" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="80" y="22" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="22" font-weight="700">0</text>
+    <text x="80" y="42" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">sanction française</text>
+    <text x="80" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">contre les USA</text>
+    <text x="80" y="68" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">(malgré les affaires)</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="50" y="385" width="700" height="45" rx="6" fill="#2d3748" stroke="#718096" stroke-width="1"/>
+  <text x="400" y="405" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">
+    <tspan fill="#ffffff" font-weight="600">EXTRATERRITORIALITÉ :</tspan>
+    Toute transaction en dollars tombe sous juridiction américaine,
+  </text>
+  <text x="400" y="420" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">même si elle est légale dans le pays d'origine.</text>
+
+  <!-- Watermark -->
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>
