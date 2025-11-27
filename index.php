@@ -1,3 +1,104 @@
+<?php
+/**
+ * Page d'accueil avec formulaire de suggestion
+ */
+session_start();
+
+// Génération du token CSRF
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+// Timestamp pour vérification temporelle anti-bot
+$form_time = time();
+
+// Rate limiting : max 3 suggestions par heure
+if (!isset($_SESSION['suggestion_count'])) {
+    $_SESSION['suggestion_count'] = 0;
+    $_SESSION['suggestion_reset'] = time() + 3600;
+}
+if (time() > $_SESSION['suggestion_reset']) {
+    $_SESSION['suggestion_count'] = 0;
+    $_SESSION['suggestion_reset'] = time() + 3600;
+}
+
+$suggestion_message = '';
+$suggestion_type = '';
+
+// Traitement du formulaire de suggestion
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
+    // Honeypot check
+    if (!empty($_POST['website'])) {
+        $suggestion_message = "Merci pour votre suggestion !";
+        $suggestion_type = 'success';
+    }
+    // CSRF check
+    elseif (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        $suggestion_message = "Erreur de sécurité. Veuillez rafraîchir la page.";
+        $suggestion_type = 'error';
+    }
+    // Time check (minimum 3 seconds)
+    elseif (isset($_POST['form_time']) && (time() - intval($_POST['form_time'])) < 3) {
+        $suggestion_message = "Merci pour votre suggestion !";
+        $suggestion_type = 'success';
+    }
+    // Rate limiting check
+    elseif ($_SESSION['suggestion_count'] >= 3) {
+        $suggestion_message = "Trop de suggestions. Réessayez dans une heure.";
+        $suggestion_type = 'error';
+    }
+    else {
+        $topic = trim(filter_input(INPUT_POST, 'topic', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
+        $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL) ?? '');
+
+        if (strlen($topic) < 5) {
+            $suggestion_message = "Votre suggestion doit contenir au moins 5 caractères.";
+            $suggestion_type = 'error';
+        } else {
+            // Envoi de l'email
+            $configFile = __DIR__ . '/config/mail.php';
+
+            if (file_exists($configFile)) {
+                $config = require $configFile;
+                require_once __DIR__ . '/includes/Mailer.php';
+
+                $mailer = new Mailer($config['smtp']);
+
+                $emailSubject = "[Réveil Douceur] Suggestion de sujet";
+                $emailBody = "Nouvelle suggestion de sujet\n";
+                $emailBody .= "============================\n\n";
+                $emailBody .= "Sujet proposé :\n" . $topic . "\n\n";
+                if (!empty($email)) {
+                    $emailBody .= "Email (optionnel) : " . $email . "\n\n";
+                }
+                $emailBody .= "============================\n";
+                $emailBody .= "Envoyé le " . date('d/m/Y à H:i') . "\n";
+                $emailBody .= "IP : " . ($_SERVER['REMOTE_ADDR'] ?? 'inconnue') . "\n";
+
+                $sent = $mailer->send(
+                    $config['recipient']['email'],
+                    $config['recipient']['name'],
+                    $emailSubject,
+                    $emailBody
+                );
+
+                if ($sent) {
+                    $suggestion_message = "Merci pour votre suggestion ! Nous la lirons avec attention.";
+                    $suggestion_type = 'success';
+                    $_SESSION['suggestion_count']++;
+                    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                } else {
+                    $suggestion_message = "Erreur lors de l'envoi. Réessayez plus tard.";
+                    $suggestion_type = 'error';
+                }
+            } else {
+                $suggestion_message = "Configuration manquante.";
+                $suggestion_type = 'error';
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -211,6 +312,70 @@
           <div class="loader">
             <div class="loader__spinner"></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Suggestion -->
+    <section class="suggestion-section" id="suggestion-section">
+      <div class="container">
+        <div class="suggestion-box">
+          <div class="suggestion-box__content">
+            <h2 class="suggestion-box__title">Un sujet vous intrigue ?</h2>
+            <p class="suggestion-box__text">
+              Proposez un sujet d'article. Si les données existent, on s'y plonge.
+            </p>
+          </div>
+
+          <?php if ($suggestion_message): ?>
+          <div class="form-message form-message--<?= $suggestion_type ?>">
+            <?= htmlspecialchars($suggestion_message) ?>
+          </div>
+          <?php endif; ?>
+
+          <form method="POST" action="#suggestion-section" class="suggestion-form">
+            <input type="hidden" name="suggestion_form" value="1">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
+            <input type="hidden" name="form_time" value="<?= $form_time ?>">
+
+            <!-- Honeypot -->
+            <div style="position:absolute;left:-9999px;opacity:0;height:0;" aria-hidden="true">
+              <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="suggestion-form__fields">
+              <div class="suggestion-form__main">
+                <label for="topic" class="sr-only">Votre suggestion de sujet</label>
+                <textarea
+                  id="topic"
+                  name="topic"
+                  class="suggestion-form__input"
+                  placeholder="Ex: Pourquoi les prix de l'immobilier ont-ils autant augmenté ?"
+                  required
+                  minlength="5"
+                  maxlength="500"
+                  rows="2"
+                ></textarea>
+              </div>
+              <div class="suggestion-form__email">
+                <label for="suggest-email" class="sr-only">Votre email (optionnel)</label>
+                <input
+                  type="email"
+                  id="suggest-email"
+                  name="email"
+                  class="suggestion-form__input suggestion-form__input--email"
+                  placeholder="Email (optionnel, pour être notifié)"
+                  maxlength="255"
+                >
+              </div>
+              <button type="submit" class="btn btn--primary suggestion-form__submit">
+                Envoyer
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

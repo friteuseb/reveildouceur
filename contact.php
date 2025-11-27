@@ -1,6 +1,7 @@
 <?php
 /**
  * Page de contact avec formulaire sécurisé
+ * Protections : CSRF, Honeypot, Time-check, Rate limiting
  */
 
 session_start();
@@ -8,6 +9,19 @@ session_start();
 // Génération du token CSRF
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+// Timestamp pour vérification temporelle anti-bot
+$form_time = time();
+
+// Rate limiting : max 5 messages par heure
+if (!isset($_SESSION['contact_count'])) {
+    $_SESSION['contact_count'] = 0;
+    $_SESSION['contact_reset'] = time() + 3600;
+}
+if (time() > $_SESSION['contact_reset']) {
+    $_SESSION['contact_count'] = 0;
+    $_SESSION['contact_reset'] = time() + 3600;
 }
 
 $message = '';
@@ -21,12 +35,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Bot détecté, on fait semblant que ça a marché
         $message = "Votre message a été envoyé. Nous vous répondrons dans les plus brefs délais.";
         $messageType = 'success';
+    }
+    // Time check (minimum 3 seconds to fill the form)
+    elseif (isset($_POST['form_time']) && (time() - intval($_POST['form_time'])) < 3) {
+        $message = "Votre message a été envoyé. Nous vous répondrons dans les plus brefs délais.";
+        $messageType = 'success';
+    }
+    // Rate limiting check
+    elseif ($_SESSION['contact_count'] >= 5) {
+        $message = "Trop de messages envoyés. Veuillez réessayer dans une heure.";
+        $messageType = 'error';
+    }
+    // Vérification CSRF
+    elseif (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        $message = "Erreur de sécurité. Veuillez rafraîchir la page et réessayer.";
+        $messageType = 'error';
     } else {
-        // Vérification CSRF
-        if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-            $message = "Erreur de sécurité. Veuillez rafraîchir la page et réessayer.";
-            $messageType = 'error';
-        } else {
             // Récupération et nettoyage des données
             $formData['name'] = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
             $formData['email'] = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL) ?? '');
@@ -93,6 +117,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $formData = ['name' => '', 'email' => '', 'subject' => '', 'message' => ''];
                         // Régénérer le token CSRF
                         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                        // Incrémenter le compteur rate limiting
+                        $_SESSION['contact_count']++;
                     } else {
                         $message = "Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard.";
                         $messageType = 'error';
@@ -275,6 +301,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <form method="POST" action="" class="contact-form" novalidate>
             <!-- Token CSRF -->
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
+            <input type="hidden" name="form_time" value="<?= $form_time ?>">
 
             <!-- Honeypot anti-spam -->
             <div class="hp-field" aria-hidden="true">
