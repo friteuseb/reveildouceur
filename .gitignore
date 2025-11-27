@@ -19,3 +19,6 @@ Thumbs.db
 
 # Configuration sensible (credentials)
 config/mail.php
+
+# Scripts avec tokens API
+scripts/
