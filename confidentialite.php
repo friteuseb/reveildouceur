@@ -102,7 +102,7 @@
 
         <h2>Logs serveur</h2>
         <p>
-          Comme tout site web, notre hébergeur (OVH) conserve des logs techniques incluant :
+          Comme tout site web, notre hébergeur (o2switch) conserve des logs techniques incluant :
         </p>
         <ul>
           <li>Adresse IP</li>

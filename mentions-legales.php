@@ -47,16 +47,16 @@
         <p>
           <strong>Réveil Douceur</strong><br>
           Site personnel à but non lucratif<br>
-          Contact : via les réseaux sociaux ou le formulaire (à venir)
+          Contact : via le <a href="/contact.php">formulaire de contact</a>
         </p>
 
         <h2>Hébergement</h2>
         <p>
           Ce site est hébergé par :<br>
-          <strong>OVH SAS</strong><br>
-          2 rue Kellermann<br>
-          59100 Roubaix, France<br>
-          Téléphone : 1007
+          <strong>o2switch SARL</strong><br>
+          222 Boulevard Gustave Flaubert<br>
+          63000 Clermont-Ferrand, France<br>
+          Téléphone : 04 44 44 60 40
         </p>
 
         <h2>Propriété intellectuelle</h2>
