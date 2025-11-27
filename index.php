@@ -203,22 +203,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
           </a>
           <a href="/a-propos.php" class="btn btn--outline btn--lg">Notre démarche</a>
         </div>
-        <div class="hero__stats">
-          <div class="hero__stat">
-            <span class="hero__stat-number" id="article-count">15+</span>
-            <span class="hero__stat-label">Articles</span>
-          </div>
-          <div class="hero__stat-separator"></div>
-          <div class="hero__stat">
-            <span class="hero__stat-number">100%</span>
-            <span class="hero__stat-label">Sourcé</span>
-          </div>
-          <div class="hero__stat-separator"></div>
-          <div class="hero__stat">
-            <span class="hero__stat-number">0</span>
-            <span class="hero__stat-label">Publicité</span>
-          </div>
-        </div>
       </div>
     </section>
 
