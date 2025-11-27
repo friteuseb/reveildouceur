@@ -3,7 +3,7 @@
 # ================================================
 
 # Page 404 personnalisée
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404.php
 
 # Activer le listing pour le dossier articles (si nécessaire)
 # Note: Le listing est géré par JavaScript, pas besoin d'Apache

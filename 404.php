@@ -4,14 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO - Mis à jour dynamiquement par JavaScript -->
-  <title>Article - Réveil Douceur</title>
-  <meta name="description" content="Article sur Réveil Douceur">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="Réveil Douceur">
+  <title>Page introuvable - Réveil Douceur</title>
+  <meta name="robots" content="noindex, nofollow">
 
   <!-- Theme Color -->
   <meta name="theme-color" content="#5B7B6F" media="(prefers-color-scheme: light)">
@@ -34,22 +28,23 @@
 <body>
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-  <!-- Header -->
-  <div id="header-include"></div>
+  <?php include 'includes/header.php'; ?>
 
   <main id="main-content">
     <div class="container">
-      <!-- Contenu de l'article chargé dynamiquement -->
-      <div id="article-content">
-        <div class="loader">
-          <div class="loader__spinner"></div>
-        </div>
+      <div class="error-page">
+        <div class="error-page__code">404</div>
+        <h1 class="error-page__title">Page introuvable</h1>
+        <p class="error-page__text">
+          La page que vous recherchez semble avoir disparu ou n'a jamais existé.<br>
+          Pas de panique, même les meilleurs explorateurs se perdent parfois.
+        </p>
+        <a href="/" class="btn btn--primary">Retour à l'accueil</a>
       </div>
     </div>
   </main>
 
-  <!-- Footer -->
-  <div id="footer-include"></div>
+  <?php include 'includes/footer.php'; ?>
 
   <script src="/js/app.js"></script>
 </body>
