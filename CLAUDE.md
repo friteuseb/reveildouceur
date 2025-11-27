@@ -17,7 +17,9 @@
 ```
 /articles/
   YYYY-MM-DD_slug-de-l-article.html    # Article HTML
-  YYYY-MM-DD_slug-de-l-article.svg     # Illustration SVG associée
+  YYYY-MM-DD_slug-de-l-article.svg     # Illustration SVG (backup/source)
+/images/illustrations/
+  YYYY-MM-DD_slug-de-l-article.png     # Illustration PNG (utilisée pour le partage social)
 /css/style.css                          # Styles (inclut dark mode)
 /js/app.js                              # Chargement dynamique des articles
 /includes/header.html                   # Header commun
@@ -27,7 +29,7 @@
 ## Format d'un article
 
 ### Nom de fichier
-`YYYY-MM-DD_slug-en-minuscules.html` + `.svg` correspondant
+`YYYY-MM-DD_slug-en-minuscules.html` + illustration PNG dans `/images/illustrations/`
 
 ### Structure HTML requise
 ```html
@@ -35,9 +37,9 @@
 <html lang="fr">
 <head>
   <!-- SEO: title, description, canonical -->
-  <!-- Open Graph: og:type, og:url, og:title, og:description, og:image -->
-  <!-- Twitter Cards: twitter:card, twitter:title, twitter:description, twitter:image -->
-  <!-- Schema.org JSON-LD -->
+  <!-- Open Graph: og:image pointe vers /images/illustrations/YYYY-MM-DD_slug.png -->
+  <!-- Twitter Cards: twitter:image pointe vers /images/illustrations/YYYY-MM-DD_slug.png -->
+  <!-- Schema.org JSON-LD: image pointe vers /images/illustrations/YYYY-MM-DD_slug.png -->
   <link rel="stylesheet" href="/css/style.css">
   <script src="/js/config.js"></script>
 </head>
@@ -50,7 +52,7 @@
         <h1 class="article__title">Titre</h1>
       </header>
       <figure class="article__hero-image">
-        <img src="/articles/YYYY-MM-DD_slug.svg" alt="Description" loading="eager">
+        <img src="/images/illustrations/YYYY-MM-DD_slug.png" alt="Description" loading="eager">
       </figure>
       <div class="article__content">
         <!-- Contenu -->
@@ -68,6 +70,11 @@
 </body>
 </html>
 ```
+
+**IMPORTANT pour les images :**
+- Toutes les méta images (og:image, twitter:image, Schema.org) doivent pointer vers `/images/illustrations/YYYY-MM-DD_slug.png`
+- L'image hero de l'article utilise aussi ce chemin PNG
+- Les fichiers SVG dans `/articles/` sont des fichiers sources/backup, pas pour le partage social
 
 ### Style d'écriture
 

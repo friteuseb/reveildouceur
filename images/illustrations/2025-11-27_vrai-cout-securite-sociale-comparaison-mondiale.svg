@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="barFrance" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3182ce"/>
+      <stop offset="100%" style="stop-color:#63b3ed"/>
+    </linearGradient>
+    <linearGradient id="barGermany" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d69e2e"/>
+      <stop offset="100%" style="stop-color:#ecc94b"/>
+    </linearGradient>
+    <linearGradient id="barSwiss" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e53e3e"/>
+      <stop offset="100%" style="stop-color:#fc8181"/>
+    </linearGradient>
+    <linearGradient id="barUSA" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#805ad5"/>
+      <stop offset="100%" style="stop-color:#b794f4"/>
+    </linearGradient>
+    <linearGradient id="barIntl" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38a169"/>
+      <stop offset="100%" style="stop-color:#68d391"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="80" fill="#4a5568" opacity="0.3"/>
+  <circle cx="750" cy="400" r="100" fill="#4a5568" opacity="0.2"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">
+    Coût annuel de la santé par pays
+  </text>
+  <text x="400" y="65" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="13">
+    Pour un salaire équivalent à 2 500 € brut/mois
+  </text>
+
+  <!-- Key stat box -->
+  <rect x="30" y="85" width="170" height="90" rx="8" fill="#2d3748" filter="url(#shadow)"/>
+  <text x="115" y="115" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">EN FRANCE</text>
+  <text x="115" y="145" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="32" font-weight="bold">40%</text>
+  <text x="115" y="165" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">du super-brut prélevé</text>
+
+  <!-- Second stat box -->
+  <rect x="215" y="85" width="170" height="90" rx="8" fill="#2d3748" filter="url(#shadow)"/>
+  <text x="300" y="115" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">SANTE SEULE</text>
+  <text x="300" y="145" text-anchor="middle" fill="#63b3ed" font-family="Arial, sans-serif" font-size="32" font-weight="bold">5 000 €</text>
+  <text x="300" y="165" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">par an (+ mutuelle)</text>
+
+  <!-- Third stat box -->
+  <rect x="400" y="85" width="170" height="90" rx="8" fill="#2d3748" filter="url(#shadow)"/>
+  <text x="485" y="115" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">RESTE A CHARGE FR</text>
+  <text x="485" y="145" text-anchor="middle" fill="#68d391" font-family="Arial, sans-serif" font-size="32" font-weight="bold">~8%</text>
+  <text x="485" y="165" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">parmi les plus bas</text>
+
+  <!-- Fourth stat box -->
+  <rect x="585" y="85" width="185" height="90" rx="8" fill="#2d3748" filter="url(#shadow)"/>
+  <text x="677" y="115" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">DEFICIT SECU 2025</text>
+  <text x="677" y="145" text-anchor="middle" fill="#fc8181" font-family="Arial, sans-serif" font-size="32" font-weight="bold">-23 Md€</text>
+  <text x="677" y="165" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">prévu cette année</text>
+
+  <!-- Bar chart section -->
+  <text x="400" y="210" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="15" font-weight="bold">
+    Comparaison du coût annuel santé
+  </text>
+
+  <!-- France bar -->
+  <text x="50" y="247" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="13">France</text>
+  <rect x="130" y="233" width="285" height="22" rx="4" fill="url(#barFrance)"/>
+  <text x="425" y="249" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">~5 000 € + mutuelle</text>
+  <text x="620" y="249" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">Employeur 70%</text>
+
+  <!-- Germany bar -->
+  <text x="50" y="282" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="13">Allemagne</text>
+  <rect x="130" y="268" width="270" height="22" rx="4" fill="url(#barGermany)"/>
+  <text x="410" y="284" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">~4 900 €</text>
+  <text x="620" y="284" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">50/50</text>
+
+  <!-- Switzerland bar -->
+  <text x="50" y="317" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="13">Suisse</text>
+  <rect x="130" y="303" width="310" height="22" rx="4" fill="url(#barSwiss)"/>
+  <text x="450" y="319" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">~5 500 €</text>
+  <text x="620" y="319" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">100% salarié</text>
+
+  <!-- USA bar -->
+  <text x="50" y="352" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="13">USA</text>
+  <rect x="130" y="338" width="480" height="22" rx="4" fill="url(#barUSA)"/>
+  <text x="620" y="354" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">~13 000 €</text>
+  <text x="720" y="354" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">Variable</text>
+
+  <!-- International insurance bar -->
+  <text x="50" y="387" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="13">Assur. Intl</text>
+  <rect x="130" y="373" width="140" height="22" rx="4" fill="url(#barIntl)"/>
+  <text x="280" y="389" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">1 500-3 000 €</text>
+  <text x="620" y="389" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">Exclusions possibles</text>
+
+  <!-- Scale indicators -->
+  <line x1="130" y1="405" x2="130" y2="410" stroke="#718096" stroke-width="1"/>
+  <text x="130" y="422" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="10">0 €</text>
+
+  <line x1="285" y1="405" x2="285" y2="410" stroke="#718096" stroke-width="1"/>
+  <text x="285" y="422" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="10">5 000 €</text>
+
+  <line x1="440" y1="405" x2="440" y2="410" stroke="#718096" stroke-width="1"/>
+  <text x="440" y="422" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="10">10 000 €</text>
+
+  <line x1="595" y1="405" x2="595" y2="410" stroke="#718096" stroke-width="1"/>
+  <text x="595" y="422" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="10">15 000 €</text>
+
+  <!-- Footer -->
+  <text x="400" y="443" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="10">
+    reveildouceur.fr | Sources : URSSAF, OCDE, Banque Mondiale
+  </text>
+</svg>
