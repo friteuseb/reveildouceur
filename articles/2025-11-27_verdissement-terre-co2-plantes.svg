@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#276749"/>
+      <stop offset="100%" style="stop-color:#48bb78"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <text x="400" y="28" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="18" font-weight="600">LE VERDISSEMENT DE LA TERRE PAR LE CO2</text>
+  <text x="400" y="48" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">35 ans de donnees satellites NASA (1982-2016)</text>
+
+  <!-- World map simplified with greening effect -->
+  <g transform="translate(50, 70)">
+    <rect x="0" y="0" width="420" height="180" rx="6" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+    <text x="210" y="20" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="600">ZONES DE VERDISSEMENT (1982-2016)</text>
+
+    <!-- Simplified world representation with green bars -->
+    <rect x="20" y="40" width="380" height="120" rx="4" fill="#1a1a1a"/>
+
+    <!-- Green patches representing vegetation increase -->
+    <rect x="30" y="50" width="60" height="35" rx="2" fill="url(#greenGrad)" opacity="0.8"/>
+    <rect x="100" y="55" width="45" height="45" rx="2" fill="url(#greenGrad)" opacity="0.9"/>
+    <rect x="155" y="45" width="70" height="50" rx="2" fill="url(#greenGrad)" opacity="0.95"/>
+    <rect x="235" y="60" width="55" height="40" rx="2" fill="url(#greenGrad)" opacity="0.7"/>
+    <rect x="300" y="50" width="80" height="55" rx="2" fill="url(#greenGrad)" opacity="0.85"/>
+
+    <!-- Labels -->
+    <text x="60" y="100" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Amerique N.</text>
+    <text x="122" y="115" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Amazonie</text>
+    <text x="190" y="110" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Afrique</text>
+    <text x="262" y="115" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Inde</text>
+    <text x="340" y="120" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Chine/Asie</text>
+
+    <text x="210" y="150" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="600">25-50% des terres vegetalisees ont verdi</text>
+  </g>
+
+  <!-- Contribution breakdown -->
+  <g transform="translate(490, 70)">
+    <rect x="0" y="0" width="260" height="180" rx="6" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+    <text x="130" y="22" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="600">CAUSES DU VERDISSEMENT</text>
+
+    <!-- Pie chart simplified as bars -->
+    <g transform="translate(20, 40)">
+      <rect x="0" y="0" width="154" height="22" rx="3" fill="#48bb78"/>
+      <text x="5" y="15" fill="#1a202c" font-family="Inter, sans-serif" font-size="10" font-weight="600">CO2 fertilisation</text>
+      <text x="147" y="15" text-anchor="end" fill="#1a202c" font-family="Inter, sans-serif" font-size="10" font-weight="700">70%</text>
+    </g>
+
+    <g transform="translate(20, 68)">
+      <rect x="0" y="0" width="20" height="18" rx="3" fill="#4299e1"/>
+      <text x="25" y="13" fill="#4299e1" font-family="Inter, sans-serif" font-size="9">Depot azote</text>
+      <text x="130" y="13" fill="#4299e1" font-family="Inter, sans-serif" font-size="9" font-weight="600">9%</text>
+    </g>
+
+    <g transform="translate(20, 92)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#ed8936"/>
+      <text x="25" y="13" fill="#ed8936" font-family="Inter, sans-serif" font-size="9">Climat (T, pluie)</text>
+      <text x="130" y="13" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="600">8%</text>
+    </g>
+
+    <g transform="translate(20, 116)">
+      <rect x="0" y="0" width="9" height="18" rx="3" fill="#9f7aea"/>
+      <text x="25" y="13" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9">Usage des sols</text>
+      <text x="130" y="13" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9" font-weight="600">4%</text>
+    </g>
+
+    <text x="130" y="160" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Source: Etude Nature Climate Change</text>
+  </g>
+
+  <!-- Key stats boxes -->
+  <g transform="translate(50, 270)">
+    <rect x="0" y="0" width="170" height="70" rx="6" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="600">SURFACE GAGNEE</text>
+    <text x="85" y="45" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="700">2x les USA</text>
+    <text x="85" y="62" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">en nouvelles feuilles</text>
+  </g>
+
+  <g transform="translate(235, 270)">
+    <rect x="0" y="0" width="170" height="70" rx="6" fill="#2d3748" stroke="#4299e1" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="10" font-weight="600">EFFET CLIMATIQUE</text>
+    <text x="85" y="45" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="700">-0,2 a -0,25C</text>
+    <text x="85" y="62" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">rechauffement freine</text>
+  </g>
+
+  <g transform="translate(420, 270)">
+    <rect x="0" y="0" width="170" height="70" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="600">ABSORPTION CO2</text>
+    <text x="85" y="45" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="700">30%</text>
+    <text x="85" y="62" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">des emissions humaines</text>
+  </g>
+
+  <g transform="translate(605, 270)">
+    <rect x="0" y="0" width="145" height="70" rx="6" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="72" y="20" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10" font-weight="600">LIMITE</text>
+    <text x="72" y="45" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700">Effet decroit</text>
+    <text x="72" y="62" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">depuis 2015</text>
+  </g>
+
+  <!-- Bottom conclusion -->
+  <g transform="translate(50, 360)">
+    <rect x="0" y="0" width="700" height="65" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="350" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">CE QU'IL FAUT RETENIR</text>
+    <text x="350" y="38" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10">Oui, le CO2 fertilise les plantes et la Terre verdit - c'est un fait mesure</text>
+    <text x="350" y="53" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Mais l'effet s'essouffle et ne compense pas les emissions (70% restent dans l'air/oceans)</text>
+  </g>
+
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>

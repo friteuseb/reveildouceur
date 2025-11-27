@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <text x="400" y="28" text-anchor="middle" fill="#ffffff" font-family="Playfair Display, serif" font-size="18" font-weight="600">CO2 À TRAVERS LES ÂGES GÉOLOGIQUES</text>
+  <text x="400" y="48" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">800 000 ans de données directes (carottes glaciaires)</text>
+
+  <!-- Main graph area -->
+  <g transform="translate(60, 70)">
+    <!-- Y axis -->
+    <line x1="50" y1="0" x2="50" y2="200" stroke="#4a5568" stroke-width="2"/>
+    <text x="25" y="10" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">ppm</text>
+    <text x="40" y="20" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8" text-anchor="end">420</text>
+    <text x="40" y="70" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8" text-anchor="end">300</text>
+    <text x="40" y="120" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8" text-anchor="end">200</text>
+    <text x="40" y="200" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8" text-anchor="end">170</text>
+
+    <!-- X axis -->
+    <line x1="50" y1="200" x2="680" y2="200" stroke="#4a5568" stroke-width="2"/>
+
+    <!-- Historical range band (170-300 ppm) -->
+    <rect x="50" y="48" width="580" height="152" fill="#4299e1" opacity="0.15"/>
+    <text x="340" y="130" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="10">Plage historique : 170-300 ppm</text>
+
+    <!-- CO2 oscillation line (simplified) -->
+    <polyline points="50,150 100,100 150,160 200,90 250,155 300,85 350,150 400,80 450,145 500,75 550,140 580,70 630,15"
+              fill="none" stroke="#48bb78" stroke-width="2"/>
+
+    <!-- Current level line -->
+    <line x1="50" y1="15" x2="680" y2="15" stroke="#e53e3e" stroke-width="1" stroke-dasharray="4,4"/>
+    <text x="685" y="18" fill="#e53e3e" font-family="Inter, sans-serif" font-size="9">422 ppm (2024)</text>
+
+    <!-- Pre-industrial max line -->
+    <line x1="50" y1="48" x2="630" y2="48" stroke="#ed8936" stroke-width="1" stroke-dasharray="4,4"/>
+    <text x="635" y="51" fill="#ed8936" font-family="Inter, sans-serif" font-size="8">300 ppm max</text>
+
+    <!-- Time labels -->
+    <text x="50" y="220" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">-800k ans</text>
+    <text x="340" y="220" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">-400k ans</text>
+    <text x="630" y="220" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">Aujourd'hui</text>
+
+    <!-- Annotations -->
+    <circle cx="630" cy="15" r="4" fill="#e53e3e"/>
+    <text x="630" y="35" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="8" font-weight="600">+40%</text>
+  </g>
+
+  <!-- Key stats boxes -->
+  <g transform="translate(50, 310)">
+    <rect x="0" y="0" width="170" height="65" rx="6" fill="#2d3748" stroke="#4299e1" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="10" font-weight="600">CAROTTES GLACIAIRES</text>
+    <text x="85" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700">800 000 ans</text>
+    <text x="85" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">de données directes</text>
+  </g>
+
+  <g transform="translate(235, 310)">
+    <rect x="0" y="0" width="170" height="65" rx="6" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#e53e3e" font-family="Inter, sans-serif" font-size="10" font-weight="600">NIVEAU ACTUEL</text>
+    <text x="85" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700">422 ppm</text>
+    <text x="85" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">record sur 800k ans</text>
+  </g>
+
+  <g transform="translate(420, 310)">
+    <rect x="0" y="0" width="170" height="65" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+    <text x="85" y="20" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="600">VITESSE ACTUELLE</text>
+    <text x="85" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700">×100</text>
+    <text x="85" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">vs augmentations naturelles</text>
+  </g>
+
+  <g transform="translate(605, 310)">
+    <rect x="0" y="0" width="145" height="65" rx="6" fill="#2d3748" stroke="#9f7aea" stroke-width="2"/>
+    <text x="72" y="20" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="10" font-weight="600">DERNIÈRE FOIS</text>
+    <text x="72" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700">3-5 M ans</text>
+    <text x="72" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">pour 400+ ppm</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="405" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">La Terre a connu des niveaux plus élevés, mais dans des contextes très différents (pas de glace, mer +60m)</text>
+
+  <text x="790" y="440" text-anchor="end" fill="#4a5568" font-family="Inter, sans-serif" font-size="10">reveildouceur.fr</text>
+</svg>
