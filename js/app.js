@@ -75,12 +75,12 @@
     },
 
     updateToggleButton(theme) {
-      const toggle = document.getElementById('theme-toggle');
-      if (toggle) {
+      const toggles = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+      toggles.forEach(toggle => {
         toggle.setAttribute('aria-label',
           theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'
         );
-      }
+      });
     },
 
     toggle() {
@@ -91,10 +91,10 @@
     },
 
     bindToggle() {
-      const toggle = document.getElementById('theme-toggle');
-      if (toggle) {
+      const toggles = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+      toggles.forEach(toggle => {
         toggle.addEventListener('click', () => this.toggle());
-      }
+      });
     }
   };
 
