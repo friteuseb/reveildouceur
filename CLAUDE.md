@@ -219,10 +219,35 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
 ## Workflow complet pour un nouvel article
 
 1. **Rédiger l'article HTML** dans `/articles/YYYY-MM-DD_slug.html`
+   - Utiliser un article existant comme template
+   - Vérifier les meta tags (og:image, twitter:image, Schema.org → PNG)
+   - Inclure `<div id="header-include"></div>` et `<div id="footer-include"></div>`
+
 2. **Créer l'infographie SVG** dans `/articles/YYYY-MM-DD_slug.svg`
-3. **Ajouter un prompt spécifique** dans `scripts/generate-illustrations.py` (optionnel mais recommandé)
-4. **Générer l'image Moebius** : `python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html`
-5. **Commit et deploy** : `git add -A && git commit -m "..." && git deploy`
+   - viewBox="0 0 800 450", fond sombre, données clés
+
+3. **Ajouter l'article dans `/articles/index.json`** (OBLIGATOIRE)
+   ```json
+   { "file": "YYYY-MM-DD_slug.html", "category": "categorie" }
+   ```
+   Catégories : `economie`, `medias`, `tech`, `environnement`, `societe`, `sante`, `geopolitique`
+
+4. **Ajouter un prompt spécifique** dans `scripts/generate-illustrations.py` > `ARTICLE_SPECIFIC_PROMPTS`
+   ```python
+   "slug-sans-date": "Description visuelle pour l'IA...",
+   ```
+
+5. **Générer l'image Moebius** : `python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html`
+   - Utilise Pollinations.ai (gratuit) ou Google Gemini si clé API dans `.env`
+
+6. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
+   - `git deploy` = push + purge cache Cloudflare
+
+## Notes techniques
+
+- **Articles HTML** : chargent header/footer via JS (`fetch('/includes/header.html')`)
+- **Pages PHP** : utilisent `include 'includes/header.php'`
+- Les deux systèmes coexistent (hybride PHP/HTML)
 
 ## Repo GitHub
 `git@github.com:friteuseb/reveildouceur.git`
