@@ -17,9 +17,12 @@
 ```
 /articles/
   YYYY-MM-DD_slug-de-l-article.html    # Article HTML
-  YYYY-MM-DD_slug-de-l-article.svg     # Illustration SVG (backup/source)
+  YYYY-MM-DD_slug-de-l-article.svg     # Infographie SVG (pour data-viz en bas de l'article)
 /images/illustrations/
-  YYYY-MM-DD_slug-de-l-article.png     # Illustration PNG (utilisée pour le partage social)
+  YYYY-MM-DD_slug-de-l-article.png     # Illustration PNG style Moebius (hero + partage social)
+/scripts/
+  generate-illustrations.py             # Script de génération d'images Moebius
+  purge-cache.sh                        # Purge du cache Cloudflare
 /css/style.css                          # Styles (inclut dark mode)
 /js/app.js                              # Chargement dynamique des articles
 /includes/header.html                   # Header commun
@@ -52,11 +55,17 @@
         <h1 class="article__title">Titre</h1>
       </header>
       <figure class="article__hero-image">
+        <!-- Image PNG style Moebius générée par le script -->
         <img src="/images/illustrations/YYYY-MM-DD_slug.png" alt="Description" loading="eager">
       </figure>
       <div class="article__content">
-        <!-- Contenu -->
+        <!-- Contenu de l'article -->
       </div>
+      <figure class="article__data-viz">
+        <!-- Infographie SVG avec les données clés -->
+        <figcaption>Les données clés en un coup d'œil</figcaption>
+        <img src="/articles/YYYY-MM-DD_slug.svg" alt="Infographie" loading="lazy">
+      </figure>
       <aside class="article__sources">
         <h3>Sources et références</h3>
         <ul>
@@ -71,10 +80,17 @@
 </html>
 ```
 
-**IMPORTANT pour les images :**
-- Toutes les méta images (og:image, twitter:image, Schema.org) doivent pointer vers `/images/illustrations/YYYY-MM-DD_slug.png`
-- L'image hero de l'article utilise aussi ce chemin PNG
-- Les fichiers SVG dans `/articles/` sont des fichiers sources/backup, pas pour le partage social
+**IMPORTANT pour les images (2 types) :**
+
+1. **PNG style Moebius** (`/images/illustrations/`) :
+   - Utilisé pour : hero image, og:image, twitter:image, Schema.org
+   - Généré avec : `python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html`
+   - Style : illustration artistique Moebius (Jean Giraud)
+
+2. **SVG infographique** (`/articles/`) :
+   - Utilisé pour : section data-viz en bas de l'article
+   - Créé manuellement avec les données clés de l'article
+   - Style : graphiques, chiffres, fond sombre (#1a202c), couleurs vives
 
 ### Style d'écriture
 
@@ -103,14 +119,18 @@
   - Texte : blanc (#ffffff), gris (#a0aec0)
 - Inclure : données clés, graphiques simplifiés, titre
 
-## Articles existants (au 26/11/2025)
+## Articles existants (au 28/11/2025)
 
 ### Économie/Finance
 - `votre-salaire-vaut-combien-en-vrai` - Inflation, création monétaire, pouvoir d'achat
 - `creation-monetaire-comment-nait-largent` - Fonctionnement de la création monétaire
+- `fraude-fiscale-vs-sociale-vrais-chiffres` - Comparaison fraude fiscale et sociale
+- `vrai-cout-securite-sociale-comparaison-mondiale` - Système de santé comparé
 
 ### Médias
 - `qui-possede-votre-journal-prefere` - Concentration des médias, 9 milliardaires
+- `fact-checkers-le-dossier-complet` - Fact-checkers, financement, limites
+- `qui-desinforme-vraiment-chiffres` - Désinformation, sources et chiffres
 
 ### Technologie
 - `pourquoi-vous-ne-pouvez-pas-lacher-votre-telephone` - Addiction smartphone, dark patterns
@@ -120,6 +140,11 @@
 - `europe-seule-a-sauver-la-planete` - Politiques climatiques, 8% des émissions
 - `qui-pollue-vraiment-le-classement` - 4 méthodes de calcul des émissions
 - `bio-supermarche-vs-maraicher-local` - Bio importé vs local conventionnel
+- `co2-a-travers-les-ages-geologiques` - CO2 historique, perspective géologique
+- `verdissement-terre-co2-plantes` - Effet du CO2 sur la végétation
+- `nucleaire-francais-danger-ou-solution` - Nucléaire français, risques et avantages
+- `voiture-electrique-bilan-carbone-reel` - Bilan carbone véhicules électriques
+- `geoingenierie-le-dossier-complet` - Géoingénierie, techniques et risques
 
 ### Société
 - `dictatures-democraties-comparons-vraiment` - France/Chine/Russie, libertés civiles
@@ -127,14 +152,26 @@
 - `violence-psychologique-suicide-masculin-le-tabou` - Suicide masculin, violences psy
 - `hommes-sensibles-ce-que-disent-les-etudes` - Préférences déclarées vs révélées (femmes)
 - `ce-que-les-hommes-disent-vouloir-vs-realite` - Préférences déclarées vs révélées (hommes)
+- `demographie-europeenne-le-sujet-tabou` - Démographie, natalité européenne
+- `france-liberte-expression-ce-que-disent-les-chiffres` - Censure, liberté d'expression, comparaisons
 
 ### Santé/Alimentation
 - `additifs-alimentaires-ce-que-dit-la-science` - Additifs, études scientifiques
 - `pesticides-ce-que-revelent-les-etudes` - Pesticides, données scientifiques
+- `covid-ce-quon-disait-vs-ce-quon-sait` - COVID, évolution des connaissances
+- `systeme-sante-francais-equation-impossible` - Système de santé, financement
 
 ### Religion/Culture
 - `textes-religieux-paix-violence-analyse-academique` - Analyse comparative des textes
 - `politiques-immigration-analyse-comparative` - Politiques par pays
+
+### Géopolitique
+- `ukraine-interets-economiques-chaque-camp` - Ukraine, intérêts économiques
+- `france-usa-souverainete-a-geometrie-variable` - Souveraineté, comparaison
+- `salvador-france-faible-avec-les-loups` - Salvador, sécurité, comparaison
+
+### Politique/Économie française
+- `france-quel-niveau-de-socialisme` - France, niveau de redistribution
 
 ## Idées d'articles futurs
 
@@ -166,12 +203,26 @@
 ## Commandes utiles
 
 ```bash
-# Commit et push un nouvel article
-git add -A && git commit -m "Ajout article: [titre]" && git push
+# Générer l'illustration PNG style Moebius pour un article
+python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html
 
-# Sur le serveur de prod
-git pull origin main
+# Générer les illustrations manquantes pour tous les articles
+python3 scripts/generate-illustrations.py --missing
+
+# Commit et push avec purge du cache Cloudflare
+git add -A && git commit -m "Ajout article: [titre]" && git deploy
+
+# Ajout d'un prompt spécifique pour un nouvel article
+# Éditer scripts/generate-illustrations.py > ARTICLE_SPECIFIC_PROMPTS
 ```
+
+## Workflow complet pour un nouvel article
+
+1. **Rédiger l'article HTML** dans `/articles/YYYY-MM-DD_slug.html`
+2. **Créer l'infographie SVG** dans `/articles/YYYY-MM-DD_slug.svg`
+3. **Ajouter un prompt spécifique** dans `scripts/generate-illustrations.py` (optionnel mais recommandé)
+4. **Générer l'image Moebius** : `python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html`
+5. **Commit et deploy** : `git add -A && git commit -m "..." && git deploy`
 
 ## Repo GitHub
 `git@github.com:friteuseb/reveildouceur.git`
