@@ -48,4 +48,5 @@ AddType image/webp .webp
 AddType image/svg+xml .svg
 
 # Traiter les fichiers .html comme PHP (pour les articles avec includes)
-AddHandler application/x-httpd-php .html
+# DÉSACTIVÉ - cause des problèmes avec ddev, les includes sont gérés par JS
+# AddHandler application/x-httpd-php .html
