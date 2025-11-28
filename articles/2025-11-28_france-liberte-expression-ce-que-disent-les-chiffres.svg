@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="barFrance" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3182ce"/>
+      <stop offset="100%" style="stop-color:#63b3ed"/>
+    </linearGradient>
+    <linearGradient id="barOther" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a5568"/>
+      <stop offset="100%" style="stop-color:#718096"/>
+    </linearGradient>
+    <linearGradient id="barDanger" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c53030"/>
+      <stop offset="100%" style="stop-color:#fc8181"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    Demandes de suppression de contenu
+  </text>
+  <text x="400" y="55" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">
+    Pour 100 000 internautes (2013-2018)
+  </text>
+
+  <!-- Chart area -->
+  <g transform="translate(50, 80)">
+    <!-- Y axis labels and bars -->
+
+    <!-- Russie -->
+    <text x="0" y="20" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11" text-anchor="start">Russie</text>
+    <rect x="80" y="8" width="365" height="20" rx="3" fill="url(#barDanger)" opacity="0.9"/>
+    <text x="455" y="22" fill="#fc8181" font-family="Arial, sans-serif" font-size="11" font-weight="bold">146</text>
+
+    <!-- Turquie -->
+    <text x="0" y="55" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11" text-anchor="start">Turquie</text>
+    <rect x="80" y="43" width="345" height="20" rx="3" fill="url(#barDanger)" opacity="0.9"/>
+    <text x="435" y="57" fill="#fc8181" font-family="Arial, sans-serif" font-size="11" font-weight="bold">138</text>
+
+    <!-- France -->
+    <text x="0" y="90" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" text-anchor="start" font-weight="bold">France</text>
+    <rect x="80" y="78" width="242" height="20" rx="3" fill="url(#barFrance)"/>
+    <text x="332" y="92" fill="#63b3ed" font-family="Arial, sans-serif" font-size="11" font-weight="bold">97</text>
+
+    <!-- Allemagne -->
+    <text x="0" y="125" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11" text-anchor="start">Allemagne</text>
+    <rect x="80" y="113" width="132" height="20" rx="3" fill="url(#barOther)"/>
+    <text x="222" y="127" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">53</text>
+
+    <!-- Inde -->
+    <text x="0" y="160" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11" text-anchor="start">Inde</text>
+    <rect x="80" y="148" width="30" height="20" rx="3" fill="url(#barOther)"/>
+    <text x="120" y="162" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">12</text>
+
+    <!-- USA -->
+    <text x="0" y="195" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11" text-anchor="start">USA</text>
+    <rect x="80" y="183" width="7" height="20" rx="3" fill="url(#barOther)"/>
+    <text x="97" y="197" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">3</text>
+  </g>
+
+  <!-- Key stats boxes -->
+  <g transform="translate(520, 100)">
+    <rect x="0" y="0" width="230" height="70" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="115" y="25" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Classement RSF 2024</text>
+    <text x="115" y="52" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="24" font-weight="bold">21e / 180</text>
+  </g>
+
+  <g transform="translate(520, 185)">
+    <rect x="0" y="0" width="230" height="70" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="115" y="25" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Freedom House</text>
+    <text x="115" y="52" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="18" font-weight="bold">LIBRE</text>
+  </g>
+
+  <!-- Timeline section -->
+  <g transform="translate(50, 310)">
+    <text x="0" y="0" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Lois censurées par le Conseil constitutionnel</text>
+
+    <!-- Timeline -->
+    <line x1="0" y1="30" x2="700" y2="30" stroke="#4a5568" stroke-width="2"/>
+
+    <!-- 2020 - Loi Avia -->
+    <circle cx="100" cy="30" r="8" fill="#e53e3e"/>
+    <text x="100" y="55" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">2020</text>
+    <text x="100" y="70" text-anchor="middle" fill="#fc8181" font-family="Arial, sans-serif" font-size="9">Loi Avia</text>
+
+    <!-- 2021 - Art 24 -->
+    <circle cx="300" cy="30" r="8" fill="#e53e3e"/>
+    <text x="300" y="55" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">2021</text>
+    <text x="300" y="70" text-anchor="middle" fill="#fc8181" font-family="Arial, sans-serif" font-size="9">Art. 24 (police)</text>
+
+    <!-- 2023 - Surveillance -->
+    <circle cx="500" cy="30" r="8" fill="#e53e3e"/>
+    <text x="500" y="55" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">2023</text>
+    <text x="500" y="70" text-anchor="middle" fill="#fc8181" font-family="Arial, sans-serif" font-size="9">Surveillance</text>
+
+    <!-- 2025 - TikTok -->
+    <circle cx="650" cy="30" r="8" fill="#ed8936"/>
+    <text x="650" y="55" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">2025</text>
+    <text x="650" y="70" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="9">TikTok NC</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50, 410)">
+    <rect x="0" y="0" width="12" height="12" fill="#e53e3e"/>
+    <text x="18" y="10" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Censuré par Conseil constit.</text>
+
+    <rect x="180" y="0" width="12" height="12" fill="#ed8936"/>
+    <text x="198" y="10" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Annulé par Conseil d'État</text>
+
+    <rect x="380" y="0" width="12" height="12" fill="#3182ce"/>
+    <text x="398" y="10" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">France</text>
+
+    <rect x="480" y="0" width="12" height="12" fill="#c53030"/>
+    <text x="498" y="10" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Régimes autoritaires</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="442" text-anchor="middle" fill="#4a5568" font-family="Arial, sans-serif" font-size="9">
+    Sources : Twitter/Meta Transparency Reports, RSF, Freedom House | reveildouceur.fr
+  </text>
+</svg>
