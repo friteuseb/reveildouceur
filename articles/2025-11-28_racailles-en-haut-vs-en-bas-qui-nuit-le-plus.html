@@ -328,14 +328,6 @@
 
         <h2>Le paradoxe médiatique</h2>
 
-        <div class="chart-container">
-          <h3>Ce qu'on voit au 20h vs ce qui coûte le plus</h3>
-          <div class="chart-wrapper">
-            <canvas id="chart-mediatique"></canvas>
-          </div>
-          <p class="chart-legend">Illustration conceptuelle basée sur les études de Laurent Mucchielli et Acrimed [8]</p>
-        </div>
-
         <p>Quelques constats :</p>
         <ul>
           <li>Un vol de scooter fait le JT régional. Un montage fiscal de 50 millions ? Rarement.</li>
@@ -625,50 +617,7 @@
         }
       });
 
-      // 6. Graphique paradoxe médiatique (conceptuel)
-      new Chart(document.getElementById('chart-mediatique'), {
-        type: 'radar',
-        data: {
-          labels: ['Couverture médiatique', 'Coût économique', 'Victimes', 'Moyens de répression', 'Condamnations'],
-          datasets: [
-            {
-              label: 'Délinquance de rue',
-              data: [90, 15, 30, 85, 70],
-              backgroundColor: 'rgba(59, 130, 246, 0.2)',
-              borderColor: colors.blue,
-              pointBackgroundColor: colors.blue
-            },
-            {
-              label: 'Délinquance en col blanc',
-              data: [20, 95, 85, 25, 10],
-              backgroundColor: 'rgba(239, 68, 68, 0.2)',
-              borderColor: colors.red,
-              pointBackgroundColor: colors.red
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: 'bottom',
-              labels: { color: colors.text }
-            }
-          },
-          scales: {
-            r: {
-              grid: { color: colors.grid },
-              pointLabels: { color: colors.text },
-              ticks: { display: false },
-              suggestedMin: 0,
-              suggestedMax: 100
-            }
-          }
-        }
-      });
-
-      // 7. Graphique synthèse
+      // 6. Graphique synthèse
       new Chart(document.getElementById('chart-synthese'), {
         type: 'polarArea',
         data: {
