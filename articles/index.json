@@ -9,6 +9,7 @@
   "geopolitique": { "label": "Géopolitique", "color": "#667eea" }
 },
   "articles": [
+    { "file": "2025-11-28_racailles-en-haut-vs-en-bas-qui-nuit-le-plus.html", "category": "societe" },
     { "file": "2025-11-28_france-liberte-expression-ce-que-disent-les-chiffres.html", "category": "societe" },
     { "file": "2025-11-27_vrai-cout-securite-sociale-comparaison-mondiale.html", "category": "economie" },
     { "file": "2025-11-27_voiture-electrique-bilan-carbone-reel.html", "category": "environnement" },
