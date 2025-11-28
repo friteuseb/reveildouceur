@@ -29,53 +29,63 @@
   <text x="200" y="112" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">Délinquance de rue</text>
 
   <!-- Stats en bas -->
-  <rect x="30" y="130" width="340" height="55" rx="8" fill="#2d3748"/>
-  <text x="50" y="155" fill="#3b82f6" font-family="Arial, sans-serif" font-size="28" font-weight="bold">218 500</text>
-  <text x="50" y="175" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">cambriolages par an</text>
-  <text x="230" y="155" fill="#3b82f6" font-family="Arial, sans-serif" font-size="28" font-weight="bold">140 000</text>
-  <text x="230" y="175" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">voitures volées</text>
+  <rect x="30" y="125" width="340" height="50" rx="8" fill="#2d3748"/>
+  <text x="50" y="148" fill="#3b82f6" font-family="Arial, sans-serif" font-size="24" font-weight="bold">218 500</text>
+  <text x="50" y="166" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">cambriolages/an</text>
+  <text x="200" y="148" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="24" font-weight="bold">3,5-6 Md€</text>
+  <text x="200" y="166" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">narcotrafic/an</text>
 
-  <rect x="30" y="195" width="340" height="55" rx="8" fill="#2d3748"/>
-  <text x="50" y="220" fill="#3b82f6" font-family="Arial, sans-serif" font-size="28" font-weight="bold">16 Md€</text>
-  <text x="50" y="240" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">sécurité + prisons/an</text>
-  <text x="230" y="220" fill="#3b82f6" font-family="Arial, sans-serif" font-size="28" font-weight="bold">80 000</text>
-  <text x="230" y="240" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">détenus</text>
+  <rect x="30" y="185" width="340" height="50" rx="8" fill="#2d3748"/>
+  <text x="50" y="208" fill="#3b82f6" font-family="Arial, sans-serif" font-size="24" font-weight="bold">16 Md€</text>
+  <text x="50" y="226" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">sécurité + prisons</text>
+  <text x="200" y="208" fill="#3b82f6" font-family="Arial, sans-serif" font-size="24" font-weight="bold">3 000</text>
+  <text x="200" y="226" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">points de deal</text>
 
   <!-- Poids invisible en bas -->
-  <rect x="30" y="260" width="340" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
-  <text x="200" y="282" text-anchor="middle" fill="#60a5fa" font-family="Arial, sans-serif" font-size="12" font-weight="bold">POIDS INVISIBLE</text>
-  <text x="50" y="305" fill="#ffffff" font-family="Arial, sans-serif" font-size="11">27% des femmes renoncent à sortir seules</text>
-  <text x="50" y="322" fill="#ffffff" font-family="Arial, sans-serif" font-size="11">92% pensent que l'insécurité a progressé</text>
+  <rect x="30" y="245" width="340" height="70" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="200" y="265" text-anchor="middle" fill="#60a5fa" font-family="Arial, sans-serif" font-size="11" font-weight="bold">POIDS INVISIBLE</text>
+  <text x="50" y="285" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">27% des femmes renoncent à sortir seules</text>
+  <text x="50" y="302" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">83% craignent les "quartiers sensibles"</text>
 
   <!-- Colonne droite : En haut -->
   <text x="600" y="95" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="16" font-weight="bold">RACAILLES D'EN HAUT</text>
-  <text x="600" y="112" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">Délinquance en col blanc</text>
+  <text x="600" y="112" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">Cols blancs &amp; politiques</text>
 
   <!-- Stats en haut -->
-  <rect x="430" y="130" width="340" height="55" rx="8" fill="#2d3748"/>
-  <text x="450" y="155" fill="#ef4444" font-family="Arial, sans-serif" font-size="28" font-weight="bold">80-100 Md€</text>
-  <text x="450" y="175" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">fraude fiscale par an</text>
+  <rect x="430" y="125" width="340" height="50" rx="8" fill="#2d3748"/>
+  <text x="450" y="148" fill="#ef4444" font-family="Arial, sans-serif" font-size="24" font-weight="bold">80-100 Md€</text>
+  <text x="450" y="166" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">fraude fiscale/an</text>
 
-  <rect x="430" y="195" width="340" height="55" rx="8" fill="#2d3748"/>
-  <text x="450" y="220" fill="#ef4444" font-family="Arial, sans-serif" font-size="28" font-weight="bold">120-156 Md€</text>
-  <text x="450" y="240" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">coût social du tabac/an</text>
+  <rect x="430" y="185" width="340" height="50" rx="8" fill="#2d3748"/>
+  <text x="450" y="208" fill="#f59e0b" font-family="Arial, sans-serif" font-size="24" font-weight="bold">74%</text>
+  <text x="450" y="226" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">pensent les politiques corrompus</text>
+  <text x="630" y="208" fill="#ef4444" font-family="Arial, sans-serif" font-size="24" font-weight="bold">25e</text>
+  <text x="630" y="226" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">rang corruption (-5)</text>
 
-  <!-- Victimes en haut -->
-  <rect x="430" y="260" width="340" height="80" rx="8" fill="#4a1d1d" stroke="#ef4444" stroke-width="1"/>
-  <text x="600" y="282" text-anchor="middle" fill="#fca5a5" font-family="Arial, sans-serif" font-size="12" font-weight="bold">BILAN HUMAIN</text>
-  <text x="450" y="305" fill="#ffffff" font-family="Arial, sans-serif" font-size="11">Amiante : 100 000 - 180 000 morts</text>
-  <text x="450" y="322" fill="#ffffff" font-family="Arial, sans-serif" font-size="11">Tabac : 75 000 morts/an</text>
+  <!-- Victimes/déni en haut -->
+  <rect x="430" y="245" width="340" height="70" rx="8" fill="#4a1d1d" stroke="#ef4444" stroke-width="1"/>
+  <text x="600" y="265" text-anchor="middle" fill="#fca5a5" font-family="Arial, sans-serif" font-size="11" font-weight="bold">BILAN HUMAIN &amp; DÉMOCRATIQUE</text>
+  <text x="450" y="285" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Amiante : 100 000 - 180 000 morts</text>
+  <text x="450" y="302" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Référendum 2005 : 55% de NON → ignoré</text>
+
+  <!-- Condamnations récentes -->
+  <rect x="430" y="325" width="340" height="45" rx="8" fill="#2d3748"/>
+  <text x="600" y="345" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="11" font-weight="bold">CONDAMNATIONS 2024</text>
+  <text x="450" y="362" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Le Pen • Sarkozy • Chirac • Balkany...</text>
 
   <!-- Comparaison centrale -->
-  <rect x="250" y="355" width="300" height="80" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
-  <text x="400" y="380" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-size="14" font-weight="bold">RAPPORT DE FORCE</text>
-  <text x="400" y="405" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18">Fraude fiscale = <tspan fill="#ef4444" font-weight="bold">8×</tspan> fraude sociale</text>
-  <text x="400" y="425" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">L'une fait le 20h, l'autre fait les lois</text>
+  <rect x="250" y="380" width="300" height="60" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="402" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-size="13" font-weight="bold">RAPPORT DE FORCE</text>
+  <text x="400" y="425" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16">Fraude fiscale = <tspan fill="#ef4444" font-weight="bold">15-25×</tspan> narcotrafic</text>
 
   <!-- Barres de comparaison visuelles -->
-  <rect x="30" y="350" width="160" height="12" rx="6" fill="url(#blueGrad)"/>
-  <text x="30" y="375" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Coût délinquance rue : ~16 Md€</text>
+  <rect x="30" y="335" width="80" height="10" rx="5" fill="url(#blueGrad)"/>
+  <text x="30" y="360" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">Narcotrafic : ~5 Md€</text>
 
-  <rect x="610" y="350" width="160" height="12" rx="6" fill="url(#redGrad)"/>
-  <text x="610" y="375" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Coût fraude fiscale : ~90 Md€</text>
+  <rect x="30" y="375" width="340" height="10" rx="5" fill="url(#redGrad)"/>
+  <text x="30" y="400" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">Fraude fiscale : ~90 Md€</text>
+
+  <!-- Conclusion -->
+  <text x="200" y="435" text-anchor="middle" fill="#60a5fa" font-family="Arial, sans-serif" font-size="11">L'une finit en prison...</text>
+  <text x="600" y="435" text-anchor="middle" fill="#fca5a5" font-family="Arial, sans-serif" font-size="11">...l'autre au Parlement</text>
 </svg>
