@@ -109,13 +109,19 @@
   </g>
 
   <!-- Key insight box -->
-  <rect x="85" y="390" width="350" height="50" fill="#2d3748" stroke="#4a5568" stroke-width="1" rx="6"/>
-  <text x="100" y="410" font-family="Arial, sans-serif" font-size="11" fill="#48bb78" font-weight="bold">99,9% d'ADN commun à tous les humains</text>
-  <text x="100" y="428" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">Une seule espèce : Homo sapiens sapiens</text>
+  <rect x="85" y="390" width="230" height="50" fill="#2d3748" stroke="#4a5568" stroke-width="1" rx="6"/>
+  <text x="100" y="410" font-family="Arial, sans-serif" font-size="11" fill="#48bb78" font-weight="bold">99,9% d'ADN commun</text>
+  <text x="100" y="428" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">Une seule espèce : H. sapiens</text>
+
+  <!-- 2025 discoveries box -->
+  <rect x="325" y="390" width="230" height="50" fill="#2d3748" stroke="#e53e3e" stroke-width="1" rx="6"/>
+  <text x="340" y="407" font-family="Arial, sans-serif" font-size="10" fill="#fc8181" font-weight="bold">DÉCOUVERTES 2025</text>
+  <text x="340" y="422" font-family="Arial, sans-serif" font-size="9" fill="#a0aec0">P. capensis (Afrique du Sud)</text>
+  <text x="340" y="435" font-family="Arial, sans-serif" font-size="9" fill="#a0aec0">Australopithèque (Éthiopie)</text>
 
   <!-- Timeline box -->
-  <rect x="450" y="390" width="310" height="50" fill="#2d3748" stroke="#4a5568" stroke-width="1" rx="6"/>
-  <text x="465" y="410" font-family="Arial, sans-serif" font-size="11" fill="#ed8936" font-weight="bold">Métissage Néandertal : ~47 000 ans</text>
-  <text x="465" y="428" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">Source : Max Planck Institute, 2024</text>
+  <rect x="565" y="390" width="195" height="50" fill="#2d3748" stroke="#4a5568" stroke-width="1" rx="6"/>
+  <text x="580" y="410" font-family="Arial, sans-serif" font-size="10" fill="#ed8936" font-weight="bold">Métissage Néandertal</text>
+  <text x="580" y="428" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">~47 000 ans (Max Planck)</text>
 
 </svg>
