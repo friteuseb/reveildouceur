@@ -1,0 +1,121 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="neandertalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#c05621"/>
+    </linearGradient>
+    <linearGradient id="denisovienGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9f7aea"/>
+      <stop offset="100%" style="stop-color:#6b46c1"/>
+    </linearGradient>
+    <linearGradient id="sapiensGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#276749"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">ADN ARCHAÏQUE DANS LES POPULATIONS ACTUELLES</text>
+
+  <!-- Legend -->
+  <rect x="530" y="55" width="15" height="15" fill="url(#neandertalGrad)" rx="2"/>
+  <text x="550" y="67" font-family="Arial, sans-serif" font-size="11" fill="#a0aec0">Néandertal</text>
+  <rect x="620" y="55" width="15" height="15" fill="url(#denisovienGrad)" rx="2"/>
+  <text x="640" y="67" font-family="Arial, sans-serif" font-size="11" fill="#a0aec0">Dénisovien</text>
+  <rect x="715" y="55" width="15" height="15" fill="url(#sapiensGrad)" rx="2"/>
+  <text x="735" y="67" font-family="Arial, sans-serif" font-size="11" fill="#a0aec0">H. sapiens</text>
+
+  <!-- Y-axis -->
+  <line x1="80" y1="80" x2="80" y2="340" stroke="#4a5568" stroke-width="1"/>
+  <text x="70" y="90" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="end">100%</text>
+  <text x="70" y="145" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="end">90%</text>
+  <text x="70" y="210" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="end">Sapiens</text>
+  <text x="70" y="300" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="end">6%</text>
+  <text x="70" y="330" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="end">0%</text>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="145" x2="760" y2="145" stroke="#4a5568" stroke-width="0.5" stroke-dasharray="5,5"/>
+  <line x1="80" y1="300" x2="760" y2="300" stroke="#4a5568" stroke-width="0.5" stroke-dasharray="5,5"/>
+
+  <!-- Africains subsahariens -->
+  <g transform="translate(120, 0)">
+    <rect x="0" y="85" width="80" height="250" fill="url(#sapiensGrad)" rx="4"/>
+    <rect x="0" y="333" width="80" height="2" fill="url(#neandertalGrad)" rx="1"/>
+    <text x="40" y="360" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Africains</text>
+    <text x="40" y="375" font-family="Arial, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">subsahariens</text>
+    <text x="40" y="100" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">99,5%</text>
+    <text x="40" y="328" font-family="Arial, sans-serif" font-size="9" fill="#ed8936" text-anchor="middle">0,5%</text>
+  </g>
+
+  <!-- Européens -->
+  <g transform="translate(230, 0)">
+    <rect x="0" y="90" width="80" height="230" fill="url(#sapiensGrad)" rx="4"/>
+    <rect x="0" y="320" width="80" height="15" fill="url(#neandertalGrad)" rx="2"/>
+    <text x="40" y="360" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Européens</text>
+    <text x="40" y="105" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">98%</text>
+    <text x="40" y="332" font-family="Arial, sans-serif" font-size="9" fill="#1a202c" text-anchor="middle" font-weight="bold">2%</text>
+  </g>
+
+  <!-- Asiatiques Est -->
+  <g transform="translate(340, 0)">
+    <rect x="0" y="92" width="80" height="225" fill="url(#sapiensGrad)" rx="4"/>
+    <rect x="0" y="317" width="80" height="18" fill="url(#neandertalGrad)" rx="2"/>
+    <text x="40" y="360" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Asiatiques</text>
+    <text x="40" y="375" font-family="Arial, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">de l'Est</text>
+    <text x="40" y="107" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">97,5%</text>
+    <text x="40" y="330" font-family="Arial, sans-serif" font-size="9" fill="#1a202c" text-anchor="middle" font-weight="bold">2,5%</text>
+  </g>
+
+  <!-- Tibétains -->
+  <g transform="translate(450, 0)">
+    <rect x="0" y="92" width="80" height="223" fill="url(#sapiensGrad)" rx="4"/>
+    <rect x="0" y="315" width="80" height="18" fill="url(#neandertalGrad)" rx="2"/>
+    <rect x="0" y="333" width="80" height="2" fill="url(#denisovienGrad)" rx="1"/>
+    <text x="40" y="360" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Tibétains</text>
+    <text x="40" y="107" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">97,3%</text>
+    <text x="40" y="328" font-family="Arial, sans-serif" font-size="9" fill="#1a202c" text-anchor="middle">2,5%</text>
+    <text x="95" y="340" font-family="Arial, sans-serif" font-size="8" fill="#9f7aea" text-anchor="start">EPAS1</text>
+  </g>
+
+  <!-- Mélanésiens -->
+  <g transform="translate(560, 0)">
+    <rect x="0" y="100" width="80" height="195" fill="url(#sapiensGrad)" rx="4"/>
+    <rect x="0" y="295" width="80" height="15" fill="url(#neandertalGrad)" rx="2"/>
+    <rect x="0" y="310" width="80" height="25" fill="url(#denisovienGrad)" rx="2"/>
+    <text x="40" y="360" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Mélanésiens</text>
+    <text x="40" y="375" font-family="Arial, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">(Papouasie)</text>
+    <text x="40" y="115" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">92%</text>
+    <text x="40" y="307" font-family="Arial, sans-serif" font-size="8" fill="#1a202c" text-anchor="middle">2%</text>
+    <text x="40" y="326" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">6%</text>
+  </g>
+
+  <!-- Aborigènes -->
+  <g transform="translate(670, 0)">
+    <rect x="0" y="102" width="80" height="195" fill="url(#sapiensGrad)" rx="4"/>
+    <rect x="0" y="297" width="80" height="15" fill="url(#neandertalGrad)" rx="2"/>
+    <rect x="0" y="312" width="80" height="23" fill="url(#denisovienGrad)" rx="2"/>
+    <text x="40" y="360" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Aborigènes</text>
+    <text x="40" y="375" font-family="Arial, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">australiens</text>
+    <text x="40" y="117" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">93%</text>
+    <text x="40" y="308" font-family="Arial, sans-serif" font-size="8" fill="#1a202c" text-anchor="middle">2%</text>
+    <text x="40" y="326" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">5%</text>
+  </g>
+
+  <!-- Key insight box -->
+  <rect x="85" y="390" width="350" height="50" fill="#2d3748" stroke="#4a5568" stroke-width="1" rx="6"/>
+  <text x="100" y="410" font-family="Arial, sans-serif" font-size="11" fill="#48bb78" font-weight="bold">99,9% d'ADN commun à tous les humains</text>
+  <text x="100" y="428" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">Une seule espèce : Homo sapiens sapiens</text>
+
+  <!-- Timeline box -->
+  <rect x="450" y="390" width="310" height="50" fill="#2d3748" stroke="#4a5568" stroke-width="1" rx="6"/>
+  <text x="465" y="410" font-family="Arial, sans-serif" font-size="11" fill="#ed8936" font-weight="bold">Métissage Néandertal : ~47 000 ans</text>
+  <text x="465" y="428" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">Source : Max Planck Institute, 2024</text>
+
+</svg>
