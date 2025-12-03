@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgNarrative" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5af19"/>
+      <stop offset="100%" style="stop-color:#f12711"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgNarrative)"/>
+
+  <!-- Decorative lines representing narrative threads -->
+  <path d="M0 100 Q200 50 400 100 T800 80" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M0 150 Q200 100 400 150 T800 130" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.15"/>
+  <path d="M0 200 Q200 150 400 200 T800 180" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.1"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#ffffff" font-weight="600">LE POUVOIR DES NARRATIFS</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0">Comment les histoires façonnent notre perception du réel</text>
+
+  <!-- Main stats boxes -->
+  <!-- Box 1: Illusory Truth -->
+  <rect x="40" y="85" width="170" height="100" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="125" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="32" fill="url(#goldGrad)" font-weight="700">2</text>
+  <text x="125" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">expositions suffisent</text>
+  <text x="125" y="155" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">pour augmenter la</text>
+  <text x="125" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">crédibilité d'une info</text>
+
+  <!-- Box 2: Conformity -->
+  <rect x="225" y="85" width="170" height="100" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="310" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="32" fill="url(#blueGrad)" font-weight="700">36,8%</text>
+  <text x="310" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">de conformité</text>
+  <text x="310" y="155" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">donnent une réponse</text>
+  <text x="310" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">fausse pour s'intégrer</text>
+
+  <!-- Box 3: Media concentration -->
+  <rect x="410" y="85" width="170" height="100" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="495" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="32" fill="#48bb78" font-weight="700">9</text>
+  <text x="495" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">milliardaires</text>
+  <text x="495" y="155" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">possèdent 90% des</text>
+  <text x="495" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">médias français</text>
+
+  <!-- Box 4: News agencies -->
+  <rect x="595" y="85" width="170" height="100" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="680" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="32" fill="#e53e3e" font-weight="700">80%</text>
+  <text x="680" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">de l'info mondiale</text>
+  <text x="680" y="155" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">vient de 3 agences</text>
+  <text x="680" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">(AFP, Reuters, AP)</text>
+
+  <!-- Timeline section -->
+  <text x="400" y="215" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#ffffff" font-weight="600">DÉLAI DE DÉCONSTRUCTION DES NARRATIFS</text>
+
+  <!-- Timeline line -->
+  <line x1="80" y1="260" x2="720" y2="260" stroke="#4a5568" stroke-width="2"/>
+
+  <!-- Timeline points -->
+  <!-- Kuwait -->
+  <circle cx="150" cy="260" r="8" fill="#ed8936"/>
+  <text x="150" y="245" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#ed8936" font-weight="700">2 ans</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Couveuses</text>
+  <text x="150" y="292" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Koweït</text>
+
+  <!-- Lab leak -->
+  <circle cx="350" cy="260" r="8" fill="#9f7aea"/>
+  <text x="350" y="245" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#9f7aea" font-weight="700">3 ans</text>
+  <text x="350" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Lab leak</text>
+  <text x="350" y="292" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">COVID</text>
+
+  <!-- Iraq -->
+  <circle cx="600" cy="260" r="8" fill="#fc8181"/>
+  <text x="600" y="245" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#fc8181" font-weight="700">13 ans</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">ADM</text>
+  <text x="600" y="292" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">Irak</text>
+
+  <!-- Cognitive mechanisms section -->
+  <text x="400" y="330" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#ffffff" font-weight="600">MÉCANISMES COGNITIFS EN JEU</text>
+
+  <!-- Mechanism pills -->
+  <rect x="50" y="350" width="140" height="35" rx="17" fill="#2d3748"/>
+  <text x="120" y="372" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Effet de vérité</text>
+  <text x="120" y="384" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">illusoire</text>
+
+  <rect x="205" y="350" width="140" height="35" rx="17" fill="#2d3748"/>
+  <text x="275" y="372" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Biais de</text>
+  <text x="275" y="384" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">confirmation</text>
+
+  <rect x="360" y="350" width="140" height="35" rx="17" fill="#2d3748"/>
+  <text x="430" y="372" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Spirale du</text>
+  <text x="430" y="384" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">silence</text>
+
+  <rect x="515" y="350" width="140" height="35" rx="17" fill="#2d3748"/>
+  <text x="585" y="372" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Dissonance</text>
+  <text x="585" y="384" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">cognitive</text>
+
+  <rect x="670" y="350" width="100" height="35" rx="17" fill="#2d3748"/>
+  <text x="720" y="372" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Cascades</text>
+  <text x="720" y="384" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">info</text>
+
+  <!-- Quote -->
+  <text x="400" y="420" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" font-style="italic">"Nous ne voyons pas d'abord, puis nous définissons ;</text>
+  <text x="400" y="435" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" font-style="italic">nous définissons d'abord, puis nous voyons." — Walter Lippmann, 1922</text>
+</svg>
