@@ -19,14 +19,18 @@
   YYYY-MM-DD_slug-de-l-article.html    # Article HTML
   YYYY-MM-DD_slug-de-l-article.svg     # Infographie SVG (pour data-viz en bas de l'article)
 /images/illustrations/
-  YYYY-MM-DD_slug-de-l-article.png     # Illustration PNG style Moebius (hero + partage social)
+  YYYY-MM-DD_slug-de-l-article.png     # Illustration PNG style Moebius (original)
+  YYYY-MM-DD_slug-de-l-article.webp    # Version WebP optimisée (générée automatiquement)
+  YYYY-MM-DD_slug-de-l-article-thumb.webp  # Thumbnail 400px pour les cards
 /scripts/
   generate-illustrations.py             # Script de génération d'images Moebius
+  optimize-images.py                     # Script d'optimisation WebP (NEW)
   purge-cache.sh                        # Purge du cache Cloudflare
 /css/style.css                          # Styles (inclut dark mode)
-/js/app.js                              # Chargement dynamique des articles
+/js/app.js                              # Chargement dynamique des articles (WebP + lazy loading)
 /includes/header.html                   # Header commun
 /includes/footer.html                   # Footer commun
+/.venv/                                  # Environnement Python virtuel
 ```
 
 ## Format d'un article
@@ -209,6 +213,25 @@ python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html
 # Générer les illustrations manquantes pour tous les articles
 python3 scripts/generate-illustrations.py --missing
 
+# === OPTIMISATION DES IMAGES (NEW) ===
+
+# Optimiser toutes les images PNG → WebP (réduit de 50-95% le poids)
+.venv/bin/python scripts/optimize-images.py
+
+# Mode simulation (voir ce qui serait fait sans modifier)
+.venv/bin/python scripts/optimize-images.py --dry-run
+
+# Forcer la réoptimisation de toutes les images
+.venv/bin/python scripts/optimize-images.py --force
+
+# Optimiser une seule image
+.venv/bin/python scripts/optimize-images.py images/illustrations/2025-11-28_nom.png
+
+# Installer/mettre à jour Pillow si nécessaire
+.venv/bin/pip install -U Pillow
+
+# === DÉPLOIEMENT ===
+
 # Commit et push avec purge du cache Cloudflare
 git add -A && git commit -m "Ajout article: [titre]" && git deploy
 
@@ -240,8 +263,41 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
 5. **Générer l'image Moebius** : `python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html`
    - Utilise Pollinations.ai (gratuit) ou Google Gemini si clé API dans `.env`
 
-6. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
+6. **Optimiser les images** : `.venv/bin/python scripts/optimize-images.py`
+   - Génère automatiquement les versions WebP et thumbnails
+   - Réduit le poids des images de 50-95%
+
+7. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
    - `git deploy` = push + purge cache Cloudflare
+
+## Optimisation des performances
+
+### Images (WebP automatique)
+
+Le site utilise automatiquement les images WebP quand disponibles :
+- **JavaScript** : Détecte le support WebP et charge les thumbnails optimisés
+- **Apache** : Sert automatiquement WebP aux navigateurs compatibles via `.htaccess`
+- **Fallback** : Si WebP non disponible, les PNG originaux sont servis
+
+### Lazy Loading
+
+Les images utilisent le lazy loading natif du navigateur :
+- Les 6 premiers articles sont chargés immédiatement (`loading="eager"`)
+- Les autres sont chargés à la demande (`loading="lazy"`)
+- `fetchpriority` et `decoding="async"` optimisent le rendu
+
+### Cache
+
+Configuration dans `.htaccess` :
+- Images : 1 an (immutable)
+- CSS/JS : 1 an (immutable)
+- HTML : 1 heure + stale-while-revalidate
+- JSON : 1 jour
+
+### Compression
+
+- GZIP activé pour HTML, CSS, JS, JSON, SVG
+- WebP réduit les images de 50-95% par rapport au PNG
 
 ## Notes techniques
 

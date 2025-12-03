@@ -1,52 +1,179 @@
 # ================================================
-# RÉVEIL DOUCEUR - Configuration Apache
+# RÉVEIL DOUCEUR - Configuration Apache Optimisée
+# Version 2.0 - Performances & Cache
 # ================================================
 
 # Page 404 personnalisée
 ErrorDocument 404 /404.php
 
-# Activer le listing pour le dossier articles (si nécessaire)
-# Note: Le listing est géré par JavaScript, pas besoin d'Apache
+# ================================================
+# COMPRESSION GZIP / BROTLI
+# ================================================
+<IfModule mod_deflate.c>
+    # Compresser les fichiers textuels
+    AddOutputFilterByType DEFLATE text/html text/plain text/css
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript text/javascript
+    AddOutputFilterByType DEFLATE application/json application/ld+json
+    AddOutputFilterByType DEFLATE application/xml text/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf font/opentype
 
-# Forcer HTTPS (décommenter si nécessaire)
-# RewriteEngine On
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    # Ne pas compresser les images déjà compressées
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|ico)$ no-gzip dont-vary
 
-# Redirection www vers non-www (décommenter si nécessaire)
-# RewriteEngine On
-# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    # Éviter les bugs avec les vieux navigateurs
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 
-# Cache des ressources statiques
+    # Headers pour le cache proxy
+    Header append Vary Accept-Encoding
+</IfModule>
+
+# ================================================
+# CACHE NAVIGATEUR OPTIMISÉ
+# ================================================
 <IfModule mod_expires.c>
     ExpiresActive On
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresDefault "access plus 1 month"
+
+    # HTML - Cache court pour le contenu dynamique
+    ExpiresByType text/html "access plus 1 hour"
+
+    # CSS et JavaScript - Cache long avec versioning
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+
+    # Images - Cache très long
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+
+    # Polices
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    ExpiresByType font/opentype "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+
+    # JSON/XML (articles, config)
+    ExpiresByType application/json "access plus 1 day"
+    ExpiresByType application/xml "access plus 1 day"
+    ExpiresByType text/xml "access plus 1 day"
 </IfModule>
 
-# Compression GZIP
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
-</IfModule>
-
-# Sécurité des en-têtes
+# Cache-Control headers
 <IfModule mod_headers.c>
+    # Fichiers statiques immutables (images optimisées)
+    <FilesMatch "\.(webp|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # CSS/JS (avec versioning via query string)
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # HTML - stale-while-revalidate pour performances
+    <FilesMatch "\.(html|php)$">
+        Header set Cache-Control "public, max-age=3600, stale-while-revalidate=86400"
+    </FilesMatch>
+
+    # JSON (index des articles)
+    <FilesMatch "\.json$">
+        Header set Cache-Control "public, max-age=86400, stale-while-revalidate=604800"
+    </FilesMatch>
+</IfModule>
+
+# ================================================
+# TYPES MIME
+# ================================================
+AddType image/webp .webp
+AddType image/svg+xml .svg
+AddType application/font-woff .woff
+AddType application/font-woff2 .woff2
+AddType application/json .json
+
+# ================================================
+# SÉCURITÉ DES EN-TÊTES
+# ================================================
+<IfModule mod_headers.c>
+    # Protection XSS et clickjacking
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
     Header set X-XSS-Protection "1; mode=block"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions Policy (anciennement Feature-Policy)
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
-# Types MIME
-AddType image/webp .webp
-AddType image/svg+xml .svg
+# ================================================
+# OPTIMISATION WEBP AUTOMATIQUE
+# ================================================
+# Servir automatiquement WebP si supporté et disponible
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-# Traiter les fichiers .html comme PHP (pour les articles avec includes)
-# DÉSACTIVÉ - cause des problèmes avec ddev, les includes sont gérés par JS
-# AddHandler application/x-httpd-php .html
+    # Vérifier le support WebP dans Accept header
+    RewriteCond %{HTTP_ACCEPT} image/webp
+
+    # Pour les PNG dans /images/illustrations/
+    RewriteCond %{REQUEST_URI} ^/images/illustrations/(.+)\.png$
+    RewriteCond %{DOCUMENT_ROOT}/images/illustrations/%1.webp -f
+    RewriteRule ^images/illustrations/(.+)\.png$ /images/illustrations/$1.webp [T=image/webp,L]
+
+    # Pour les JPG dans /images/illustrations/
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{REQUEST_URI} ^/images/illustrations/(.+)\.jpe?g$
+    RewriteCond %{DOCUMENT_ROOT}/images/illustrations/%1.webp -f
+    RewriteRule ^images/illustrations/(.+)\.jpe?g$ /images/illustrations/$1.webp [T=image/webp,L]
+</IfModule>
+
+# Header Vary pour le cache proxy avec WebP
+<IfModule mod_headers.c>
+    <FilesMatch "\.(png|jpe?g)$">
+        Header append Vary Accept
+    </FilesMatch>
+</IfModule>
+
+# ================================================
+# PROTECTION DES FICHIERS SENSIBLES
+# ================================================
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(env|log|md|py|sh|bat)$">
+    Require all denied
+</FilesMatch>
+
+# Autoriser le sitemap et robots.txt
+<FilesMatch "(sitemap\.xml|robots\.txt)$">
+    Require all granted
+</FilesMatch>
+
+# ================================================
+# FORCER HTTPS (décommenter en production)
+# ================================================
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# ================================================
+# REDIRECTION WWW (décommenter si nécessaire)
+# ================================================
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+#     RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+# </IfModule>

@@ -23,4 +23,10 @@ config/mail.php
 # Scripts avec tokens API
 scripts/
 !scripts/generate-sitemap.py
+!scripts/optimize-images.py
 .env
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc

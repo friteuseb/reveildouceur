@@ -1,10 +1,21 @@
 /**
  * Réveil Douceur - Application JavaScript
- * Version 2.1 - Support articles bruts
+ * Version 2.2 - Optimisation performances (WebP, lazy loading avancé)
  */
 
 (function() {
   'use strict';
+
+  // ========================================
+  // Détection support WebP
+  // ========================================
+  const supportsWebP = (function() {
+    const canvas = document.createElement('canvas');
+    if (canvas.getContext && canvas.getContext('2d')) {
+      return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    }
+    return false;
+  })();
 
   // ========================================
   // Configuration
@@ -375,10 +386,13 @@
     return null;
   }
 
-  function findThumbnail(basePath, filename) {
+  function findThumbnail(basePath, filename, useThumb = false) {
     const baseName = filename.replace('.html', '');
-    // Utiliser les illustrations PNG Mœbius
-    // Fallback sur SVG via onerror si le PNG n'existe pas
+    // Utiliser WebP si supporté, avec fallback PNG
+    const suffix = useThumb ? '-thumb' : '';
+    if (supportsWebP) {
+      return `/images/illustrations/${baseName}${suffix}.webp`;
+    }
     return `/images/illustrations/${baseName}.png`;
   }
 
@@ -394,7 +408,8 @@
       const excerpt = extractExcerpt(htmlContent);
       const date = extractDate(filename, htmlContent);
       const isRaw = isRawArticle(htmlContent);
-      const thumbnail = findThumbnail(CONFIG.articles.path, filename);
+      const thumbnail = findThumbnail(CONFIG.articles.path, filename, true); // Thumbnails pour cards
+      const heroImage = findThumbnail(CONFIG.articles.path, filename, false); // Full size pour hero
       const category = getArticleCategory(filename);
 
       return {
@@ -405,6 +420,7 @@
         excerpt,
         date,
         thumbnail,
+        heroImage,
         isRaw,
         category
       };
@@ -430,11 +446,20 @@
   // Rendu des articles
   // ========================================
 
-  function createArticleCard(article) {
+  function createArticleCard(article, index) {
     const formattedDate = formatDate(article.date);
     const categoryBadge = article.category
       ? `<span class="article-card__category" style="background-color: ${article.category.color}">${article.category.label}</span>`
       : '';
+
+    // Les 6 premiers articles sont chargés immédiatement (au-dessus du fold)
+    const isAboveFold = index < 6;
+    const loadingAttr = isAboveFold ? 'eager' : 'lazy';
+    const fetchPriority = isAboveFold ? 'high' : 'low';
+
+    // Fallback vers PNG si WebP non disponible
+    const baseName = article.filename.replace('.html', '');
+    const fallbackSrc = `/images/illustrations/${baseName}.png`;
 
     return `
       <article class="article-card" data-category="${article.category?.id || ''}">
@@ -443,8 +468,12 @@
             <img
               src="${article.thumbnail}"
               alt="${article.title}"
-              loading="lazy"
-              onerror="this.src='${CONFIG.articles.defaultThumbnail}'"
+              loading="${loadingAttr}"
+              fetchpriority="${fetchPriority}"
+              decoding="async"
+              width="400"
+              height="225"
+              onerror="this.onerror=null; this.src='${fallbackSrc}'; if(this.src.includes('.png')) this.src='${CONFIG.articles.defaultThumbnail}';"
             >
           </a>
         </div>
@@ -529,7 +558,7 @@
     }
 
     const filtersHTML = createCategoryFilters();
-    const articlesHTML = articles.map(createArticleCard).join('');
+    const articlesHTML = articles.map((article, index) => createArticleCard(article, index)).join('');
 
     container.innerHTML = `
       ${filtersHTML}
