@@ -22,4 +22,5 @@ config/mail.php
 
 # Scripts avec tokens API
 scripts/
+!scripts/generate-sitemap.py
 .env
