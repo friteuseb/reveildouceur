@@ -288,17 +288,13 @@
   }
 
   /**
-   * Formate une date en français
+   * Formate une date - année uniquement
    */
   function formatDate(date) {
     if (!(date instanceof Date) || isNaN(date)) {
-      return 'Date inconnue';
+      return '';
     }
-    return date.toLocaleDateString('fr-FR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+    return date.getFullYear().toString();
   }
 
   // ========================================
