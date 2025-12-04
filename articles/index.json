@@ -1,53 +1,194 @@
 {
   "categories": {
-  "economie": { "label": "Économie", "color": "#3182ce" },
-  "medias": { "label": "Médias", "color": "#805ad5" },
-  "technologie": { "label": "Technologie", "color": "#00b5d8" },
-  "environnement": { "label": "Environnement", "color": "#38a169" },
-  "societe": { "label": "Société", "color": "#dd6b20" },
-  "sante": { "label": "Santé", "color": "#e53e3e" },
-  "geopolitique": { "label": "Géopolitique", "color": "#667eea" }
-},
+    "economie": {
+      "label": "Économie",
+      "color": "#3182ce"
+    },
+    "medias": {
+      "label": "Médias",
+      "color": "#805ad5"
+    },
+    "technologie": {
+      "label": "Technologie",
+      "color": "#00b5d8"
+    },
+    "environnement": {
+      "label": "Environnement",
+      "color": "#38a169"
+    },
+    "societe": {
+      "label": "Société",
+      "color": "#dd6b20"
+    },
+    "sante": {
+      "label": "Santé",
+      "color": "#e53e3e"
+    },
+    "geopolitique": {
+      "label": "Géopolitique",
+      "color": "#667eea"
+    }
+  },
   "articles": [
-    { "file": "2025-12-03_pouvoir-des-narratifs-comment-les-histoires-faconnent-le-monde.html", "category": "medias" },
-    { "file": "2025-12-01_origines-de-lhomme-ce-que-dit-la-genetique.html", "category": "societe" },
-    { "file": "2025-11-28_racailles-en-haut-vs-en-bas-qui-nuit-le-plus.html", "category": "societe" },
-    { "file": "2025-11-28_france-liberte-expression-ce-que-disent-les-chiffres.html", "category": "societe" },
-    { "file": "2025-11-27_vrai-cout-securite-sociale-comparaison-mondiale.html", "category": "economie" },
-    { "file": "2025-11-27_voiture-electrique-bilan-carbone-reel.html", "category": "environnement" },
-    { "file": "2025-11-27_verdissement-terre-co2-plantes.html", "category": "environnement" },
-    { "file": "2025-11-27_ukraine-interets-economiques-chaque-camp.html", "category": "geopolitique" },
-    { "file": "2025-11-27_systeme-sante-francais-equation-impossible.html", "category": "sante" },
-    { "file": "2025-11-27_qui-desinforme-vraiment-chiffres.html", "category": "medias" },
-    { "file": "2025-11-27_paradoxe-bonheur-feminin-etudes.html", "category": "societe" },
-    { "file": "2025-11-27_nucleaire-francais-danger-ou-solution.html", "category": "environnement" },
-    { "file": "2025-11-27_geoingenierie-le-dossier-complet.html", "category": "environnement" },
-    { "file": "2025-11-27_fraude-fiscale-vs-sociale-vrais-chiffres.html", "category": "economie" },
-    { "file": "2025-11-27_france-usa-souverainete-a-geometrie-variable.html", "category": "geopolitique" },
-    { "file": "2025-11-27_france-quel-niveau-de-socialisme.html", "category": "economie" },
-    { "file": "2025-11-27_fact-checkers-le-dossier-complet.html", "category": "medias" },
-    { "file": "2025-11-27_co2-a-travers-les-ages-geologiques.html", "category": "environnement" },
-    { "file": "2025-11-26_votre-salaire-vaut-combien-en-vrai.html", "category": "economie" },
-    { "file": "2025-11-26_violences-conjugales-ce-que-disent-les-chiffres.html", "category": "societe" },
-    { "file": "2025-11-26_violence-psychologique-suicide-masculin-le-tabou.html", "category": "societe" },
-    { "file": "2025-11-26_salvador-france-faible-avec-les-loups.html", "category": "geopolitique" },
-    { "file": "2025-11-26_qui-possede-votre-journal-prefere.html", "category": "medias" },
-    { "file": "2025-11-26_qui-pollue-vraiment-le-classement.html", "category": "environnement" },
-    { "file": "2025-11-26_pourquoi-vous-ne-pouvez-pas-lacher-votre-telephone.html", "category": "technologie" },
-    { "file": "2025-11-26_ia-consommation-eau-data-centers.html", "category": "technologie" },
-    { "file": "2025-11-26_hommes-sensibles-ce-que-disent-les-etudes.html", "category": "societe" },
-    { "file": "2025-11-26_faire-confiance-aveuglement-quels-risques.html", "category": "societe" },
-    { "file": "2025-11-26_europe-seule-a-sauver-la-planete.html", "category": "environnement" },
-    { "file": "2025-11-26_dictatures-democraties-comparons-vraiment.html", "category": "geopolitique" },
-    { "file": "2025-11-26_demographie-europeenne-le-sujet-tabou.html", "category": "societe" },
-    { "file": "2025-11-26_covid-ce-quon-disait-vs-ce-quon-sait.html", "category": "sante" },
-    { "file": "2025-11-26_ce-que-les-hommes-disent-vouloir-vs-realite.html", "category": "societe" },
-    { "file": "2025-11-26_bio-supermarche-vs-maraicher-local.html", "category": "sante" },
-    { "file": "2025-11-26_apres-la-redpill-ce-que-personne-ne-vous-dit.html", "category": "societe" },
-    { "file": "2025-11-25_textes-religieux-paix-violence-analyse-academique.html", "category": "societe" },
-    { "file": "2025-11-25_politiques-immigration-analyse-comparative.html", "category": "geopolitique" },
-    { "file": "2025-11-25_pesticides-ce-que-revelent-les-etudes.html", "category": "sante" },
-    { "file": "2025-11-25_creation-monetaire-comment-nait-largent.html", "category": "economie" },
-    { "file": "2025-11-25_additifs-alimentaires-ce-que-dit-la-science.html", "category": "sante" }
+    {
+      "file": "pouvoir-des-narratifs-comment-les-histoires-faconnent-le-monde.html",
+      "category": "medias"
+    },
+    {
+      "file": "origines-de-lhomme-ce-que-dit-la-genetique.html",
+      "category": "societe"
+    },
+    {
+      "file": "racailles-en-haut-vs-en-bas-qui-nuit-le-plus.html",
+      "category": "societe"
+    },
+    {
+      "file": "france-liberte-expression-ce-que-disent-les-chiffres.html",
+      "category": "societe"
+    },
+    {
+      "file": "vrai-cout-securite-sociale-comparaison-mondiale.html",
+      "category": "economie"
+    },
+    {
+      "file": "voiture-electrique-bilan-carbone-reel.html",
+      "category": "environnement"
+    },
+    {
+      "file": "verdissement-terre-co2-plantes.html",
+      "category": "environnement"
+    },
+    {
+      "file": "ukraine-interets-economiques-chaque-camp.html",
+      "category": "geopolitique"
+    },
+    {
+      "file": "systeme-sante-francais-equation-impossible.html",
+      "category": "sante"
+    },
+    {
+      "file": "qui-desinforme-vraiment-chiffres.html",
+      "category": "medias"
+    },
+    {
+      "file": "paradoxe-bonheur-feminin-etudes.html",
+      "category": "societe"
+    },
+    {
+      "file": "nucleaire-francais-danger-ou-solution.html",
+      "category": "environnement"
+    },
+    {
+      "file": "geoingenierie-le-dossier-complet.html",
+      "category": "environnement"
+    },
+    {
+      "file": "fraude-fiscale-vs-sociale-vrais-chiffres.html",
+      "category": "economie"
+    },
+    {
+      "file": "france-usa-souverainete-a-geometrie-variable.html",
+      "category": "geopolitique"
+    },
+    {
+      "file": "france-quel-niveau-de-socialisme.html",
+      "category": "economie"
+    },
+    {
+      "file": "fact-checkers-le-dossier-complet.html",
+      "category": "medias"
+    },
+    {
+      "file": "co2-a-travers-les-ages-geologiques.html",
+      "category": "environnement"
+    },
+    {
+      "file": "votre-salaire-vaut-combien-en-vrai.html",
+      "category": "economie"
+    },
+    {
+      "file": "violences-conjugales-ce-que-disent-les-chiffres.html",
+      "category": "societe"
+    },
+    {
+      "file": "violence-psychologique-suicide-masculin-le-tabou.html",
+      "category": "societe"
+    },
+    {
+      "file": "salvador-france-faible-avec-les-loups.html",
+      "category": "geopolitique"
+    },
+    {
+      "file": "qui-possede-votre-journal-prefere.html",
+      "category": "medias"
+    },
+    {
+      "file": "qui-pollue-vraiment-le-classement.html",
+      "category": "environnement"
+    },
+    {
+      "file": "pourquoi-vous-ne-pouvez-pas-lacher-votre-telephone.html",
+      "category": "technologie"
+    },
+    {
+      "file": "ia-consommation-eau-data-centers.html",
+      "category": "technologie"
+    },
+    {
+      "file": "hommes-sensibles-ce-que-disent-les-etudes.html",
+      "category": "societe"
+    },
+    {
+      "file": "faire-confiance-aveuglement-quels-risques.html",
+      "category": "societe"
+    },
+    {
+      "file": "europe-seule-a-sauver-la-planete.html",
+      "category": "environnement"
+    },
+    {
+      "file": "dictatures-democraties-comparons-vraiment.html",
+      "category": "geopolitique"
+    },
+    {
+      "file": "demographie-europeenne-le-sujet-tabou.html",
+      "category": "societe"
+    },
+    {
+      "file": "covid-ce-quon-disait-vs-ce-quon-sait.html",
+      "category": "sante"
+    },
+    {
+      "file": "ce-que-les-hommes-disent-vouloir-vs-realite.html",
+      "category": "societe"
+    },
+    {
+      "file": "bio-supermarche-vs-maraicher-local.html",
+      "category": "sante"
+    },
+    {
+      "file": "apres-la-redpill-ce-que-personne-ne-vous-dit.html",
+      "category": "societe"
+    },
+    {
+      "file": "textes-religieux-paix-violence-analyse-academique.html",
+      "category": "societe"
+    },
+    {
+      "file": "politiques-immigration-analyse-comparative.html",
+      "category": "geopolitique"
+    },
+    {
+      "file": "pesticides-ce-que-revelent-les-etudes.html",
+      "category": "sante"
+    },
+    {
+      "file": "creation-monetaire-comment-nait-largent.html",
+      "category": "economie"
+    },
+    {
+      "file": "additifs-alimentaires-ce-que-dit-la-science.html",
+      "category": "sante"
+    }
   ]
 }

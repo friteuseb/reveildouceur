@@ -16,15 +16,16 @@
 
 ```
 /articles/
-  YYYY-MM-DD_slug-de-l-article.html    # Article HTML
-  YYYY-MM-DD_slug-de-l-article.svg     # Infographie SVG (pour data-viz en bas de l'article)
+  slug-de-l-article.html               # Article HTML (sans date dans le nom)
+  slug-de-l-article.svg                # Infographie SVG (pour data-viz en bas de l'article)
 /images/illustrations/
-  YYYY-MM-DD_slug-de-l-article.png     # Illustration PNG style Moebius (original)
-  YYYY-MM-DD_slug-de-l-article.webp    # Version WebP optimisée (générée automatiquement)
-  YYYY-MM-DD_slug-de-l-article-thumb.webp  # Thumbnail 400px pour les cards
+  slug-de-l-article.png                # Illustration PNG style Moebius (original)
+  slug-de-l-article.webp               # Version WebP optimisée (générée automatiquement)
+  slug-de-l-article-thumb.webp         # Thumbnail 400px pour les cards
 /scripts/
   generate-illustrations.py             # Script de génération d'images Moebius
-  optimize-images.py                     # Script d'optimisation WebP (NEW)
+  optimize-images.py                     # Script d'optimisation WebP
+  migrate-urls.py                        # Script de migration URLs (dates → sans dates)
   purge-cache.sh                        # Purge du cache Cloudflare
 /css/style.css                          # Styles (inclut dark mode)
 /js/app.js                              # Chargement dynamique des articles (WebP + lazy loading)
@@ -36,7 +37,7 @@
 ## Format d'un article
 
 ### Nom de fichier
-`YYYY-MM-DD_slug-en-minuscules.html` + illustration PNG dans `/images/illustrations/`
+`slug-en-minuscules.html` (sans date) + illustration PNG dans `/images/illustrations/`
 
 ### Structure HTML requise
 ```html
@@ -44,9 +45,9 @@
 <html lang="fr">
 <head>
   <!-- SEO: title, description, canonical -->
-  <!-- Open Graph: og:image pointe vers /images/illustrations/YYYY-MM-DD_slug.png -->
-  <!-- Twitter Cards: twitter:image pointe vers /images/illustrations/YYYY-MM-DD_slug.png -->
-  <!-- Schema.org JSON-LD: image pointe vers /images/illustrations/YYYY-MM-DD_slug.png -->
+  <!-- Open Graph: og:image pointe vers /images/illustrations/slug.png -->
+  <!-- Twitter Cards: twitter:image pointe vers /images/illustrations/slug.png -->
+  <!-- Schema.org JSON-LD: image pointe vers /images/illustrations/slug.png -->
   <link rel="stylesheet" href="/css/style.css">
   <script src="/js/config.js"></script>
 </head>
@@ -60,7 +61,7 @@
       </header>
       <figure class="article__hero-image">
         <!-- Image PNG style Moebius générée par le script -->
-        <img src="/images/illustrations/YYYY-MM-DD_slug.png" alt="Description" loading="eager">
+        <img src="/images/illustrations/slug.png" alt="Description" loading="eager">
       </figure>
       <div class="article__content">
         <!-- Contenu de l'article -->
@@ -68,7 +69,7 @@
       <figure class="article__data-viz">
         <!-- Infographie SVG avec les données clés -->
         <figcaption>Les données clés en un coup d'œil</figcaption>
-        <img src="/articles/YYYY-MM-DD_slug.svg" alt="Infographie" loading="lazy">
+        <img src="/articles/slug.svg" alt="Infographie" loading="lazy">
       </figure>
       <aside class="article__sources">
         <h3>Sources et références</h3>
@@ -88,7 +89,7 @@
 
 1. **PNG style Moebius** (`/images/illustrations/`) :
    - Utilisé pour : hero image, og:image, twitter:image, Schema.org
-   - Généré avec : `python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html`
+   - Généré avec : `python3 scripts/generate-illustrations.py slug.html`
    - Style : illustration artistique Moebius (Jean Giraud)
 
 2. **SVG infographique** (`/articles/`) :
@@ -208,12 +209,12 @@
 
 ```bash
 # Générer l'illustration PNG style Moebius pour un article
-python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html
+python3 scripts/generate-illustrations.py slug.html
 
 # Générer les illustrations manquantes pour tous les articles
 python3 scripts/generate-illustrations.py --missing
 
-# === OPTIMISATION DES IMAGES (NEW) ===
+# === OPTIMISATION DES IMAGES ===
 
 # Optimiser toutes les images PNG → WebP (réduit de 50-95% le poids)
 .venv/bin/python scripts/optimize-images.py
@@ -225,7 +226,7 @@ python3 scripts/generate-illustrations.py --missing
 .venv/bin/python scripts/optimize-images.py --force
 
 # Optimiser une seule image
-.venv/bin/python scripts/optimize-images.py images/illustrations/2025-11-28_nom.png
+.venv/bin/python scripts/optimize-images.py images/illustrations/nom.png
 
 # Installer/mettre à jour Pillow si nécessaire
 .venv/bin/pip install -U Pillow
@@ -241,26 +242,26 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
 
 ## Workflow complet pour un nouvel article
 
-1. **Rédiger l'article HTML** dans `/articles/YYYY-MM-DD_slug.html`
+1. **Rédiger l'article HTML** dans `/articles/slug.html`
    - Utiliser un article existant comme template
    - Vérifier les meta tags (og:image, twitter:image, Schema.org → PNG)
    - Inclure `<div id="header-include"></div>` et `<div id="footer-include"></div>`
 
-2. **Créer l'infographie SVG** dans `/articles/YYYY-MM-DD_slug.svg`
+2. **Créer l'infographie SVG** dans `/articles/slug.svg`
    - viewBox="0 0 800 450", fond sombre, données clés
 
 3. **Ajouter l'article dans `/articles/index.json`** (OBLIGATOIRE)
    ```json
-   { "file": "YYYY-MM-DD_slug.html", "category": "categorie" }
+   { "file": "slug.html", "category": "categorie" }
    ```
    Catégories : `economie`, `medias`, `tech`, `environnement`, `societe`, `sante`, `geopolitique`
 
 4. **Ajouter un prompt spécifique** dans `scripts/generate-illustrations.py` > `ARTICLE_SPECIFIC_PROMPTS`
    ```python
-   "slug-sans-date": "Description visuelle pour l'IA...",
+   "slug": "Description visuelle pour l'IA...",
    ```
 
-5. **Générer l'image Moebius** : `python3 scripts/generate-illustrations.py YYYY-MM-DD_slug.html`
+5. **Générer l'image Moebius** : `python3 scripts/generate-illustrations.py slug.html`
    - Utilise Pollinations.ai (gratuit) ou Google Gemini si clé API dans `.env`
 
 6. **Optimiser les images** : `.venv/bin/python scripts/optimize-images.py`
