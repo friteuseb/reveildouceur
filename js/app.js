@@ -699,6 +699,212 @@
   }
 
   // ========================================
+  // Recherche
+  // ========================================
+
+  const SearchManager = {
+    modal: null,
+    input: null,
+    results: null,
+    isOpen: false,
+    articlesLoaded: false,
+
+    init() {
+      this.createModal();
+      this.bindEvents();
+    },
+
+    async ensureArticlesLoaded() {
+      if (this.articlesLoaded || allArticles.length > 0) {
+        this.articlesLoaded = true;
+        return;
+      }
+
+      try {
+        const articles = await loadArticles();
+        allArticles = articles;
+        this.articlesLoaded = true;
+      } catch (error) {
+        console.error('Erreur chargement articles pour recherche:', error);
+      }
+    },
+
+    createModal() {
+      const modalHTML = `
+        <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Rechercher">
+          <div class="search-modal__container">
+            <div class="search-modal__header">
+              <svg class="search-modal__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="M21 21l-4.35-4.35"></path>
+              </svg>
+              <input type="text" class="search-modal__input" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
+              <button class="search-modal__close" id="search-close">Esc</button>
+            </div>
+            <div class="search-modal__results" id="search-results">
+              <div class="search-modal__hint">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="M21 21l-4.35-4.35"></path>
+                </svg>
+                Tapez pour rechercher dans les titres et contenus des articles
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+      this.modal = document.getElementById('search-modal');
+      this.input = document.getElementById('search-input');
+      this.results = document.getElementById('search-results');
+    },
+
+    bindEvents() {
+      // Toggle button
+      const toggleBtn = document.getElementById('search-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => this.open());
+      }
+
+      // Close button
+      const closeBtn = document.getElementById('search-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => this.close());
+      }
+
+      // Click outside to close
+      if (this.modal) {
+        this.modal.addEventListener('click', (e) => {
+          if (e.target === this.modal) {
+            this.close();
+          }
+        });
+      }
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        // Ctrl/Cmd + K to open
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          this.toggle();
+        }
+        // Escape to close
+        if (e.key === 'Escape' && this.isOpen) {
+          this.close();
+        }
+      });
+
+      // Search on input
+      if (this.input) {
+        this.input.addEventListener('input', () => {
+          this.search(this.input.value);
+        });
+      }
+    },
+
+    async open() {
+      if (!this.modal) return;
+      this.modal.classList.add('search-modal--open');
+      this.isOpen = true;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => this.input?.focus(), 100);
+
+      // Charger les articles si pas encore fait (pour pages autres que accueil)
+      await this.ensureArticlesLoaded();
+    },
+
+    close() {
+      if (!this.modal) return;
+      this.modal.classList.remove('search-modal--open');
+      this.isOpen = false;
+      document.body.style.overflow = '';
+      if (this.input) this.input.value = '';
+      this.showHint();
+    },
+
+    toggle() {
+      this.isOpen ? this.close() : this.open();
+    },
+
+    showHint() {
+      if (!this.results) return;
+      this.results.innerHTML = `
+        <div class="search-modal__hint">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+          Tapez pour rechercher dans les titres et contenus des articles
+        </div>
+      `;
+    },
+
+    search(query) {
+      if (!this.results) return;
+
+      const trimmedQuery = query.trim().toLowerCase();
+
+      if (trimmedQuery.length < 2) {
+        this.showHint();
+        return;
+      }
+
+      // Search through all loaded articles
+      const matches = allArticles.filter(article => {
+        const titleMatch = article.title.toLowerCase().includes(trimmedQuery);
+        const excerptMatch = article.excerpt.toLowerCase().includes(trimmedQuery);
+        const categoryMatch = article.category?.label.toLowerCase().includes(trimmedQuery);
+        return titleMatch || excerptMatch || categoryMatch;
+      });
+
+      this.renderResults(matches, trimmedQuery);
+    },
+
+    highlightText(text, query) {
+      if (!query) return text;
+      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      return text.replace(regex, '<mark>$1</mark>');
+    },
+
+    renderResults(matches, query) {
+      if (matches.length === 0) {
+        this.results.innerHTML = `
+          <div class="search-modal__empty">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 15s1.5-2 4-2 4 2 4 2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+            Aucun article trouvé pour "<strong>${query}</strong>"
+          </div>
+        `;
+        return;
+      }
+
+      const countHTML = `<div class="search-modal__count">${matches.length} résultat${matches.length > 1 ? 's' : ''}</div>`;
+
+      const resultsHTML = matches.map(article => {
+        const categoryBadge = article.category
+          ? `<span class="search-modal__result-category" style="background-color: ${article.category.color}">${article.category.label}</span>`
+          : '';
+
+        return `
+          <a href="${article.url}" class="search-modal__result">
+            ${categoryBadge}
+            <div class="search-modal__result-title">${this.highlightText(article.title, query)}</div>
+            <div class="search-modal__result-excerpt">${this.highlightText(article.excerpt, query)}</div>
+          </a>
+        `;
+      }).join('');
+
+      this.results.innerHTML = countHTML + resultsHTML;
+    }
+  };
+
+  // ========================================
   // Initialisation
   // ========================================
 
@@ -712,6 +918,9 @@
       ThemeManager.bindToggle();
       initMobileNav();
     }
+
+    // Initialiser la recherche
+    SearchManager.init();
 
     // Page d'accueil : charger la grille d'articles
     const articlesGrid = document.getElementById('articles-grid');
