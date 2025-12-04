@@ -24,6 +24,7 @@ config/mail.php
 scripts/
 !scripts/generate-sitemap.py
 !scripts/optimize-images.py
+!scripts/generate-illustrations.py
 .env
 
 # Python virtual environment
