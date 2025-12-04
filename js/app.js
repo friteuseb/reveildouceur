@@ -430,6 +430,37 @@
     }
   }
 
+  /**
+   * Mélange un tableau avec une graine (seed) pour résultat reproductible
+   * Utilise l'algorithme Fisher-Yates avec un générateur pseudo-aléatoire
+   */
+  function seededShuffle(array, seed) {
+    const shuffled = [...array];
+
+    // Générateur pseudo-aléatoire simple basé sur la seed
+    const random = () => {
+      seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+      return seed / 0x7fffffff;
+    };
+
+    // Fisher-Yates shuffle
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    return shuffled;
+  }
+
+  /**
+   * Génère une seed basée sur la date du jour
+   * Change chaque jour à minuit
+   */
+  function getDailySeed() {
+    const today = new Date();
+    return today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  }
+
   async function loadArticles() {
     const filenames = await fetchDirectoryListing(CONFIG.articles.path);
     if (filenames.length === 0) return [];
@@ -437,9 +468,20 @@
     const articlePromises = filenames.map(fetchArticleMetadata);
     const articles = await Promise.all(articlePromises);
 
-    return articles
-      .filter(article => article !== null)
-      .sort((a, b) => b.date - a.date);
+    const validArticles = articles.filter(article => article !== null);
+
+    // Trier par date (plus récent d'abord)
+    validArticles.sort((a, b) => b.date - a.date);
+
+    // Garder les 3 plus récents, mélanger le reste avec rotation quotidienne
+    const recentCount = 3;
+    const recentArticles = validArticles.slice(0, recentCount);
+    const olderArticles = validArticles.slice(recentCount);
+
+    // Mélanger les anciens articles avec une seed quotidienne
+    const shuffledOlder = seededShuffle(olderArticles, getDailySeed());
+
+    return [...recentArticles, ...shuffledOlder];
   }
 
   // ========================================
@@ -556,8 +598,20 @@
     const filtersHTML = createCategoryFilters();
     const articlesHTML = articles.map((article, index) => createArticleCard(article, index)).join('');
 
+    // Note explicative sur l'ordre des articles
+    const orderNoteHTML = articles.length > 3 ? `
+      <p class="articles-grid__order-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 16v-4M12 8h.01"></path>
+        </svg>
+        Les 3 premiers articles sont les plus récents. Les autres sont mélangés chaque jour pour vous faire découvrir l'ensemble de nos analyses.
+      </p>
+    ` : '';
+
     container.innerHTML = `
       ${filtersHTML}
+      ${orderNoteHTML}
       <div class="articles-grid__cards">
         ${articlesHTML}
       </div>

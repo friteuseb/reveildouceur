@@ -1294,6 +1294,32 @@ main {
   filter: brightness(1.1);
 }
 
+/* Note explicative ordre des articles */
+.articles-grid__order-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.articles-grid__order-note svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+  .articles-grid__order-note {
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
 /* Articles grid with filters */
 .articles-grid__cards {
   display: grid;
