@@ -853,6 +853,29 @@ main {
   letter-spacing: 0.08em;
 }
 
+/* Hero compact variant */
+.hero--compact {
+  min-height: auto;
+}
+
+.hero--compact .hero__content {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.hero--compact .hero__intro {
+  margin-bottom: var(--space-md);
+}
+
+.hero--compact .hero__title {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .hero--compact .hero__content {
+    padding: var(--space-lg) 0 var(--space-xl);
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
     min-height: auto;

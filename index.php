@@ -176,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
 
   <main id="main-content">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero hero--compact">
       <div class="hero__background">
         <div class="hero__gradient"></div>
         <div class="hero__pattern"></div>
@@ -190,19 +190,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
           <span class="hero__title-line">Et si on se posait</span>
           <span class="hero__title-accent">les bonnes questions ?</span>
         </h1>
-        <p class="hero__subtitle">
-          Un espace de réflexion basé sur des sources vérifiables.
-          Ni alarmisme, ni complotisme. Juste des faits et des questions.
-        </p>
-        <div class="hero__actions">
-          <a href="#articles-section" class="btn btn--primary btn--lg">
-            Lire les articles
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-          </a>
-          <a href="/a-propos.php" class="btn btn--outline btn--lg">Notre démarche</a>
-        </div>
       </div>
     </section>
 
