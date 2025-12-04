@@ -762,11 +762,14 @@
     },
 
     bindEvents() {
-      // Toggle button
-      const toggleBtn = document.getElementById('search-toggle');
-      if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => this.open());
-      }
+      // Toggle button - utiliser délégation d'événements pour gérer le timing
+      document.addEventListener('click', (e) => {
+        const toggleBtn = e.target.closest('#search-toggle, .header__search-btn');
+        if (toggleBtn) {
+          e.preventDefault();
+          this.open();
+        }
+      });
 
       // Close button
       const closeBtn = document.getElementById('search-close');
