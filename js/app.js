@@ -32,18 +32,18 @@
     },
     navigation: [
       { label: 'Accueil', href: '/', id: 'home' },
-      { label: 'À propos', href: '/a-propos.html', id: 'about' },
-      { label: 'Contact', href: '/contact.html', id: 'contact' }
+      { label: 'À propos', href: '/a-propos.php', id: 'about' },
+      { label: 'Contact', href: '/contact.php', id: 'contact' }
     ],
     footerLinks: {
       main: [
         { label: 'Accueil', href: '/' },
-        { label: 'À propos', href: '/a-propos.html' },
-        { label: 'Contact', href: '/contact.html' }
+        { label: 'À propos', href: '/a-propos.php' },
+        { label: 'Contact', href: '/contact.php' }
       ],
       legal: [
-        { label: 'Mentions légales', href: '/mentions-legales.html' },
-        { label: 'Confidentialité', href: '/confidentialite.html' }
+        { label: 'Mentions légales', href: '/mentions-legales.php' },
+        { label: 'Confidentialité', href: '/confidentialite.php' }
       ]
     },
     theme: {
