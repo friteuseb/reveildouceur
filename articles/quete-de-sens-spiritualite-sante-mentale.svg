@@ -1,0 +1,174 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fc8181"/>
+      <stop offset="100%" style="stop-color:#e53e3e"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b794f4"/>
+      <stop offset="100%" style="stop-color:#805ad5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    SPIRITUALITÉ ET SANTÉ MENTALE : LES DONNÉES
+  </text>
+
+  <!-- Left panel: Declining curves -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="235" height="175" rx="8" fill="#2d3748" stroke="#805ad5" stroke-width="1"/>
+    <text x="117" y="22" text-anchor="middle" fill="#b794f4" font-family="Arial" font-size="12" font-weight="bold">EN DÉCLIN</text>
+
+    <!-- Pratique religieuse -->
+    <text x="15" y="50" fill="#a0aec0" font-family="Arial" font-size="10">Pratique religieuse régulière</text>
+    <rect x="15" y="55" width="205" height="8" rx="2" fill="#4a5568"/>
+    <rect x="15" y="55" width="40" height="8" rx="2" fill="url(#greenGrad)"/>
+    <text x="225" y="62" text-anchor="end" fill="#68d391" font-family="Arial" font-size="9" font-weight="bold">&lt;10%</text>
+
+    <!-- Sans religion -->
+    <text x="15" y="85" fill="#a0aec0" font-family="Arial" font-size="10">Français "sans religion"</text>
+    <g transform="translate(15, 90)">
+      <rect x="0" y="0" width="55" height="12" rx="2" fill="#4a5568"/>
+      <text x="60" y="10" fill="#a0aec0" font-family="Arial" font-size="8">27% (1981)</text>
+      <rect x="0" y="16" width="105" height="12" rx="2" fill="url(#redGrad)"/>
+      <text x="110" y="26" fill="#fc8181" font-family="Arial" font-size="8" font-weight="bold">51% (2020)</text>
+    </g>
+
+    <!-- Capital social -->
+    <text x="15" y="135" fill="#a0aec0" font-family="Arial" font-size="10">Capital social (Putnam)</text>
+    <polyline points="15,165 60,160 105,155 150,162 195,168 220,172"
+              fill="none" stroke="#fc8181" stroke-width="2"/>
+    <text x="175" y="148" fill="#fc8181" font-family="Arial" font-size="8">-35% depuis 1970</text>
+  </g>
+
+  <!-- Right panel: Rising curves -->
+  <g transform="translate(535, 55)">
+    <rect x="0" y="0" width="235" height="175" rx="8" fill="#2d3748" stroke="#e53e3e" stroke-width="1"/>
+    <text x="117" y="22" text-anchor="middle" fill="#fc8181" font-family="Arial" font-size="12" font-weight="bold">EN HAUSSE</text>
+
+    <!-- Antidépresseurs -->
+    <text x="15" y="50" fill="#a0aec0" font-family="Arial" font-size="10">Antidépresseurs (France)</text>
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="80" height="12" rx="2" fill="#4a5568"/>
+      <text x="85" y="10" fill="#a0aec0" font-family="Arial" font-size="8">2000</text>
+      <rect x="0" y="16" width="132" height="12" rx="2" fill="url(#redGrad)"/>
+      <text x="137" y="26" fill="#fc8181" font-family="Arial" font-size="8" font-weight="bold">+65% (2020)</text>
+    </g>
+
+    <!-- Deaths of despair -->
+    <text x="15" y="100" fill="#a0aec0" font-family="Arial" font-size="10">"Deaths of despair" (USA)</text>
+    <polyline points="15,130 60,128 105,120 150,108 195,95 220,85"
+              fill="none" stroke="#fc8181" stroke-width="2"/>
+    <text x="140" y="82" fill="#fc8181" font-family="Arial" font-size="8" font-weight="bold">+180%</text>
+    <text x="140" y="92" fill="#a0aec0" font-family="Arial" font-size="7">depuis 1999</text>
+
+    <!-- Anxiété -->
+    <text x="15" y="150" fill="#a0aec0" font-family="Arial" font-size="10">Troubles anxieux</text>
+    <rect x="15" y="155" width="205" height="8" rx="2" fill="#4a5568"/>
+    <rect x="15" y="155" width="160" height="8" rx="2" fill="url(#redGrad)"/>
+    <text x="180" y="162" fill="#fc8181" font-family="Arial" font-size="8" font-weight="bold">21% pop.</text>
+  </g>
+
+  <!-- Center panel: Research findings -->
+  <g transform="translate(280, 55)">
+    <rect x="0" y="0" width="240" height="175" rx="8" fill="#2d3748" stroke="#48bb78" stroke-width="1"/>
+    <text x="120" y="22" text-anchor="middle" fill="#68d391" font-family="Arial" font-size="12" font-weight="bold">CE QUE DIT LA RECHERCHE</text>
+
+    <text x="15" y="45" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">Koenig (Duke) - 3000 études :</text>
+    <text x="15" y="60" fill="#68d391" font-family="Arial" font-size="11" font-weight="bold">80% montrent association positive</text>
+    <text x="15" y="73" fill="#a0aec0" font-family="Arial" font-size="9">spiritualité → bien-être mental</text>
+
+    <line x1="15" y1="82" x2="225" y2="82" stroke="#4a5568" stroke-width="1"/>
+
+    <text x="15" y="98" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">VanderWeele (Harvard) :</text>
+    <text x="15" y="115" fill="#a0aec0" font-family="Arial" font-size="9">Pratique religieuse régulière =</text>
+
+    <circle cx="25" cy="132" r="4" fill="#48bb78"/>
+    <text x="35" y="136" fill="#68d391" font-family="Arial" font-size="10" font-weight="bold">-30% risque dépression</text>
+
+    <circle cx="25" cy="152" r="4" fill="#48bb78"/>
+    <text x="35" y="156" fill="#68d391" font-family="Arial" font-size="10" font-weight="bold">÷5 risque de suicide</text>
+  </g>
+
+  <!-- Bottom section: Mechanisms -->
+  <g transform="translate(30, 245)">
+    <rect x="0" y="0" width="740" height="85" rx="8" fill="#2d3748" stroke="#667eea" stroke-width="1"/>
+    <text x="370" y="20" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="11" font-weight="bold">MÉCANISMES PROTECTEURS IDENTIFIÉS</text>
+
+    <!-- 5 pillars -->
+    <g transform="translate(30, 35)">
+      <rect x="0" y="0" width="120" height="40" rx="6" fill="#4a5568"/>
+      <text x="60" y="18" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">SENS</text>
+      <text x="60" y="32" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="8">"Pourquoi" de la vie</text>
+    </g>
+
+    <g transform="translate(165, 35)">
+      <rect x="0" y="0" width="120" height="40" rx="6" fill="#4a5568"/>
+      <text x="60" y="18" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">COMMUNAUTÉ</text>
+      <text x="60" y="32" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="8">Liens sociaux forts</text>
+    </g>
+
+    <g transform="translate(300, 35)">
+      <rect x="0" y="0" width="120" height="40" rx="6" fill="#4a5568"/>
+      <text x="60" y="18" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">RITUELS</text>
+      <text x="60" y="32" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="8">Structure temporelle</text>
+    </g>
+
+    <g transform="translate(435, 35)">
+      <rect x="0" y="0" width="120" height="40" rx="6" fill="#4a5568"/>
+      <text x="60" y="18" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">RÉCIT</text>
+      <text x="60" y="32" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="8">Cadre narratif global</text>
+    </g>
+
+    <g transform="translate(570, 35)">
+      <rect x="0" y="0" width="130" height="40" rx="6" fill="#4a5568"/>
+      <text x="65" y="18" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">PRATIQUES</text>
+      <text x="65" y="32" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="8">Prière, méditation</text>
+    </g>
+  </g>
+
+  <!-- Bottom section: Validated virtues -->
+  <g transform="translate(30, 345)">
+    <rect x="0" y="0" width="740" height="75" rx="8" fill="#2d3748" stroke="#d69e2e" stroke-width="1"/>
+    <text x="370" y="18" text-anchor="middle" fill="#ecc94b" font-family="Arial" font-size="11" font-weight="bold">"VERTUS" TRADITIONNELLES VALIDÉES PAR LA PSYCHOLOGIE</text>
+
+    <g transform="translate(50, 30)">
+      <circle cx="15" cy="15" r="12" fill="#805ad5"/>
+      <text x="15" y="19" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">P</text>
+      <text x="40" y="13" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">PARDON</text>
+      <text x="40" y="26" fill="#a0aec0" font-family="Arial" font-size="8">↓ stress, ↑ santé cardio</text>
+    </g>
+
+    <g transform="translate(250, 30)">
+      <circle cx="15" cy="15" r="12" fill="#38a169"/>
+      <text x="15" y="19" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">G</text>
+      <text x="40" y="13" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">GRATITUDE</text>
+      <text x="40" y="26" fill="#a0aec0" font-family="Arial" font-size="8">↑ bien-être, sommeil</text>
+    </g>
+
+    <g transform="translate(470, 30)">
+      <circle cx="15" cy="15" r="12" fill="#3182ce"/>
+      <text x="15" y="19" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">E</text>
+      <text x="40" y="13" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold">ESPOIR</text>
+      <text x="40" y="26" fill="#a0aec0" font-family="Arial" font-size="8">Prédicteur de résilience</text>
+    </g>
+  </g>
+
+  <!-- Quote -->
+  <text x="400" y="440" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="10" font-style="italic">
+    "Celui qui a un pourquoi peut supporter presque n'importe quel comment." — Viktor Frankl
+  </text>
+
+</svg>
