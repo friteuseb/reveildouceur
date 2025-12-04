@@ -447,7 +447,6 @@
   // ========================================
 
   function createArticleCard(article, index) {
-    const formattedDate = formatDate(article.date);
     const categoryBadge = article.category
       ? `<span class="article-card__category" style="background-color: ${article.category.color}">${article.category.label}</span>`
       : '';
@@ -478,10 +477,7 @@
           </a>
         </div>
         <div class="article-card__content">
-          <div class="article-card__meta">
-            ${categoryBadge}
-            <time class="article-card__date" datetime="${article.date.toISOString()}">${formattedDate}</time>
-          </div>
+          ${categoryBadge ? `<div class="article-card__meta">${categoryBadge}</div>` : ''}
           <h2 class="article-card__title">
             <a href="${article.url}">${article.title}</a>
           </h2>
