@@ -26,13 +26,11 @@ ARTICLES_DIR = Path(__file__).parent.parent / "articles"
 IMAGES_DIR = Path(__file__).parent.parent / "images" / "illustrations"
 
 # Style de prompt pour des illustrations cohérentes (Mœbius)
-STYLE_SUFFIX = """
-Style: Mœbius (Jean Giraud) comic art style, clean precise ink lines, subtle crosshatching,
-vibrant but harmonious colors, surreal dreamlike quality, intricate details,
-European bande dessinée aesthetic, slight sci-fi retrofuturistic feeling.
-No text, no words, no letters, no numbers, no speech bubbles in the image.
-16:9 landscape format, editorial magazine cover quality.
-"""
+# IMPORTANT: Ce préfixe est ajouté AU DÉBUT du prompt pour ne pas être tronqué
+STYLE_PREFIX = "Moebius Jean Giraud comic art style, clean ink lines, crosshatching, vibrant colors, surreal dreamlike, European bande dessinée, sci-fi retrofuturistic. "
+
+# Suffixe pour les contraintes techniques (ajouté si place disponible)
+STYLE_SUFFIX = "No text, no words, no letters in image. 16:9 landscape format."
 
 # Prompts spécifiques pour éviter les images trop similaires
 ARTICLE_SPECIFIC_PROMPTS = {
@@ -93,8 +91,9 @@ def generate_image_prompt(title, description, article_slug=None):
     """Génère un prompt pour l'illustration basé sur le contenu de l'article"""
 
     # Vérifier si on a un prompt spécifique pour cet article
+    # STYLE_PREFIX au DÉBUT pour ne pas être tronqué par la limite de 500 caractères
     if article_slug and article_slug in ARTICLE_SPECIFIC_PROMPTS:
-        prompt = f"Editorial illustration: {ARTICLE_SPECIFIC_PROMPTS[article_slug]}. {STYLE_SUFFIX}"
+        prompt = f"{STYLE_PREFIX}{ARTICLE_SPECIFIC_PROMPTS[article_slug]}. {STYLE_SUFFIX}"
         return prompt
 
     # Mots-clés thématiques pour guider l'illustration
@@ -123,10 +122,8 @@ def generate_image_prompt(title, description, article_slug=None):
     if not visual_elements:
         visual_elements = ["abstract conceptual art, philosophical thinking"]
 
-    # Construire le prompt
-    prompt = f"Editorial illustration about: {title}. "
-    prompt += f"Visual concept: {visual_elements[0]}. "
-    prompt += STYLE_SUFFIX
+    # Construire le prompt avec STYLE_PREFIX au début pour ne pas être tronqué
+    prompt = f"{STYLE_PREFIX}Editorial illustration: {visual_elements[0]}. {STYLE_SUFFIX}"
 
     return prompt
 
