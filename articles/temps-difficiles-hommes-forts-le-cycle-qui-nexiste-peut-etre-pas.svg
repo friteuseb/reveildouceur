@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e53e3e"/>
+      <stop offset="100%" style="stop-color:#c53030"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#276749"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#c05621"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#805ad5"/>
+      <stop offset="100%" style="stop-color:#553c9a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">
+    "TEMPS DIFFICILES, HOMMES FORTS" : MYTHE OU RÉALITÉ ?
+  </text>
+
+  <!-- Main quote with X mark -->
+  <rect x="30" y="50" width="740" height="50" rx="6" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+  <text x="400" y="72" fill="#e2e8f0" font-family="Georgia, serif" font-size="12" font-style="italic" text-anchor="middle">
+    "Les temps difficiles créent des hommes forts. Les hommes forts créent des temps faciles.
+  </text>
+  <text x="400" y="88" fill="#e2e8f0" font-family="Georgia, serif" font-size="12" font-style="italic" text-anchor="middle">
+    Les temps faciles créent des hommes faibles. Et les hommes faibles créent des temps difficiles."
+  </text>
+
+  <!-- Origin reveal -->
+  <rect x="30" y="110" width="230" height="90" rx="8" fill="#1a1a2e" stroke="#e53e3e" stroke-width="1"/>
+  <text x="145" y="132" fill="#e53e3e" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">ORIGINE RÉELLE</text>
+  <text x="145" y="155" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">2016</text>
+  <text x="145" y="175" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Roman post-apocalyptique</text>
+  <text x="145" y="190" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">de G. Michael Hopf</text>
+
+  <!-- Scientific verdict -->
+  <rect x="280" y="110" width="230" height="90" rx="8" fill="#1a1a2e" stroke="#ed8936" stroke-width="1"/>
+  <text x="395" y="132" fill="#ed8936" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">VERDICT SCIENTIFIQUE</text>
+  <text x="395" y="158" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">"Pseudoscience"</text>
+  <text x="395" y="175" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">- Peter Turchin (cliodynamique)</text>
+  <text x="395" y="190" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">- NYT: "Aussi scientifique que l'astrologie"</text>
+
+  <!-- Real Ibn Khaldun -->
+  <rect x="530" y="110" width="240" height="90" rx="8" fill="#1a1a2e" stroke="#48bb78" stroke-width="1"/>
+  <text x="650" y="132" fill="#48bb78" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">VRAI PRÉCURSEUR</text>
+  <text x="650" y="155" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Ibn Khaldun (1377)</text>
+  <text x="650" y="175" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Théorie de l'asabiyyah</text>
+  <text x="650" y="190" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Mais bien plus nuancée</text>
+
+  <!-- Rome myth section -->
+  <rect x="30" y="215" width="360" height="100" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="210" y="238" fill="#e53e3e" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">MYTHE : ROME TOMBÉE PAR "FAIBLESSE"</text>
+
+  <text x="45" y="260" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">✗ "Décadence" et "hommes faibles"</text>
+  <text x="45" y="280" fill="#48bb78" font-family="Arial, sans-serif" font-size="10">✓ Guerres civiles incessantes</text>
+  <text x="45" y="295" fill="#48bb78" font-family="Arial, sans-serif" font-size="10">✓ Crise économique et monétaire</text>
+  <text x="220" y="280" fill="#48bb78" font-family="Arial, sans-serif" font-size="10">✓ Pression migratoire (fuyant les Huns)</text>
+  <text x="220" y="295" fill="#48bb78" font-family="Arial, sans-serif" font-size="10">✓ Complexité bureaucratique (Tainter)</text>
+
+  <!-- Greatest Generation myth -->
+  <rect x="410" y="215" width="360" height="100" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="590" y="238" fill="#ed8936" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">MYTHE : "GREATEST GENERATION" PARFAITE</text>
+
+  <text x="425" y="260" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Ce qu'on oublie (Kenneth Rose) :</text>
+  <text x="425" y="278" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">• Désertions massives</text>
+  <text x="425" y="293" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">• Record divorces en 1946</text>
+  <text x="580" y="278" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">• Ségrégation maintenue</text>
+  <text x="580" y="293" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">• Marché noir florissant</text>
+
+  <!-- Modern generations comparison -->
+  <rect x="30" y="330" width="740" height="85" rx="8" fill="#1a1a2e" stroke="#805ad5" stroke-width="1"/>
+  <text x="400" y="352" fill="#805ad5" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">GÉNÉRATIONS ACTUELLES : "FAIBLES" OU DIFFÉRENTES ?</text>
+
+  <!-- Stats boxes -->
+  <rect x="50" y="365" width="130" height="40" rx="4" fill="url(#redGrad)" opacity="0.8"/>
+  <text x="115" y="382" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">46%</text>
+  <text x="115" y="398" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">Gen Z stressés/anxieux</text>
+
+  <rect x="200" y="365" width="130" height="40" rx="4" fill="url(#greenGrad)" opacity="0.8"/>
+  <text x="265" y="382" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">37%</text>
+  <text x="265" y="398" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">Gen Z en thérapie</text>
+
+  <rect x="350" y="365" width="180" height="40" rx="4" fill="url(#orangeGrad)" opacity="0.8"/>
+  <text x="440" y="382" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">PARADOXE</text>
+  <text x="440" y="398" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">Plus lucides = plus diagnostiqués</text>
+
+  <rect x="550" y="365" width="200" height="40" rx="4" fill="url(#purpleGrad)" opacity="0.8"/>
+  <text x="650" y="382" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">RENVERSEMENT</text>
+  <text x="650" y="398" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">Demander de l'aide = force (pas faiblesse)</text>
+
+  <!-- Footer -->
+  <text x="400" y="438" fill="#718096" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">
+    reveildouceur.fr | Sources: Strauss-Howe theory critics, K. Rose, PMC/NIH, historiens de Rome
+  </text>
+</svg>

@@ -68,6 +68,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Cinéma et révélations
     "quand-le-cinema-nous-dit-la-verite": "Giant cinema screen splitting reality in half, left side shows mundane grey office workers in cubicles, right side reveals the hidden truth behind the screen with puppet strings attached to politicians and billionaires, a lone viewer in red seat wearing special sunglasses like in They Live, film reels transforming into scrolls of truth, Matrix-style green code cascading in corners, movie projector beam illuminating hidden symbols on dollar bills and TV screens, surreal revelation moment, Truman Show dome cracking above",
+
+    # Société et cycles
+    "temps-difficiles-hommes-forts-le-cycle-qui-nexiste-peut-etre-pas": "Circular wheel of history with four quadrants showing different generations: muscular warrior in ancient armor at top, comfortable businessman lounging in middle, young person with smartphone at bottom, then rising phoenix figure completing the cycle, BUT the wheel is cracked and broken showing it's a false construct, fragments floating away revealing complex gears and multiple intersecting factors beneath (economy, war, technology, disease), central figure examining the broken wheel with magnifying glass, skeptical expression, muted earth tones with gold accents",
 }
 
 def extract_article_info(html_path):
