@@ -65,6 +65,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
     "demographie-europeenne-le-sujet-tabou": "Map of Europe slowly fading from vibrant colors to grey, empty cradles and school desks, population pyramid inverting like hourglass running out, elderly figures outnumbering children, demographic transition visualization with taboo whisper symbols",
     "hommes-sensibles-ce-que-disent-les-etudes": "Masculine figure caught between two mirrors showing contrasting reflections: one side shows emotional vulnerability with soft watercolors, other side shows stoic mask cracking, women observing from shadows with thought bubbles showing contradictory preferences, psychological study visualization",
     "violence-psychologique-suicide-masculin-le-tabou": "Solitary male silhouette standing on edge of dark cliff, invisible chains made of words wrapping around him, broken support hotline telephone dangling, statistics floating like ghosts, heavy atmosphere of isolation and silence, mental health crisis visualization",
+
+    # Cinéma et révélations
+    "quand-le-cinema-nous-dit-la-verite": "Giant cinema screen splitting reality in half, left side shows mundane grey office workers in cubicles, right side reveals the hidden truth behind the screen with puppet strings attached to politicians and billionaires, a lone viewer in red seat wearing special sunglasses like in They Live, film reels transforming into scrolls of truth, Matrix-style green code cascading in corners, movie projector beam illuminating hidden symbols on dollar bills and TV screens, surreal revelation moment, Truman Show dome cracking above",
 }
 
 def extract_article_info(html_path):

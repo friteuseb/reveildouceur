@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="filmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#805ad5"/>
+      <stop offset="100%" style="stop-color:#553c9a"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#276749"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#c05621"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">
+    FILMS PROPHÉTIQUES : CE QU'ILS ONT PRÉDIT
+  </text>
+
+  <!-- Timeline -->
+  <line x1="50" y1="80" x2="750" y2="80" stroke="#4a5568" stroke-width="2"/>
+
+  <!-- Film entries on timeline -->
+  <!-- Network 1976 -->
+  <circle cx="100" cy="80" r="8" fill="url(#filmGrad)"/>
+  <text x="100" y="100" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">1976</text>
+  <text x="100" y="115" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Network</text>
+
+  <!-- They Live 1988 -->
+  <circle cx="220" cy="80" r="8" fill="url(#filmGrad)"/>
+  <text x="220" y="100" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">1988</text>
+  <text x="220" y="115" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">They Live</text>
+
+  <!-- Wag the Dog 1997 -->
+  <circle cx="340" cy="80" r="8" fill="url(#filmGrad)"/>
+  <text x="340" y="100" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">1997</text>
+  <text x="340" y="115" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Wag the Dog</text>
+
+  <!-- Matrix/Fight Club/Truman 1998-99 -->
+  <circle cx="460" cy="80" r="8" fill="url(#filmGrad)"/>
+  <text x="460" y="100" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">1998-99</text>
+  <text x="460" y="115" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Matrix/Truman</text>
+
+  <!-- V for Vendetta 2005 -->
+  <circle cx="580" cy="80" r="8" fill="url(#filmGrad)"/>
+  <text x="580" y="100" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">2005</text>
+  <text x="580" y="115" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">V Vendetta</text>
+
+  <!-- Idiocracy 2006 -->
+  <circle cx="700" cy="80" r="8" fill="url(#filmGrad)"/>
+  <text x="700" y="100" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">2006</text>
+  <text x="700" y="115" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Idiocracy</text>
+
+  <!-- Main content boxes -->
+  <!-- Box 1: Predictions réalisées -->
+  <rect x="30" y="140" width="230" height="140" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="145" y="165" fill="#48bb78" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">PRÉDICTIONS RÉALISÉES</text>
+
+  <circle cx="50" cy="190" r="4" fill="#48bb78"/>
+  <text x="60" y="194" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">Télé-réalité (Network → 1999)</text>
+
+  <circle cx="50" cy="215" r="4" fill="#48bb78"/>
+  <text x="60" y="219" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">Pub omniprésente (They Live)</text>
+
+  <circle cx="50" cy="240" r="4" fill="#48bb78"/>
+  <text x="60" y="244" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">Surveillance de masse (Truman)</text>
+
+  <circle cx="50" cy="265" r="4" fill="#48bb78"/>
+  <text x="60" y="269" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">Guerres médiatiques (Wag)</text>
+
+  <!-- Box 2: Messages confirmés -->
+  <rect x="280" y="140" width="230" height="140" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="395" y="165" fill="#ed8936" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">MESSAGES CONFIRMÉS</text>
+
+  <text x="295" y="190" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">Matrix → Allégorie transgenre</text>
+  <text x="305" y="205" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">(Wachowski, 2020)</text>
+
+  <text x="295" y="230" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">They Live → Anti-capitalisme</text>
+  <text x="305" y="245" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">(Carpenter: "studio voulait censurer")</text>
+
+  <text x="295" y="270" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="11">Fight Club → Critique consumérisme</text>
+
+  <!-- Box 3: Statistiques clés -->
+  <rect x="530" y="140" width="240" height="140" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="650" y="165" fill="#805ad5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CHIFFRES CLÉS</text>
+
+  <text x="650" y="200" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">50</text>
+  <text x="650" y="218" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">ans d'avance (Network)</text>
+
+  <text x="590" y="250" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">7</text>
+  <text x="590" y="268" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">villes pour Idiocracy</text>
+
+  <text x="710" y="250" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">246B$</text>
+  <text x="710" y="268" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">accord tabac (Insider)</text>
+
+  <!-- Quote section -->
+  <rect x="30" y="295" width="740" height="70" rx="8" fill="#1a1a2e" stroke="#4a5568" stroke-width="1"/>
+  <text x="400" y="325" fill="#e2e8f0" font-family="Georgia, serif" font-size="14" font-style="italic" text-anchor="middle">
+    "Les années 80 ne se sont jamais terminées. Ce que je criais à propos de l'économie
+  </text>
+  <text x="400" y="345" fill="#e2e8f0" font-family="Georgia, serif" font-size="14" font-style="italic" text-anchor="middle">
+    est devenu douloureusement clair pour beaucoup de gens."
+  </text>
+  <text x="400" y="360" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">— John Carpenter, réalisateur de They Live</text>
+
+  <!-- Film icons row -->
+  <rect x="30" y="380" width="100" height="55" rx="5" fill="url(#filmGrad)" opacity="0.8"/>
+  <text x="80" y="405" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">NETWORK</text>
+  <text x="80" y="420" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Info = Business</text>
+
+  <rect x="145" y="380" width="100" height="55" rx="5" fill="url(#greenGrad)" opacity="0.8"/>
+  <text x="195" y="405" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">THEY LIVE</text>
+  <text x="195" y="420" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">OBEY / CONSUME</text>
+
+  <rect x="260" y="380" width="100" height="55" rx="5" fill="url(#orangeGrad)" opacity="0.8"/>
+  <text x="310" y="405" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">MATRIX</text>
+  <text x="310" y="420" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Pilule rouge</text>
+
+  <rect x="375" y="380" width="100" height="55" rx="5" fill="url(#filmGrad)" opacity="0.8"/>
+  <text x="425" y="405" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">WAG THE DOG</text>
+  <text x="425" y="420" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Guerre fabriquée</text>
+
+  <rect x="490" y="380" width="100" height="55" rx="5" fill="url(#greenGrad)" opacity="0.8"/>
+  <text x="540" y="405" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">TRUMAN SHOW</text>
+  <text x="540" y="420" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Vie = émission</text>
+
+  <rect x="605" y="380" width="100" height="55" rx="5" fill="url(#orangeGrad)" opacity="0.8"/>
+  <text x="655" y="405" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">FIGHT CLUB</text>
+  <text x="655" y="420" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Anti-conso</text>
+
+  <rect x="720" y="380" width="50" height="55" rx="5" fill="url(#filmGrad)" opacity="0.8"/>
+  <text x="745" y="405" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">+</text>
+  <text x="745" y="420" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">autres</text>
+
+  <!-- Footer -->
+  <text x="400" y="445" fill="#718096" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">
+    reveildouceur.fr | Sources: interviews réalisateurs, analyses académiques
+  </text>
+</svg>
