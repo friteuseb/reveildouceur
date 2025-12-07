@@ -72,6 +72,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Énergie/Pétrole
     "petrole-energie-fossile-limitee-vraiment": "Cross-section of Earth showing two competing theories of oil origin: surface layer with prehistoric swamp with dinosaurs and ancient forests decomposing into black liquid, deep underground layer showing primordial carbon bubbling up from Earth's molten core through cracks, oil derrick on surface piercing both layers, question mark made of oil drops floating above, Saturn's moon Titan visible in sky with methane lakes, hourglass filled with oil slowly draining but magically refilling from below, geological strata visible with fossils on one side and crystalline formations on other, scientific controversy visualization",
+
+    # Éducation
+    "ecole-francaise-comparaison-internationale": "Split scene classroom comparison: left side shows overcrowded French classroom with exhausted teacher drowning in paperwork and tired students at desks piled with books under harsh fluorescent lights, clock showing long hours, euro coins scattered but not reaching the teacher; right side shows bright Estonian classroom with small group of engaged students around modern technology, happy teacher with master's degree diploma on wall, sunlight streaming through windows; giant PISA ranking chart floating between both scenes showing France falling while Estonia rises, balance scale weighing hours vs results tipping wrong way, educational paradox visualization",
 }
 
 def extract_article_info(html_path):
