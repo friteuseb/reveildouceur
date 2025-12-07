@@ -69,6 +69,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Société et cycles
     "temps-difficiles-hommes-forts-le-cycle-qui-nexiste-peut-etre-pas": "Circular wheel of history with four quadrants showing different generations: muscular warrior in ancient armor at top, comfortable businessman lounging in middle, young person with smartphone at bottom, then rising phoenix figure completing the cycle, BUT the wheel is cracked and broken showing it's a false construct, fragments floating away revealing complex gears and multiple intersecting factors beneath (economy, war, technology, disease), central figure examining the broken wheel with magnifying glass, skeptical expression, muted earth tones with gold accents",
+
+    # Énergie/Pétrole
+    "petrole-energie-fossile-limitee-vraiment": "Cross-section of Earth showing two competing theories of oil origin: surface layer with prehistoric swamp with dinosaurs and ancient forests decomposing into black liquid, deep underground layer showing primordial carbon bubbling up from Earth's molten core through cracks, oil derrick on surface piercing both layers, question mark made of oil drops floating above, Saturn's moon Titan visible in sky with methane lakes, hourglass filled with oil slowly draining but magically refilling from below, geological strata visible with fossils on one side and crystalline formations on other, scientific controversy visualization",
 }
 
 def extract_article_info(html_path):
