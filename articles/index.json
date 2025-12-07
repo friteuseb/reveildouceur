@@ -27,9 +27,17 @@
     "geopolitique": {
       "label": "Géopolitique",
       "color": "#667eea"
+    },
+    "predictions": {
+      "label": "Madame Irma",
+      "color": "#9f7aea"
     }
   },
   "articles": [
+    {
+      "file": "jumeau-numerique-terre-simuler-avenir.html",
+      "category": "predictions"
+    },
     {
       "file": "ecole-francaise-comparaison-internationale.html",
       "category": "societe"

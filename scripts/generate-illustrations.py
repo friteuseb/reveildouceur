@@ -75,6 +75,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Éducation
     "ecole-francaise-comparaison-internationale": "Split scene classroom comparison: left side shows overcrowded French classroom with exhausted teacher drowning in paperwork and tired students at desks piled with books under harsh fluorescent lights, clock showing long hours, euro coins scattered but not reaching the teacher; right side shows bright Estonian classroom with small group of engaged students around modern technology, happy teacher with master's degree diploma on wall, sunlight streaming through windows; giant PISA ranking chart floating between both scenes showing France falling while Estonia rises, balance scale weighing hours vs results tipping wrong way, educational paradox visualization",
+
+    # Madame Irma - Prédictions
+    "jumeau-numerique-terre-simuler-avenir": "Massive holographic Earth floating in futuristic control room, translucent blue digital grid covering the planet surface, data streams flowing like rivers across continents, scientists in white coats monitoring multiple screens showing weather patterns and economic graphs, a butterfly with fractal wings symbolizing chaos theory in foreground, European Space Agency and Nvidia logos subtly visible, supercomputers with blinking lights lining the walls, split vision showing Earth simulation versus unpredictable human silhouettes walking in random directions, crystal ball cracked revealing circuit boards inside, prediction vs chaos visualization",
 }
 
 def extract_article_info(html_path):
