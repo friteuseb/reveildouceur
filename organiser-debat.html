@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organiser un débat entre amis - Réveil Douceur</title>
+  <meta name="description" content="Guide complet pour organiser une soirée débat entre amis. Choisissez vos thématiques, préparez vos arguments avec des sources fiables, et apprenez à animer des discussions constructives.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Organiser un débat entre amis - Réveil Douceur">
+  <meta property="og:description" content="Guide complet pour organiser une soirée débat entre amis basée sur des sources fiables.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reveildouceur.fr/organiser-debat.html">
+
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/config.js"></script>
+
+  <style>
+    /* Styles spécifiques - Page compacte */
+
+    /* Hero compact */
+    .debat-hero {
+      background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+      padding: var(--space-xl) 0 var(--space-2xl);
+      text-align: center;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .debat-hero__title {
+      margin-bottom: var(--space-sm);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .debat-hero__subtitle {
+      color: var(--color-text-light);
+      max-width: 650px;
+      margin: 0 auto var(--space-lg);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .debat-hero__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    /* Sections compactes */
+    .debat-section {
+      padding: var(--space-2xl) 0;
+    }
+
+    .debat-section--alt {
+      background: var(--color-bg-alt);
+    }
+
+    .debat-section__header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto var(--space-xl);
+    }
+
+    .debat-section__title {
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      margin-bottom: var(--space-xs);
+    }
+
+    .debat-section__intro {
+      color: var(--color-text-light);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* Grille compacte pourquoi */
+    .pourquoi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .pourquoi-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: var(--space-md);
+      transition: all var(--transition);
+    }
+
+    .pourquoi-card:hover {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow);
+    }
+
+    .pourquoi-card__title {
+      font-size: 1rem;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text);
+    }
+
+    .pourquoi-card__text {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* CTA intermédiaire */
+    .cta-banner {
+      text-align: center;
+      padding: var(--space-lg);
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: var(--radius);
+      margin: var(--space-xl) 0;
+    }
+
+    .cta-banner__text {
+      margin: 0 0 var(--space-md);
+      font-size: 1rem;
+    }
+
+    .cta-banner .btn {
+      background: #fff;
+      color: var(--color-primary);
+      border-color: #fff;
+    }
+
+    .cta-banner .btn:hover {
+      background: var(--color-bg);
+    }
+
+    /* Règles compactes */
+    .regles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .regle-item {
+      display: flex;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+    }
+
+    .regle-item__number {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8125rem;
+      font-weight: 600;
+    }
+
+    .regle-item__content h3 {
+      font-size: 0.9375rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-text);
+    }
+
+    .regle-item__content p {
+      font-size: 0.8125rem;
+      color: var(--color-text-light);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Étapes compactes */
+    .etapes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .etape-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: var(--space-md);
+      position: relative;
+    }
+
+    .etape-card__number {
+      position: absolute;
+      top: calc(-1 * var(--space-sm));
+      left: var(--space-md);
+      background: var(--color-primary);
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .etape-card__timing {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-primary);
+      margin-bottom: var(--space-xs);
+      margin-top: var(--space-xs);
+    }
+
+    .etape-card__title {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text);
+    }
+
+    .etape-card__text {
+      font-size: 0.8125rem;
+      color: var(--color-text-light);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Formats compacts */
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-md);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .format-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: var(--space-md);
+      border-top: 3px solid var(--color-primary);
+    }
+
+    .format-card--recommande {
+      border-top-color: #f6ad55;
+    }
+
+    .format-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--space-sm);
+    }
+
+    .format-card__title {
+      font-size: 1rem;
+      margin: 0;
+      color: var(--color-text);
+    }
+
+    .format-card__badge {
+      font-size: 0.625rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: #f6ad55;
+      color: #fff;
+      padding: 0.125rem 0.375rem;
+      border-radius: 3px;
+    }
+
+    .format-card__duration {
+      font-size: 0.8125rem;
+      color: var(--color-primary);
+      font-weight: 500;
+      margin-bottom: var(--space-sm);
+    }
+
+    .format-card__desc {
+      font-size: 0.8125rem;
+      color: var(--color-text-light);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Section sélection */
+    .selection-section {
+      background: var(--color-surface);
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .selection-section__header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+
+    .selection-section__title {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-xs);
+    }
+
+    .selection-section__subtitle {
+      color: var(--color-text-light);
+      font-size: 0.9375rem;
+      margin: 0;
+    }
+
+    /* Filtres */
+    .selection-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-md);
+      justify-content: center;
+    }
+
+    .selection-filter {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all var(--transition);
+      color: var(--color-text);
+    }
+
+    .selection-filter:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .selection-filter--active {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #fff;
+    }
+
+    /* Liste articles */
+    .article-list {
+      display: grid;
+      gap: var(--space-xs);
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: var(--space-xs);
+      margin-bottom: var(--space-md);
+    }
+
+    .article-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .article-item:hover {
+      border-color: var(--color-primary);
+    }
+
+    .article-item--selected {
+      border-color: var(--color-primary);
+      background: rgba(91, 123, 111, 0.08);
+    }
+
+    [data-theme="dark"] .article-item--selected {
+      background: rgba(122, 155, 143, 0.15);
+    }
+
+    .article-item__checkbox {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      border: 2px solid var(--color-border);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+
+    .article-item--selected .article-item__checkbox {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .article-item__checkbox svg {
+      opacity: 0;
+      color: #fff;
+    }
+
+    .article-item--selected .article-item__checkbox svg {
+      opacity: 1;
+    }
+
+    .article-item__content {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .article-item__category {
+      font-size: 0.625rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #fff;
+      padding: 0.125rem 0.375rem;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .article-item__title {
+      font-size: 0.875rem;
+      color: var(--color-text);
+      line-height: 1.3;
+    }
+
+    /* Résumé sélection */
+    .selection-summary {
+      padding: var(--space-md);
+      background: var(--color-bg-alt);
+      border-radius: var(--radius);
+      margin-bottom: var(--space-md);
+    }
+
+    .selection-summary__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-sm);
+    }
+
+    .selection-summary__count {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .selection-summary__count span {
+      color: var(--color-primary);
+    }
+
+    .selected-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+
+    .selected-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--color-primary);
+      color: #fff;
+      font-size: 0.75rem;
+      border-radius: var(--radius);
+    }
+
+    .selected-tag__remove {
+      background: none;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      opacity: 0.7;
+    }
+
+    .selected-tag__remove:hover {
+      opacity: 1;
+    }
+
+    /* Actions export */
+    .selection-actions {
+      display: flex;
+      gap: var(--space-sm);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Tips compact */
+    .tips-box {
+      padding: var(--space-md);
+      background: rgba(91, 123, 111, 0.1);
+      border: 1px solid var(--color-primary);
+      border-radius: var(--radius);
+      margin-top: var(--space-xl);
+    }
+
+    [data-theme="dark"] .tips-box {
+      background: rgba(122, 155, 143, 0.1);
+    }
+
+    .tips-box__title {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-sm);
+      color: var(--color-text);
+    }
+
+    .tips-box__list {
+      margin: 0;
+      padding-left: var(--space-lg);
+      font-size: 0.8125rem;
+      color: var(--color-text-light);
+    }
+
+    .tips-box__list li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .debat-section {
+        padding: var(--space-xl) 0;
+      }
+
+      .selection-section {
+        padding: var(--space-md);
+        margin: 0 calc(-1 * var(--space-md));
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+      }
+
+      .selection-summary__header {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
+      }
+
+      .regles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <div id="header-include"></div>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="debat-hero">
+      <div class="container">
+        <h1 class="debat-hero__title">Organisez un débat entre amis</h1>
+        <p class="debat-hero__subtitle">
+          Transformez vos soirées en moments d'échange enrichissants. Débattez sur des sujets
+          de société en vous appuyant sur des sources fiables et des données vérifiées.
+        </p>
+        <a href="#selection" class="btn btn--primary debat-hero__cta">
+          Choisir mes thématiques
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Pourquoi -->
+    <section class="debat-section">
+      <div class="container">
+        <div class="debat-section__header">
+          <h2 class="debat-section__title">Pourquoi débattre entre amis ?</h2>
+          <p class="debat-section__intro">
+            Sortez des bulles de filtre, confrontez vos idées et apprenez ensemble.
+          </p>
+        </div>
+
+        <div class="pourquoi-grid">
+          <div class="pourquoi-card">
+            <h3 class="pourquoi-card__title">Esprit critique</h3>
+            <p class="pourquoi-card__text">
+              Argumenter et chercher des preuves oblige à structurer sa pensée.
+            </p>
+          </div>
+          <div class="pourquoi-card">
+            <h3 class="pourquoi-card__title">Liens renforcés</h3>
+            <p class="pourquoi-card__text">
+              Des échanges respectueux sur des sujets profonds créent une vraie complicité.
+            </p>
+          </div>
+          <div class="pourquoi-card">
+            <h3 class="pourquoi-card__title">Apprentissage collectif</h3>
+            <p class="pourquoi-card__text">
+              Chacun apporte son expertise, ses lectures et son vécu.
+            </p>
+          </div>
+          <div class="pourquoi-card">
+            <h3 class="pourquoi-card__title">Dépasser les clivages</h3>
+            <p class="pourquoi-card__text">
+              Se concentrer sur les faits révèle souvent des points communs insoupçonnés.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-banner">
+          <p class="cta-banner__text">Prêt à organiser votre première soirée débat ?</p>
+          <a href="#selection" class="btn">Sélectionner des articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Règles du débat -->
+    <section class="debat-section debat-section--alt">
+      <div class="container">
+        <div class="debat-section__header">
+          <h2 class="debat-section__title">Les règles d'or du débat bienveillant</h2>
+          <p class="debat-section__intro">
+            Un bon débat n'est pas une bataille, mais une exploration commune.
+          </p>
+        </div>
+
+        <div class="regles-grid">
+          <div class="regle-item">
+            <span class="regle-item__number">1</span>
+            <div class="regle-item__content">
+              <h3>Écouter avant de répondre</h3>
+              <p>Reformulez ce que vous avez compris avant de donner votre avis.</p>
+            </div>
+          </div>
+          <div class="regle-item">
+            <span class="regle-item__number">2</span>
+            <div class="regle-item__content">
+              <h3>Sourcer ses affirmations</h3>
+              <p>Distinguez faits vérifiables et opinions personnelles.</p>
+            </div>
+          </div>
+          <div class="regle-item">
+            <span class="regle-item__number">3</span>
+            <div class="regle-item__content">
+              <h3>Accepter la nuance</h3>
+              <p>Reconnaissez quand un argument adverse a du mérite.</p>
+            </div>
+          </div>
+          <div class="regle-item">
+            <span class="regle-item__number">4</span>
+            <div class="regle-item__content">
+              <h3>Attaquer les idées, pas les personnes</h3>
+              <p>Évitez les jugements personnels, concentrez-vous sur les arguments.</p>
+            </div>
+          </div>
+          <div class="regle-item">
+            <span class="regle-item__number">5</span>
+            <div class="regle-item__content">
+              <h3>Accepter de changer d'avis</h3>
+              <p>C'est une force, pas une faiblesse.</p>
+            </div>
+          </div>
+          <div class="regle-item">
+            <span class="regle-item__number">6</span>
+            <div class="regle-item__content">
+              <h3>Respecter le temps de parole</h3>
+              <p>Chacun doit pouvoir s'exprimer équitablement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment organiser -->
+    <section class="debat-section">
+      <div class="container">
+        <div class="debat-section__header">
+          <h2 class="debat-section__title">Comment organiser votre soirée</h2>
+        </div>
+
+        <div class="etapes-grid">
+          <div class="etape-card">
+            <span class="etape-card__number">1</span>
+            <span class="etape-card__timing">1-2 semaines avant</span>
+            <h3 class="etape-card__title">Choisir les thèmes</h3>
+            <p class="etape-card__text">Sélectionnez 2-3 articles ci-dessous et partagez-les au groupe.</p>
+          </div>
+          <div class="etape-card">
+            <span class="etape-card__number">2</span>
+            <span class="etape-card__timing">Quelques jours avant</span>
+            <h3 class="etape-card__title">Préparer le cadre</h3>
+            <p class="etape-card__text">Lieu confortable, 4-8 personnes, désigner un modérateur.</p>
+          </div>
+          <div class="etape-card">
+            <span class="etape-card__number">3</span>
+            <span class="etape-card__timing">Le jour J</span>
+            <h3 class="etape-card__title">Lancer le débat</h3>
+            <p class="etape-card__text">Rappeler les règles, tour de table, présenter les données clés.</p>
+          </div>
+          <div class="etape-card">
+            <span class="etape-card__number">4</span>
+            <span class="etape-card__timing">Pendant</span>
+            <h3 class="etape-card__title">Animer</h3>
+            <p class="etape-card__text">Distribuer la parole, recentrer si besoin, poser des questions.</p>
+          </div>
+          <div class="etape-card">
+            <span class="etape-card__number">5</span>
+            <span class="etape-card__timing">Pour conclure</span>
+            <h3 class="etape-card__title">Faire le bilan</h3>
+            <p class="etape-card__text">Ce que chacun retient, les changements de perspective.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formats -->
+    <section class="debat-section debat-section--alt">
+      <div class="container">
+        <div class="debat-section__header">
+          <h2 class="debat-section__title">Choisissez votre format</h2>
+        </div>
+
+        <div class="formats-grid">
+          <div class="format-card format-card--recommande">
+            <div class="format-card__header">
+              <h3 class="format-card__title">Le café-débat</h3>
+              <span class="format-card__badge">Recommandé</span>
+            </div>
+            <p class="format-card__duration">1h30 - 2h | 4-6 personnes</p>
+            <p class="format-card__desc">
+              Format décontracté, idéal pour débuter. Un seul sujet, discussion libre avec modération légère.
+            </p>
+          </div>
+          <div class="format-card">
+            <div class="format-card__header">
+              <h3 class="format-card__title">Le débat structuré</h3>
+            </div>
+            <p class="format-card__duration">2h - 2h30 | 6-10 personnes</p>
+            <p class="format-card__desc">
+              Format plus formel avec temps de parole définis. Idéal pour des sujets complexes.
+            </p>
+          </div>
+          <div class="format-card">
+            <div class="format-card__header">
+              <h3 class="format-card__title">L'avocat du diable</h3>
+            </div>
+            <p class="format-card__duration">1h30 | 4-8 personnes</p>
+            <p class="format-card__desc">
+              Chacun défend une position assignée au hasard. Excellent pour la prise de recul.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-banner" style="margin-top: var(--space-xl); margin-bottom: 0;">
+          <p class="cta-banner__text">Maintenant, choisissez vos sujets de discussion</p>
+          <a href="#selection" class="btn">Voir les articles disponibles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sélection des articles -->
+    <section class="debat-section" id="selection">
+      <div class="container">
+        <div class="debat-section__header">
+          <h2 class="debat-section__title">Sélectionnez vos thématiques</h2>
+          <p class="debat-section__intro">
+            Choisissez parmi nos articles sourcés, puis partagez votre sélection avec vos amis.
+          </p>
+        </div>
+
+        <div class="selection-section">
+          <div class="selection-section__header">
+            <h3 class="selection-section__title">Nos articles pour débattre</h3>
+            <p class="selection-section__subtitle">Cliquez pour sélectionner</p>
+          </div>
+
+          <!-- Filtres -->
+          <div class="selection-filters" id="category-filters">
+            <button class="selection-filter selection-filter--active" data-category="">Tous</button>
+          </div>
+
+          <!-- Liste des articles -->
+          <div class="article-list" id="article-list">
+            <div class="loader">
+              <div class="loader__spinner"></div>
+            </div>
+          </div>
+
+          <!-- Résumé sélection -->
+          <div class="selection-summary" id="selection-summary" style="display: none;">
+            <div class="selection-summary__header">
+              <span class="selection-summary__count">
+                <span id="selection-count">0</span> article(s) sélectionné(s)
+              </span>
+              <button class="btn btn--secondary" id="clear-selection" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">
+                Effacer tout
+              </button>
+            </div>
+            <div class="selected-tags" id="selected-tags"></div>
+          </div>
+
+          <!-- Actions -->
+          <div class="selection-actions">
+            <button class="btn btn--primary" id="copy-selection">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copier les liens
+            </button>
+            <button class="btn btn--outline" id="share-whatsapp">
+              WhatsApp
+            </button>
+            <button class="btn btn--outline" id="share-email">
+              Email
+            </button>
+          </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="tips-box">
+          <h4 class="tips-box__title">Conseils pour bien préparer</h4>
+          <ul class="tips-box__list">
+            <li>Demandez à chaque participant de lire les articles avant et de noter 2-3 questions</li>
+            <li>Imprimez les infographies des articles pour les avoir sous les yeux</li>
+            <li>Préparez quelques questions de relance au cas où la discussion s'essouffle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-include"></div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    /**
+     * Organiser un débat - Sélection d'articles
+     */
+    (function() {
+      'use strict';
+
+      const STORAGE_KEY = 'reveil-douceur-debate-selection';
+      const ARTICLES_URL = '/articles/index.json';
+      const SITE_URL = 'https://reveildouceur.fr';
+
+      let articlesData = [];
+      let categoriesData = {};
+      let selectedArticles = [];
+      let currentFilter = '';
+      let titlesCache = {};
+
+      function loadSelection() {
+        try {
+          const saved = localStorage.getItem(STORAGE_KEY);
+          if (saved) selectedArticles = JSON.parse(saved);
+        } catch (e) {}
+      }
+
+      function saveSelection() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(selectedArticles));
+        } catch (e) {}
+      }
+
+      function showToast(message) {
+        const existing = document.querySelector('.toast');
+        if (existing) existing.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.style.cssText = `
+          position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+          background: var(--color-primary); color: #fff; padding: 12px 24px;
+          border-radius: var(--radius); font-size: 0.9375rem; box-shadow: var(--shadow-lg);
+          z-index: 1000; animation: fadeInUp 0.3s ease;
+        `;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 300);
+        }, 2500);
+      }
+
+      function getArticleTitle(slug) {
+        if (titlesCache[slug]) return titlesCache[slug];
+        // Fallback: convertir le slug en titre lisible
+        return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      }
+
+      async function loadArticleTitles() {
+        const promises = articlesData.map(async (article) => {
+          const slug = article.file.replace('.html', '');
+          try {
+            const response = await fetch(`/articles/${article.file}`);
+            if (response.ok) {
+              const html = await response.text();
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+
+              // Chercher le titre dans <title> ou <h1>
+              let title = doc.querySelector('title')?.textContent;
+              if (title) {
+                title = title.replace(/\s*[-–—]\s*Réveil Douceur\s*$/i, '').trim();
+              }
+              if (!title) {
+                const h1 = doc.querySelector('h1');
+                if (h1) title = h1.textContent.trim();
+              }
+              if (title) titlesCache[slug] = title;
+            }
+          } catch (e) {}
+        });
+        await Promise.all(promises);
+        renderArticles();
+      }
+
+      function renderFilters() {
+        const container = document.getElementById('category-filters');
+        let html = '<button class="selection-filter selection-filter--active" data-category="">Tous</button>';
+        Object.entries(categoriesData).forEach(([id, cat]) => {
+          html += `<button class="selection-filter" data-category="${id}">${cat.label}</button>`;
+        });
+        container.innerHTML = html;
+
+        container.querySelectorAll('.selection-filter').forEach(btn => {
+          btn.addEventListener('click', () => {
+            currentFilter = btn.dataset.category;
+            container.querySelectorAll('.selection-filter').forEach(b => b.classList.remove('selection-filter--active'));
+            btn.classList.add('selection-filter--active');
+            renderArticles();
+          });
+        });
+      }
+
+      function renderArticles() {
+        const container = document.getElementById('article-list');
+        let articles = currentFilter ? articlesData.filter(a => a.category === currentFilter) : articlesData;
+
+        let html = '';
+        articles.forEach(article => {
+          const slug = article.file.replace('.html', '');
+          const isSelected = selectedArticles.includes(slug);
+          const category = categoriesData[article.category];
+
+          html += `
+            <div class="article-item ${isSelected ? 'article-item--selected' : ''}" data-slug="${slug}">
+              <div class="article-item__checkbox">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="article-item__content">
+                ${category ? `<span class="article-item__category" style="background-color: ${category.color}">${category.label}</span>` : ''}
+                <span class="article-item__title">${getArticleTitle(slug)}</span>
+              </div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = html;
+        container.querySelectorAll('.article-item').forEach(item => {
+          item.addEventListener('click', () => toggleArticle(item.dataset.slug));
+        });
+        updateSummary();
+      }
+
+      function toggleArticle(slug) {
+        const idx = selectedArticles.indexOf(slug);
+        if (idx === -1) selectedArticles.push(slug);
+        else selectedArticles.splice(idx, 1);
+        saveSelection();
+        renderArticles();
+      }
+
+      function updateSummary() {
+        const summary = document.getElementById('selection-summary');
+        const countEl = document.getElementById('selection-count');
+        const tagsContainer = document.getElementById('selected-tags');
+
+        if (selectedArticles.length === 0) {
+          summary.style.display = 'none';
+          return;
+        }
+
+        summary.style.display = 'block';
+        countEl.textContent = selectedArticles.length;
+
+        tagsContainer.innerHTML = selectedArticles.map(slug => `
+          <span class="selected-tag">
+            ${getArticleTitle(slug).substring(0, 30)}${getArticleTitle(slug).length > 30 ? '...' : ''}
+            <button class="selected-tag__remove" data-slug="${slug}">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </span>
+        `).join('');
+
+        tagsContainer.querySelectorAll('.selected-tag__remove').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleArticle(btn.dataset.slug);
+          });
+        });
+      }
+
+      function clearSelection() {
+        selectedArticles = [];
+        saveSelection();
+        renderArticles();
+      }
+
+      function getArticleUrls() {
+        return selectedArticles.map(slug => `${SITE_URL}/articles/${slug}.html`);
+      }
+
+      function copySelection() {
+        if (!selectedArticles.length) { showToast('Sélectionnez des articles'); return; }
+        const text = `Pour notre débat, je propose :\n\n${getArticleUrls().join('\n')}\n\nOrganisé avec ${SITE_URL}/organiser-debat.html`;
+        navigator.clipboard.writeText(text).then(() => showToast('Liens copiés !'));
+      }
+
+      function shareWhatsApp() {
+        if (!selectedArticles.length) { showToast('Sélectionnez des articles'); return; }
+        const text = `Pour notre débat, je propose :\n\n${getArticleUrls().join('\n')}`;
+        window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+      }
+
+      function shareEmail() {
+        if (!selectedArticles.length) { showToast('Sélectionnez des articles'); return; }
+        const subject = 'Proposition de soirée débat';
+        const body = `Salut !\n\nJe propose qu'on organise un débat. Voici les articles :\n\n${getArticleUrls().join('\n')}\n\nÀ bientôt !`;
+        window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+      }
+
+      async function init() {
+        loadSelection();
+        try {
+          const response = await fetch(ARTICLES_URL);
+          if (response.ok) {
+            const data = await response.json();
+            if (data.categories && data.articles) {
+              categoriesData = data.categories;
+              articlesData = data.articles;
+            }
+          }
+          renderFilters();
+          renderArticles();
+          // Charger les vrais titres de façon asynchrone
+          loadArticleTitles();
+        } catch (e) {
+          document.getElementById('article-list').innerHTML = '<p style="text-align:center;color:var(--color-text-muted);">Erreur de chargement</p>';
+        }
+
+        document.getElementById('clear-selection').addEventListener('click', clearSelection);
+        document.getElementById('copy-selection').addEventListener('click', copySelection);
+        document.getElementById('share-whatsapp').addEventListener('click', shareWhatsApp);
+        document.getElementById('share-email').addEventListener('click', shareEmail);
+      }
+
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+    })();
+  </script>
+</body>
+</html>

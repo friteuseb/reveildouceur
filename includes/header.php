@@ -52,6 +52,7 @@
         $current_page = basename($_SERVER['PHP_SELF']);
         $nav_items = [
           ['href' => '/', 'file' => 'index.php', 'label' => 'Accueil'],
+          ['href' => '/organiser-debat.html', 'file' => 'organiser-debat.html', 'label' => 'Organiser un débat'],
           ['href' => '/a-propos.php', 'file' => 'a-propos.php', 'label' => 'À propos'],
           ['href' => '/contact.php', 'file' => 'contact.php', 'label' => 'Contact']
         ];

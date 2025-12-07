@@ -49,6 +49,7 @@ const SITE_CONFIG = {
   // ========================================
   navigation: [
     { label: 'Accueil', href: '/', id: 'home' },
+    { label: 'Organiser un débat', href: '/organiser-debat.html', id: 'debat' },
     { label: 'À propos', href: '/a-propos.php', id: 'about' },
     { label: 'Contact', href: '/contact.php', id: 'contact' }
   ],
@@ -59,6 +60,7 @@ const SITE_CONFIG = {
   footerLinks: {
     main: [
       { label: 'Accueil', href: '/' },
+      { label: 'Organiser un débat', href: '/organiser-debat.html' },
       { label: 'À propos', href: '/a-propos.php' },
       { label: 'Contact', href: '/contact.php' }
     ],

@@ -12,6 +12,7 @@
       <h3 class="footer__title">Navigation</h3>
       <ul class="footer__links">
         <li><a href="/" class="footer__link">Accueil</a></li>
+        <li><a href="/organiser-debat.html" class="footer__link">Organiser un débat</a></li>
         <li><a href="/a-propos.php" class="footer__link">À propos</a></li>
         <li><a href="/contact.php" class="footer__link">Contact</a></li>
       </ul>
