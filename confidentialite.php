@@ -60,13 +60,13 @@
           <li>Pas de newsletter</li>
         </ul>
 
-        <h2>Formulaire de contact</h2>
+        <h2>Formulaire de contact et suggestions</h2>
         <p>
-          Lorsque vous utilisez notre formulaire de contact, les données suivantes sont collectées :
+          Lorsque vous utilisez nos formulaires (contact ou suggestion de sujet), les données suivantes sont collectées :
         </p>
         <ul>
-          <li>Nom</li>
-          <li>Adresse email</li>
+          <li>Nom (formulaire contact uniquement)</li>
+          <li>Adresse email (obligatoire pour contact, optionnel pour suggestions)</li>
           <li>Sujet et contenu de votre message</li>
           <li>Adresse IP (à des fins de sécurité)</li>
         </ul>
@@ -74,6 +74,21 @@
           Ces données sont <strong>uniquement transmises par email</strong> à l'administrateur du site
           pour répondre à votre demande. Elles ne sont pas stockées dans une base de données
           et ne sont jamais partagées avec des tiers.
+        </p>
+
+        <h2>Outil "Organiser un débat"</h2>
+        <p>
+          Si vous utilisez l'outil de création de session de débat, les données suivantes sont temporairement stockées :
+        </p>
+        <ul>
+          <li>Nom de la session de débat</li>
+          <li>Pseudonyme des participants</li>
+          <li>Votes effectués</li>
+        </ul>
+        <p>
+          Ces données sont stockées dans une base de données locale et sont <strong>automatiquement supprimées
+          après 72 heures</strong>. Aucune adresse email n'est collectée pour cette fonctionnalité.
+          Les données ne sont accessibles qu'aux participants de la session via un code unique.
         </p>
 
         <h2>Cookies</h2>
@@ -138,7 +153,7 @@
           mise à jour sera indiquée ci-dessous.
         </p>
         <p>
-          <em>Dernière mise à jour : novembre 2025</em>
+          <em>Dernière mise à jour : décembre 2025</em>
         </p>
       </div>
     </article>

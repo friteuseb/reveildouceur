@@ -354,6 +354,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
                   </svg>
                 </button>
               </div>
+              <div class="suggestion-form__consent">
+                <label class="form-checkbox">
+                  <input type="checkbox" name="consent" required>
+                  <span>J'accepte la <a href="/confidentialite.php" target="_blank" rel="noopener">politique de confidentialité</a></span>
+                </label>
+              </div>
             </div>
           </form>
         </div>

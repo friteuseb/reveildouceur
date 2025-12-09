@@ -243,6 +243,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       z-index: -1;
     }
 
+    /* Checkbox consentement RGPD */
+    .form-group--checkbox {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .form-checkbox input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: var(--color-primary, #5B7B6F);
+      cursor: pointer;
+    }
+
+    .form-checkbox__text {
+      color: var(--color-text-secondary, #666);
+    }
+
+    .form-checkbox__text a {
+      color: var(--color-primary, #5B7B6F);
+      text-decoration: underline;
+    }
+
+    .form-checkbox__text a:hover {
+      text-decoration: none;
+    }
+
     .contact-intro {
       text-align: center;
       margin-bottom: 2rem;
@@ -364,6 +400,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 maxlength="5000"
                 placeholder="Votre message..."
               ><?= htmlspecialchars($formData['message']) ?></textarea>
+            </div>
+
+            <div class="form-group form-group--checkbox">
+              <label class="form-checkbox">
+                <input type="checkbox" name="consent" id="consent" required>
+                <span class="form-checkbox__text">
+                  J'accepte que mes données soient traitées conformément à la
+                  <a href="/confidentialite.php" target="_blank" rel="noopener">politique de confidentialité</a>
+                  <span class="required">*</span>
+                </span>
+              </label>
             </div>
 
             <button type="submit" class="btn btn--primary form-submit">

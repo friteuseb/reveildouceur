@@ -19,6 +19,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
+// Rate limiting par IP (30 requêtes/minute max)
+session_start();
+$clientIP = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$rateLimitKey = 'api_rate_' . md5($clientIP);
+
+if (!isset($_SESSION[$rateLimitKey])) {
+    $_SESSION[$rateLimitKey] = ['count' => 0, 'reset' => time() + 60];
+}
+
+if (time() > $_SESSION[$rateLimitKey]['reset']) {
+    $_SESSION[$rateLimitKey] = ['count' => 0, 'reset' => time() + 60];
+}
+
+$_SESSION[$rateLimitKey]['count']++;
+
+if ($_SESSION[$rateLimitKey]['count'] > 30) {
+    header('Retry-After: ' . ($_SESSION[$rateLimitKey]['reset'] - time()));
+    http_response_code(429);
+    echo json_encode(['error' => 'Trop de requêtes. Réessayez dans quelques secondes.']);
+    exit;
+}
+
 // Configuration
 define('DB_PATH', __DIR__ . '/data/debates.sqlite');
 define('SESSION_EXPIRY_HOURS', 72); // Sessions expirent après 72h
