@@ -31,6 +31,10 @@
     "predictions": {
       "label": "Madame Irma",
       "color": "#9f7aea"
+    },
+    "quizz": {
+      "label": "Quizz",
+      "color": "#ed64a6"
     }
   },
   "articles": [
