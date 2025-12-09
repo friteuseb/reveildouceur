@@ -109,11 +109,12 @@
     <text x="130" y="40" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="10">États-Unis (2013)</text>
 
     <!-- Barres USA -->
-    <rect x="30" y="50" width="200" height="24" rx="4" fill="#2d3748"/>
-    <rect x="30" y="50" width="140" height="24" rx="4" fill="url(#redGrad)" opacity="0.8"/>
-    <text x="100" y="66" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">28% Démocrates</text>
-    <rect x="170" y="50" width="35" height="24" rx="0 4 4 0" fill="url(#blueGrad)" opacity="0.8"/>
-    <text x="187" y="66" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">7%</text>
+    <rect x="30" y="50" width="200" height="24" rx="4" fill="#4a5568"/>
+    <rect x="30" y="50" width="56" height="24" rx="4 0 0 4" fill="url(#redGrad)" opacity="0.9"/>
+    <rect x="86" y="50" width="14" height="24" fill="url(#blueGrad)" opacity="0.9"/>
+    <text x="58" y="66" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">28%</text>
+    <text x="93" y="66" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="7" font-weight="bold">7%</text>
+    <text x="165" y="66" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">65% autres</text>
 
     <!-- France -->
     <text x="130" y="95" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="10">France (2001)</text>
