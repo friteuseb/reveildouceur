@@ -27,8 +27,9 @@
   optimize-images.py                     # Script d'optimisation WebP
   migrate-urls.py                        # Script de migration URLs (dates → sans dates)
   purge-cache.sh                        # Purge du cache Cloudflare
-/css/style.css                          # Styles (inclut dark mode)
+/css/style.css                          # Styles (inclut dark mode + quizz)
 /js/app.js                              # Chargement dynamique des articles (WebP + lazy loading)
+/js/quizz.js                            # Logique interactive des quizz
 /includes/header.html                   # Header commun
 /includes/footer.html                   # Footer commun
 /.venv/                                  # Environnement Python virtuel
@@ -178,6 +179,88 @@
 ### Politique/Économie française
 - `france-quel-niveau-de-socialisme` - France, niveau de redistribution
 
+### Quizz interactifs
+- `quizz-idees-recues-economie-environnement` - 10 questions sur économie et environnement
+
+## Format d'un quizz interactif
+
+### Fichiers nécessaires
+- `/articles/quizz-slug.html` - Le quizz HTML
+- `/images/illustrations/quizz-slug.png` - Illustration (optionnelle mais recommandée)
+- `/js/quizz.js` - Script JS (déjà présent, à inclure dans le HTML)
+
+### Structure HTML d'un quizz
+```html
+<article class="article quizz">
+  <header class="article__header">
+    <p class="article__meta">
+      <span class="quizz__badge">Quizz interactif</span>
+      <time datetime="YYYY">YYYY</time>
+    </p>
+    <h1 class="article__title">Titre du quizz</h1>
+    <p class="quizz__intro">Introduction...</p>
+  </header>
+
+  <div class="quizz__container" id="quizz-container">
+    <!-- Barre de progression -->
+    <div class="quizz__progress">...</div>
+
+    <!-- Questions -->
+    <div class="quizz__questions" id="quizz-questions">
+      <!-- Chaque question -->
+      <div class="quizz__question" data-question="1" data-correct="b">
+        <h2 class="quizz__question-title">
+          <span class="quizz__question-number">1</span>
+          Texte de la question ?
+        </h2>
+        <div class="quizz__answers">
+          <button class="quizz__answer" data-answer="a">
+            <span class="quizz__answer-letter">A</span>
+            <span class="quizz__answer-text">Réponse A</span>
+          </button>
+          <!-- ... autres réponses ... -->
+        </div>
+        <div class="quizz__explanation" hidden>
+          <div class="quizz__explanation-content">
+            <strong>Explication :</strong> Texte explicatif sourcé.
+          </div>
+          <div class="quizz__source">
+            Source : <a href="URL">Nom de la source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation et résultats -->
+    <div class="quizz__navigation" id="quizz-nav" hidden>...</div>
+    <div class="quizz__results" id="quizz-results" hidden>...</div>
+  </div>
+</article>
+```
+
+### Attributs importants
+- `data-question="N"` : Numéro de la question
+- `data-correct="x"` : Lettre de la bonne réponse (a, b, c, d)
+- `data-answer="x"` : Lettre de chaque réponse
+- `hidden` : Questions 2+ et explications sont cachées par défaut
+
+### Scripts à inclure
+```html
+<script src="/js/app.js"></script>
+<script src="/js/quizz.js"></script>
+```
+
+### Workflow pour un nouveau quizz
+
+1. **Copier le template** `/articles/quizz-template.html`
+2. **Modifier les méta-données** (title, description, og:image)
+3. **Rédiger les questions** (5 à 15 recommandé)
+   - Toujours sourcer les explications
+   - Varier les sujets pour maintenir l'intérêt
+4. **Ajouter dans index.json** avec `"category": "quizz"`
+5. **Générer l'illustration** (optionnel)
+6. **Tester localement** avant déploiement
+
 ## Idées d'articles futurs
 
 ### Économie
@@ -254,7 +337,7 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
    ```json
    { "file": "slug.html", "category": "categorie" }
    ```
-   Catégories : `economie`, `medias`, `tech`, `environnement`, `societe`, `sante`, `geopolitique`
+   Catégories : `economie`, `medias`, `tech`, `environnement`, `societe`, `sante`, `geopolitique`, `quizz`
 
 4. **Ajouter un prompt spécifique** dans `scripts/generate-illustrations.py` > `ARTICLE_SPECIFIC_PROMPTS`
    ```python
