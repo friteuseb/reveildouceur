@@ -758,6 +758,7 @@
     results: null,
     isOpen: false,
     articlesLoaded: false,
+    previousActiveElement: null,
 
     init() {
       this.createModal();
@@ -847,6 +848,10 @@
         if (e.key === 'Escape' && this.isOpen) {
           this.close();
         }
+        // Focus trap - Tab key handling
+        if (e.key === 'Tab' && this.isOpen) {
+          this.handleFocusTrap(e);
+        }
       });
 
       // Search on input
@@ -859,6 +864,8 @@
 
     async open() {
       if (!this.modal) return;
+      // Sauvegarder l'élément actif pour y revenir à la fermeture
+      this.previousActiveElement = document.activeElement;
       this.modal.classList.add('search-modal--open');
       this.isOpen = true;
       document.body.style.overflow = 'hidden';
@@ -875,10 +882,41 @@
       document.body.style.overflow = '';
       if (this.input) this.input.value = '';
       this.showHint();
+      // Restaurer le focus sur l'élément précédent
+      if (this.previousActiveElement) {
+        this.previousActiveElement.focus();
+        this.previousActiveElement = null;
+      }
     },
 
     toggle() {
       this.isOpen ? this.close() : this.open();
+    },
+
+    handleFocusTrap(e) {
+      const focusableElements = this.modal.querySelectorAll(
+        'input, button, a[href], [tabindex]:not([tabindex="-1"])'
+      );
+      const focusable = Array.from(focusableElements).filter(el => !el.disabled && el.offsetParent !== null);
+
+      if (focusable.length === 0) return;
+
+      const firstElement = focusable[0];
+      const lastElement = focusable[focusable.length - 1];
+
+      if (e.shiftKey) {
+        // Shift + Tab : si on est sur le premier, aller au dernier
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        // Tab : si on est sur le dernier, aller au premier
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
     },
 
     showHint() {

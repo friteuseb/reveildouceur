@@ -210,6 +210,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
           <div class="loader">
             <div class="loader__spinner"></div>
           </div>
+          <noscript>
+            <div class="empty-state">
+              <div class="empty-state__icon">📚</div>
+              <p>JavaScript est nécessaire pour afficher les articles.<br>
+              Activez JavaScript dans votre navigateur pour profiter de l'expérience complète.</p>
+            </div>
+          </noscript>
         </div>
       </div>
     </section>

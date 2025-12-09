@@ -75,7 +75,7 @@
 
   --color-text: #E8E4DF;
   --color-text-light: #B8B4AF;
-  --color-text-muted: #8A8580;
+  --color-text-muted: #9A9590;
 
   --color-bg: #1A1D1E;
   --color-bg-alt: #232829;
@@ -89,7 +89,7 @@
   --shadow-lg: 0 4px 20px rgba(var(--shadow-color), 0.4);
 
   --footer-bg: #141718;
-  --footer-text: #8A8580;
+  --footer-text: #A8A39E;
   --footer-heading: #E8E4DF;
 }
 
