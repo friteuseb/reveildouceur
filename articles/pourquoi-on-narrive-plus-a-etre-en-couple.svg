@@ -1,0 +1,241 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1419"/>
+      <stop offset="100%" style="stop-color:#1a202c"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e53e3e"/>
+      <stop offset="100%" style="stop-color:#fc8181"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#dd6b20"/>
+      <stop offset="100%" style="stop-color:#ed8936"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#805ad5"/>
+      <stop offset="100%" style="stop-color:#b794f4"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3182ce"/>
+      <stop offset="100%" style="stop-color:#63b3ed"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38a169"/>
+      <stop offset="100%" style="stop-color:#68d391"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">
+    POURQUOI ON N'ARRIVE PLUS À ÊTRE EN COUPLE
+  </text>
+  <text x="400" y="44" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="10">
+    Les chiffres et les facteurs qui expliquent la crise relationnelle
+  </text>
+
+  <!-- ========== ROW 1: STATISTIQUES CLÉS ========== -->
+  <g transform="translate(15, 58)">
+    <rect x="0" y="0" width="185" height="95" rx="6" fill="#1e2632" stroke="#e53e3e" stroke-width="1.5"/>
+    <text x="92" y="18" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">DIVORCES</text>
+
+    <text x="92" y="48" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">45%</text>
+    <text x="92" y="62" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">taux de divorce 2024</text>
+
+    <g transform="translate(15, 72)">
+      <text x="0" y="10" fill="#718096" font-family="system-ui, sans-serif" font-size="7">1960: ~10%</text>
+      <text x="90" y="10" fill="#fc8181" font-family="system-ui, sans-serif" font-size="7" font-weight="bold">x4.5</text>
+    </g>
+  </g>
+
+  <g transform="translate(210, 58)">
+    <rect x="0" y="0" width="185" height="95" rx="6" fill="#1e2632" stroke="#dd6b20" stroke-width="1.5"/>
+    <text x="92" y="18" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">ÂGE AU MARIAGE</text>
+
+    <text x="92" y="48" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">36 ans</text>
+    <text x="92" y="62" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">moyenne 2024</text>
+
+    <g transform="translate(15, 72)">
+      <text x="0" y="10" fill="#718096" font-family="system-ui, sans-serif" font-size="7">1974: 25 ans</text>
+      <text x="90" y="10" fill="#ed8936" font-family="system-ui, sans-serif" font-size="7" font-weight="bold">+11 ans</text>
+    </g>
+  </g>
+
+  <g transform="translate(405, 58)">
+    <rect x="0" y="0" width="185" height="95" rx="6" fill="#1e2632" stroke="#805ad5" stroke-width="1.5"/>
+    <text x="92" y="18" text-anchor="middle" fill="#b794f4" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">CÉLIBAT MASCULIN</text>
+
+    <text x="92" y="48" text-anchor="middle" fill="#b794f4" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">30%</text>
+    <text x="92" y="62" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">jamais mariés à 50 ans</text>
+
+    <g transform="translate(15, 72)">
+      <text x="0" y="10" fill="#718096" font-family="system-ui, sans-serif" font-size="7">Génération 1930: 14%</text>
+      <text x="120" y="10" fill="#b794f4" font-family="system-ui, sans-serif" font-size="7" font-weight="bold">x2</text>
+    </g>
+  </g>
+
+  <g transform="translate(600, 58)">
+    <rect x="0" y="0" width="185" height="95" rx="6" fill="#1e2632" stroke="#3182ce" stroke-width="1.5"/>
+    <text x="92" y="18" text-anchor="middle" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">JEUNES CHEZ PARENTS</text>
+
+    <text x="92" y="48" text-anchor="middle" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">50%</text>
+    <text x="92" y="62" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">des 15-29 ans</text>
+
+    <g transform="translate(15, 72)">
+      <text x="0" y="10" fill="#718096" font-family="system-ui, sans-serif" font-size="7">Taux effort Paris:</text>
+      <text x="90" y="10" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="7" font-weight="bold">32% du revenu</text>
+    </g>
+  </g>
+
+  <!-- ========== ROW 2: PARADOXE DU CHOIX ========== -->
+  <g transform="translate(15, 165)">
+    <rect x="0" y="0" width="380" height="85" rx="6" fill="#1e2632" stroke="#ed8936" stroke-width="1.5"/>
+    <text x="190" y="18" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      LE PARADOXE DU CHOIX (TINDER)
+    </text>
+
+    <g transform="translate(20, 30)">
+      <rect x="0" y="0" width="100" height="45" rx="4" fill="#2d3748"/>
+      <text x="50" y="20" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">140</text>
+      <text x="50" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">profils/jour</text>
+    </g>
+
+    <text x="145" y="55" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="16">→</text>
+
+    <g transform="translate(170, 30)">
+      <rect x="0" y="0" width="100" height="45" rx="4" fill="#2d3748"/>
+      <text x="50" y="20" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">-27%</text>
+      <text x="50" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">chances d'accepter</text>
+    </g>
+
+    <text x="295" y="55" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="16">=</text>
+
+    <g transform="translate(310, 30)">
+      <rect x="0" y="0" width="55" height="45" rx="4" fill="#e53e3e" opacity="0.2"/>
+      <text x="27" y="28" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">REJET</text>
+    </g>
+  </g>
+
+  <!-- RÉSEAUX SOCIAUX -->
+  <g transform="translate(405, 165)">
+    <rect x="0" y="0" width="380" height="85" rx="6" fill="#1e2632" stroke="#805ad5" stroke-width="1.5"/>
+    <text x="190" y="18" text-anchor="middle" fill="#b794f4" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      RÉSEAUX SOCIAUX ET COUPLES
+    </text>
+
+    <g transform="translate(20, 32)">
+      <circle cx="15" cy="15" r="12" fill="#805ad5" opacity="0.3"/>
+      <text x="15" y="19" text-anchor="middle" fill="#b794f4" font-family="system-ui, sans-serif" font-size="10">📱</text>
+      <text x="45" y="12" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">Jalousie sociale</text>
+      <text x="45" y="24" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">→ Baisse satisfaction à 1 an</text>
+    </g>
+
+    <g transform="translate(200, 32)">
+      <circle cx="15" cy="15" r="12" fill="#38a169" opacity="0.3"/>
+      <text x="15" y="19" text-anchor="middle" fill="#68d391" font-family="system-ui, sans-serif" font-size="10">✓</text>
+      <text x="45" y="12" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">-30min/jour</text>
+      <text x="45" y="24" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">→ Moins solitude/dépression</text>
+    </g>
+
+    <text x="190" y="75" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="7" font-style="italic">
+      Étude Univ. Pennsylvanie (2018)
+    </text>
+  </g>
+
+  <!-- ========== ROW 3: LES 4 FACTEURS ========== -->
+  <g transform="translate(15, 262)">
+    <rect x="0" y="0" width="770" height="95" rx="6" fill="#1e2632" stroke="#4a5568" stroke-width="1"/>
+    <text x="385" y="18" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      LES 4 FACTEURS DE LA CRISE RELATIONNELLE
+    </text>
+
+    <!-- Technologique -->
+    <g transform="translate(20, 30)">
+      <rect x="0" y="0" width="175" height="55" rx="4" fill="#2d3748"/>
+      <circle cx="25" cy="18" r="10" fill="#e53e3e" opacity="0.3"/>
+      <text x="25" y="22" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10">📱</text>
+      <text x="110" y="16" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">TECHNOLOGIQUE</text>
+      <text x="100" y="32" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">Apps: paradoxe du choix</text>
+      <text x="100" y="44" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="7">Réseaux: comparaison, FOMO</text>
+    </g>
+
+    <!-- Économique -->
+    <g transform="translate(205, 30)">
+      <rect x="0" y="0" width="175" height="55" rx="4" fill="#2d3748"/>
+      <circle cx="25" cy="18" r="10" fill="#dd6b20" opacity="0.3"/>
+      <text x="25" y="22" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="10">💰</text>
+      <text x="110" y="16" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">ÉCONOMIQUE</text>
+      <text x="100" y="32" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">Précarité = pas de projection</text>
+      <text x="100" y="44" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="7">Logement inaccessible</text>
+    </g>
+
+    <!-- Sociologique -->
+    <g transform="translate(390, 30)">
+      <rect x="0" y="0" width="175" height="55" rx="4" fill="#2d3748"/>
+      <circle cx="25" cy="18" r="10" fill="#805ad5" opacity="0.3"/>
+      <text x="25" y="22" text-anchor="middle" fill="#b794f4" font-family="system-ui, sans-serif" font-size="10">👥</text>
+      <text x="110" y="16" text-anchor="middle" fill="#b794f4" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">SOCIOLOGIQUE</text>
+      <text x="100" y="32" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">Individualisme: "je" avant "nous"</text>
+      <text x="100" y="44" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="7">Fin des lieux de rencontre IRL</text>
+    </g>
+
+    <!-- Psychologique -->
+    <g transform="translate(575, 30)">
+      <rect x="0" y="0" width="175" height="55" rx="4" fill="#2d3748"/>
+      <circle cx="25" cy="18" r="10" fill="#3182ce" opacity="0.3"/>
+      <text x="25" y="22" text-anchor="middle" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="10">🧠</text>
+      <text x="110" y="16" text-anchor="middle" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">PSYCHOLOGIQUE</text>
+      <text x="100" y="32" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">Intolérance à la frustration</text>
+      <text x="100" y="44" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="7">Quête du partenaire "parfait"</text>
+    </g>
+  </g>
+
+  <!-- ========== ROW 4: LIEUX DE RENCONTRE ========== -->
+  <g transform="translate(15, 367)">
+    <rect x="0" y="0" width="380" height="48" rx="6" fill="#1e2632" stroke="#38a169" stroke-width="1"/>
+    <text x="190" y="14" text-anchor="middle" fill="#68d391" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">
+      OÙ SE FORMENT LES COUPLES (2022)
+    </text>
+
+    <g transform="translate(15, 22)">
+      <rect x="0" y="0" width="80" height="18" rx="2" fill="#38a169" opacity="0.3"/>
+      <text x="40" y="13" text-anchor="middle" fill="#68d391" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">22% Apps</text>
+    </g>
+    <g transform="translate(100, 22)">
+      <rect x="0" y="0" width="70" height="18" rx="2" fill="#3182ce" opacity="0.3"/>
+      <text x="35" y="13" text-anchor="middle" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">17% RS</text>
+    </g>
+    <g transform="translate(175, 22)">
+      <rect x="0" y="0" width="60" height="18" rx="2" fill="#805ad5" opacity="0.3"/>
+      <text x="30" y="13" text-anchor="middle" fill="#b794f4" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">14% Job</text>
+    </g>
+    <g transform="translate(240, 22)">
+      <rect x="0" y="0" width="55" height="18" rx="2" fill="#ed8936" opacity="0.3"/>
+      <text x="27" y="13" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">12% Bar</text>
+    </g>
+    <g transform="translate(300, 22)">
+      <rect x="0" y="0" width="65" height="18" rx="2" fill="#718096" opacity="0.3"/>
+      <text x="32" y="13" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">12% École</text>
+    </g>
+  </g>
+
+  <!-- Question finale -->
+  <g transform="translate(405, 367)">
+    <rect x="0" y="0" width="380" height="48" rx="6" fill="#2d3748"/>
+    <text x="190" y="20" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="9" font-style="italic">
+      "Le problème n'est pas de trouver la bonne personne,
+    </text>
+    <text x="190" y="34" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="9" font-style="italic">
+      mais d'être devenu incapable de construire avec quelqu'un."
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="438" text-anchor="middle" fill="#4a5568" font-family="system-ui, sans-serif" font-size="8">
+    reveildouceur.fr • Sources : INSEE, INED, Statista, Pronk &amp; Denissen (2020), Univ. Pennsylvanie
+  </text>
+
+</svg>
