@@ -1044,10 +1044,10 @@
       const radarContainer = document.getElementById(containerId);
       if (!radarContainer) return;
 
-      // Taille augmentée pour laisser plus de place aux labels
-      const size = 340;
+      // Taille du SVG - radar compact sans labels SVG
+      const size = 220;
       const center = size / 2;
-      const maxRadius = 100; // Rayon fixe pour le graphique
+      const maxRadius = 90;
       const axes = Object.keys(systemes);
       const angleStep = (2 * Math.PI) / axes.length;
 
@@ -1082,7 +1082,7 @@
 
       svg += `<polygon points="${points}" fill="var(--color-primary)" fill-opacity="0.35" stroke="var(--color-primary)" stroke-width="2.5"/>`;
 
-      // Points et labels
+      // Points sur le graphique (sans labels SVG)
       axes.forEach((axe, i) => {
         const angle = i * angleStep - Math.PI / 2;
         const value = Math.min(1, (scores[axe] || 0) / 100);
@@ -1092,32 +1092,27 @@
 
         // Point sur le graphique
         svg += `<circle cx="${x}" cy="${y}" r="5" fill="${systemes[axe].color}" stroke="#fff" stroke-width="1.5"/>`;
-
-        // Label avec plus d'espace et meilleur positionnement
-        const labelRadius = maxRadius + 55;
-        const lx = center + Math.cos(angle) * labelRadius;
-        const ly = center + Math.sin(angle) * labelRadius;
-
-        // Ajuster l'ancrage du texte selon la position sur le cercle
-        let textAnchor = 'middle';
-        const cosAngle = Math.cos(angle);
-        if (cosAngle < -0.2) textAnchor = 'end';
-        else if (cosAngle > 0.2) textAnchor = 'start';
-
-        // Décaler légèrement verticalement si en haut ou en bas
-        const sinAngle = Math.sin(angle);
-        let dy = 0;
-        if (sinAngle < -0.7) dy = -5; // En haut
-        if (sinAngle > 0.7) dy = 5;  // En bas
-
-        // Afficher le nom court + le %
-        const scorePercent = scores[axe] || 0;
-        svg += `<text x="${lx}" y="${ly + dy}" text-anchor="${textAnchor}" dominant-baseline="middle" fill="${systemes[axe].color}" font-size="11" font-weight="600">${systemes[axe].shortLabel}</text>`;
-        svg += `<text x="${lx}" y="${ly + dy + 12}" text-anchor="${textAnchor}" dominant-baseline="middle" fill="var(--color-text-muted)" font-size="9">${scorePercent}%</text>`;
       });
 
       svg += '</svg>';
-      radarContainer.innerHTML = svg;
+
+      // Générer la légende HTML sous le radar
+      const legendHtml = `
+        <div class="miroir__radar-legend">
+          ${axes.map(axe => {
+            const scorePercent = scores[axe] || 0;
+            return `
+              <div class="miroir__radar-legend-item">
+                <span class="miroir__radar-legend-color" style="background-color: ${systemes[axe].color}"></span>
+                <span class="miroir__radar-legend-label">${systemes[axe].label}</span>
+                <span class="miroir__radar-legend-score">${scorePercent}%</span>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+
+      radarContainer.innerHTML = svg + legendHtml;
     }
 
     generateReadingRecommendations(results) {

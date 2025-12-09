@@ -4118,6 +4118,42 @@ main {
   margin-bottom: var(--space-md);
 }
 
+/* Légende HTML sous les radars */
+.miroir__radar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm) var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.miroir__radar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.8125rem;
+}
+
+.miroir__radar-legend-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.miroir__radar-legend-label {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.miroir__radar-legend-score {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 /* Badge domaine dans top 3 */
 .miroir__top3-domain {
   display: inline-block;
