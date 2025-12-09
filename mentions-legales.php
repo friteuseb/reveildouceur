@@ -50,6 +50,15 @@
           Contact : via le <a href="/contact.php">formulaire de contact</a>
         </p>
 
+        <h2>Directeur de la publication</h2>
+        <p>
+          Conformément à l'article 6 III-2 de la loi n° 2004-575 du 21 juin 2004 (LCEN), les coordonnées
+          du directeur de la publication sont conservées par l'hébergeur du site (o2switch).
+          <br><br>
+          En cas de demande judiciaire légitime, ces informations peuvent être communiquées
+          aux autorités compétentes.
+        </p>
+
         <h2>Hébergement</h2>
         <p>
           Ce site est hébergé par :<br>
@@ -79,6 +88,47 @@
           Les articles présentent des faits sourcés et posent des questions. Ils ne constituent en aucun cas
           des conseils médicaux, juridiques ou financiers.
         </p>
+
+        <h2>Nature du contenu</h2>
+        <p>
+          Ce site est un <strong>espace d'opinion et d'analyse personnelle</strong>. Les articles publiés :
+        </p>
+        <ul>
+          <li>Relèvent de la <strong>liberté d'expression</strong> garantie par l'article 11 de la Déclaration des droits de l'homme et du citoyen de 1789 et l'article 10 de la Convention européenne des droits de l'homme</li>
+          <li>Constituent des <strong>opinions argumentées</strong> fondées sur des sources publiques et vérifiables</li>
+          <li>Ne prétendent pas détenir la vérité absolue mais invitent au <strong>débat et à la réflexion</strong></li>
+          <li>Ne visent aucune personne, groupe ou communauté à titre diffamatoire ou injurieux</li>
+        </ul>
+        <p>
+          Les analyses présentées engagent uniquement leur auteur et ne sauraient être assimilées à des
+          incitations à la haine, à la discrimination ou à la violence. Ce site se démarque explicitement
+          de tout mouvement extrémiste, complotiste ou haineux.
+        </p>
+
+        <h2>Droit de réponse</h2>
+        <p>
+          Conformément à l'article 6 IV de la loi n° 2004-575 du 21 juin 2004 (LCEN), toute personne
+          nommée ou désignée dans un article dispose d'un droit de réponse.
+        </p>
+        <p>
+          Les demandes de droit de réponse peuvent être adressées via le <a href="/contact.php">formulaire de contact</a>.
+          L'éditeur s'engage à examiner toute demande dans un délai de 3 mois et, le cas échéant,
+          à publier la réponse dans des conditions comparables à celles de l'article concerné.
+        </p>
+
+        <h2>Signalement de contenu</h2>
+        <p>
+          Si vous estimez qu'un contenu publié sur ce site est illicite, vous pouvez le signaler
+          via le <a href="/contact.php">formulaire de contact</a> en précisant :
+        </p>
+        <ul>
+          <li>L'URL de la page concernée</li>
+          <li>La nature précise du contenu que vous estimez illicite</li>
+          <li>Le fondement juridique de votre demande</li>
+        </ul>
+        <p>
+          Toute demande sera examinée avec attention. L'éditeur se réserve le droit de refuser
+          les demandes non fondées juridiquement ou relevant d'un simple désaccord d'opinion.</p>
 
         <h2>Liens hypertextes</h2>
         <p>
