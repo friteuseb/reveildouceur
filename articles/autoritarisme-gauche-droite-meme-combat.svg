@@ -1,8 +1,8 @@
-<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a202c"/>
-      <stop offset="100%" style="stop-color:#2d3748"/>
+      <stop offset="0%" style="stop-color:#0f1419"/>
+      <stop offset="100%" style="stop-color:#1a202c"/>
     </linearGradient>
     <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#e53e3e"/>
@@ -12,111 +12,198 @@
       <stop offset="0%" style="stop-color:#3182ce"/>
       <stop offset="100%" style="stop-color:#2c5282"/>
     </linearGradient>
-    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#805ad5"/>
-      <stop offset="100%" style="stop-color:#6b46c1"/>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e53e3e"/>
+      <stop offset="100%" style="stop-color:#3182ce"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  <rect width="800" height="520" fill="url(#bgGrad)"/>
 
   <!-- Title -->
-  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
-    AUTORITARISME : LES DEUX EXTRÊMES EN CHIFFRES
+  <text x="400" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">
+    AUTORITARISME : CE QUE DISENT LES DONNÉES
+  </text>
+  <text x="400" y="50" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="11">
+    Sources : Rummel (1994), Costello et al. (2022), IFOP, Indiana University
   </text>
 
-  <!-- Horseshoe visualization -->
-  <g transform="translate(400, 200)">
-    <!-- Arc du fer à cheval -->
-    <path d="M -150 80 Q -150 -80 0 -80 Q 150 -80 150 80"
-          fill="none" stroke="#4a5568" stroke-width="40" stroke-linecap="round"/>
+  <!-- ========== SECTION 1: GRAPHIQUE VICTIMES ========== -->
+  <text x="40" y="82" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+    VICTIMES DES RÉGIMES AUTORITAIRES AU XXe SIÈCLE
+  </text>
 
-    <!-- Côté gauche (rouge) -->
-    <path d="M -150 80 Q -150 -80 0 -80"
-          fill="none" stroke="url(#redGrad)" stroke-width="38" stroke-linecap="round"/>
+  <!-- Barres horizontales - Régimes de gauche -->
+  <g transform="translate(40, 95)">
+    <!-- Chine maoïste - 80M max -->
+    <text x="0" y="12" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10">Chine (Mao)</text>
+    <rect x="95" y="2" width="380" height="14" rx="2" fill="#2d3748"/>
+    <rect x="95" y="2" width="340" height="14" rx="2" fill="url(#redGrad)" opacity="0.9"/>
+    <text x="440" y="13" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">45-80 M</text>
 
-    <!-- Côté droit (bleu) -->
-    <path d="M 0 -80 Q 150 -80 150 80"
-          fill="none" stroke="url(#blueGrad)" stroke-width="38" stroke-linecap="round"/>
+    <!-- URSS -->
+    <text x="0" y="34" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10">URSS</text>
+    <rect x="95" y="24" width="380" height="14" rx="2" fill="#2d3748"/>
+    <rect x="95" y="24" width="85" height="14" rx="2" fill="url(#redGrad)" opacity="0.9"/>
+    <text x="185" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">15-20 M</text>
 
-    <!-- Point de convergence (bas) -->
-    <circle cx="-150" cy="80" r="12" fill="#e53e3e"/>
-    <circle cx="150" cy="80" r="12" fill="#3182ce"/>
+    <!-- Cambodge -->
+    <text x="0" y="56" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10">Cambodge</text>
+    <rect x="95" y="46" width="380" height="14" rx="2" fill="#2d3748"/>
+    <rect x="95" y="46" width="8" height="14" rx="2" fill="url(#redGrad)" opacity="0.9"/>
+    <text x="108" y="57" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">1.5-2 M</text>
 
-    <!-- Labels -->
-    <text x="-150" y="115" text-anchor="middle" fill="#fc8181" font-family="Arial" font-size="14" font-weight="bold">EXTRÊME</text>
-    <text x="-150" y="132" text-anchor="middle" fill="#fc8181" font-family="Arial" font-size="14" font-weight="bold">GAUCHE</text>
-
-    <text x="150" y="115" text-anchor="middle" fill="#63b3ed" font-family="Arial" font-size="14" font-weight="bold">EXTRÊME</text>
-    <text x="150" y="132" text-anchor="middle" fill="#63b3ed" font-family="Arial" font-size="14" font-weight="bold">DROITE</text>
-
-    <text x="0" y="-105" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="12">CENTRE</text>
-
-    <!-- Convergence label -->
-    <text x="0" y="145" text-anchor="middle" fill="#805ad5" font-family="Arial" font-size="13" font-weight="bold">CONVERGENCE AUTORITAIRE</text>
+    <!-- Corée du Nord -->
+    <text x="0" y="78" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10">Corée du N.</text>
+    <rect x="95" y="68" width="380" height="14" rx="2" fill="#2d3748"/>
+    <rect x="95" y="68" width="15" height="14" rx="2" fill="url(#redGrad)" opacity="0.9"/>
+    <text x="115" y="79" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">1-3.5 M</text>
   </g>
 
-  <!-- Stats boxes -->
-  <!-- Left stats -->
-  <g transform="translate(50, 280)">
-    <rect x="0" y="0" width="200" height="140" rx="8" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
-    <text x="100" y="25" text-anchor="middle" fill="#fc8181" font-family="Arial" font-size="13" font-weight="bold">RÉGIMES DE GAUCHE</text>
-    <text x="100" y="48" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="11">XXe siècle</text>
+  <!-- Ligne séparatrice -->
+  <line x1="40" y1="188" x2="490" y2="188" stroke="#4a5568" stroke-width="1" stroke-dasharray="4"/>
 
-    <text x="15" y="75" fill="#a0aec0" font-family="Arial" font-size="11">URSS</text>
-    <text x="185" y="75" text-anchor="end" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold">15-20 M</text>
+  <!-- Barres horizontales - Régimes de droite -->
+  <g transform="translate(40, 198)">
+    <!-- Allemagne nazie -->
+    <text x="0" y="12" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="10">Allemagne nazie</text>
+    <rect x="95" y="2" width="380" height="14" rx="2" fill="#2d3748"/>
+    <rect x="95" y="2" width="51" height="14" rx="2" fill="url(#blueGrad)" opacity="0.9"/>
+    <text x="151" y="13" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">11-12 M</text>
 
-    <text x="15" y="95" fill="#a0aec0" font-family="Arial" font-size="11">Chine (Mao)</text>
-    <text x="185" y="95" text-anchor="end" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold">45-80 M</text>
+    <!-- Espagne -->
+    <text x="0" y="34" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="10">Espagne (Franco)</text>
+    <rect x="95" y="24" width="380" height="14" rx="2" fill="#2d3748"/>
+    <rect x="95" y="24" width="1" height="14" rx="2" fill="url(#blueGrad)" opacity="0.9"/>
+    <text x="100" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">100-200 K</text>
 
-    <text x="15" y="115" fill="#a0aec0" font-family="Arial" font-size="11">Cambodge</text>
-    <text x="185" y="115" text-anchor="end" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold">1.5-2 M</text>
-
-    <line x1="15" y1="125" x2="185" y2="125" stroke="#4a5568" stroke-width="1"/>
-    <text x="100" y="138" text-anchor="middle" fill="#fc8181" font-family="Arial" font-size="10">~110 millions (Rummel)</text>
+    <!-- Amérique latine -->
+    <text x="0" y="56" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="10">Am. latine</text>
+    <rect x="95" y="46" width="380" height="14" rx="2" fill="#2d3748"/>
+    <rect x="95" y="46" width="1" height="14" rx="2" fill="url(#blueGrad)" opacity="0.9"/>
+    <text x="100" y="57" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">100 K+</text>
   </g>
 
-  <!-- Right stats -->
-  <g transform="translate(550, 280)">
-    <rect x="0" y="0" width="200" height="140" rx="8" fill="#2d3748" stroke="#3182ce" stroke-width="2"/>
-    <text x="100" y="25" text-anchor="middle" fill="#63b3ed" font-family="Arial" font-size="13" font-weight="bold">RÉGIMES DE DROITE</text>
-    <text x="100" y="48" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="11">XXe siècle</text>
+  <!-- Totaux -->
+  <g transform="translate(40, 275)">
+    <rect x="0" y="0" width="220" height="38" rx="4" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="110" y="16" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10">TOTAL RÉGIMES DE GAUCHE</text>
+    <text x="110" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">~110 millions</text>
 
-    <text x="15" y="75" fill="#a0aec0" font-family="Arial" font-size="11">Allemagne nazie</text>
-    <text x="185" y="75" text-anchor="end" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold">11-12 M</text>
-
-    <text x="15" y="95" fill="#a0aec0" font-family="Arial" font-size="11">Amérique latine</text>
-    <text x="185" y="95" text-anchor="end" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold">100 000+</text>
-
-    <text x="15" y="115" fill="#a0aec0" font-family="Arial" font-size="11">Espagne (Franco)</text>
-    <text x="185" y="115" text-anchor="end" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold">100-200 K</text>
-
-    <line x1="15" y1="125" x2="185" y2="125" stroke="#4a5568" stroke-width="1"/>
-    <text x="100" y="138" text-anchor="middle" fill="#63b3ed" font-family="Arial" font-size="10">~50 millions (Rummel)</text>
+    <rect x="240" y="0" width="220" height="38" rx="4" fill="#2d3748" stroke="#3182ce" stroke-width="2"/>
+    <text x="350" y="16" text-anchor="middle" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="10">TOTAL RÉGIMES DE DROITE</text>
+    <text x="350" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">~50 millions</text>
   </g>
 
-  <!-- Center study box -->
-  <g transform="translate(280, 280)">
-    <rect x="0" y="0" width="240" height="140" rx="8" fill="#2d3748" stroke="#805ad5" stroke-width="2"/>
-    <text x="120" y="25" text-anchor="middle" fill="#d6bcfa" font-family="Arial" font-size="13" font-weight="bold">ÉTUDE COSTELLO 2022</text>
-    <text x="120" y="48" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="10">Journal of Personality and Social Psychology</text>
+  <!-- ========== SECTION 2: ORIENTATION JOURNALISTES ========== -->
+  <g transform="translate(520, 75)">
+    <text x="130" y="0" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      ORIENTATION POLITIQUE
+    </text>
+    <text x="130" y="14" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      DES JOURNALISTES
+    </text>
 
-    <text x="20" y="75" fill="#ffffff" font-family="Arial" font-size="11">Traits communs identifiés :</text>
+    <!-- USA -->
+    <text x="130" y="40" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="10">États-Unis (2013)</text>
 
-    <circle cx="25" cy="95" r="3" fill="#805ad5"/>
-    <text x="35" y="99" fill="#a0aec0" font-family="Arial" font-size="10">Intolérance à la dissidence</text>
+    <!-- Barres USA -->
+    <rect x="30" y="50" width="200" height="24" rx="4" fill="#2d3748"/>
+    <rect x="30" y="50" width="140" height="24" rx="4" fill="url(#redGrad)" opacity="0.8"/>
+    <text x="100" y="66" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">28% Démocrates</text>
+    <rect x="170" y="50" width="35" height="24" rx="0 4 4 0" fill="url(#blueGrad)" opacity="0.8"/>
+    <text x="187" y="66" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">7%</text>
 
-    <circle cx="25" cy="113" r="3" fill="#805ad5"/>
-    <text x="35" y="117" fill="#a0aec0" font-family="Arial" font-size="10">Pensée manichéenne</text>
+    <!-- France -->
+    <text x="130" y="95" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="10">France (2001)</text>
 
-    <circle cx="25" cy="131" r="3" fill="#805ad5"/>
-    <text x="35" y="135" fill="#a0aec0" font-family="Arial" font-size="10">Violence justifiée "pour le bien"</text>
+    <!-- Barre France -->
+    <rect x="30" y="105" width="200" height="24" rx="4" fill="#2d3748"/>
+    <rect x="30" y="105" width="148" height="24" rx="4" fill="url(#redGrad)" opacity="0.8"/>
+    <text x="104" y="121" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">74% Gauche</text>
+
+    <!-- Légende -->
+    <g transform="translate(30, 145)">
+      <rect x="0" y="0" width="10" height="10" rx="2" fill="#e53e3e"/>
+      <text x="15" y="9" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Gauche</text>
+      <rect x="60" y="0" width="10" height="10" rx="2" fill="#3182ce"/>
+      <text x="75" y="9" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Droite</text>
+    </g>
   </g>
 
-  <!-- Key insight -->
-  <text x="400" y="438" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="11" font-style="italic">
-    "Le clivage fondamental n'oppose pas gauche et droite, mais autoritarisme et liberté"
+  <!-- ========== SECTION 3: TRAITS AUTORITAIRES ========== -->
+  <g transform="translate(520, 240)">
+    <text x="130" y="0" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      TRAITS COMMUNS
+    </text>
+    <text x="130" y="14" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      DE L'AUTORITARISME
+    </text>
+    <text x="130" y="28" text-anchor="middle" fill="#718096" font-family="system-ui, sans-serif" font-size="9">
+      Étude Costello et al., 2022
+    </text>
+
+    <!-- Traits communs au centre -->
+    <rect x="10" y="40" width="240" height="90" rx="6" fill="#2d3748" stroke="#805ad5" stroke-width="1.5"/>
+
+    <circle cx="30" cy="60" r="4" fill="#805ad5"/>
+    <text x="40" y="64" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Intolérance à la dissidence</text>
+
+    <circle cx="30" cy="82" r="4" fill="#805ad5"/>
+    <text x="40" y="86" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Pensée manichéenne</text>
+
+    <circle cx="30" cy="104" r="4" fill="#805ad5"/>
+    <text x="40" y="108" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Violence "pour le bien"</text>
+
+    <circle cx="30" cy="126" r="4" fill="#805ad5"/>
+    <text x="40" y="130" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Certitude morale absolue</text>
+  </g>
+
+  <!-- ========== SECTION 4: MANIFESTATIONS CONTEMPORAINES ========== -->
+  <g transform="translate(40, 330)">
+    <text x="0" y="0" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      MANIFESTATIONS CONTEMPORAINES
+    </text>
+
+    <!-- Gauche -->
+    <rect x="0" y="15" width="220" height="95" rx="6" fill="#2d3748" stroke="#e53e3e" stroke-width="1.5"/>
+    <text x="110" y="32" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">EXTRÊME-GAUCHE</text>
+
+    <text x="15" y="50" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">• Cancel culture</text>
+    <text x="15" y="64" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">• Déplatforming universitaire</text>
+    <text x="15" y="78" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">• Censure d'œuvres classiques</text>
+    <text x="15" y="92" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">• Violence "antifasciste"</text>
+    <text x="15" y="106" fill="#718096" font-family="system-ui, sans-serif" font-size="8" font-style="italic">→ Autoritarisme social/institutionnel</text>
+
+    <!-- Droite -->
+    <rect x="240" y="15" width="220" height="95" rx="6" fill="#2d3748" stroke="#3182ce" stroke-width="1.5"/>
+    <text x="350" y="32" text-anchor="middle" fill="#63b3ed" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">EXTRÊME-DROITE</text>
+
+    <text x="255" y="50" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">• Mouvements identitaires</text>
+    <text x="255" y="64" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">• Nationalisme autoritaire</text>
+    <text x="255" y="78" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">• Restriction droits minorités</text>
+    <text x="255" y="92" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">• Théories complotistes</text>
+    <text x="255" y="106" fill="#718096" font-family="system-ui, sans-serif" font-size="8" font-style="italic">→ Autoritarisme politique/physique</text>
+  </g>
+
+  <!-- ========== INSIGHT FINAL ========== -->
+  <g transform="translate(520, 385)">
+    <rect x="0" y="0" width="260" height="55" rx="6" fill="#1e2632" stroke="url(#purpleGrad)" stroke-width="2"/>
+    <text x="130" y="20" text-anchor="middle" fill="#d6bcfa" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">
+      LE CLIVAGE FONDAMENTAL
+    </text>
+    <text x="130" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">
+      n'oppose pas gauche et droite
+    </text>
+    <text x="130" y="52" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      mais AUTORITARISME et LIBERTÉ
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="505" text-anchor="middle" fill="#4a5568" font-family="system-ui, sans-serif" font-size="9">
+    reveildouceur.fr • Données : R.J. Rummel "Death by Government" (1994), Costello et al. JPSP (2022), IFOP (2001), Indiana University (2013)
   </text>
 
 </svg>
