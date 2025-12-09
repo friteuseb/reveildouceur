@@ -35,6 +35,10 @@
   },
   "articles": [
     {
+      "file": "societe-moderne-fabrique-mal-etre.html",
+      "category": "societe"
+    },
+    {
       "file": "jumeau-numerique-terre-simuler-avenir.html",
       "category": "predictions"
     },
