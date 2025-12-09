@@ -1,0 +1,7 @@
+# Protéger les fichiers de données
+<FilesMatch "\.(sqlite|db)$">
+    Require all denied
+</FilesMatch>
+
+# Désactiver le listing de répertoire
+Options -Indexes

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Organiser un débat entre amis - Réveil Douceur</title>
-  <meta name="description" content="Guide complet pour organiser une soirée débat entre amis. Choisissez vos thématiques, préparez vos arguments avec des sources fiables, et apprenez à animer des discussions constructives.">
+  <meta name="description" content="Guide complet pour organiser une soirée débat entre amis. Choisissez vos thématiques, créez une session de vote et préparez vos arguments avec des sources fiables.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Organiser un débat entre amis - Réveil Douceur">
@@ -292,6 +292,204 @@
       margin: 0;
     }
 
+    /* === NOUVELLE SECTION: MODE TABS === */
+    .mode-tabs {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-lg);
+    }
+
+    .mode-tab {
+      padding: var(--space-sm) var(--space-lg);
+      background: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--color-text);
+      transition: all var(--transition);
+    }
+
+    .mode-tab:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .mode-tab--active {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #fff;
+    }
+
+    .mode-panel {
+      display: none;
+    }
+
+    .mode-panel--active {
+      display: block;
+    }
+
+    /* Section session */
+    .session-box {
+      background: var(--color-surface);
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      max-width: 600px;
+      margin: 0 auto var(--space-xl);
+    }
+
+    .session-box__title {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-md);
+      text-align: center;
+    }
+
+    .session-box__form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .form-group label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-text);
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: var(--space-sm) var(--space-md);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+
+    /* Code de session */
+    .session-code-display {
+      text-align: center;
+      padding: var(--space-lg);
+      background: var(--color-bg-alt);
+      border-radius: var(--radius);
+      margin: var(--space-md) 0;
+    }
+
+    .session-code-display__label {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--space-xs);
+    }
+
+    .session-code-display__code {
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: monospace;
+      letter-spacing: 0.2em;
+      color: var(--color-primary);
+    }
+
+    .session-code-display__url {
+      font-size: 0.75rem;
+      color: var(--color-text-light);
+      margin-top: var(--space-sm);
+      word-break: break-all;
+    }
+
+    /* Résultats de vote */
+    .vote-results {
+      margin-top: var(--space-lg);
+    }
+
+    .vote-results__title {
+      font-size: 1rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .vote-result-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm);
+      background: var(--color-bg);
+      border-radius: var(--radius);
+      margin-bottom: var(--space-xs);
+    }
+
+    .vote-result-item__rank {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      min-width: 24px;
+    }
+
+    .vote-result-item__bar {
+      flex: 1;
+      height: 24px;
+      background: var(--color-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .vote-result-item__fill {
+      height: 100%;
+      background: var(--color-primary);
+      transition: width 0.5s ease;
+    }
+
+    .vote-result-item__title {
+      position: absolute;
+      left: var(--space-sm);
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.75rem;
+      color: var(--color-text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: calc(100% - 60px);
+    }
+
+    .vote-result-item__count {
+      min-width: 50px;
+      text-align: right;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* Participants */
+    .participants-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-top: var(--space-sm);
+    }
+
+    .participant-tag {
+      padding: 0.25rem 0.5rem;
+      background: var(--color-bg-alt);
+      border-radius: var(--radius);
+      font-size: 0.75rem;
+      color: var(--color-text-light);
+    }
+
     /* Section sélection */
     .selection-section {
       background: var(--color-surface);
@@ -530,13 +728,53 @@
       margin-bottom: 0.25rem;
     }
 
+    /* Info box */
+    .info-box {
+      padding: var(--space-md);
+      background: rgba(49, 130, 206, 0.1);
+      border: 1px solid #3182ce;
+      border-radius: var(--radius);
+      margin-bottom: var(--space-md);
+      font-size: 0.875rem;
+      color: var(--color-text);
+    }
+
+    .info-box strong {
+      color: #3182ce;
+    }
+
+    /* Vote limit indicator */
+    .vote-limit {
+      text-align: center;
+      padding: var(--space-sm);
+      background: var(--color-bg-alt);
+      border-radius: var(--radius);
+      margin-bottom: var(--space-md);
+      font-size: 0.875rem;
+    }
+
+    .vote-limit__count {
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .vote-limit--exceeded {
+      background: rgba(229, 62, 62, 0.1);
+      border: 1px solid #e53e3e;
+    }
+
+    .vote-limit--exceeded .vote-limit__count {
+      color: #e53e3e;
+    }
+
     /* Responsive */
     @media (max-width: 640px) {
       .debat-section {
         padding: var(--space-xl) 0;
       }
 
-      .selection-section {
+      .selection-section,
+      .session-box {
         padding: var(--space-md);
         margin: 0 calc(-1 * var(--space-md));
         border-radius: 0;
@@ -553,6 +791,15 @@
       .regles-grid {
         grid-template-columns: 1fr;
       }
+
+      .mode-tabs {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .mode-tab {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -567,11 +814,11 @@
       <div class="container">
         <h1 class="debat-hero__title">Organisez un débat entre amis</h1>
         <p class="debat-hero__subtitle">
-          Transformez vos soirées en moments d'échange enrichissants. Débattez sur des sujets
-          de société en vous appuyant sur des sources fiables et des données vérifiées.
+          Transformez vos soirées en moments d'échange enrichissants. Créez une session de vote,
+          invitez vos amis et choisissez ensemble les sujets à débattre.
         </p>
         <a href="#selection" class="btn btn--primary debat-hero__cta">
-          Choisir mes thématiques
+          Créer une session de vote
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 5v14M5 12l7 7 7-7"/>
           </svg>
@@ -618,7 +865,7 @@
 
         <div class="cta-banner">
           <p class="cta-banner__text">Prêt à organiser votre première soirée débat ?</p>
-          <a href="#selection" class="btn">Sélectionner des articles</a>
+          <a href="#selection" class="btn">Créer une session de vote</a>
         </div>
       </div>
     </section>
@@ -690,33 +937,27 @@
         <div class="etapes-grid">
           <div class="etape-card">
             <span class="etape-card__number">1</span>
-            <span class="etape-card__timing">1-2 semaines avant</span>
-            <h3 class="etape-card__title">Choisir les thèmes</h3>
-            <p class="etape-card__text">Sélectionnez 2-3 articles ci-dessous et partagez-les au groupe.</p>
+            <span class="etape-card__timing">Maintenant</span>
+            <h3 class="etape-card__title">Créer une session</h3>
+            <p class="etape-card__text">Sélectionnez des articles et créez un code de session à partager.</p>
           </div>
           <div class="etape-card">
             <span class="etape-card__number">2</span>
-            <span class="etape-card__timing">Quelques jours avant</span>
-            <h3 class="etape-card__title">Préparer le cadre</h3>
-            <p class="etape-card__text">Lieu confortable, 4-8 personnes, désigner un modérateur.</p>
+            <span class="etape-card__timing">Avant le débat</span>
+            <h3 class="etape-card__title">Inviter les amis</h3>
+            <p class="etape-card__text">Partagez le code. Chacun vote pour ses sujets préférés.</p>
           </div>
           <div class="etape-card">
             <span class="etape-card__number">3</span>
-            <span class="etape-card__timing">Le jour J</span>
-            <h3 class="etape-card__title">Lancer le débat</h3>
-            <p class="etape-card__text">Rappeler les règles, tour de table, présenter les données clés.</p>
+            <span class="etape-card__timing">Quelques jours avant</span>
+            <h3 class="etape-card__title">Consulter les résultats</h3>
+            <p class="etape-card__text">Voyez les sujets les plus populaires et préparez le débat.</p>
           </div>
           <div class="etape-card">
             <span class="etape-card__number">4</span>
-            <span class="etape-card__timing">Pendant</span>
-            <h3 class="etape-card__title">Animer</h3>
-            <p class="etape-card__text">Distribuer la parole, recentrer si besoin, poser des questions.</p>
-          </div>
-          <div class="etape-card">
-            <span class="etape-card__number">5</span>
-            <span class="etape-card__timing">Pour conclure</span>
-            <h3 class="etape-card__title">Faire le bilan</h3>
-            <p class="etape-card__text">Ce que chacun retient, les changements de perspective.</p>
+            <span class="etape-card__timing">Le jour J</span>
+            <h3 class="etape-card__title">Débattre</h3>
+            <p class="etape-card__text">4-8 personnes, les règles affichées, et c'est parti !</p>
           </div>
         </div>
       </div>
@@ -759,70 +1000,219 @@
             </p>
           </div>
         </div>
-
-        <div class="cta-banner" style="margin-top: var(--space-xl); margin-bottom: 0;">
-          <p class="cta-banner__text">Maintenant, choisissez vos sujets de discussion</p>
-          <a href="#selection" class="btn">Voir les articles disponibles</a>
-        </div>
       </div>
     </section>
 
-    <!-- Sélection des articles -->
+    <!-- Sélection des articles et Session de vote -->
     <section class="debat-section" id="selection">
       <div class="container">
         <div class="debat-section__header">
-          <h2 class="debat-section__title">Sélectionnez vos thématiques</h2>
+          <h2 class="debat-section__title">Sessions de vote</h2>
           <p class="debat-section__intro">
-            Choisissez parmi nos articles sourcés, puis partagez votre sélection avec vos amis.
+            Créez une session pour que vos amis votent, ou rejoignez une session existante.
           </p>
         </div>
 
-        <div class="selection-section">
-          <div class="selection-section__header">
-            <h3 class="selection-section__title">Nos articles pour débattre</h3>
-            <p class="selection-section__subtitle">Cliquez pour sélectionner</p>
-          </div>
+        <!-- Onglets de mode -->
+        <div class="mode-tabs">
+          <button class="mode-tab mode-tab--active" data-mode="create">Créer une session</button>
+          <button class="mode-tab" data-mode="join">Rejoindre une session</button>
+          <button class="mode-tab" data-mode="results">Voir les résultats</button>
+        </div>
 
-          <!-- Filtres -->
-          <div class="selection-filters" id="category-filters">
-            <button class="selection-filter selection-filter--active" data-category="">Tous</button>
-          </div>
+        <!-- Panel: Créer une session -->
+        <div class="mode-panel mode-panel--active" id="panel-create">
+          <div class="session-box">
+            <h3 class="session-box__title">Nouvelle session de débat</h3>
 
-          <!-- Liste des articles -->
-          <div class="article-list" id="article-list">
-            <div class="loader">
-              <div class="loader__spinner"></div>
+            <div class="session-box__form" id="create-session-form">
+              <div class="form-group">
+                <label for="session-name">Nom de la session</label>
+                <input type="text" id="session-name" placeholder="Ex: Soirée débat du 15 janvier" maxlength="100">
+              </div>
+              <div class="form-group">
+                <label for="max-votes">Nombre de votes par participant</label>
+                <select id="max-votes">
+                  <option value="1">1 vote</option>
+                  <option value="2">2 votes</option>
+                  <option value="3" selected>3 votes</option>
+                  <option value="5">5 votes</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <!-- Résumé sélection -->
-          <div class="selection-summary" id="selection-summary" style="display: none;">
-            <div class="selection-summary__header">
-              <span class="selection-summary__count">
-                <span id="selection-count">0</span> article(s) sélectionné(s)
-              </span>
-              <button class="btn btn--secondary" id="clear-selection" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">
-                Effacer tout
+          <!-- Sélection des articles -->
+          <div class="selection-section">
+            <div class="selection-section__header">
+              <h3 class="selection-section__title">Choisissez les articles proposés au vote</h3>
+              <p class="selection-section__subtitle">Cliquez pour sélectionner (min. 2 articles)</p>
+            </div>
+
+            <!-- Filtres -->
+            <div class="selection-filters" id="category-filters">
+              <button class="selection-filter selection-filter--active" data-category="">Tous</button>
+            </div>
+
+            <!-- Liste des articles -->
+            <div class="article-list" id="article-list">
+              <div class="loader">
+                <div class="loader__spinner"></div>
+              </div>
+            </div>
+
+            <!-- Résumé sélection -->
+            <div class="selection-summary" id="selection-summary" style="display: none;">
+              <div class="selection-summary__header">
+                <span class="selection-summary__count">
+                  <span id="selection-count">0</span> article(s) sélectionné(s)
+                </span>
+                <button class="btn btn--secondary" id="clear-selection" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">
+                  Effacer tout
+                </button>
+              </div>
+              <div class="selected-tags" id="selected-tags"></div>
+            </div>
+
+            <!-- Actions -->
+            <div class="selection-actions">
+              <button class="btn btn--primary" id="create-session-btn" disabled>
+                Créer la session de vote
               </button>
             </div>
-            <div class="selected-tags" id="selected-tags"></div>
           </div>
 
-          <!-- Actions -->
-          <div class="selection-actions">
-            <button class="btn btn--primary" id="copy-selection">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-              Copier les liens
-            </button>
-            <button class="btn btn--outline" id="share-whatsapp">
-              WhatsApp
-            </button>
-            <button class="btn btn--outline" id="share-email">
-              Email
-            </button>
+          <!-- Session créée -->
+          <div id="session-created" style="display: none;">
+            <div class="session-box">
+              <h3 class="session-box__title">Session créée avec succès !</h3>
+
+              <div class="session-code-display">
+                <p class="session-code-display__label">Code de la session</p>
+                <p class="session-code-display__code" id="created-session-code">------</p>
+                <p class="session-code-display__url" id="created-session-url"></p>
+              </div>
+
+              <div class="info-box">
+                <strong>Partagez ce code</strong> avec vos amis pour qu'ils puissent voter.
+                La session expire dans 72 heures.
+              </div>
+
+              <div class="selection-actions">
+                <button class="btn btn--primary" id="copy-session-link">
+                  Copier le lien
+                </button>
+                <button class="btn btn--outline" id="share-session-whatsapp">
+                  WhatsApp
+                </button>
+                <button class="btn btn--outline" id="view-session-results">
+                  Voir les résultats
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Rejoindre une session -->
+        <div class="mode-panel" id="panel-join">
+          <div class="session-box">
+            <h3 class="session-box__title">Rejoindre une session</h3>
+
+            <div class="session-box__form" id="join-session-form">
+              <div class="form-group">
+                <label for="join-code">Code de la session</label>
+                <input type="text" id="join-code" placeholder="Ex: ABC123" maxlength="6" style="text-transform: uppercase; letter-spacing: 0.1em; font-family: monospace;">
+              </div>
+              <div class="form-group">
+                <label for="participant-name">Votre prénom</label>
+                <input type="text" id="participant-name" placeholder="Ex: Marie" maxlength="50">
+              </div>
+              <div class="selection-actions">
+                <button class="btn btn--primary" id="join-session-btn">
+                  Rejoindre
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interface de vote -->
+          <div id="vote-interface" style="display: none;">
+            <div class="session-box">
+              <h3 class="session-box__title" id="vote-session-name">Session de vote</h3>
+              <div class="vote-limit" id="vote-limit">
+                Votes restants : <span class="vote-limit__count" id="votes-remaining">3</span>
+              </div>
+            </div>
+
+            <div class="selection-section">
+              <div class="selection-section__header">
+                <h3 class="selection-section__title">Votez pour vos sujets préférés</h3>
+              </div>
+
+              <div class="article-list" id="vote-article-list"></div>
+
+              <div class="selection-actions">
+                <button class="btn btn--primary" id="submit-votes-btn">
+                  Enregistrer mes votes
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="vote-submitted" style="display: none;">
+            <div class="session-box">
+              <h3 class="session-box__title">Votes enregistrés !</h3>
+              <p style="text-align: center; color: var(--color-text-light);">
+                Merci pour votre participation. L'organisateur verra les résultats.
+              </p>
+              <div class="selection-actions" style="margin-top: var(--space-md);">
+                <button class="btn btn--outline" id="view-results-after-vote">
+                  Voir les résultats
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Résultats -->
+        <div class="mode-panel" id="panel-results">
+          <div class="session-box">
+            <h3 class="session-box__title">Consulter les résultats</h3>
+
+            <div class="session-box__form" id="results-form">
+              <div class="form-group">
+                <label for="results-code">Code de la session</label>
+                <input type="text" id="results-code" placeholder="Ex: ABC123" maxlength="6" style="text-transform: uppercase; letter-spacing: 0.1em; font-family: monospace;">
+              </div>
+              <div class="selection-actions">
+                <button class="btn btn--primary" id="view-results-btn">
+                  Voir les résultats
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Affichage des résultats -->
+          <div id="results-display" style="display: none;">
+            <div class="session-box">
+              <h3 class="session-box__title" id="results-session-name">Résultats</h3>
+              <p style="text-align: center; color: var(--color-text-light);">
+                <span id="results-participant-count">0</span> participant(s)
+              </p>
+
+              <div class="vote-results" id="vote-results"></div>
+
+              <div id="participants-section" style="margin-top: var(--space-lg);">
+                <h4 style="font-size: 0.875rem; margin-bottom: var(--space-xs);">Participants</h4>
+                <div class="participants-list" id="participants-list"></div>
+              </div>
+
+              <div class="selection-actions" style="margin-top: var(--space-lg);">
+                <button class="btn btn--outline" id="refresh-results">
+                  Actualiser
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -830,8 +1220,8 @@
         <div class="tips-box">
           <h4 class="tips-box__title">Conseils pour bien préparer</h4>
           <ul class="tips-box__list">
-            <li>Demandez à chaque participant de lire les articles avant et de noter 2-3 questions</li>
-            <li>Imprimez les infographies des articles pour les avoir sous les yeux</li>
+            <li>Partagez le code de session quelques jours avant pour laisser le temps de voter</li>
+            <li>Demandez aux participants de lire les articles gagnants avant le débat</li>
             <li>Préparez quelques questions de relance au cas où la discussion s'essouffle</li>
           </ul>
         </div>
@@ -845,12 +1235,12 @@
   <script src="/js/app.js"></script>
   <script>
     /**
-     * Organiser un débat - Sélection d'articles
+     * Organiser un débat - Sessions de vote
      */
     (function() {
       'use strict';
 
-      const STORAGE_KEY = 'reveil-douceur-debate-selection';
+      const API_URL = '/api/debate-sessions.php';
       const ARTICLES_URL = '/articles/index.json';
       const SITE_URL = 'https://reveildouceur.fr';
 
@@ -860,28 +1250,23 @@
       let currentFilter = '';
       let titlesCache = {};
 
-      function loadSelection() {
-        try {
-          const saved = localStorage.getItem(STORAGE_KEY);
-          if (saved) selectedArticles = JSON.parse(saved);
-        } catch (e) {}
-      }
+      // État de la session
+      let currentSession = null;
+      let participantToken = localStorage.getItem('debate-participant-token') || '';
+      let votedArticles = [];
 
-      function saveSelection() {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(selectedArticles));
-        } catch (e) {}
-      }
+      // === UTILITAIRES ===
 
-      function showToast(message) {
+      function showToast(message, type = 'success') {
         const existing = document.querySelector('.toast');
         if (existing) existing.remove();
 
         const toast = document.createElement('div');
         toast.className = 'toast';
+        const bgColor = type === 'error' ? '#e53e3e' : 'var(--color-primary)';
         toast.style.cssText = `
           position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-          background: var(--color-primary); color: #fff; padding: 12px 24px;
+          background: ${bgColor}; color: #fff; padding: 12px 24px;
           border-radius: var(--radius); font-size: 0.9375rem; box-shadow: var(--shadow-lg);
           z-index: 1000; animation: fadeInUp 0.3s ease;
         `;
@@ -890,14 +1275,67 @@
         setTimeout(() => {
           toast.style.opacity = '0';
           setTimeout(() => toast.remove(), 300);
-        }, 2500);
+        }, 3000);
       }
 
       function getArticleTitle(slug) {
         if (titlesCache[slug]) return titlesCache[slug];
-        // Fallback: convertir le slug en titre lisible
         return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
       }
+
+      async function apiCall(action, method = 'GET', data = null) {
+        const url = method === 'GET' && data
+          ? `${API_URL}?action=${action}&${new URLSearchParams(data)}`
+          : `${API_URL}?action=${action}`;
+
+        const options = {
+          method,
+          headers: { 'Content-Type': 'application/json' }
+        };
+
+        if (method === 'POST' && data) {
+          options.body = JSON.stringify(data);
+        }
+
+        const response = await fetch(url, options);
+        const result = await response.json();
+
+        if (!response.ok || result.error) {
+          throw new Error(result.error || 'Erreur serveur');
+        }
+
+        return result;
+      }
+
+      // === GESTION DES ONGLETS ===
+
+      function initTabs() {
+        const tabs = document.querySelectorAll('.mode-tab');
+        const panels = document.querySelectorAll('.mode-panel');
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            const mode = tab.dataset.mode;
+
+            tabs.forEach(t => t.classList.remove('mode-tab--active'));
+            tab.classList.add('mode-tab--active');
+
+            panels.forEach(p => p.classList.remove('mode-panel--active'));
+            document.getElementById(`panel-${mode}`).classList.add('mode-panel--active');
+          });
+        });
+
+        // Vérifier si on arrive avec un paramètre session dans l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionCode = urlParams.get('session');
+        if (sessionCode) {
+          // Basculer sur l'onglet "Rejoindre"
+          document.querySelector('[data-mode="join"]').click();
+          document.getElementById('join-code').value = sessionCode.toUpperCase();
+        }
+      }
+
+      // === CHARGEMENT DES ARTICLES ===
 
       async function loadArticleTitles() {
         const promises = articlesData.map(async (article) => {
@@ -909,7 +1347,6 @@
               const parser = new DOMParser();
               const doc = parser.parseFromString(html, 'text/html');
 
-              // Chercher le titre dans <title> ou <h1>
               let title = doc.querySelector('title')?.textContent;
               if (title) {
                 title = title.replace(/\s*[-–—]\s*Réveil Douceur\s*$/i, '').trim();
@@ -974,13 +1411,13 @@
           item.addEventListener('click', () => toggleArticle(item.dataset.slug));
         });
         updateSummary();
+        updateCreateButton();
       }
 
       function toggleArticle(slug) {
         const idx = selectedArticles.indexOf(slug);
         if (idx === -1) selectedArticles.push(slug);
         else selectedArticles.splice(idx, 1);
-        saveSelection();
         renderArticles();
       }
 
@@ -1017,37 +1454,248 @@
         });
       }
 
+      function updateCreateButton() {
+        const btn = document.getElementById('create-session-btn');
+        const sessionName = document.getElementById('session-name').value.trim();
+        btn.disabled = selectedArticles.length < 2 || !sessionName;
+      }
+
       function clearSelection() {
         selectedArticles = [];
-        saveSelection();
         renderArticles();
       }
 
-      function getArticleUrls() {
-        return selectedArticles.map(slug => `${SITE_URL}/articles/${slug}.html`);
+      // === CRÉATION DE SESSION ===
+
+      async function createSession() {
+        const name = document.getElementById('session-name').value.trim();
+        const maxVotes = parseInt(document.getElementById('max-votes').value);
+
+        if (!name) {
+          showToast('Entrez un nom pour la session', 'error');
+          return;
+        }
+        if (selectedArticles.length < 2) {
+          showToast('Sélectionnez au moins 2 articles', 'error');
+          return;
+        }
+
+        try {
+          const result = await apiCall('create', 'POST', {
+            name,
+            articles: selectedArticles,
+            maxVotes
+          });
+
+          currentSession = result.session;
+
+          // Sauvegarder le token organisateur
+          localStorage.setItem(`debate-organizer-${result.session.code}`, result.session.organizerToken);
+
+          // Afficher la confirmation
+          document.getElementById('create-session-form').closest('.session-box').style.display = 'none';
+          document.querySelector('#panel-create .selection-section').style.display = 'none';
+          document.getElementById('session-created').style.display = 'block';
+
+          document.getElementById('created-session-code').textContent = result.session.code;
+          document.getElementById('created-session-url').textContent = result.session.shareUrl;
+
+          showToast('Session créée !');
+
+        } catch (error) {
+          showToast(error.message, 'error');
+        }
       }
 
-      function copySelection() {
-        if (!selectedArticles.length) { showToast('Sélectionnez des articles'); return; }
-        const text = `Pour notre débat, je propose :\n\n${getArticleUrls().join('\n')}\n\nOrganisé avec ${SITE_URL}/organiser-debat.html`;
-        navigator.clipboard.writeText(text).then(() => showToast('Liens copiés !'));
+      function copySessionLink() {
+        if (!currentSession) return;
+        const text = `Je vous invite à voter pour notre prochain débat !\n\nRejoignez avec le code: ${currentSession.code}\n\n${currentSession.shareUrl}`;
+        navigator.clipboard.writeText(text).then(() => showToast('Lien copié !'));
       }
 
-      function shareWhatsApp() {
-        if (!selectedArticles.length) { showToast('Sélectionnez des articles'); return; }
-        const text = `Pour notre débat, je propose :\n\n${getArticleUrls().join('\n')}`;
+      function shareSessionWhatsApp() {
+        if (!currentSession) return;
+        const text = `Je vous invite à voter pour notre prochain débat !\n\nRejoignez avec le code: ${currentSession.code}\n\n${currentSession.shareUrl}`;
         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
       }
 
-      function shareEmail() {
-        if (!selectedArticles.length) { showToast('Sélectionnez des articles'); return; }
-        const subject = 'Proposition de soirée débat';
-        const body = `Salut !\n\nJe propose qu'on organise un débat. Voici les articles :\n\n${getArticleUrls().join('\n')}\n\nÀ bientôt !`;
-        window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+      // === REJOINDRE UNE SESSION ===
+
+      async function joinSession() {
+        const code = document.getElementById('join-code').value.trim().toUpperCase();
+        const name = document.getElementById('participant-name').value.trim();
+
+        if (!code || code.length !== 6) {
+          showToast('Entrez un code de session valide (6 caractères)', 'error');
+          return;
+        }
+        if (!name) {
+          showToast('Entrez votre prénom', 'error');
+          return;
+        }
+
+        try {
+          const result = await apiCall('get', 'GET', { code });
+          currentSession = result.session;
+          currentSession.participantName = name;
+
+          // Afficher l'interface de vote
+          document.getElementById('join-session-form').closest('.session-box').style.display = 'none';
+          document.getElementById('vote-interface').style.display = 'block';
+          document.getElementById('vote-session-name').textContent = currentSession.name;
+
+          renderVoteArticles();
+
+        } catch (error) {
+          showToast(error.message, 'error');
+        }
       }
 
+      function renderVoteArticles() {
+        const container = document.getElementById('vote-article-list');
+        const maxVotes = currentSession.maxVotes;
+
+        let html = '';
+        currentSession.articles.forEach(slug => {
+          const isVoted = votedArticles.includes(slug);
+
+          html += `
+            <div class="article-item ${isVoted ? 'article-item--selected' : ''}" data-slug="${slug}">
+              <div class="article-item__checkbox">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="article-item__content">
+                <span class="article-item__title">${getArticleTitle(slug)}</span>
+              </div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = html;
+        container.querySelectorAll('.article-item').forEach(item => {
+          item.addEventListener('click', () => toggleVote(item.dataset.slug));
+        });
+
+        updateVoteLimit();
+      }
+
+      function toggleVote(slug) {
+        const maxVotes = currentSession.maxVotes;
+        const idx = votedArticles.indexOf(slug);
+
+        if (idx === -1) {
+          if (votedArticles.length >= maxVotes) {
+            showToast(`Maximum ${maxVotes} votes autorisés`, 'error');
+            return;
+          }
+          votedArticles.push(slug);
+        } else {
+          votedArticles.splice(idx, 1);
+        }
+
+        renderVoteArticles();
+      }
+
+      function updateVoteLimit() {
+        const maxVotes = currentSession.maxVotes;
+        const remaining = maxVotes - votedArticles.length;
+        const limitEl = document.getElementById('vote-limit');
+        const countEl = document.getElementById('votes-remaining');
+
+        countEl.textContent = remaining;
+        limitEl.classList.toggle('vote-limit--exceeded', remaining === 0);
+      }
+
+      async function submitVotes() {
+        if (votedArticles.length === 0) {
+          showToast('Sélectionnez au moins un article', 'error');
+          return;
+        }
+
+        try {
+          const result = await apiCall('vote', 'POST', {
+            code: currentSession.code,
+            participantName: currentSession.participantName,
+            participantToken,
+            votes: votedArticles
+          });
+
+          // Sauvegarder le token
+          participantToken = result.participantToken;
+          localStorage.setItem('debate-participant-token', participantToken);
+          localStorage.setItem(`debate-votes-${currentSession.code}`, JSON.stringify(votedArticles));
+
+          // Afficher confirmation
+          document.getElementById('vote-interface').style.display = 'none';
+          document.getElementById('vote-submitted').style.display = 'block';
+
+          showToast(`${result.votesRegistered} vote(s) enregistré(s) !`);
+
+        } catch (error) {
+          showToast(error.message, 'error');
+        }
+      }
+
+      // === RÉSULTATS ===
+
+      async function viewResults(code = null) {
+        code = code || document.getElementById('results-code').value.trim().toUpperCase();
+
+        if (!code || code.length !== 6) {
+          showToast('Entrez un code de session valide', 'error');
+          return;
+        }
+
+        try {
+          const organizerToken = localStorage.getItem(`debate-organizer-${code}`) || '';
+          const result = await apiCall('results', 'GET', { code, token: organizerToken });
+
+          currentSession = result.session;
+
+          // Afficher les résultats
+          document.getElementById('results-form').closest('.session-box').style.display = 'none';
+          document.getElementById('results-display').style.display = 'block';
+
+          document.getElementById('results-session-name').textContent = result.session.name;
+          document.getElementById('results-participant-count').textContent = result.participantCount;
+
+          // Graphique des résultats
+          const maxVotes = Math.max(...result.results.map(r => r.votes), 1);
+          const resultsHtml = result.results.map((r, i) => {
+            const percentage = (r.votes / maxVotes) * 100;
+            return `
+              <div class="vote-result-item">
+                <span class="vote-result-item__rank">#${i + 1}</span>
+                <div class="vote-result-item__bar">
+                  <div class="vote-result-item__fill" style="width: ${percentage}%"></div>
+                  <span class="vote-result-item__title">${getArticleTitle(r.slug)}</span>
+                </div>
+                <span class="vote-result-item__count">${r.votes} vote${r.votes > 1 ? 's' : ''}</span>
+              </div>
+            `;
+          }).join('');
+
+          document.getElementById('vote-results').innerHTML = resultsHtml;
+
+          // Liste des participants
+          const participantsHtml = result.participants.map(name =>
+            `<span class="participant-tag">${name}</span>`
+          ).join('');
+          document.getElementById('participants-list').innerHTML = participantsHtml || '<em>Aucun participant</em>';
+
+        } catch (error) {
+          showToast(error.message, 'error');
+        }
+      }
+
+      // === INITIALISATION ===
+
       async function init() {
-        loadSelection();
+        initTabs();
+
+        // Charger les articles
         try {
           const response = await fetch(ARTICLES_URL);
           if (response.ok) {
@@ -1059,16 +1707,34 @@
           }
           renderFilters();
           renderArticles();
-          // Charger les vrais titres de façon asynchrone
           loadArticleTitles();
         } catch (e) {
-          document.getElementById('article-list').innerHTML = '<p style="text-align:center;color:var(--color-text-muted);">Erreur de chargement</p>';
+          document.getElementById('article-list').innerHTML =
+            '<p style="text-align:center;color:var(--color-text-muted);">Erreur de chargement</p>';
         }
 
+        // Event listeners
+        document.getElementById('session-name').addEventListener('input', updateCreateButton);
         document.getElementById('clear-selection').addEventListener('click', clearSelection);
-        document.getElementById('copy-selection').addEventListener('click', copySelection);
-        document.getElementById('share-whatsapp').addEventListener('click', shareWhatsApp);
-        document.getElementById('share-email').addEventListener('click', shareEmail);
+        document.getElementById('create-session-btn').addEventListener('click', createSession);
+        document.getElementById('copy-session-link').addEventListener('click', copySessionLink);
+        document.getElementById('share-session-whatsapp').addEventListener('click', shareSessionWhatsApp);
+        document.getElementById('view-session-results').addEventListener('click', () => {
+          document.querySelector('[data-mode="results"]').click();
+          document.getElementById('results-code').value = currentSession.code;
+          viewResults(currentSession.code);
+        });
+
+        document.getElementById('join-session-btn').addEventListener('click', joinSession);
+        document.getElementById('submit-votes-btn').addEventListener('click', submitVotes);
+        document.getElementById('view-results-after-vote').addEventListener('click', () => {
+          document.querySelector('[data-mode="results"]').click();
+          document.getElementById('results-code').value = currentSession.code;
+          viewResults(currentSession.code);
+        });
+
+        document.getElementById('view-results-btn').addEventListener('click', () => viewResults());
+        document.getElementById('refresh-results').addEventListener('click', () => viewResults(currentSession.code));
       }
 
       if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
