@@ -102,8 +102,36 @@ function updateStats(SQLite3 $db, string $slug): void {
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-// GET: Récupérer les stats
+// GET: Récupérer les stats (single ou batch)
 if ($method === 'GET') {
+    // Mode batch: ?articles=slug1,slug2,slug3
+    if (isset($_GET['articles'])) {
+        $slugs = array_filter(explode(',', $_GET['articles']), 'validateSlug');
+
+        if (empty($slugs)) {
+            http_response_code(400);
+            echo json_encode(['error' => 'Invalid article slugs']);
+            exit;
+        }
+
+        $ipHash = getIpHash();
+        $results = [];
+
+        foreach ($slugs as $slug) {
+            $stats = getArticleStats($db, $slug);
+            $userVote = getUserVote($db, $slug, $ipHash);
+            $results[$slug] = [
+                'likes' => (int)$stats['likes'],
+                'dislikes' => (int)$stats['dislikes'],
+                'userVote' => $userVote
+            ];
+        }
+
+        echo json_encode(['votes' => $results]);
+        exit;
+    }
+
+    // Mode single: ?article=slug
     $slug = $_GET['article'] ?? '';
 
     if (!$slug || !validateSlug($slug)) {

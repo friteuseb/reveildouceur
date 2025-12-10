@@ -497,9 +497,10 @@
     // Fallback vers PNG si WebP non disponible
     const baseName = article.filename.replace('.html', '');
     const fallbackSrc = `/images/illustrations/${baseName}.png`;
+    const slug = baseName;
 
     return `
-      <article class="article-card" data-category="${article.category?.id || ''}">
+      <article class="article-card" data-category="${article.category?.id || ''}" data-slug="${slug}">
         <div class="article-card__image">
           <a href="${article.url}" aria-label="Lire ${article.title}">
             <img
@@ -515,7 +516,19 @@
           </a>
         </div>
         <div class="article-card__content">
-          ${categoryBadge ? `<div class="article-card__meta">${categoryBadge}</div>` : ''}
+          <div class="article-card__meta">
+            ${categoryBadge}
+            <div class="article-card__vote" data-slug="${slug}">
+              <button class="article-card__vote-btn article-card__vote-btn--like" data-vote="1" title="J'aime">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                <span class="article-card__vote-count" data-count="likes">0</span>
+              </button>
+              <button class="article-card__vote-btn article-card__vote-btn--dislike" data-vote="-1" title="Je n'aime pas">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+                <span class="article-card__vote-count" data-count="dislikes">0</span>
+              </button>
+            </div>
+          </div>
           <h2 class="article-card__title">
             <a href="${article.url}">${article.title}</a>
           </h2>
@@ -747,6 +760,187 @@
       }
     });
   }
+
+  // ========================================
+  // Système de vote
+  // ========================================
+
+  const VoteManager = {
+    API_URL: '/api/vote.php',
+
+    // Charger les votes pour plusieurs articles (batch)
+    async loadBatchVotes(slugs) {
+      if (!slugs || slugs.length === 0) return {};
+      try {
+        const response = await fetch(`${this.API_URL}?articles=${encodeURIComponent(slugs.join(','))}`);
+        if (!response.ok) return {};
+        const data = await response.json();
+        return data.votes || {};
+      } catch (error) {
+        console.error('Erreur chargement votes batch:', error);
+        return {};
+      }
+    },
+
+    // Charger les votes pour un seul article
+    async loadVotes(slug) {
+      try {
+        const response = await fetch(`${this.API_URL}?article=${encodeURIComponent(slug)}`);
+        if (!response.ok) return null;
+        return await response.json();
+      } catch (error) {
+        console.error('Erreur chargement votes:', error);
+        return null;
+      }
+    },
+
+    // Envoyer un vote
+    async sendVote(slug, voteType) {
+      try {
+        const response = await fetch(this.API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ article: slug, vote: voteType })
+        });
+        if (!response.ok) return null;
+        return await response.json();
+      } catch (error) {
+        console.error('Erreur envoi vote:', error);
+        return null;
+      }
+    },
+
+    // Mettre à jour l'affichage d'un composant de vote
+    updateVoteDisplay(container, data) {
+      if (!container || !data) return;
+
+      const likesEl = container.querySelector('[data-count="likes"]');
+      const dislikesEl = container.querySelector('[data-count="dislikes"]');
+      const likeBtn = container.querySelector('[data-vote="1"]');
+      const dislikeBtn = container.querySelector('[data-vote="-1"]');
+
+      if (likesEl) likesEl.textContent = data.likes || 0;
+      if (dislikesEl) dislikesEl.textContent = data.dislikes || 0;
+      if (likeBtn) likeBtn.classList.toggle('active', data.userVote === 1);
+      if (dislikeBtn) dislikeBtn.classList.toggle('active', data.userVote === -1);
+    },
+
+    // Mettre à jour tous les affichages pour un slug
+    updateAllDisplaysForSlug(slug, data) {
+      document.querySelectorAll(`[data-slug="${slug}"]`).forEach(container => {
+        this.updateVoteDisplay(container, data);
+      });
+    },
+
+    // Gérer le clic sur un bouton de vote
+    async handleVoteClick(e) {
+      const btn = e.target.closest('[data-vote]');
+      if (!btn) return;
+
+      const container = btn.closest('[data-slug]');
+      if (!container) return;
+
+      const slug = container.dataset.slug;
+      const voteType = parseInt(btn.dataset.vote, 10);
+      const isActive = btn.classList.contains('active');
+
+      // Désactiver les boutons pendant la requête
+      const buttons = container.querySelectorAll('[data-vote]');
+      buttons.forEach(b => b.disabled = true);
+
+      const data = await this.sendVote(slug, isActive ? 0 : voteType);
+
+      buttons.forEach(b => b.disabled = false);
+
+      if (data) {
+        this.updateAllDisplaysForSlug(slug, data);
+      }
+    },
+
+    // Initialiser les votes pour les cartes d'articles
+    async initCardVotes() {
+      const cards = document.querySelectorAll('.article-card[data-slug]');
+      if (cards.length === 0) return;
+
+      const slugs = Array.from(cards).map(card => card.dataset.slug).filter(Boolean);
+      const votes = await this.loadBatchVotes(slugs);
+
+      Object.entries(votes).forEach(([slug, data]) => {
+        this.updateAllDisplaysForSlug(slug, data);
+      });
+
+      // Ajouter les écouteurs d'événements (délégation)
+      document.querySelector('.articles-grid__cards')?.addEventListener('click', (e) => {
+        if (e.target.closest('[data-vote]')) {
+          e.preventDefault();
+          e.stopPropagation();
+          this.handleVoteClick(e);
+        }
+      });
+    },
+
+    // Créer le HTML du composant de vote pour les articles
+    createArticleVoteHTML(position) {
+      return `
+        <div class="article-vote article-vote--${position}" data-position="${position}">
+          <span class="article-vote__label">Cet article vous a-t-il été utile ?</span>
+          <div class="article-vote__buttons">
+            <button class="article-vote__btn article-vote__btn--like" data-vote="1" aria-label="J'aime">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+              <span class="article-vote__count" data-count="likes">0</span>
+            </button>
+            <button class="article-vote__btn article-vote__btn--dislike" data-vote="-1" aria-label="Je n'aime pas">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+              <span class="article-vote__count" data-count="dislikes">0</span>
+            </button>
+          </div>
+        </div>
+      `;
+    },
+
+    // Initialiser les votes pour une page article
+    async initArticleVotes() {
+      const path = window.location.pathname;
+      const match = path.match(/\/articles\/([a-z0-9-]+)\.html$/);
+      if (!match) return;
+
+      const slug = match[1];
+
+      // Points d'insertion
+      const heroImage = document.querySelector('.article__hero-image');
+      const sources = document.querySelector('.article__sources');
+      const dataViz = document.querySelector('.article__data-viz');
+
+      // Insérer en haut (après hero image)
+      if (heroImage) {
+        const topVote = this.createArticleVoteHTML('top');
+        heroImage.insertAdjacentHTML('afterend', `<div data-slug="${slug}">${topVote}</div>`);
+      }
+
+      // Insérer en bas (avant sources ou data-viz)
+      const bottomInsertPoint = sources || dataViz;
+      if (bottomInsertPoint) {
+        const bottomVote = this.createArticleVoteHTML('bottom');
+        bottomInsertPoint.insertAdjacentHTML('beforebegin', `<div data-slug="${slug}">${bottomVote}</div>`);
+      }
+
+      // Charger les votes
+      const data = await this.loadVotes(slug);
+      if (data) {
+        this.updateAllDisplaysForSlug(slug, data);
+      }
+
+      // Ajouter les écouteurs
+      document.querySelectorAll('.article-vote').forEach(container => {
+        container.addEventListener('click', (e) => {
+          if (e.target.closest('[data-vote]')) {
+            e.preventDefault();
+            this.handleVoteClick(e);
+          }
+        });
+      });
+    }
+  };
 
   // ========================================
   // Recherche
@@ -1020,6 +1214,8 @@
       try {
         const articles = await loadArticles();
         renderArticles(articles, articlesGrid);
+        // Initialiser les votes sur les cartes
+        await VoteManager.initCardVotes();
       } catch (error) {
         console.error('Erreur chargement articles:', error);
         articlesGrid.innerHTML = `
@@ -1035,6 +1231,9 @@
     if (articleContent) {
       await loadRawArticle();
     }
+
+    // Initialiser les votes pour les pages article (insertion automatique)
+    await VoteManager.initArticleVotes();
   }
 
   if (document.readyState === 'loading') {
