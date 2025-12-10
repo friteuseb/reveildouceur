@@ -31,3 +31,4 @@ scripts/
 .venv/
 __pycache__/
 *.pyc
+api/votes.db
