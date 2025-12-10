@@ -32,3 +32,14 @@ scripts/
 __pycache__/
 *.pyc
 api/votes.db
+
+# Fichiers de recherche et notes (générés par Claude)
+RESEARCH_*.md
+RECHERCHE_*.md
+research/
+
+# Fichiers backup et temporaires
+*.bak
+*.tmp
+*.orig
+*~
