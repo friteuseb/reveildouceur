@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="barGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+    <linearGradient id="barOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#dd6b20"/>
+    </linearGradient>
+    <linearGradient id="barBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4299e1"/>
+      <stop offset="100%" style="stop-color:#3182ce"/>
+    </linearGradient>
+    <linearGradient id="barRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fc8181"/>
+      <stop offset="100%" style="stop-color:#e53e3e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">
+    Le Paradoxe de l'Égalité de Genre
+  </text>
+  <text x="400" y="55" font-family="Inter, sans-serif" font-size="12" fill="#a0aec0" text-anchor="middle">
+    Plus de liberté = plus de différences ?
+  </text>
+
+  <!-- Section 1: STEM par pays -->
+  <text x="130" y="85" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#48bb78">
+    % FEMMES EN STEM
+  </text>
+
+  <!-- Bars STEM -->
+  <g transform="translate(30, 95)">
+    <!-- Mongolie -->
+    <text x="0" y="15" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Mongolie</text>
+    <rect x="70" y="5" width="171" height="16" rx="3" fill="url(#barGreen)" opacity="0.9"/>
+    <text x="248" y="17" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#48bb78">57%</text>
+
+    <!-- Tunisie -->
+    <text x="0" y="40" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Tunisie</text>
+    <rect x="70" y="30" width="132" height="16" rx="3" fill="url(#barGreen)" opacity="0.8"/>
+    <text x="209" y="42" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#48bb78">44%</text>
+
+    <!-- Algérie -->
+    <text x="0" y="65" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Algérie</text>
+    <rect x="70" y="55" width="123" height="16" rx="3" fill="url(#barGreen)" opacity="0.7"/>
+    <text x="200" y="67" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#48bb78">41%</text>
+
+    <!-- Suède -->
+    <text x="0" y="90" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Suède</text>
+    <rect x="70" y="80" width="99" height="16" rx="3" fill="url(#barOrange)" opacity="0.8"/>
+    <text x="176" y="92" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#ed8936">33%</text>
+
+    <!-- Pays-Bas -->
+    <text x="0" y="115" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Pays-Bas</text>
+    <rect x="70" y="105" width="75" height="16" rx="3" fill="url(#barOrange)" opacity="0.7"/>
+    <text x="152" y="117" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#ed8936">25%</text>
+  </g>
+
+  <!-- Arrow and insight -->
+  <text x="130" y="230" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">
+    Pays moins égalitaires → plus de femmes en STEM
+  </text>
+
+  <!-- Section 2: Temps partiel Europe -->
+  <text x="560" y="85" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#4299e1">
+    TEMPS PARTIEL FEMMES (UE)
+  </text>
+
+  <g transform="translate(420, 95)">
+    <!-- Pays-Bas -->
+    <text x="0" y="15" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Pays-Bas</text>
+    <rect x="70" y="5" width="182" height="16" rx="3" fill="url(#barBlue)" opacity="0.9"/>
+    <text x="259" y="17" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#4299e1">60.6%</text>
+
+    <!-- Autriche -->
+    <text x="0" y="40" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Autriche</text>
+    <rect x="70" y="30" width="152" height="16" rx="3" fill="url(#barBlue)" opacity="0.8"/>
+    <text x="229" y="42" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#4299e1">50.7%</text>
+
+    <!-- Allemagne -->
+    <text x="0" y="65" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Allemagne</text>
+    <rect x="70" y="55" width="144" height="16" rx="3" fill="url(#barBlue)" opacity="0.7"/>
+    <text x="221" y="67" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#4299e1">48.0%</text>
+
+    <!-- Moyenne UE -->
+    <text x="0" y="90" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Moy. UE (F)</text>
+    <rect x="70" y="80" width="84" height="16" rx="3" fill="url(#barBlue)" opacity="0.6"/>
+    <text x="161" y="92" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#4299e1">27.9%</text>
+
+    <!-- Hommes -->
+    <text x="0" y="115" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0">Moy. UE (H)</text>
+    <rect x="70" y="105" width="23" height="16" rx="3" fill="#718096" opacity="0.6"/>
+    <text x="100" y="117" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#718096">7.7%</text>
+  </g>
+
+  <!-- Section 3: Key Stats -->
+  <g transform="translate(0, 250)">
+    <!-- Stat 1: Mortalité travail -->
+    <rect x="30" y="0" width="175" height="80" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="117" y="25" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#fc8181" text-anchor="middle">92%</text>
+    <text x="117" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">des morts au travail</text>
+    <text x="117" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">sont des hommes</text>
+    <text x="117" y="75" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">(USA, UE - stable depuis 30 ans)</text>
+
+    <!-- Stat 2: Bonheur -->
+    <rect x="220" y="0" width="175" height="80" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="307" y="25" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#ed8936" text-anchor="middle">-8.5%</text>
+    <text x="307" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">Déclin du bonheur</text>
+    <text x="307" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">féminin depuis 1970</text>
+    <text x="307" y="75" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">(équiv. hausse chômage)</text>
+
+    <!-- Stat 3: Préférences -->
+    <rect x="410" y="0" width="175" height="80" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="497" y="25" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#48bb78" text-anchor="middle">r=0.67</text>
+    <text x="497" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">Corrélation égalité</text>
+    <text x="497" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">↔ différences préférences</text>
+    <text x="497" y="75" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">(Falk & Hermle, Science 2018)</text>
+
+    <!-- Stat 4: STEM paradoxe -->
+    <rect x="600" y="0" width="175" height="80" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="687" y="25" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#4299e1" text-anchor="middle">57%</text>
+    <text x="687" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">femmes en sciences</text>
+    <text x="687" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">naturelles (OCDE)</text>
+    <text x="687" y="75" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">(vs 28% en ingénierie)</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="30" y="355" width="740" height="70" rx="8" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+  <text x="400" y="380" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">
+    Le paradoxe résumé
+  </text>
+  <text x="400" y="400" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" text-anchor="middle">
+    Dans les pays les plus libres et égalitaires, les choix de carrière des hommes et des femmes
+  </text>
+  <text x="400" y="415" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" text-anchor="middle">
+    divergent davantage. La liberté de choix révèle-t-elle des préférences différentes ?
+  </text>
+
+  <!-- Sources -->
+  <text x="400" y="442" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">
+    Sources : OCDE 2024, Eurostat 2023, Stoet &amp; Geary 2018, Falk &amp; Hermle 2018, Stevenson &amp; Wolfers 2009, BLS
+  </text>
+</svg>

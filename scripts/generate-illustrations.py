@@ -80,6 +80,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
     # Relations et couples
     "pourquoi-on-narrive-plus-a-etre-en-couple": "Two lonely silhouettes separated by wall of glowing smartphone screens with dating app profiles, paradox of choice, heart symbols floating but never connecting, urban apartment windows with solitary figures, broken wedding rings on ground, modern loneliness despite infinite connections",
 
+    # Égalité de genre et paradoxes
+    "egalite-femmes-hommes-paradoxe-liberte": "Split scene contrasting two worlds: left side shows women in headscarves working at computers and engineering desks in a Middle Eastern setting with math equations floating around them; right side shows Scandinavian blonde women in yoga studio and childcare center surrounded by soft pastel colors and empty STEM classrooms behind them; giant freedom bird flying overhead casting shadow that splits both scenes; world map showing inverse correlation between gender equality index and women in STEM; paradox visualization with question marks made of career symbols, balance scales showing choice vs constraint, economic security symbols like safety nets below the Middle Eastern side vs open sky above Scandinavian side",
+
     # Madame Irma - Prédictions
     "jumeau-numerique-terre-simuler-avenir": "Massive holographic Earth floating in futuristic control room, translucent blue digital grid covering the planet surface, data streams flowing like rivers across continents, scientists in white coats monitoring multiple screens showing weather patterns and economic graphs, a butterfly with fractal wings symbolizing chaos theory in foreground, European Space Agency and Nvidia logos subtly visible, supercomputers with blinking lights lining the walls, split vision showing Earth simulation versus unpredictable human silhouettes walking in random directions, crystal ball cracked revealing circuit boards inside, prediction vs chaos visualization",
 }
