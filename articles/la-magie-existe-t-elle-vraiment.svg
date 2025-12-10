@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="magicGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9f7aea"/>
+      <stop offset="50%" style="stop-color:#ed64a6"/>
+      <stop offset="100%" style="stop-color:#f6ad55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="550" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">
+    Les mécanismes d'influence invisibles
+  </text>
+  <text x="400" y="52" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" text-anchor="middle">
+    Ce que la science a découvert sur la "magie réelle"
+  </text>
+
+  <!-- Section 1: Les sens invisibles -->
+  <rect x="20" y="70" width="240" height="140" rx="8" fill="#2d3748" stroke="#9f7aea" stroke-width="2"/>
+  <text x="140" y="92" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#9f7aea" text-anchor="middle">LES SENS INVISIBLES</text>
+
+  <text x="35" y="115" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#48bb78">+53%</text>
+  <text x="35" y="132" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">revenus casinos</text>
+  <text x="35" y="144" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">parfumés (Las Vegas)</text>
+
+  <text x="140" y="115" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#ed64a6">65%</text>
+  <text x="140" y="132" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">des émotions</text>
+  <text x="140" y="144" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">liées à l'odorat</text>
+
+  <text x="35" y="175" font-family="Inter, sans-serif" font-size="9" fill="#718096">L'olfaction contourne le thalamus</text>
+  <text x="35" y="188" font-family="Inter, sans-serif" font-size="9" fill="#718096">→ accès direct aux émotions</text>
+  <text x="35" y="201" font-family="Inter, sans-serif" font-size="9" fill="#718096">et à la mémoire (effet Proust)</text>
+
+  <!-- Section 2: Le pouvoir des mots -->
+  <rect x="280" y="70" width="240" height="140" rx="8" fill="#2d3748" stroke="#4299e1" stroke-width="2"/>
+  <text x="400" y="92" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#4299e1" text-anchor="middle">LE POUVOIR DES MOTS</text>
+
+  <text x="295" y="115" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#48bb78">82%</text>
+  <text x="295" y="132" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">effet antidépresseurs</text>
+  <text x="295" y="144" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">= placebo (Kirsch 2008)</text>
+
+  <text x="420" y="115" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#fc8181">26%</text>
+  <text x="420" y="132" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">effets secondaires</text>
+  <text x="420" y="144" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">sous... placebo (nocebo)</text>
+
+  <text x="295" y="175" font-family="Inter, sans-serif" font-size="9" fill="#718096">Chirurgie placebo = aussi efficace</text>
+  <text x="295" y="188" font-family="Inter, sans-serif" font-size="9" fill="#718096">que vraie chirurgie (Moseley 2002)</text>
+  <text x="295" y="201" font-family="Inter, sans-serif" font-size="9" fill="#718096">Les mots créent des effets réels</text>
+
+  <!-- Section 3: L'autorité -->
+  <rect x="540" y="70" width="240" height="140" rx="8" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+  <text x="660" y="92" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#e53e3e" text-anchor="middle">L'AUTORITÉ ET LES SYMBOLES</text>
+
+  <text x="555" y="115" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#fc8181">62,5%</text>
+  <text x="555" y="132" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">obéissent jusqu'au</text>
+  <text x="555" y="144" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">"choc mortel" (Milgram)</text>
+
+  <text x="680" y="115" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#ed8936">+25</text>
+  <text x="680" y="132" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">points QI par</text>
+  <text x="680" y="144" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">effet Pygmalion</text>
+
+  <text x="555" y="175" font-family="Inter, sans-serif" font-size="9" fill="#718096">Un homme en blouse blanche</text>
+  <text x="555" y="188" font-family="Inter, sans-serif" font-size="9" fill="#718096">fait taire la conscience morale</text>
+  <text x="555" y="201" font-family="Inter, sans-serif" font-size="9" fill="#718096">de la majorité des gens</text>
+
+  <!-- Section 4: Les récits -->
+  <rect x="20" y="225" width="370" height="130" rx="8" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+  <text x="205" y="247" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#ed8936" text-anchor="middle">LES RÉCITS QUI TRANSFORMENT</text>
+
+  <g transform="translate(35, 260)">
+    <text x="0" y="15" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#48bb78">+57%</text>
+    <text x="0" y="32" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">dons charité avec</text>
+    <text x="0" y="45" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">storytelling (Zak)</text>
+
+    <text x="110" y="15" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#fc8181">6x</text>
+    <text x="110" y="32" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">plus rapide:</text>
+    <text x="110" y="45" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">fake news vs vrai</text>
+
+    <text x="200" y="15" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#4299e1">95%</text>
+    <text x="200" y="32" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">décisions d'achat</text>
+    <text x="200" y="45" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">= subconscientes</text>
+  </g>
+
+  <text x="35" y="330" font-family="Inter, sans-serif" font-size="9" fill="#718096">L'ocytocine libérée par les histoires augmente empathie et confiance</text>
+
+  <!-- Section 5: L'hypnose -->
+  <rect x="410" y="225" width="370" height="130" rx="8" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+  <text x="595" y="247" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#48bb78" text-anchor="middle">L'HYPNOSE VALIDÉE PAR LA SCIENCE</text>
+
+  <g transform="translate(425, 260)">
+    <text x="0" y="15" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#48bb78">-50%</text>
+    <text x="0" y="32" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">douleur perçue</text>
+    <text x="0" y="45" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">sous hypnose</text>
+
+    <text x="100" y="15" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#9f7aea">IRM</text>
+    <text x="100" y="32" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">état cérébral</text>
+    <text x="100" y="45" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">distinct mesuré</text>
+
+    <text x="190" y="15" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#ed64a6">Réel</text>
+    <text x="190" y="32" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">pas du spectacle</text>
+    <text x="190" y="45" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0">état de conscience</text>
+  </g>
+
+  <text x="425" y="330" font-family="Inter, sans-serif" font-size="9" fill="#718096">Court-circuite les résistances conscientes pour reprogrammer les automatismes</text>
+
+  <!-- Section 6: Les magiciens modernes -->
+  <rect x="20" y="370" width="760" height="100" rx="8" fill="#1a202c" stroke="url(#magicGrad)" stroke-width="2"/>
+  <text x="400" y="392" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#ed64a6" text-anchor="middle">LES MAGICIENS MODERNES</text>
+
+  <g transform="translate(40, 405)">
+    <!-- Publicitaires -->
+    <circle cx="40" cy="25" r="22" fill="#2d3748" stroke="#9f7aea" stroke-width="2"/>
+    <text x="40" y="30" font-family="Inter, sans-serif" font-size="20" text-anchor="middle">🎯</text>
+    <text x="40" y="60" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">Publicitaires</text>
+
+    <!-- Architectes -->
+    <circle cx="160" cy="25" r="22" fill="#2d3748" stroke="#4299e1" stroke-width="2"/>
+    <text x="160" y="30" font-family="Inter, sans-serif" font-size="20" text-anchor="middle">🏛️</text>
+    <text x="160" y="60" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">Architectes</text>
+
+    <!-- Politiques -->
+    <circle cx="280" cy="25" r="22" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="280" y="30" font-family="Inter, sans-serif" font-size="20" text-anchor="middle">🎭</text>
+    <text x="280" y="60" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">Politiques</text>
+
+    <!-- Parfumeurs -->
+    <circle cx="400" cy="25" r="22" fill="#2d3748" stroke="#ed64a6" stroke-width="2"/>
+    <text x="400" y="30" font-family="Inter, sans-serif" font-size="20" text-anchor="middle">🌸</text>
+    <text x="400" y="60" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">Parfumeurs</text>
+
+    <!-- Storytellers -->
+    <circle cx="520" cy="25" r="22" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+    <text x="520" y="30" font-family="Inter, sans-serif" font-size="20" text-anchor="middle">📖</text>
+    <text x="520" y="60" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">Storytellers</text>
+
+    <!-- Designers -->
+    <circle cx="640" cy="25" r="22" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+    <text x="640" y="30" font-family="Inter, sans-serif" font-size="20" text-anchor="middle">🎨</text>
+    <text x="640" y="60" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">Designers</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="20" y="485" width="760" height="50" rx="8" fill="#2d3748"/>
+  <text x="400" y="507" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">
+    Ces mécanismes sont RÉELS, MESURABLES, et opèrent SOUS LE SEUIL DE CONSCIENCE
+  </text>
+  <text x="400" y="525" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">
+    Les "mages" modernes ne portent pas de cape — ils portent des costumes et travaillent dans des bureaux
+  </text>
+
+  <!-- Sources -->
+  <text x="400" y="545" font-family="Inter, sans-serif" font-size="7" fill="#718096" text-anchor="middle">
+    Sources : Hirsch 1995, Kirsch 2008, Moseley 2002, Milgram 1963, Rosenthal 1968, Zak 2015, MIT 2018, Jensen 2017
+  </text>
+</svg>

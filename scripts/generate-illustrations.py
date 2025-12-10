@@ -80,6 +80,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
     # Relations et couples
     "pourquoi-on-narrive-plus-a-etre-en-couple": "Two lonely silhouettes separated by wall of glowing smartphone screens with dating app profiles, paradox of choice, heart symbols floating but never connecting, urban apartment windows with solitary figures, broken wedding rings on ground, modern loneliness despite infinite connections",
 
+    # Magie et influence invisible
+    "la-magie-existe-t-elle-vraiment": "Surreal scene of invisible forces manipulating reality: giant translucent hands made of perfume mist reaching down from above to move chess pieces that are tiny humans in a casino, words floating as glowing runes with visible power emanating from them, a figure in business suit casting long shadow shaped like ancient wizard with staff, brain with visible neural pathways being touched by feather of suggestion, mirror showing different reality than what stands before it, storyteller weaving golden threads that become chains around listeners, all bathed in mystical purple and gold light suggesting hidden influence, optical illusions and impossible geometry, the seen and unseen worlds overlapping",
+
     # Parentalité et timing
     "le-bon-moment-pour-avoir-des-enfants": "Surreal hourglass where the sand is made of tiny baby cribs and rattles falling from top to bottom, a young couple in their 20s looking carefree at the top near full sand, same couple aged in their late 30s desperately reaching for the falling sand at the bottom with almost no sand left, biological clock face visible through the glass with hands spinning fast, calendar pages flying around, career ladder and apartment keys floating in the background competing for attention, warm nostalgic sepia tones at top transitioning to cold blue urgent tones at bottom, time running out visualization",
 
