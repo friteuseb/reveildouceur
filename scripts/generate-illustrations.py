@@ -80,6 +80,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
     # Relations et couples
     "pourquoi-on-narrive-plus-a-etre-en-couple": "Two lonely silhouettes separated by wall of glowing smartphone screens with dating app profiles, paradox of choice, heart symbols floating but never connecting, urban apartment windows with solitary figures, broken wedding rings on ground, modern loneliness despite infinite connections",
 
+    # Parentalité et timing
+    "le-bon-moment-pour-avoir-des-enfants": "Surreal hourglass where the sand is made of tiny baby cribs and rattles falling from top to bottom, a young couple in their 20s looking carefree at the top near full sand, same couple aged in their late 30s desperately reaching for the falling sand at the bottom with almost no sand left, biological clock face visible through the glass with hands spinning fast, calendar pages flying around, career ladder and apartment keys floating in the background competing for attention, warm nostalgic sepia tones at top transitioning to cold blue urgent tones at bottom, time running out visualization",
+
     # Égalité de genre et paradoxes
     "egalite-femmes-hommes-paradoxe-liberte": "Split scene showing paradox of choice: left side depicts women in modest professional attire working enthusiastically at engineering desks with circuit boards and robot arms in a developing country office with economic necessity symbols like coins and job security icons; right side shows Nordic women in casual clothes choosing between multiple colorful doors labeled with different career paths like art, teaching, nursing, business, with an empty engineering door in background; giant compass in center pointing different directions for each side; world map with arrows showing inverse correlation; freedom bird with open wings above Nordic side but women walking away from technical careers; warm earth tones on left, cool Scandinavian blues on right",
 

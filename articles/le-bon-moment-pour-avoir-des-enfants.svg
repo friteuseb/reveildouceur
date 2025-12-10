@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="fertilityGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="40%" style="stop-color:#ecc94b"/>
+      <stop offset="70%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#e53e3e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">
+    Le report de la parentalité en France
+  </text>
+  <text x="400" y="52" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" text-anchor="middle">
+    Quand le "bon moment" devient un piège
+  </text>
+
+  <!-- Section 1: Timeline âge premier enfant -->
+  <text x="30" y="82" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#48bb78">
+    ÂGE AU PREMIER ENFANT
+  </text>
+
+  <!-- Timeline -->
+  <line x1="50" y1="130" x2="370" y2="130" stroke="#4a5568" stroke-width="2"/>
+
+  <!-- 1974 -->
+  <circle cx="70" cy="130" r="6" fill="#48bb78"/>
+  <text x="70" y="115" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">1974</text>
+  <text x="70" y="150" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#48bb78" text-anchor="middle">24 ans</text>
+
+  <!-- 1994 -->
+  <circle cx="170" cy="130" r="6" fill="#ecc94b"/>
+  <text x="170" y="115" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">1994</text>
+  <text x="170" y="150" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#ecc94b" text-anchor="middle">26,5 ans</text>
+
+  <!-- 2010 -->
+  <circle cx="270" cy="130" r="6" fill="#ed8936"/>
+  <text x="270" y="115" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">2010</text>
+  <text x="270" y="150" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#ed8936" text-anchor="middle">28 ans</text>
+
+  <!-- 2023 -->
+  <circle cx="350" cy="130" r="6" fill="#e53e3e"/>
+  <text x="350" y="115" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">2023</text>
+  <text x="350" y="150" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#e53e3e" text-anchor="middle">29,1 ans</text>
+
+  <text x="210" y="175" font-family="Inter, sans-serif" font-size="10" fill="#718096" text-anchor="middle">+5,1 ans en 50 ans</text>
+
+  <!-- Section 2: Fécondité -->
+  <text x="450" y="82" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#fc8181">
+    TAUX DE FÉCONDITÉ
+  </text>
+
+  <g transform="translate(420, 95)">
+    <!-- 2010 -->
+    <rect x="0" y="0" width="50" height="60" rx="4" fill="#2d3748" stroke="#4a5568"/>
+    <text x="25" y="25" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#48bb78" text-anchor="middle">2,0</text>
+    <text x="25" y="42" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">2010</text>
+
+    <!-- 2023 -->
+    <rect x="65" y="0" width="50" height="60" rx="4" fill="#2d3748" stroke="#4a5568"/>
+    <text x="90" y="25" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#ed8936" text-anchor="middle">1,68</text>
+    <text x="90" y="42" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">2023</text>
+
+    <!-- 2024 -->
+    <rect x="130" y="0" width="50" height="60" rx="4" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="155" y="25" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#e53e3e" text-anchor="middle">1,59</text>
+    <text x="155" y="42" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">2024*</text>
+
+    <!-- Seuil -->
+    <line x1="195" y1="20" x2="350" y2="20" stroke="#718096" stroke-width="1" stroke-dasharray="4"/>
+    <text x="272" y="16" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">Seuil de remplacement: 2,1</text>
+
+    <text x="90" y="75" font-family="Inter, sans-serif" font-size="9" fill="#fc8181" text-anchor="middle">Plus bas depuis 1945</text>
+  </g>
+
+  <!-- Section 3: Courbe fertilité -->
+  <text x="30" y="210" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#4299e1">
+    FERTILITÉ FÉMININE PAR ÂGE
+  </text>
+
+  <g transform="translate(30, 220)">
+    <!-- Axe -->
+    <line x1="0" y1="80" x2="350" y2="80" stroke="#4a5568" stroke-width="1"/>
+
+    <!-- Courbe simplifiée -->
+    <path d="M 0 20 Q 50 10, 100 15 Q 150 25, 200 50 Q 250 70, 300 78 L 350 80"
+          stroke="url(#fertilityGrad)" stroke-width="3" fill="none"/>
+
+    <!-- Points clés -->
+    <circle cx="50" cy="12" r="5" fill="#48bb78"/>
+    <text x="50" y="0" font-family="Inter, sans-serif" font-size="9" fill="#48bb78" text-anchor="middle">25 ans</text>
+    <text x="50" y="100" font-family="Inter, sans-serif" font-size="8" fill="#a0aec0" text-anchor="middle">Pic</text>
+
+    <circle cx="150" cy="30" r="5" fill="#ecc94b"/>
+    <text x="150" y="0" font-family="Inter, sans-serif" font-size="9" fill="#ecc94b" text-anchor="middle">30 ans</text>
+    <text x="150" y="100" font-family="Inter, sans-serif" font-size="8" fill="#a0aec0" text-anchor="middle">Déclin</text>
+
+    <circle cx="220" cy="55" r="5" fill="#ed8936"/>
+    <text x="220" y="0" font-family="Inter, sans-serif" font-size="9" fill="#ed8936" text-anchor="middle">35 ans</text>
+    <text x="220" y="100" font-family="Inter, sans-serif" font-size="8" fill="#a0aec0" text-anchor="middle">Accélération</text>
+
+    <circle cx="280" cy="72" r="5" fill="#e53e3e"/>
+    <text x="280" y="0" font-family="Inter, sans-serif" font-size="9" fill="#e53e3e" text-anchor="middle">38 ans</text>
+    <text x="280" y="100" font-family="Inter, sans-serif" font-size="8" fill="#a0aec0" text-anchor="middle">12% FIV</text>
+
+    <circle cx="330" cy="78" r="5" fill="#e53e3e"/>
+    <text x="330" y="0" font-family="Inter, sans-serif" font-size="9" fill="#e53e3e" text-anchor="middle">40 ans</text>
+    <text x="330" y="100" font-family="Inter, sans-serif" font-size="8" fill="#a0aec0" text-anchor="middle">5% FIV</text>
+  </g>
+
+  <!-- Section 4: Le piège du timing -->
+  <text x="450" y="210" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#ed8936">
+    LE PIÈGE DU TIMING
+  </text>
+
+  <g transform="translate(420, 225)">
+    <!-- Barre études -->
+    <rect x="0" y="0" width="100" height="20" rx="3" fill="#4299e1" opacity="0.8"/>
+    <text x="50" y="14" font-family="Inter, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Études: 23-25 ans</text>
+
+    <!-- Barre CDI -->
+    <rect x="110" y="0" width="80" height="20" rx="3" fill="#ed8936" opacity="0.8"/>
+    <text x="150" y="14" font-family="Inter, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">1er CDI: 29 ans</text>
+
+    <!-- Barre Propriété -->
+    <rect x="200" y="0" width="90" height="20" rx="3" fill="#e53e3e" opacity="0.8"/>
+    <text x="245" y="14" font-family="Inter, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Propriété: 33 ans</text>
+
+    <!-- Flèche -->
+    <path d="M 150 30 L 150 50 L 170 40 Z" fill="#fc8181"/>
+    <text x="150" y="70" font-family="Inter, sans-serif" font-size="10" fill="#fc8181" text-anchor="middle">= Fenêtre fertile réduite</text>
+  </g>
+
+  <!-- Section 5: Stats clés -->
+  <g transform="translate(0, 340)">
+    <!-- Stat 1 -->
+    <rect x="30" y="0" width="175" height="75" rx="8" fill="#2d3748" stroke="#4a5568"/>
+    <text x="117" y="25" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#e53e3e" text-anchor="middle">15%</text>
+    <text x="117" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">des femmes nées en 1980</text>
+    <text x="117" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">resteront sans enfant</text>
+
+    <!-- Stat 2 -->
+    <rect x="220" y="0" width="175" height="75" rx="8" fill="#2d3748" stroke="#4a5568"/>
+    <text x="307" y="25" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#ed8936" text-anchor="middle">+11%</text>
+    <text x="307" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">risque d'échec de</text>
+    <text x="307" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">conception par an (35+)</text>
+
+    <!-- Stat 3 -->
+    <rect x="410" y="0" width="175" height="75" rx="8" fill="#2d3748" stroke="#4a5568"/>
+    <text x="497" y="25" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#48bb78" text-anchor="middle">3-4%</text>
+    <text x="497" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">sont "childfree" par choix</text>
+    <text x="497" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">(le reste voudrait des enfants)</text>
+
+    <!-- Stat 4 -->
+    <rect x="600" y="0" width="175" height="75" rx="8" fill="#2d3748" stroke="#4a5568"/>
+    <text x="687" y="25" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#4299e1" text-anchor="middle">10-12%</text>
+    <text x="687" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">des parents regrettent</text>
+    <text x="687" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">(mais plus regrettent d'attendre)</text>
+  </g>
+
+  <!-- Sources -->
+  <text x="400" y="442" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">
+    Sources : INSEE 2024, INED, Agence de la Biomédecine, Eurostat, ASRM
+  </text>
+</svg>
