@@ -31,6 +31,12 @@ $cookieExpiry = 60 * 60 * 24 * 365 * 2; // 2 ans
 // Initialiser la DB si elle n'existe pas
 if (!file_exists($dbPath)) {
     define('VOTE_API_INCLUDED', true);
+    // Vérifier que le répertoire est accessible en écriture
+    if (!is_writable(__DIR__)) {
+        http_response_code(500);
+        echo json_encode(['error' => 'Directory not writable', 'dir' => __DIR__]);
+        exit;
+    }
     require_once __DIR__ . '/init-db.php';
 }
 
@@ -39,7 +45,7 @@ try {
     $db->busyTimeout(5000);
 } catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Database connection failed']);
+    echo json_encode(['error' => 'Database connection failed', 'message' => $e->getMessage()]);
     exit;
 }
 
@@ -58,15 +64,27 @@ function getOrCreateVoterToken(): string {
     // Générer un nouveau token aléatoire (non lié à l'IP ou autre donnée personnelle)
     $token = bin2hex(random_bytes(32));
 
-    // Définir le cookie (sera envoyé avec la réponse)
-    setcookie($cookieName, $token, [
-        'expires' => time() + $cookieExpiry,
-        'path' => '/',
-        'domain' => '',
-        'secure' => true,
-        'httponly' => true,
-        'samesite' => 'Lax'
-    ]);
+    // Définir le cookie - syntaxe compatible PHP < 7.3
+    $expire = time() + $cookieExpiry;
+    $path = '/';
+    $domain = '';
+    $secure = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off';
+    $httponly = true;
+
+    // Ajouter SameSite via header si possible (PHP < 7.3 workaround)
+    if (PHP_VERSION_ID >= 70300) {
+        setcookie($cookieName, $token, [
+            'expires' => $expire,
+            'path' => $path,
+            'domain' => $domain,
+            'secure' => $secure,
+            'httponly' => $httponly,
+            'samesite' => 'Lax'
+        ]);
+    } else {
+        // Fallback pour PHP < 7.3 - SameSite via path hack
+        setcookie($cookieName, $token, $expire, "$path; SameSite=Lax", $domain, $secure, $httponly);
+    }
 
     return $token;
 }
