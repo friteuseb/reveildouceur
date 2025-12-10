@@ -30,6 +30,7 @@ $cookieExpiry = 60 * 60 * 24 * 365 * 2; // 2 ans
 
 // Initialiser la DB si elle n'existe pas
 if (!file_exists($dbPath)) {
+    define('VOTE_API_INCLUDED', true);
     require_once __DIR__ . '/init-db.php';
 }
 

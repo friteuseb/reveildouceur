@@ -69,12 +69,19 @@ try {
         $db->exec('CREATE INDEX IF NOT EXISTS idx_voter ON votes(voter_token)');
     }
 
-    echo "Base de données créée/mise à jour avec succès: $dbPath\n";
-
     // Permissions sécurisées
     chmod($dbPath, 0640);
 
+    // Message seulement si exécuté directement en CLI (pas inclus par l'API)
+    if (!defined('VOTE_API_INCLUDED') && php_sapi_name() === 'cli') {
+        echo "Base de données créée/mise à jour avec succès: $dbPath\n";
+    }
+
 } catch (Exception $e) {
-    echo "Erreur: " . $e->getMessage() . "\n";
-    exit(1);
+    if (!defined('VOTE_API_INCLUDED')) {
+        echo "Erreur: " . $e->getMessage() . "\n";
+        exit(1);
+    }
+    // Si inclus par l'API, laisser l'erreur remonter
+    throw $e;
 }
