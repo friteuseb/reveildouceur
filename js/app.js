@@ -561,6 +561,10 @@
     return `
       <div class="category-filters">
         <button class="category-filter category-filter--active" data-category="">Tous</button>
+        <button class="category-filter category-filter--sort" data-sort="popular">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+          Plus aimés
+        </button>
         ${filterButtons}
       </div>
     `;
@@ -583,12 +587,107 @@
     });
   }
 
+  let currentSort = 'recent'; // 'recent' ou 'popular'
+
   function initCategoryFilters() {
     document.querySelectorAll('.category-filter').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', async () => {
+        // Gestion du tri par popularité
+        if (btn.dataset.sort === 'popular') {
+          await sortByPopularity();
+          return;
+        }
+
+        // Réinitialiser le tri à "récent" lors du changement de catégorie
+        currentSort = 'recent';
+        document.querySelector('[data-sort="popular"]')?.classList.remove('category-filter--active');
+
         filterArticles(btn.dataset.category);
       });
     });
+  }
+
+  async function sortByPopularity() {
+    const sortBtn = document.querySelector('[data-sort="popular"]');
+    const allBtn = document.querySelector('[data-category=""]');
+
+    // Toggle: si déjà actif, revenir au tri récent
+    if (currentSort === 'popular') {
+      currentSort = 'recent';
+      sortBtn?.classList.remove('category-filter--active');
+      allBtn?.classList.add('category-filter--active');
+      resetToDefaultOrder();
+      return;
+    }
+
+    currentSort = 'popular';
+
+    // Mettre à jour les boutons
+    document.querySelectorAll('.category-filter').forEach(b => b.classList.remove('category-filter--active'));
+    sortBtn?.classList.add('category-filter--active');
+
+    // Charger le classement
+    const ranking = await VoteManager.loadRanking();
+    if (ranking.length === 0) {
+      // Pas encore de votes, garder l'ordre actuel
+      return;
+    }
+
+    // Créer un map slug -> position dans le ranking
+    const rankMap = new Map();
+    ranking.forEach((r, index) => {
+      rankMap.set(r.slug, { index, score: r.score, likes: r.likes });
+    });
+
+    // Récupérer et trier les cartes
+    const container = document.querySelector('.articles-grid__cards');
+    if (!container) return;
+
+    const cards = Array.from(container.querySelectorAll('.article-card'));
+
+    cards.sort((a, b) => {
+      const slugA = a.dataset.slug;
+      const slugB = b.dataset.slug;
+      const rankA = rankMap.get(slugA);
+      const rankB = rankMap.get(slugB);
+
+      // Articles avec votes en premier, triés par score
+      if (rankA && rankB) {
+        return rankB.score - rankA.score || rankB.likes - rankA.likes;
+      }
+      if (rankA) return -1;
+      if (rankB) return 1;
+      return 0; // Garder l'ordre relatif pour les articles sans votes
+    });
+
+    // Réordonner le DOM
+    cards.forEach(card => container.appendChild(card));
+
+    // Afficher tous les articles (retirer le filtre catégorie)
+    cards.forEach(card => card.style.display = '');
+    activeFilter = null;
+  }
+
+  function resetToDefaultOrder() {
+    const container = document.querySelector('.articles-grid__cards');
+    if (!container) return;
+
+    // Trier par l'ordre original (basé sur allArticles)
+    const cards = Array.from(container.querySelectorAll('.article-card'));
+    const slugOrder = allArticles.map(a => a.filename.replace('.html', ''));
+
+    cards.sort((a, b) => {
+      const indexA = slugOrder.indexOf(a.dataset.slug);
+      const indexB = slugOrder.indexOf(b.dataset.slug);
+      return indexA - indexB;
+    });
+
+    cards.forEach(card => container.appendChild(card));
+
+    // Réappliquer le filtre si nécessaire
+    if (activeFilter) {
+      filterArticles(activeFilter);
+    }
   }
 
   function renderArticles(articles, container) {
@@ -767,12 +866,15 @@
 
   const VoteManager = {
     API_URL: '/api/vote.php',
+    ranking: [], // Cache du classement
 
     // Charger les votes pour plusieurs articles (batch)
     async loadBatchVotes(slugs) {
       if (!slugs || slugs.length === 0) return {};
       try {
-        const response = await fetch(`${this.API_URL}?articles=${encodeURIComponent(slugs.join(','))}`);
+        const response = await fetch(`${this.API_URL}?articles=${encodeURIComponent(slugs.join(','))}`, {
+          credentials: 'include' // Important pour les cookies
+        });
         if (!response.ok) return {};
         const data = await response.json();
         return data.votes || {};
@@ -785,12 +887,30 @@
     // Charger les votes pour un seul article
     async loadVotes(slug) {
       try {
-        const response = await fetch(`${this.API_URL}?article=${encodeURIComponent(slug)}`);
+        const response = await fetch(`${this.API_URL}?article=${encodeURIComponent(slug)}`, {
+          credentials: 'include'
+        });
         if (!response.ok) return null;
         return await response.json();
       } catch (error) {
         console.error('Erreur chargement votes:', error);
         return null;
+      }
+    },
+
+    // Charger le classement par votes
+    async loadRanking() {
+      try {
+        const response = await fetch(`${this.API_URL}?ranking=true`, {
+          credentials: 'include'
+        });
+        if (!response.ok) return [];
+        const data = await response.json();
+        this.ranking = data.ranking || [];
+        return this.ranking;
+      } catch (error) {
+        console.error('Erreur chargement ranking:', error);
+        return [];
       }
     },
 
@@ -800,6 +920,7 @@
         const response = await fetch(this.API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
           body: JSON.stringify({ article: slug, vote: voteType })
         });
         if (!response.ok) return null;

@@ -2,15 +2,20 @@
 /**
  * API de gestion des votes - Réveil Douceur
  *
+ * RGPD-friendly: utilise un cookie anonyme au lieu de l'IP
+ *
  * Endpoints:
- *   GET  ?article=slug        → Récupère les stats d'un article + vote de l'utilisateur
- *   POST {article, vote}      → Enregistre/modifie un vote (1 = like, -1 = dislike, 0 = annuler)
+ *   GET  ?article=slug           → Stats d'un article + vote utilisateur
+ *   GET  ?articles=slug1,slug2   → Stats batch
+ *   GET  ?ranking=true           → Classement par likes
+ *   POST {article, vote}         → Enregistre/modifie un vote
  */
 
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: https://reveildouceur.fr');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Credentials: true');
 
 // Préflight CORS
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
@@ -20,6 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 // Configuration
 $dbPath = __DIR__ . '/votes.db';
+$cookieName = 'rd_vote_token';
+$cookieExpiry = 60 * 60 * 24 * 365 * 2; // 2 ans
 
 // Initialiser la DB si elle n'existe pas
 if (!file_exists($dbPath)) {
@@ -36,16 +43,31 @@ try {
 }
 
 /**
- * Hash l'IP pour la confidentialité (RGPD)
+ * Génère ou récupère le token anonyme de l'utilisateur
+ * Aucune donnée personnelle - juste un UUID aléatoire
  */
-function getIpHash(): string {
-    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_REAL_IP'] ?? $_SERVER['REMOTE_ADDR'] ?? 'unknown';
-    // Prendre la première IP si plusieurs (proxy)
-    $ip = explode(',', $ip)[0];
-    $ip = trim($ip);
-    // Hash avec sel pour éviter la réversibilité
-    $salt = 'reveildouceur_2024_votes';
-    return hash('sha256', $ip . $salt);
+function getOrCreateVoterToken(): string {
+    global $cookieName, $cookieExpiry;
+
+    // Vérifier si le token existe dans le cookie
+    if (isset($_COOKIE[$cookieName]) && preg_match('/^[a-f0-9]{64}$/', $_COOKIE[$cookieName])) {
+        return $_COOKIE[$cookieName];
+    }
+
+    // Générer un nouveau token aléatoire (non lié à l'IP ou autre donnée personnelle)
+    $token = bin2hex(random_bytes(32));
+
+    // Définir le cookie (sera envoyé avec la réponse)
+    setcookie($cookieName, $token, [
+        'expires' => time() + $cookieExpiry,
+        'path' => '/',
+        'domain' => '',
+        'secure' => true,
+        'httponly' => true,
+        'samesite' => 'Lax'
+    ]);
+
+    return $token;
 }
 
 /**
@@ -69,10 +91,10 @@ function getArticleStats(SQLite3 $db, string $slug): array {
 /**
  * Récupère le vote de l'utilisateur courant
  */
-function getUserVote(SQLite3 $db, string $slug, string $ipHash): ?int {
-    $stmt = $db->prepare('SELECT vote_type FROM votes WHERE article_slug = :slug AND ip_hash = :ip');
+function getUserVote(SQLite3 $db, string $slug, string $voterToken): ?int {
+    $stmt = $db->prepare('SELECT vote_type FROM votes WHERE article_slug = :slug AND voter_token = :token');
     $stmt->bindValue(':slug', $slug, SQLITE3_TEXT);
-    $stmt->bindValue(':ip', $ipHash, SQLITE3_TEXT);
+    $stmt->bindValue(':token', $voterToken, SQLITE3_TEXT);
     $result = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
 
     return $result ? (int)$result['vote_type'] : null;
@@ -98,12 +120,48 @@ function updateStats(SQLite3 $db, string $slug): void {
     $stmt->execute();
 }
 
+/**
+ * Récupère le classement des articles par likes
+ */
+function getRanking(SQLite3 $db, int $limit = 100): array {
+    $stmt = $db->prepare('
+        SELECT article_slug, likes, dislikes,
+               (likes - dislikes) as score
+        FROM vote_stats
+        WHERE likes > 0
+        ORDER BY score DESC, likes DESC
+        LIMIT :limit
+    ');
+    $stmt->bindValue(':limit', $limit, SQLITE3_INTEGER);
+    $result = $stmt->execute();
+
+    $ranking = [];
+    while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+        $ranking[] = [
+            'slug' => $row['article_slug'],
+            'likes' => (int)$row['likes'],
+            'dislikes' => (int)$row['dislikes'],
+            'score' => (int)$row['score']
+        ];
+    }
+    return $ranking;
+}
+
 // ============ TRAITEMENT DES REQUÊTES ============
 
 $method = $_SERVER['REQUEST_METHOD'];
+$voterToken = getOrCreateVoterToken();
 
-// GET: Récupérer les stats (single ou batch)
+// GET: Récupérer les stats
 if ($method === 'GET') {
+
+    // Mode ranking: ?ranking=true
+    if (isset($_GET['ranking'])) {
+        $limit = isset($_GET['limit']) ? min(100, max(1, (int)$_GET['limit'])) : 100;
+        echo json_encode(['ranking' => getRanking($db, $limit)]);
+        exit;
+    }
+
     // Mode batch: ?articles=slug1,slug2,slug3
     if (isset($_GET['articles'])) {
         $slugs = array_filter(explode(',', $_GET['articles']), 'validateSlug');
@@ -114,12 +172,11 @@ if ($method === 'GET') {
             exit;
         }
 
-        $ipHash = getIpHash();
         $results = [];
 
         foreach ($slugs as $slug) {
             $stats = getArticleStats($db, $slug);
-            $userVote = getUserVote($db, $slug, $ipHash);
+            $userVote = getUserVote($db, $slug, $voterToken);
             $results[$slug] = [
                 'likes' => (int)$stats['likes'],
                 'dislikes' => (int)$stats['dislikes'],
@@ -140,9 +197,8 @@ if ($method === 'GET') {
         exit;
     }
 
-    $ipHash = getIpHash();
     $stats = getArticleStats($db, $slug);
-    $userVote = getUserVote($db, $slug, $ipHash);
+    $userVote = getUserVote($db, $slug, $voterToken);
 
     echo json_encode([
         'article' => $slug,
@@ -173,25 +229,23 @@ if ($method === 'POST') {
         exit;
     }
 
-    $ipHash = getIpHash();
-
     // Annulation de vote
     if ($vote === 0) {
-        $stmt = $db->prepare('DELETE FROM votes WHERE article_slug = :slug AND ip_hash = :ip');
+        $stmt = $db->prepare('DELETE FROM votes WHERE article_slug = :slug AND voter_token = :token');
         $stmt->bindValue(':slug', $slug, SQLITE3_TEXT);
-        $stmt->bindValue(':ip', $ipHash, SQLITE3_TEXT);
+        $stmt->bindValue(':token', $voterToken, SQLITE3_TEXT);
         $stmt->execute();
     } else {
         // Upsert du vote
         $stmt = $db->prepare('
-            INSERT INTO votes (article_slug, ip_hash, vote_type, updated_at)
-            VALUES (:slug, :ip, :vote, CURRENT_TIMESTAMP)
-            ON CONFLICT(article_slug, ip_hash) DO UPDATE SET
+            INSERT INTO votes (article_slug, voter_token, vote_type, updated_at)
+            VALUES (:slug, :token, :vote, CURRENT_TIMESTAMP)
+            ON CONFLICT(article_slug, voter_token) DO UPDATE SET
                 vote_type = :vote,
                 updated_at = CURRENT_TIMESTAMP
         ');
         $stmt->bindValue(':slug', $slug, SQLITE3_TEXT);
-        $stmt->bindValue(':ip', $ipHash, SQLITE3_TEXT);
+        $stmt->bindValue(':token', $voterToken, SQLITE3_TEXT);
         $stmt->bindValue(':vote', $vote, SQLITE3_INTEGER);
         $stmt->execute();
     }

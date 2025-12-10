@@ -4719,3 +4719,19 @@ main {
   border-color: #ef4444;
   color: #f87171;
 }
+
+/* Bouton tri populaire */
+.category-filter--sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.category-filter--sort svg {
+  transition: transform 0.2s ease;
+}
+
+.category-filter--sort.category-filter--active svg {
+  transform: scale(1.1);
+  color: var(--color-primary);
+}
