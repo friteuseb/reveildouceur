@@ -4502,3 +4502,137 @@ main {
     font-size: 0.75rem;
   }
 }
+
+/* ========================================
+   SYSTÈME DE VOTE - Like/Dislike
+   ======================================== */
+
+.article-vote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  margin: var(--space-lg) 0;
+}
+
+.article-vote--top {
+  margin-top: 0;
+}
+
+.article-vote--bottom {
+  margin-bottom: var(--space-xl);
+}
+
+.article-vote__label {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-right: var(--space-sm);
+}
+
+.article-vote__buttons {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.article-vote__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-light);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.article-vote__btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.article-vote__btn--like.active {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #16a34a;
+}
+
+.article-vote__btn--dislike.active {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #dc2626;
+}
+
+.article-vote__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.article-vote__btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.article-vote__btn:hover svg {
+  transform: scale(1.1);
+}
+
+.article-vote__btn--like:hover svg {
+  color: #22c55e;
+}
+
+.article-vote__btn--dislike:hover svg {
+  color: #ef4444;
+}
+
+.article-vote__count {
+  font-weight: 600;
+  min-width: 1.5em;
+  text-align: center;
+}
+
+/* Dark mode */
+[data-theme="dark"] .article-vote {
+  background: var(--color-bg-alt);
+}
+
+[data-theme="dark"] .article-vote__btn {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .article-vote__btn--like.active {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: #22c55e;
+  color: #4ade80;
+}
+
+[data-theme="dark"] .article-vote__btn--dislike.active {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #f87171;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .article-vote {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .article-vote__label {
+    margin-right: 0;
+    margin-bottom: var(--space-xs);
+  }
+}
