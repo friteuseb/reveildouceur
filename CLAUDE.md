@@ -351,8 +351,76 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
    - Génère automatiquement les versions WebP et thumbnails
    - Réduit le poids des images de 50-95%
 
-7. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
+7. **Mettre à jour le sitemap** `/sitemap.xml` (OBLIGATOIRE)
+   ```xml
+   <url>
+     <loc>https://reveildouceur.fr/articles/slug.html</loc>
+     <lastmod>YYYY-MM-DD</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.9</priority>
+   </url>
+   ```
+
+8. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
    - `git deploy` = push + purge cache Cloudflare
+
+## Précautions juridiques pour les articles sensibles
+
+Les sujets suivants nécessitent des **précautions rédactionnelles renforcées** pour éviter plaintes et poursuites :
+
+### Sujets à risque
+- Immigration, démographie, origines ethniques
+- Religion (islam, christianisme, judaïsme...)
+- Violence conjugale, différences hommes/femmes
+- Personnalités nommément citées (politiques, journalistes, entrepreneurs)
+- Fact-checkers, médias mainstream
+- COVID, vaccins, santé publique
+
+### Règles de protection légale
+
+1. **Toujours sourcer avec des sources officielles**
+   - Études peer-reviewed (DOI, liens directs)
+   - Rapports d'organismes publics (INSEE, OCDE, OMS, Eurostat)
+   - Éviter les sources militantes ou partisanes
+
+2. **Formulation prudente**
+   - ✅ "Les données suggèrent que..." / "Une étude de X montre..."
+   - ✅ "Selon les chiffres de l'INSEE..." / "D'après le rapport de..."
+   - ❌ "Il est évident que..." / "Tout le monde sait que..."
+   - ❌ Accusations directes sans preuve
+
+3. **Présenter les nuances et contre-arguments**
+   - Inclure systématiquement une section "Ce que la nuance exige"
+   - Mentionner les limites méthodologiques des études
+   - Présenter les hypothèses concurrentes
+
+4. **Éviter la diffamation**
+   - Ne pas accuser nommément sans preuve judiciaire
+   - Utiliser "présumé", "selon X", "d'après les accusations de"
+   - Ne pas prêter d'intentions malveillantes
+
+5. **Mentions légales dans l'article**
+   - Pour les sujets très sensibles, ajouter un disclaimer :
+   ```html
+   <p class="article__disclaimer">
+     <em>Cet article présente des données issues de sources officielles dans un but informatif.
+     Il ne constitue pas une prise de position politique et invite à la réflexion critique.</em>
+   </p>
+   ```
+
+6. **Droit de réponse**
+   - Le site dispose d'une page contact pour exercer un droit de réponse
+   - Répondre rapidement et de bonne foi aux demandes de correction
+
+### Check-list avant publication (articles sensibles)
+
+- [ ] Toutes les affirmations sont sourcées
+- [ ] Les sources sont officielles/académiques
+- [ ] Le ton est interrogatif, pas accusatoire
+- [ ] Les nuances et limites sont présentées
+- [ ] Aucune personne n'est diffamée
+- [ ] Le vocabulaire interdit est évité ("complot", "on vous ment", etc.)
+- [ ] L'article pose des questions, ne donne pas de réponses définitives
 
 ## Optimisation des performances
 
