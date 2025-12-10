@@ -124,7 +124,7 @@
     <text x="497" y="25" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#48bb78" text-anchor="middle">r=0.67</text>
     <text x="497" y="45" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">Corrélation égalité</text>
     <text x="497" y="60" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">↔ différences préférences</text>
-    <text x="497" y="75" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">(Falk & Hermle, Science 2018)</text>
+    <text x="497" y="75" font-family="Inter, sans-serif" font-size="8" fill="#718096" text-anchor="middle">(Falk &amp; Hermle, Science 2018)</text>
 
     <!-- Stat 4: STEM paradoxe -->
     <rect x="600" y="0" width="175" height="80" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
