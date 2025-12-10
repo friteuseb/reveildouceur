@@ -50,10 +50,10 @@ $dbPath = __DIR__ . '/votes.db';
 $cookieName = 'rd_vote_token';
 $cookieExpiry = 60 * 60 * 24 * 365 * 2; // 2 ans
 
-// Initialiser la DB si elle n'existe pas
+// Initialiser ou migrer la DB
+define('VOTE_API_INCLUDED', true);
+
 if (!file_exists($dbPath)) {
-    define('VOTE_API_INCLUDED', true);
-    // Vérifier que le répertoire est accessible en écriture
     if (!is_writable(__DIR__)) {
         http_response_code(500);
         echo json_encode(['error' => 'Directory not writable', 'dir' => __DIR__]);
@@ -65,6 +65,42 @@ if (!file_exists($dbPath)) {
 try {
     $db = new SQLite3($dbPath);
     $db->busyTimeout(5000);
+
+    // Vérifier si la migration est nécessaire (ip_hash -> voter_token)
+    $result = $db->query("PRAGMA table_info(votes)");
+    $hasVoterToken = false;
+    $hasIpHash = false;
+    while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+        if ($row['name'] === 'voter_token') $hasVoterToken = true;
+        if ($row['name'] === 'ip_hash') $hasIpHash = true;
+    }
+
+    // Migration nécessaire (méthode compatible toutes versions SQLite)
+    if ($hasIpHash && !$hasVoterToken) {
+        $db->exec('BEGIN TRANSACTION');
+        $db->exec('CREATE TABLE votes_new (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            article_slug TEXT NOT NULL,
+            voter_token TEXT NOT NULL,
+            vote_type INTEGER NOT NULL CHECK(vote_type IN (-1, 1)),
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            UNIQUE(article_slug, voter_token)
+        )');
+        $db->exec('INSERT INTO votes_new (id, article_slug, voter_token, vote_type, created_at, updated_at)
+                   SELECT id, article_slug, ip_hash, vote_type, created_at, updated_at FROM votes');
+        $db->exec('DROP TABLE votes');
+        $db->exec('ALTER TABLE votes_new RENAME TO votes');
+        $db->exec('CREATE INDEX IF NOT EXISTS idx_article ON votes(article_slug)');
+        $db->exec('CREATE INDEX IF NOT EXISTS idx_voter ON votes(voter_token)');
+        $db->exec('COMMIT');
+    }
+
+    // Si la table n'a ni l'un ni l'autre, recréer
+    if (!$hasVoterToken && !$hasIpHash) {
+        require_once __DIR__ . '/init-db.php';
+    }
+
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode(['error' => 'Database connection failed', 'message' => $e->getMessage()]);
