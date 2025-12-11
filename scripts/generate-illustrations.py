@@ -100,6 +100,11 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Madame Irma - Prédictions
     "jumeau-numerique-terre-simuler-avenir": "Massive holographic Earth floating in futuristic control room, translucent blue digital grid covering the planet surface, data streams flowing like rivers across continents, scientists in white coats monitoring multiple screens showing weather patterns and economic graphs, a butterfly with fractal wings symbolizing chaos theory in foreground, European Space Agency and Nvidia logos subtly visible, supercomputers with blinking lights lining the walls, split vision showing Earth simulation versus unpredictable human silhouettes walking in random directions, crystal ball cracked revealing circuit boards inside, prediction vs chaos visualization",
+
+    # Quizz interactifs
+    "miroir-pensee": "Solitary figure standing before giant ornate mirror in surreal dreamscape, but the reflection shows multiple transparent versions of the same person each controlled by different puppet strings: one by TV screens, one by social media icons, one by crowd of identical grey figures, one by authority figure in suit; the real person holds scissors contemplating cutting the strings; thought bubbles around head contain question marks and broken chains; soft ethereal light emanating from the mirror suggesting self-discovery; philosophical introspection visualization, free will versus conditioning",
+
+    "miroir-croyances": "Giant translucent human head seen from inside, filled with floating symbols from different belief systems orbiting like planets: Christian cross, Buddhist wheel, Islamic crescent, Hindu om, scientific atom, dollar sign, hammer and sickle, scales of justice, all interconnected by glowing threads; some symbols are bright and conscious, others dim and hidden in shadows representing unconscious beliefs; person sitting in meditation pose at center unaware of the constellation around them; stained glass window aesthetic with warm amber light, invisible influences visualization, philosophical archaeology of the mind",
 }
 
 def extract_article_info(html_path):
