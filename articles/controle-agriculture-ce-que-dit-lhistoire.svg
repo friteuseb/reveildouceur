@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e53e3e"/>
+      <stop offset="100%" style="stop-color:#c53030"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#dd6b20"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fond -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Titre -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">
+    Contrôle étatique de l'agriculture : le bilan historique
+  </text>
+
+  <!-- Section 1: Victimes des collectivisations -->
+  <text x="200" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12">
+    VICTIMES DES COLLECTIVISATIONS FORCÉES
+  </text>
+
+  <!-- Barre URSS -->
+  <rect x="50" y="85" width="300" height="40" rx="4" fill="url(#redGrad)" opacity="0.9"/>
+  <text x="60" y="110" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">URSS (1929-1933)</text>
+  <text x="340" y="110" text-anchor="end" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">7-10 millions</text>
+
+  <!-- Barre Chine -->
+  <rect x="50" y="130" width="300" height="40" rx="4" fill="url(#redGrad)" opacity="0.7"/>
+  <text x="60" y="155" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Chine (1958-1962)</text>
+  <text x="340" y="155" text-anchor="end" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">30-55 millions</text>
+
+  <!-- Total -->
+  <rect x="50" y="180" width="300" height="30" rx="4" fill="#4a5568"/>
+  <text x="200" y="200" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+    37-65 millions de morts au XXe siècle
+  </text>
+
+  <!-- Section 2: Zimbabwe -->
+  <text x="600" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12">
+    EFFONDREMENT ZIMBABWE
+  </text>
+
+  <rect x="450" y="85" width="300" height="130" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+
+  <text x="470" y="110" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">Production agricole</text>
+  <text x="470" y="130" fill="#fc8181" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">-75%</text>
+  <text x="540" y="130" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">en 10 ans</text>
+
+  <text x="620" y="110" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">Exportateur → Importateur</text>
+  <text x="620" y="135" fill="#ed8936" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Grenier de l'Afrique</text>
+  <text x="620" y="155" fill="#fc8181" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">→ Aide alimentaire</text>
+
+  <text x="470" y="180" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">Inflation 2008</text>
+  <text x="470" y="200" fill="#fc8181" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">89,7 sextillions %</text>
+
+  <!-- Section 3: France aujourd'hui -->
+  <text x="400" y="240" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">
+    FRANCE : SIGNAUX D'ALERTE
+  </text>
+
+  <!-- Statistiques France -->
+  <g transform="translate(50, 260)">
+    <rect width="160" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
+    <text x="80" y="25" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Suicides agriculteurs</text>
+    <text x="80" y="55" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">+30%</text>
+    <text x="80" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">vs moyenne nationale</text>
+  </g>
+
+  <g transform="translate(230, 260)">
+    <rect width="160" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
+    <text x="80" y="25" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Exploitations disparues</text>
+    <text x="80" y="55" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">-70%</text>
+    <text x="80" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">depuis 1970</text>
+  </g>
+
+  <g transform="translate(410, 260)">
+    <rect width="160" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
+    <text x="80" y="25" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Revenus de la PAC</text>
+    <text x="80" y="55" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">40%</text>
+    <text x="80" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">du revenu moyen</text>
+  </g>
+
+  <g transform="translate(590, 260)">
+    <rect width="160" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
+    <text x="80" y="25" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Charge administrative</text>
+    <text x="80" y="55" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">15h</text>
+    <text x="80" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">/semaine en paperasse</text>
+  </g>
+
+  <!-- Timeline en bas -->
+  <line x1="50" y1="380" x2="750" y2="380" stroke="#4a5568" stroke-width="2"/>
+
+  <!-- Points de la timeline -->
+  <circle cx="100" cy="380" r="6" fill="#e53e3e"/>
+  <text x="100" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">1929</text>
+  <text x="100" y="412" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="8">URSS</text>
+
+  <circle cx="220" cy="380" r="6" fill="#e53e3e"/>
+  <text x="220" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">1958</text>
+  <text x="220" y="412" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="8">Chine</text>
+
+  <circle cx="400" cy="380" r="6" fill="#ed8936"/>
+  <text x="400" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">2000</text>
+  <text x="400" y="412" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="8">Zimbabwe</text>
+
+  <circle cx="520" cy="380" r="6" fill="#ed8936"/>
+  <text x="520" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">2007</text>
+  <text x="520" y="412" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="8">Venezuela</text>
+
+  <circle cx="700" cy="380" r="6" fill="#48bb78"/>
+  <text x="700" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">2024</text>
+  <text x="700" y="412" text-anchor="middle" fill="#48bb78" font-family="system-ui, sans-serif" font-size="8">France ?</text>
+
+  <!-- Message final -->
+  <text x="400" y="440" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10" font-style="italic">
+    "L'histoire ne se répète pas, mais elle rime." - Mark Twain
+  </text>
+</svg>

@@ -60,6 +60,12 @@
 
   <!-- Articles -->
   <url>
+    <loc>https://reveildouceur.fr/articles/controle-agriculture-ce-que-dit-lhistoire.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://reveildouceur.fr/articles/monde-moderne-redescente-pyramide-maslow.html</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
