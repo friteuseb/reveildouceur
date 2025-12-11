@@ -121,14 +121,14 @@
   </g>
 
   <!-- Question centrale -->
-  <g transform="translate(400, 400)">
+  <g transform="translate(400, 418)">
     <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#a0aec0" font-style="italic">
       Nous ne redescendons pas la pyramide : nous vivons dans une pyramide instable
     </text>
   </g>
 
   <!-- Footer -->
-  <text x="400" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4a5568">
+  <text x="400" y="443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4a5568">
     Sources : INSV, Fondation de France, DARES, Survey Center on American Life
   </text>
 </svg>
