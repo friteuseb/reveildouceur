@@ -16,6 +16,22 @@
       "label": "Environnement",
       "color": "#38a169"
     },
+    "relations": {
+      "label": "Relations H/F",
+      "color": "#ec4899"
+    },
+    "psychologie": {
+      "label": "Psychologie",
+      "color": "#8b5cf6"
+    },
+    "politique": {
+      "label": "Politique",
+      "color": "#f59e0b"
+    },
+    "histoire": {
+      "label": "Histoire",
+      "color": "#78716c"
+    },
     "societe": {
       "label": "Société",
       "color": "#dd6b20"
@@ -40,15 +56,15 @@
   "articles": [
     {
       "file": "controle-agriculture-ce-que-dit-lhistoire.html",
-      "category": "societe"
+      "category": "politique"
     },
     {
       "file": "monde-moderne-redescente-pyramide-maslow.html",
-      "category": "societe"
+      "category": "psychologie"
     },
     {
       "file": "victime-ou-vainqueur-rapport-reussite.html",
-      "category": "societe"
+      "category": "psychologie"
     },
     {
       "file": "vegetarisme-veganisme-sauve-t-il-vraiment-des-animaux.html",
@@ -64,15 +80,15 @@
     },
     {
       "file": "egalite-femmes-hommes-paradoxe-liberte.html",
-      "category": "societe"
+      "category": "relations"
     },
     {
       "file": "pourquoi-on-narrive-plus-a-etre-en-couple.html",
-      "category": "societe"
+      "category": "relations"
     },
     {
       "file": "societe-moderne-fabrique-mal-etre.html",
-      "category": "societe"
+      "category": "psychologie"
     },
     {
       "file": "jumeau-numerique-terre-simuler-avenir.html",
@@ -88,7 +104,7 @@
     },
     {
       "file": "temps-difficiles-hommes-forts-le-cycle-qui-nexiste-peut-etre-pas.html",
-      "category": "societe"
+      "category": "histoire"
     },
     {
       "file": "quand-le-cinema-nous-dit-la-verite.html",
@@ -96,11 +112,11 @@
     },
     {
       "file": "quete-de-sens-spiritualite-sante-mentale.html",
-      "category": "societe"
+      "category": "psychologie"
     },
     {
       "file": "autoritarisme-gauche-droite-meme-combat.html",
-      "category": "societe"
+      "category": "politique"
     },
     {
       "file": "pouvoir-des-narratifs-comment-les-histoires-faconnent-le-monde.html",
@@ -108,15 +124,15 @@
     },
     {
       "file": "origines-de-lhomme-ce-que-dit-la-genetique.html",
-      "category": "societe"
+      "category": "histoire"
     },
     {
       "file": "racailles-en-haut-vs-en-bas-qui-nuit-le-plus.html",
-      "category": "societe"
+      "category": "politique"
     },
     {
       "file": "france-liberte-expression-ce-que-disent-les-chiffres.html",
-      "category": "societe"
+      "category": "politique"
     },
     {
       "file": "vrai-cout-securite-sociale-comparaison-mondiale.html",
@@ -144,7 +160,7 @@
     },
     {
       "file": "paradoxe-bonheur-feminin-etudes.html",
-      "category": "societe"
+      "category": "relations"
     },
     {
       "file": "nucleaire-francais-danger-ou-solution.html",
@@ -180,11 +196,11 @@
     },
     {
       "file": "violences-conjugales-ce-que-disent-les-chiffres.html",
-      "category": "societe"
+      "category": "relations"
     },
     {
       "file": "violence-psychologique-suicide-masculin-le-tabou.html",
-      "category": "societe"
+      "category": "relations"
     },
     {
       "file": "salvador-france-faible-avec-les-loups.html",
@@ -208,11 +224,11 @@
     },
     {
       "file": "hommes-sensibles-ce-que-disent-les-etudes.html",
-      "category": "societe"
+      "category": "relations"
     },
     {
       "file": "faire-confiance-aveuglement-quels-risques.html",
-      "category": "societe"
+      "category": "psychologie"
     },
     {
       "file": "europe-seule-a-sauver-la-planete.html",
@@ -232,7 +248,7 @@
     },
     {
       "file": "ce-que-les-hommes-disent-vouloir-vs-realite.html",
-      "category": "societe"
+      "category": "relations"
     },
     {
       "file": "bio-supermarche-vs-maraicher-local.html",
@@ -240,11 +256,11 @@
     },
     {
       "file": "apres-la-redpill-ce-que-personne-ne-vous-dit.html",
-      "category": "societe"
+      "category": "psychologie"
     },
     {
       "file": "textes-religieux-paix-violence-analyse-academique.html",
-      "category": "societe"
+      "category": "histoire"
     },
     {
       "file": "politiques-immigration-analyse-comparative.html",
