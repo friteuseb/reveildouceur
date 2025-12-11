@@ -4735,3 +4735,112 @@ main {
   transform: scale(1.1);
   color: var(--color-primary);
 }
+
+
+/* === Articles Similaires (Sur le même thème) === */
+.related-articles {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--color-surface, #f8f9fa);
+  border-radius: 12px;
+}
+
+.related-articles__title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text, #1a202c);
+  text-align: center;
+}
+
+.related-articles__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg, #ffffff);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.related-card__image {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.related-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover .related-card__image img {
+  transform: scale(1.05);
+}
+
+.related-card__category {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.related-card__content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--color-text, #1a202c);
+  line-height: 1.4;
+}
+
+.related-card__excerpt {
+  font-size: 0.875rem;
+  color: var(--color-text-light, #4a5568);
+  margin: 0;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Dark mode */
+[data-theme="dark"] .related-articles {
+  background: var(--color-surface-dark, #2d3748);
+}
+
+[data-theme="dark"] .related-card {
+  background: var(--color-bg-dark, #1a202c);
+}
+
+[data-theme="dark"] .related-card__title {
+  color: var(--color-text-dark, #f7fafc);
+}
+
+[data-theme="dark"] .related-card__excerpt {
+  color: var(--color-text-light-dark, #a0aec0);
+}
