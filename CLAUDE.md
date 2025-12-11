@@ -180,86 +180,118 @@
 - `france-quel-niveau-de-socialisme` - France, niveau de redistribution
 
 ### Quizz interactifs
-- `quizz-idees-recues-economie-environnement` - 10 questions sur économie et environnement
+- `miroir-pensee` - Le Miroir de la Pensée Libre (introspection, autonomie intellectuelle)
+- `miroir-croyances` - Le Miroir des Croyances Invisibles (influences philosophiques)
 
-## Format d'un quizz interactif
+## Format des Quizz
 
-### Fichiers nécessaires
+Il existe **deux types** de quizz sur le site :
+
+### Type 1 : Quizz Miroir (introspection)
+Quizz psychologiques/philosophiques à la **racine du site** avec leur propre JS.
+
+**Fichiers :**
+- `/miroir-slug.html` - Page HTML du quizz
+- `/js/miroir-slug.js` - Logique JS spécifique
+- `/images/illustrations/miroir-slug.png` - Illustration Moebius
+
+**Quizz miroir existants :**
+- `miroir-pensee` - Pensée libre, conditionnements, conformisme
+- `miroir-croyances` - Influences spirituelles et idéologiques
+
+### Type 2 : Quizz Articles (éducatifs)
+Quizz factuels dans `/articles/` utilisant le système de quizz générique.
+
+**Fichiers :**
 - `/articles/quizz-slug.html` - Le quizz HTML
-- `/images/illustrations/quizz-slug.png` - Illustration (optionnelle mais recommandée)
-- `/js/quizz.js` - Script JS (déjà présent, à inclure dans le HTML)
+- `/images/illustrations/quizz-slug.png` - Illustration
+- `/js/quizz.js` - Script JS générique (déjà présent)
 
-### Structure HTML d'un quizz
-```html
-<article class="article quizz">
-  <header class="article__header">
-    <p class="article__meta">
-      <span class="quizz__badge">Quizz interactif</span>
-      <time datetime="YYYY">YYYY</time>
-    </p>
-    <h1 class="article__title">Titre du quizz</h1>
-    <p class="quizz__intro">Introduction...</p>
-  </header>
+## Workflow pour un nouveau quizz
 
-  <div class="quizz__container" id="quizz-container">
-    <!-- Barre de progression -->
-    <div class="quizz__progress">...</div>
+### Option A : Quizz Miroir (introspection, psychologique)
 
-    <!-- Questions -->
-    <div class="quizz__questions" id="quizz-questions">
-      <!-- Chaque question -->
-      <div class="quizz__question" data-question="1" data-correct="b">
-        <h2 class="quizz__question-title">
-          <span class="quizz__question-number">1</span>
-          Texte de la question ?
-        </h2>
-        <div class="quizz__answers">
-          <button class="quizz__answer" data-answer="a">
-            <span class="quizz__answer-letter">A</span>
-            <span class="quizz__answer-text">Réponse A</span>
-          </button>
-          <!-- ... autres réponses ... -->
-        </div>
-        <div class="quizz__explanation" hidden>
-          <div class="quizz__explanation-content">
-            <strong>Explication :</strong> Texte explicatif sourcé.
-          </div>
-          <div class="quizz__source">
-            Source : <a href="URL">Nom de la source</a>
-          </div>
-        </div>
-      </div>
-    </div>
+1. **Créer le fichier HTML** `/miroir-slug.html`
+   - Copier la structure de `miroir-pensee.html` ou `miroir-croyances.html`
+   - Modifier les meta tags (title, description, og:image)
 
-    <!-- Navigation et résultats -->
-    <div class="quizz__navigation" id="quizz-nav" hidden>...</div>
-    <div class="quizz__results" id="quizz-results" hidden>...</div>
-  </div>
-</article>
-```
+2. **Créer le fichier JS** `/js/miroir-slug.js`
+   - Définir les questions, réponses, et logique de scoring
+   - S'inspirer de `miroir-pensee.js` ou `miroir-croyances.js`
 
-### Attributs importants
-- `data-question="N"` : Numéro de la question
-- `data-correct="x"` : Lettre de la bonne réponse (a, b, c, d)
-- `data-answer="x"` : Lettre de chaque réponse
-- `hidden` : Questions 2+ et explications sont cachées par défaut
+3. **Ajouter le prompt d'illustration** dans `scripts/generate-illustrations.py`
+   ```python
+   "miroir-slug": "Description visuelle pour l'IA...",
+   ```
 
-### Scripts à inclure
-```html
-<script src="/js/app.js"></script>
-<script src="/js/quizz.js"></script>
-```
+4. **Générer l'illustration**
+   ```bash
+   python3 scripts/generate-illustrations.py miroir-slug.html
+   ```
+   Note : Le script cherche dans /articles/, donc générer manuellement :
+   ```bash
+   # Ou utiliser directement Pollinations (voir script)
+   ```
 
-### Workflow pour un nouveau quizz
+5. **Optimiser l'image**
+   ```bash
+   .venv/bin/python scripts/optimize-images.py images/illustrations/miroir-slug.png
+   ```
+
+6. **Ajouter dans index.json** avec métadonnées inline (OBLIGATOIRE pour les cards)
+   ```json
+   {
+     "file": "miroir-slug.html",
+     "category": "quizz",
+     "href": "/miroir-slug.html",
+     "title": "Titre du quizz",
+     "excerpt": "Description courte pour la card...",
+     "date": "YYYY-MM-DD"
+   }
+   ```
+   **Important** : Les champs `href`, `title`, `excerpt` sont obligatoires pour les fichiers hors /articles/
+
+7. **Mettre à jour /quizz.html** pour ajouter la card du nouveau quizz
+
+8. **Mettre à jour le sitemap** `/sitemap.xml`
+
+9. **Déployer**
+   ```bash
+   git add -A && git commit -m "Ajout quizz: [titre]" && git push && bash scripts/purge-cache.sh
+   ```
+
+### Option B : Quizz Article (éducatif, factuel)
 
 1. **Copier le template** `/articles/quizz-template.html`
 2. **Modifier les méta-données** (title, description, og:image)
 3. **Rédiger les questions** (5 à 15 recommandé)
    - Toujours sourcer les explications
    - Varier les sujets pour maintenir l'intérêt
-4. **Ajouter dans index.json** avec `"category": "quizz"`
-5. **Générer l'illustration** (optionnel)
-6. **Tester localement** avant déploiement
+4. **Ajouter dans index.json** :
+   ```json
+   { "file": "quizz-slug.html", "category": "quizz" }
+   ```
+5. **Générer l'illustration** : `python3 scripts/generate-illustrations.py quizz-slug.html`
+6. **Optimiser** : `.venv/bin/python scripts/optimize-images.py`
+7. **Mettre à jour le sitemap**
+8. **Déployer**
+
+## Structure index.json pour les quizz externes
+
+Pour les quizz à la racine (miroir-*), utiliser le format avec métadonnées inline :
+
+```json
+{
+  "file": "miroir-slug.html",
+  "category": "quizz",
+  "href": "/miroir-slug.html",
+  "title": "Titre complet du quizz",
+  "excerpt": "Description de 1-2 phrases pour la card d'aperçu.",
+  "date": "2025-12-01"
+}
+```
+
+**Pourquoi ?** Le système charge normalement les métadonnées en fetchant le fichier depuis `/articles/`. Pour les fichiers ailleurs, on fournit les métadonnées directement dans index.json.
 
 ## Idées d'articles futurs
 
