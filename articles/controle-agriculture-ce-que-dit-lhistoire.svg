@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a202c"/>
@@ -12,119 +12,220 @@
       <stop offset="0%" style="stop-color:#ed8936"/>
       <stop offset="100%" style="stop-color:#dd6b20"/>
     </linearGradient>
-    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#48bb78"/>
-      <stop offset="100%" style="stop-color:#38a169"/>
-    </linearGradient>
   </defs>
 
   <!-- Fond -->
-  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
 
   <!-- Titre -->
-  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">
-    Contrôle étatique de l'agriculture : le bilan historique
+  <text x="400" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">
+    Le pattern du contrôle agricole : de l'histoire à aujourd'hui
   </text>
 
-  <!-- Section 1: Victimes des collectivisations -->
-  <text x="200" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12">
-    VICTIMES DES COLLECTIVISATIONS FORCÉES
+  <!-- Section gauche: Timeline historique -->
+  <text x="200" y="55" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">
+    PRÉCÉDENTS HISTORIQUES
   </text>
 
-  <!-- Barre URSS -->
-  <rect x="50" y="85" width="300" height="40" rx="4" fill="url(#redGrad)" opacity="0.9"/>
-  <text x="60" y="110" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">URSS (1929-1933)</text>
-  <text x="340" y="110" text-anchor="end" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">7-10 millions</text>
-
-  <!-- Barre Chine -->
-  <rect x="50" y="130" width="300" height="40" rx="4" fill="url(#redGrad)" opacity="0.7"/>
-  <text x="60" y="155" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Chine (1958-1962)</text>
-  <text x="340" y="155" text-anchor="end" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">30-55 millions</text>
-
-  <!-- Total -->
-  <rect x="50" y="180" width="300" height="30" rx="4" fill="#4a5568"/>
-  <text x="200" y="200" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
-    37-65 millions de morts au XXe siècle
-  </text>
-
-  <!-- Section 2: Zimbabwe -->
-  <text x="600" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="12">
-    EFFONDREMENT ZIMBABWE
-  </text>
-
-  <rect x="450" y="85" width="300" height="130" rx="6" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
-
-  <text x="470" y="110" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">Production agricole</text>
-  <text x="470" y="130" fill="#fc8181" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">-75%</text>
-  <text x="540" y="130" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">en 10 ans</text>
-
-  <text x="620" y="110" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">Exportateur → Importateur</text>
-  <text x="620" y="135" fill="#ed8936" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Grenier de l'Afrique</text>
-  <text x="620" y="155" fill="#fc8181" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">→ Aide alimentaire</text>
-
-  <text x="470" y="180" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">Inflation 2008</text>
-  <text x="470" y="200" fill="#fc8181" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">89,7 sextillions %</text>
-
-  <!-- Section 3: France aujourd'hui -->
-  <text x="400" y="240" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">
-    FRANCE : SIGNAUX D'ALERTE
-  </text>
-
-  <!-- Statistiques France -->
-  <g transform="translate(50, 260)">
-    <rect width="160" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
-    <text x="80" y="25" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Suicides agriculteurs</text>
-    <text x="80" y="55" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">+30%</text>
-    <text x="80" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">vs moyenne nationale</text>
+  <!-- URSS -->
+  <g transform="translate(30, 65)">
+    <rect width="170" height="55" rx="4" fill="url(#redGrad)" opacity="0.9"/>
+    <text x="10" y="18" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">URSS 1929-33</text>
+    <text x="10" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9">Collectivisation forcée</text>
+    <text x="10" y="45" fill="#fc8181" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">7-10M morts</text>
   </g>
 
-  <g transform="translate(230, 260)">
-    <rect width="160" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
-    <text x="80" y="25" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Exploitations disparues</text>
-    <text x="80" y="55" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">-70%</text>
-    <text x="80" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">depuis 1970</text>
+  <!-- Chine -->
+  <g transform="translate(210, 65)">
+    <rect width="170" height="55" rx="4" fill="url(#redGrad)" opacity="0.8"/>
+    <text x="10" y="18" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Chine 1958-62</text>
+    <text x="10" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9">Grand Bond en avant</text>
+    <text x="10" y="45" fill="#fc8181" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">30-55M morts</text>
   </g>
 
-  <g transform="translate(410, 260)">
-    <rect width="160" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
-    <text x="80" y="25" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Revenus de la PAC</text>
-    <text x="80" y="55" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">40%</text>
-    <text x="80" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">du revenu moyen</text>
+  <!-- Zimbabwe -->
+  <g transform="translate(30, 125)">
+    <rect width="170" height="55" rx="4" fill="url(#orangeGrad)" opacity="0.8"/>
+    <text x="10" y="18" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Zimbabwe 2000</text>
+    <text x="10" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9">Expropriation fermes</text>
+    <text x="10" y="45" fill="#fc8181" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">-75% production</text>
   </g>
 
-  <g transform="translate(590, 260)">
-    <rect width="160" height="80" rx="6" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
-    <text x="80" y="25" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Charge administrative</text>
-    <text x="80" y="55" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">15h</text>
-    <text x="80" y="70" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">/semaine en paperasse</text>
+  <!-- Sri Lanka -->
+  <g transform="translate(210, 125)">
+    <rect width="170" height="55" rx="4" fill="url(#orangeGrad)" opacity="0.7"/>
+    <text x="10" y="18" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Sri Lanka 2021</text>
+    <text x="10" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9">100% bio forcé</text>
+    <text x="10" y="45" fill="#fc8181" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">-40% riz, fuite président</text>
   </g>
+
+  <!-- Section droite: Europe actuelle -->
+  <text x="600" y="55" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+    EUROPE AUJOURD'HUI
+  </text>
+
+  <!-- Pays-Bas -->
+  <g transform="translate(420, 65)">
+    <rect width="170" height="55" rx="4" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
+    <text x="10" y="18" fill="#ed8936" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Pays-Bas 2022-24</text>
+    <text x="10" y="32" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Crise de l'azote</text>
+    <text x="10" y="45" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10">11 000 fermes menacées</text>
+  </g>
+
+  <!-- France -->
+  <g transform="translate(600, 65)">
+    <rect width="170" height="55" rx="4" fill="#2d3748" stroke="#ed8936" stroke-width="1"/>
+    <text x="10" y="18" fill="#ed8936" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">France 2024-25</text>
+    <text x="10" y="32" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Mercosur + normes</text>
+    <text x="10" y="45" fill="#fc8181" font-family="system-ui, sans-serif" font-size="10">Gendarmes vs paysans</text>
+  </g>
+
+  <!-- Ariège box -->
+  <g transform="translate(420, 125)">
+    <rect width="350" height="55" rx="4" fill="#2d3748" stroke="#e53e3e" stroke-width="2"/>
+    <text x="175" y="18" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">ARIÈGE - 11 DÉCEMBRE 2025</text>
+    <text x="175" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">Camions blindés de gendarmerie déployés pour imposer</text>
+    <text x="175" y="48" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10">l'abattage de 200 vaches face à 500 agriculteurs</text>
+  </g>
+
+  <!-- Pattern Analysis -->
+  <text x="400" y="200" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">
+    LE PATTERN RÉCURRENT
+  </text>
+
+  <!-- Étapes du pattern -->
+  <g transform="translate(30, 215)">
+    <!-- Étape 1 -->
+    <rect x="0" y="0" width="115" height="65" rx="4" fill="#2d3748"/>
+    <text x="57" y="18" text-anchor="middle" fill="#48bb78" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">1</text>
+    <text x="57" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Réglementation</text>
+    <text x="57" y="48" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">croissante</text>
+    <text x="57" y="60" text-anchor="middle" fill="#4a5568" font-family="system-ui, sans-serif" font-size="8">400+ normes</text>
+
+    <!-- Flèche -->
+    <polygon points="120,32 130,27 130,37" fill="#4a5568"/>
+
+    <!-- Étape 2 -->
+    <rect x="135" y="0" width="115" height="65" rx="4" fill="#2d3748"/>
+    <text x="192" y="18" text-anchor="middle" fill="#48bb78" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">2</text>
+    <text x="192" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Dépendance</text>
+    <text x="192" y="48" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">financière</text>
+    <text x="192" y="60" text-anchor="middle" fill="#4a5568" font-family="system-ui, sans-serif" font-size="8">30-50% PAC</text>
+
+    <!-- Flèche -->
+    <polygon points="255,32 265,27 265,37" fill="#4a5568"/>
+
+    <!-- Étape 3 -->
+    <rect x="270" y="0" width="115" height="65" rx="4" fill="#2d3748"/>
+    <text x="327" y="18" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">3</text>
+    <text x="327" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Stigmatisation</text>
+    <text x="327" y="48" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">"pollueurs"</text>
+    <text x="327" y="60" text-anchor="middle" fill="#4a5568" font-family="system-ui, sans-serif" font-size="8">koulaks 2.0?</text>
+
+    <!-- Flèche -->
+    <polygon points="390,32 400,27 400,37" fill="#4a5568"/>
+
+    <!-- Étape 4 -->
+    <rect x="405" y="0" width="115" height="65" rx="4" fill="#2d3748"/>
+    <text x="462" y="18" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">4</text>
+    <text x="462" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Mesures forcées</text>
+    <text x="462" y="48" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">"bien commun"</text>
+    <text x="462" y="60" text-anchor="middle" fill="#4a5568" font-family="system-ui, sans-serif" font-size="8">abattages, arrachages</text>
+
+    <!-- Flèche -->
+    <polygon points="525,32 535,27 535,37" fill="#4a5568"/>
+
+    <!-- Étape 5 -->
+    <rect x="540" y="0" width="115" height="65" rx="4" fill="#2d3748"/>
+    <text x="597" y="18" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">5</text>
+    <text x="597" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Forces de</text>
+    <text x="597" y="48" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">l'ordre</text>
+    <text x="597" y="60" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="8">← Ariège 2025</text>
+
+    <!-- Flèche -->
+    <polygon points="660,32 670,27 670,37" fill="#4a5568"/>
+
+    <!-- Étape 6 -->
+    <rect x="675" y="0" width="95" height="65" rx="4" fill="#2d3748"/>
+    <text x="722" y="18" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">6</text>
+    <text x="722" y="35" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Concentration</text>
+    <text x="722" y="48" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">des terres</text>
+    <text x="722" y="60" text-anchor="middle" fill="#4a5568" font-family="system-ui, sans-serif" font-size="8">fonds, Bill Gates</text>
+  </g>
+
+  <!-- Statistiques France en bas -->
+  <text x="400" y="310" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">
+    FRANCE : LES SIGNAUX
+  </text>
+
+  <g transform="translate(30, 320)">
+    <rect width="145" height="70" rx="4" fill="#2d3748" stroke="#4a5568"/>
+    <text x="72" y="20" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Suicides agriculteurs</text>
+    <text x="72" y="45" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">1/2j</text>
+    <text x="72" y="60" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">+20% vs moyenne</text>
+  </g>
+
+  <g transform="translate(185, 320)">
+    <rect width="145" height="70" rx="4" fill="#2d3748" stroke="#4a5568"/>
+    <text x="72" y="20" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Volailles abattues</text>
+    <text x="72" y="45" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">16M</text>
+    <text x="72" y="60" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">grippe aviaire</text>
+  </g>
+
+  <g transform="translate(340, 320)">
+    <rect width="145" height="70" rx="4" fill="#2d3748" stroke="#4a5568"/>
+    <text x="72" y="20" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Retraites 10 ans</text>
+    <text x="72" y="45" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">50%</text>
+    <text x="72" y="60" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">qui reprendra?</text>
+  </g>
+
+  <g transform="translate(495, 320)">
+    <rect width="145" height="70" rx="4" fill="#2d3748" stroke="#4a5568"/>
+    <text x="72" y="20" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Arrachage vignes</text>
+    <text x="72" y="45" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">120M</text>
+    <text x="72" y="60" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">pour détruire</text>
+  </g>
+
+  <g transform="translate(650, 320)">
+    <rect width="120" height="70" rx="4" fill="#2d3748" stroke="#ed8936"/>
+    <text x="60" y="20" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">Mercosur</text>
+    <text x="60" y="40" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Viande vs</text>
+    <text x="60" y="55" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Voitures</text>
+    <text x="60" y="66" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="7">France isolée</text>
+  </g>
+
+  <!-- Question finale -->
+  <text x="400" y="420" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+    La question n'est pas si chaque mesure est justifiée.
+  </text>
+  <text x="400" y="440" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+    C'est : à quel moment l'accumulation devient-elle un démantèlement ?
+  </text>
 
   <!-- Timeline en bas -->
-  <line x1="50" y1="380" x2="750" y2="380" stroke="#4a5568" stroke-width="2"/>
+  <line x1="50" y1="465" x2="750" y2="465" stroke="#4a5568" stroke-width="2"/>
 
-  <!-- Points de la timeline -->
-  <circle cx="100" cy="380" r="6" fill="#e53e3e"/>
-  <text x="100" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">1929</text>
-  <text x="100" y="412" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="8">URSS</text>
+  <circle cx="100" cy="465" r="5" fill="#e53e3e"/>
+  <text x="100" y="480" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">1929</text>
+  <text x="100" y="490" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="7">URSS</text>
 
-  <circle cx="220" cy="380" r="6" fill="#e53e3e"/>
-  <text x="220" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">1958</text>
-  <text x="220" y="412" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="8">Chine</text>
+  <circle cx="200" cy="465" r="5" fill="#e53e3e"/>
+  <text x="200" y="480" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">1958</text>
+  <text x="200" y="490" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="7">Chine</text>
 
-  <circle cx="400" cy="380" r="6" fill="#ed8936"/>
-  <text x="400" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">2000</text>
-  <text x="400" y="412" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="8">Zimbabwe</text>
+  <circle cx="350" cy="465" r="5" fill="#ed8936"/>
+  <text x="350" y="480" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">2000</text>
+  <text x="350" y="490" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="7">Zimbabwe</text>
 
-  <circle cx="520" cy="380" r="6" fill="#ed8936"/>
-  <text x="520" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">2007</text>
-  <text x="520" y="412" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="8">Venezuela</text>
+  <circle cx="450" cy="465" r="5" fill="#ed8936"/>
+  <text x="450" y="480" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">2021</text>
+  <text x="450" y="490" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="7">Sri Lanka</text>
 
-  <circle cx="700" cy="380" r="6" fill="#48bb78"/>
-  <text x="700" y="400" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="9">2024</text>
-  <text x="700" y="412" text-anchor="middle" fill="#48bb78" font-family="system-ui, sans-serif" font-size="8">France ?</text>
+  <circle cx="550" cy="465" r="5" fill="#ed8936"/>
+  <text x="550" y="480" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="8">2022</text>
+  <text x="550" y="490" text-anchor="middle" fill="#ed8936" font-family="system-ui, sans-serif" font-size="7">Pays-Bas</text>
 
-  <!-- Message final -->
-  <text x="400" y="440" text-anchor="middle" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="10" font-style="italic">
-    "L'histoire ne se répète pas, mais elle rime." - Mark Twain
-  </text>
+  <circle cx="700" cy="465" r="8" fill="#fc8181"/>
+  <text x="700" y="480" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">2025</text>
+  <text x="700" y="492" text-anchor="middle" fill="#fc8181" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">France ?</text>
 </svg>
