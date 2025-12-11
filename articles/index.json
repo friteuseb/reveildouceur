@@ -257,6 +257,22 @@
     {
       "file": "additifs-alimentaires-ce-que-dit-la-science.html",
       "category": "sante"
+    },
+    {
+      "file": "miroir-pensee.html",
+      "category": "quizz",
+      "href": "/miroir-pensee.html",
+      "title": "Le Miroir de la Pensée Libre",
+      "excerpt": "Pensez-vous vraiment par vous-même ? Un questionnaire introspectif pour explorer vos conditionnements, vos peurs et votre rapport au groupe.",
+      "date": "2025-12-01"
+    },
+    {
+      "file": "miroir-croyances.html",
+      "category": "quizz",
+      "href": "/miroir-croyances.html",
+      "title": "Le Miroir des Croyances Invisibles",
+      "excerpt": "Quelles philosophies vous habitent sans que vous le sachiez ? Découvrez les influences spirituelles et idéologiques qui façonnent votre vision du monde.",
+      "date": "2025-12-01"
     }
   ]
 }

@@ -393,6 +393,29 @@
   }
 
   async function fetchArticleMetadata(filename) {
+    // Vérifier si l'article a des métadonnées inline (pour les quizz, pages externes, etc.)
+    const articleData = articlesWithCategories.find(a => a.file === filename);
+
+    if (articleData && articleData.title && articleData.href) {
+      // Article avec métadonnées inline - pas besoin de fetch
+      const baseName = filename.replace('.html', '');
+      const category = getArticleCategory(filename);
+
+      return {
+        filename,
+        url: articleData.href,
+        rawUrl: articleData.href,
+        title: articleData.title,
+        excerpt: articleData.excerpt || '',
+        date: articleData.date ? new Date(articleData.date).getTime() : Date.now(),
+        thumbnail: findThumbnail('/images/illustrations/', baseName + '.png', true),
+        heroImage: findThumbnail('/images/illustrations/', baseName + '.png', false),
+        isRaw: false,
+        category
+      };
+    }
+
+    // Article standard - fetch pour extraire les métadonnées
     try {
       const url = CONFIG.articles.path + filename;
       const response = await fetch(url);
