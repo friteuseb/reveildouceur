@@ -52,8 +52,7 @@
         $current_page = basename($_SERVER['PHP_SELF']);
         $nav_items = [
           ['href' => '/', 'file' => 'index.php', 'label' => 'Articles'],
-          ['href' => '/miroir-pensee.html', 'file' => 'miroir-pensee.html', 'label' => 'Pensée Libre'],
-          ['href' => '/miroir-croyances.html', 'file' => 'miroir-croyances.html', 'label' => 'Croyances Invisibles'],
+          ['href' => '/quizz.html', 'file' => 'quizz.html', 'label' => 'Quizz'],
           ['href' => '/organiser-debat.html', 'file' => 'organiser-debat.html', 'label' => 'Organiser un débat'],
           ['href' => '/a-propos.php', 'file' => 'a-propos.php', 'label' => 'À propos'],
           ['href' => '/contact.php', 'file' => 'contact.php', 'label' => 'Contact']

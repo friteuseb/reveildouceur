@@ -49,8 +49,7 @@ const SITE_CONFIG = {
   // ========================================
   navigation: [
     { label: 'Articles', href: '/', id: 'home' },
-    { label: 'Pensée Libre', href: '/miroir-pensee.html', id: 'miroir-pensee' },
-    { label: 'Croyances Invisibles', href: '/miroir-croyances.html', id: 'miroir-croyances' },
+    { label: 'Quizz', href: '/quizz.html', id: 'quizz' },
     { label: 'Organiser un débat', href: '/organiser-debat.html', id: 'debat' },
     { label: 'À propos', href: '/a-propos.php', id: 'about' },
     { label: 'Contact', href: '/contact.php', id: 'contact' }
@@ -62,8 +61,7 @@ const SITE_CONFIG = {
   footerLinks: {
     main: [
       { label: 'Articles', href: '/' },
-      { label: 'Pensée Libre', href: '/miroir-pensee.html' },
-      { label: 'Croyances Invisibles', href: '/miroir-croyances.html' },
+      { label: 'Quizz', href: '/quizz.html' },
       { label: 'Organiser un débat', href: '/organiser-debat.html' },
       { label: 'À propos', href: '/a-propos.php' },
       { label: 'Contact', href: '/contact.php' }
