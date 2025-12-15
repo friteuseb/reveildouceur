@@ -1385,6 +1385,31 @@ main {
   border: 1px solid var(--color-border);
 }
 
+/* Graphiques SVG inline */
+.article__chart {
+  margin: var(--space-xl) 0;
+  padding: var(--space-md);
+  background: transparent;
+  border-radius: var(--radius-lg);
+}
+
+.article__chart figcaption {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+}
+
+.article__chart svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
 .article__data-viz figcaption {
   font-family: var(--font-sans);
   font-size: 0.75rem;

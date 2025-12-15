@@ -111,6 +111,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Environnement - Méthane bovin
     "methane-bovin-faut-il-reduire-cheptel": "Pastoral French countryside with peaceful cows grazing on lush green prairie, but scene is split by dramatic diagonal: one side shows healthy ecosystem with carbon being absorbed into rich soil beneath grass roots visualized as glowing green tendrils, birds and biodiversity thriving; other side shows ghostly transparent cows fading away while cargo ships arrive on horizon carrying Brazilian beef with smoke trails and tiny burning Amazon trees visible in distance; giant balance scale in sky weighing a French cow against a globe showing 0.05% in small text; methane molecule CH4 floating but transforming into CO2 then being reabsorbed by grass in circular arrow pattern showing 12-year cycle; Cour des comptes report floating like ominous decree from above; French farmer looking up questioning the logic; warm pastoral greens versus cold industrial import greys",
+
+    # Santé - Vaccins ARNm grippe
+    "vaccins-arnm-grippe-ce-que-dit-la-science": "Split laboratory scene showing mRNA technology transformation: left side displays traditional flu vaccine production with eggs in incubators and slow calendar pages turning; right side shows futuristic mRNA synthesis with glowing lipid nanoparticles floating like tiny golden spheres around a double helix structure; central figure is a scientist holding both a classic syringe and a modern one with mRNA ribbon design; microscope view insets showing virus particles with spike proteins being targeted; floating data charts comparing efficacy percentages; subtle question marks made of molecular structures hovering above; peer-reviewed journal pages floating like sacred scrolls; balance scale weighing innovation against uncertainty; warm amber scientific glow meeting cool analytical blue",
 }
 
 def extract_article_info(html_path):
