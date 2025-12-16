@@ -94,53 +94,54 @@
           <!-- GRAPHIQUE 1 : Répartition des émissions de méthane en France -->
           <figure class="article__chart">
             <figcaption>D'où vient le méthane en France ?</figcaption>
-            <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graphique circulaire montrant la répartition des sources de méthane en France">
+            <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graphique montrant la répartition des sources de méthane en France">
               <defs>
                 <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" style="stop-color:#1a202c"/>
                   <stop offset="100%" style="stop-color:#2d3748"/>
                 </linearGradient>
+                <linearGradient id="agriGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#38a169"/>
+                  <stop offset="100%" style="stop-color:#48bb78"/>
+                </linearGradient>
               </defs>
-              <rect width="700" height="400" fill="url(#bgGrad1)" rx="12"/>
+              <rect width="700" height="340" fill="url(#bgGrad1)" rx="12"/>
 
               <!-- Titre -->
-              <text x="350" y="35" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Sources du méthane en France (2023)</text>
+              <text x="350" y="30" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Sources du méthane en France (2023)</text>
+              <text x="350" y="50" text-anchor="middle" fill="#a0aec0" font-size="11">Le méthane représente 17% des émissions françaises de GES</text>
 
-              <!-- Camembert -->
-              <g transform="translate(200, 220)">
-                <!-- Agriculture 71% - vert -->
-                <circle r="120" fill="none" stroke="#48bb78" stroke-width="60" stroke-dasharray="446.1 628.3" transform="rotate(-90)"/>
-                <!-- dont bovins 60% du total agri = 42% total -->
-                <circle r="120" fill="none" stroke="#38a169" stroke-width="60" stroke-dasharray="264 628.3" transform="rotate(-90)"/>
-                <!-- Déchets 20% - orange -->
-                <circle r="120" fill="none" stroke="#ed8936" stroke-width="60" stroke-dasharray="125.7 628.3" transform="rotate(166)"/>
-                <!-- Énergie 9% - bleu -->
-                <circle r="120" fill="none" stroke="#4299e1" stroke-width="60" stroke-dasharray="56.5 628.3" transform="rotate(238)"/>
+              <!-- Barres horizontales -->
+              <g transform="translate(50, 80)">
+                <!-- Agriculture 71% -->
+                <text x="0" y="20" fill="#ffffff" font-size="13" font-weight="bold">Agriculture</text>
+                <text x="0" y="38" fill="#a0aec0" font-size="10">(dont bovins ~60%)</text>
+                <rect x="130" y="8" width="426" height="35" fill="url(#agriGrad)" rx="4"/>
+                <text x="566" y="32" fill="#48bb78" font-size="16" font-weight="bold">71%</text>
 
-                <!-- Centre blanc -->
-                <circle r="90" fill="#1a202c"/>
-                <text x="0" y="-10" text-anchor="middle" fill="#a0aec0" font-size="12">Total méthane</text>
-                <text x="0" y="15" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">17%</text>
-                <text x="0" y="35" text-anchor="middle" fill="#a0aec0" font-size="11">des GES français</text>
+                <!-- Déchets 20% -->
+                <text x="0" y="85" fill="#ffffff" font-size="13" font-weight="bold">Déchets</text>
+                <text x="0" y="103" fill="#a0aec0" font-size="10">(décharges, eaux usées)</text>
+                <rect x="130" y="73" width="120" height="35" fill="#ed8936" rx="4"/>
+                <text x="260" y="97" fill="#ed8936" font-size="16" font-weight="bold">20%</text>
+
+                <!-- Énergie 9% -->
+                <text x="0" y="150" fill="#ffffff" font-size="13" font-weight="bold">Énergie</text>
+                <text x="0" y="168" fill="#a0aec0" font-size="10">(fuites gaz naturel)</text>
+                <rect x="130" y="138" width="54" height="35" fill="#4299e1" rx="4"/>
+                <text x="194" y="162" fill="#4299e1" font-size="16" font-weight="bold">9%</text>
               </g>
 
-              <!-- Légende -->
-              <g transform="translate(400, 100)">
-                <rect x="0" y="0" width="20" height="20" fill="#48bb78" rx="3"/>
-                <text x="30" y="15" fill="#ffffff" font-size="14">Agriculture : 71%</text>
-                <text x="30" y="32" fill="#a0aec0" font-size="11">(dont bovins : ~60%)</text>
-
-                <rect x="0" y="55" width="20" height="20" fill="#ed8936" rx="3"/>
-                <text x="30" y="70" fill="#ffffff" font-size="14">Déchets : 20%</text>
-                <text x="30" y="87" fill="#a0aec0" font-size="11">(décharges, eaux usées)</text>
-
-                <rect x="0" y="110" width="20" height="20" fill="#4299e1" rx="3"/>
-                <text x="30" y="125" fill="#ffffff" font-size="14">Énergie : 9%</text>
-                <text x="30" y="142" fill="#a0aec0" font-size="11">(fuites gaz naturel)</text>
+              <!-- Focus bovins dans l'agriculture -->
+              <g transform="translate(50, 265)">
+                <rect x="0" y="0" width="600" height="50" fill="#2d3748" rx="6" stroke="#48bb78" stroke-width="1"/>
+                <text x="20" y="22" fill="#48bb78" font-size="12" font-weight="bold">🐄 Focus bovins :</text>
+                <text x="140" y="22" fill="#ffffff" font-size="12">71% × 60% = <tspan font-weight="bold" fill="#48bb78">~42%</tspan> du méthane français</text>
+                <text x="20" y="40" fill="#a0aec0" font-size="11">→ Soit environ <tspan fill="#ed8936" font-weight="bold">5% des émissions totales de GES</tspan> (méthane entérique seul)</text>
               </g>
 
               <!-- Note -->
-              <text x="350" y="380" text-anchor="middle" fill="#718096" font-size="10">Source : Citepa, données Secten 2023</text>
+              <text x="350" y="332" text-anchor="middle" fill="#718096" font-size="10">Source : Citepa, données Secten 2023</text>
             </svg>
           </figure>
 
