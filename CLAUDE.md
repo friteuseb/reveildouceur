@@ -346,6 +346,26 @@ python3 scripts/generate-illustrations.py --missing
 # Installer/mettre à jour Pillow si nécessaire
 .venv/bin/pip install -U Pillow
 
+# === ARTICLES SIMILAIRES (Sur le même thème) ===
+
+# Générer les sections "Sur le même thème" pour tous les articles
+.venv/bin/python scripts/generate-related-articles.py
+
+# Mode simulation (voir ce qui serait fait sans modifier)
+.venv/bin/python scripts/generate-related-articles.py --dry-run
+
+# Forcer la régénération même si déjà présent
+.venv/bin/python scripts/generate-related-articles.py --force
+
+# Traiter un seul article
+.venv/bin/python scripts/generate-related-articles.py --article slug-de-larticle
+
+# Utiliser OpenAI API au lieu de sentence-transformers (local)
+.venv/bin/python scripts/generate-related-articles.py --openai
+
+# Installer les dépendances si nécessaire
+.venv/bin/pip install sentence-transformers beautifulsoup4 numpy
+
 # === DÉPLOIEMENT ===
 
 # Commit et push avec purge du cache Cloudflare
@@ -383,7 +403,12 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
    - Génère automatiquement les versions WebP et thumbnails
    - Réduit le poids des images de 50-95%
 
-7. **Mettre à jour le sitemap** `/sitemap.xml` (OBLIGATOIRE)
+7. **Générer les articles similaires** : `.venv/bin/python scripts/generate-related-articles.py`
+   - Calcule la similarité sémantique entre tous les articles
+   - Injecte automatiquement la section "Sur le même thème"
+   - Utilise sentence-transformers (local) ou OpenAI API (--openai)
+
+8. **Mettre à jour le sitemap** `/sitemap.xml` (OBLIGATOIRE)
    ```xml
    <url>
      <loc>https://reveildouceur.fr/articles/slug.html</loc>
@@ -393,7 +418,7 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
    </url>
    ```
 
-8. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
+9. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
    - `git deploy` = push + purge cache Cloudflare
 
 ## Précautions juridiques pour les articles sensibles

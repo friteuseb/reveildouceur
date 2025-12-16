@@ -1,0 +1,141 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#dd6b20"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9f7aea"/>
+      <stop offset="100%" style="stop-color:#805ad5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="22" font-weight="bold">Du loup au chien : ce que dit la génétique</text>
+  <text x="400" y="55" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="12">400 races, 1 ancêtre commun</text>
+
+  <!-- Section 1: DNA comparison -->
+  <rect x="20" y="75" width="240" height="160" fill="#2d3748" rx="8" opacity="0.8"/>
+  <text x="140" y="100" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="13" font-weight="bold">ADN EN COMMUN</text>
+
+  <text x="140" y="135" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="36" font-weight="bold">99,8%</text>
+  <text x="140" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="11">entre chien et loup gris</text>
+
+  <text x="40" y="185" fill="#48bb78" font-family="Inter, sans-serif" font-size="10">• Chihuahua → Loup : 0,2%</text>
+  <text x="40" y="200" fill="#ed8936" font-family="Inter, sans-serif" font-size="10">• Coyote → Loup : 4%</text>
+  <text x="40" y="215" fill="#fc8181" font-family="Inter, sans-serif" font-size="10">• Renard → Loup : 7%</text>
+
+  <text x="140" y="230" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">Le chien est 20× plus proche</text>
+  <text x="140" y="240" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">du loup que le coyote</text>
+
+  <!-- Section 2: Timeline -->
+  <rect x="280" y="75" width="240" height="160" fill="#2d3748" rx="8" opacity="0.8"/>
+  <text x="400" y="100" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="13" font-weight="bold">CHRONOLOGIE</text>
+
+  <!-- Timeline line -->
+  <line x1="300" y1="130" x2="500" y2="130" stroke="#4a5568" stroke-width="2"/>
+
+  <!-- Points -->
+  <circle cx="310" cy="130" r="5" fill="#9f7aea"/>
+  <text x="310" y="150" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8" font-weight="bold">-40 000</text>
+  <text x="310" y="160" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">Divergence</text>
+
+  <circle cx="370" cy="130" r="5" fill="#ed8936"/>
+  <text x="370" y="150" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="8" font-weight="bold">-20 000</text>
+  <text x="370" y="160" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">Domestication</text>
+
+  <circle cx="430" cy="130" r="5" fill="#48bb78"/>
+  <text x="430" y="150" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="8" font-weight="bold">-14 000</text>
+  <text x="430" y="160" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">1er chien</text>
+
+  <circle cx="490" cy="130" r="5" fill="#4299e1"/>
+  <text x="490" y="150" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="8" font-weight="bold">XIXe s.</text>
+  <text x="490" y="160" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">Races mod.</text>
+
+  <!-- Key insight -->
+  <rect x="295" y="175" width="210" height="50" fill="#1a202c" rx="4"/>
+  <text x="400" y="195" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Ancêtre commun :</text>
+  <text x="400" y="212" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="11" font-weight="bold">Un loup préhistorique ÉTEINT</text>
+  <text x="400" y="225" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">(pas le loup gris moderne)</text>
+
+  <!-- Section 3: Key stat -->
+  <rect x="540" y="75" width="240" height="160" fill="#2d3748" rx="8" opacity="0.8"/>
+  <text x="660" y="100" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="13" font-weight="bold">RACES PRIMITIVES</text>
+
+  <text x="660" y="130" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Les plus proches du loup :</text>
+
+  <text x="580" y="155" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="bold">1.</text>
+  <text x="595" y="155" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Shiba Inu</text>
+  <text x="720" y="155" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Japon</text>
+
+  <text x="580" y="172" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="bold">2.</text>
+  <text x="595" y="172" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Chow Chow</text>
+  <text x="720" y="172" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Chine</text>
+
+  <text x="580" y="189" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="bold">3.</text>
+  <text x="595" y="189" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Akita Inu</text>
+  <text x="720" y="189" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Japon</text>
+
+  <text x="580" y="206" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="bold">4.</text>
+  <text x="595" y="206" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Malamute</text>
+  <text x="720" y="206" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Alaska</text>
+
+  <text x="660" y="230" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">Moins modifiées au XIXe siècle</text>
+
+  <!-- Bottom section: Key insights -->
+  <rect x="20" y="250" width="375" height="85" fill="#2d3748" rx="8" opacity="0.8"/>
+  <text x="207" y="275" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="13" font-weight="bold">DOUBLE ORIGINE ?</text>
+
+  <circle cx="100" cy="310" r="25" fill="#48bb78" opacity="0.7"/>
+  <text x="100" y="315" text-anchor="middle" fill="#1a202c" font-family="Inter, sans-serif" font-size="9" font-weight="bold">ASIE</text>
+
+  <text x="170" y="310" fill="#a0aec0" font-family="Inter, sans-serif" font-size="20">+</text>
+
+  <circle cx="240" cy="310" r="25" fill="#ed8936" opacity="0.7"/>
+  <text x="240" y="315" text-anchor="middle" fill="#1a202c" font-family="Inter, sans-serif" font-size="9" font-weight="bold">EUROPE</text>
+
+  <text x="290" y="310" fill="#a0aec0" font-family="Inter, sans-serif" font-size="20">=</text>
+
+  <text x="350" y="305" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">Tous les</text>
+  <text x="350" y="320" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="bold">chiens actuels</text>
+
+  <!-- Auto-domestication -->
+  <rect x="405" y="250" width="375" height="85" fill="#2d3748" rx="8" opacity="0.8"/>
+  <text x="592" y="275" text-anchor="middle" fill="#fc8181" font-family="Inter, sans-serif" font-size="13" font-weight="bold">AUTO-DOMESTICATION</text>
+
+  <text x="592" y="300" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Les loups se seraient domestiqués eux-mêmes</text>
+  <text x="592" y="315" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">en se rapprochant des campements humains</text>
+
+  <text x="592" y="335" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="11" font-weight="bold">74,2% des simulations → domestication en &lt;15 000 ans</text>
+
+  <!-- Bottom banner -->
+  <rect x="20" y="350" width="760" height="85" fill="#1a202c" rx="8" stroke="#4a5568" stroke-width="1"/>
+
+  <text x="400" y="375" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">LE CHIFFRE CLÉ</text>
+
+  <text x="140" y="410" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="28" font-weight="bold">64%</text>
+  <text x="140" y="425" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">des races ont de l'ADN</text>
+  <text x="140" y="435" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">de loup post-domestication</text>
+
+  <text x="400" y="410" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="28" font-weight="bold">~400</text>
+  <text x="400" y="425" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">races reconnues</text>
+  <text x="400" y="435" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">aujourd'hui (FCI)</text>
+
+  <text x="660" y="410" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="28" font-weight="bold">1</text>
+  <text x="660" y="425" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">seul ancêtre commun</text>
+  <text x="660" y="435" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">(loup préhistorique)</text>
+
+  <!-- Source -->
+  <text x="400" y="448" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="8">Sources : Nature 2022, PNAS 2024, Projet CanMap Cornell/UCLA</text>
+</svg>

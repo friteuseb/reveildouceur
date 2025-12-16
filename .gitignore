@@ -26,12 +26,16 @@ scripts/
 !scripts/generate-sitemap.py
 !scripts/optimize-images.py
 !scripts/generate-illustrations.py
+!scripts/generate-related-articles.py
 .env
 
 # Python virtual environment
 .venv/
 __pycache__/
 *.pyc
+
+# Cache de similarite semantique
+.similarity_cache/
 api/votes.db
 
 # Fichiers de recherche et notes (générés par Claude)
