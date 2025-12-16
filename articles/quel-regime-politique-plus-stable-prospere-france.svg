@@ -1,0 +1,241 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4299e1"/>
+      <stop offset="100%" style="stop-color:#3182ce"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#dd6b20"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fc8181"/>
+      <stop offset="100%" style="stop-color:#e53e3e"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9f7aea"/>
+      <stop offset="100%" style="stop-color:#805ad5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Régimes politiques français : stabilité et prospérité
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="48" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
+    Du Moyen Âge à nos jours — 1 000 ans d'histoire politique
+  </text>
+
+  <!-- Section 1: Durée des régimes (Timeline bar chart) -->
+  <text x="30" y="75" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+    DURÉE DES RÉGIMES (en années)
+  </text>
+
+  <!-- Timeline bars -->
+  <g transform="translate(30, 85)">
+    <!-- Monarchie Capétienne - 805 ans (scaled to fit) -->
+    <rect x="0" y="0" width="350" height="22" fill="url(#purpleGrad)" rx="2"/>
+    <text x="8" y="15" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Monarchie Capétienne (987-1792)</text>
+    <text x="345" y="15" text-anchor="end" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">805 ans</text>
+
+    <!-- Separator -->
+    <line x1="0" y1="28" x2="350" y2="28" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="175" y="38" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="8" font-style="italic">Révolution 1789</text>
+
+    <!-- IIIe République - 70 ans -->
+    <rect x="0" y="45" width="105" height="16" fill="url(#greenGrad)" rx="2"/>
+    <text x="5" y="56" fill="#1a202c" font-family="Arial, sans-serif" font-size="9" font-weight="bold">IIIe République</text>
+    <text x="110" y="56" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">70 ans</text>
+
+    <!-- Ve République - 67 ans -->
+    <rect x="0" y="64" width="100" height="16" fill="url(#greenGrad)" rx="2"/>
+    <text x="5" y="75" fill="#1a202c" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Ve République</text>
+    <text x="105" y="75" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">67 ans</text>
+
+    <!-- Second Empire - 18 ans -->
+    <rect x="0" y="83" width="27" height="16" fill="url(#blueGrad)" rx="2"/>
+    <text x="32" y="94" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">Second Empire 18 ans</text>
+
+    <!-- IVe République - 12 ans -->
+    <rect x="0" y="102" width="18" height="16" fill="url(#redGrad)" rx="2"/>
+    <text x="23" y="113" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">IVe République 12 ans</text>
+
+    <!-- Légende ratio -->
+    <text x="175" y="135" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="9" font-weight="bold">
+      La monarchie = 11× plus longue que la IIIe République
+    </text>
+  </g>
+
+  <!-- Section 2: Key Stats -->
+  <g transform="translate(420, 65)">
+    <text x="0" y="10" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+      CHIFFRES CLÉS
+    </text>
+
+    <!-- Stat boxes -->
+    <rect x="0" y="20" width="170" height="42" fill="#2d3748" rx="5" stroke="#805ad5" stroke-width="2"/>
+    <text x="85" y="40" text-anchor="middle" fill="#9f7aea" font-family="Arial, sans-serif" font-size="18" font-weight="bold">805</text>
+    <text x="85" y="55" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">ans de monarchie capétienne</text>
+
+    <rect x="180" y="20" width="170" height="42" fill="#2d3748" rx="5" stroke="#4a5568" stroke-width="1"/>
+    <text x="265" y="40" text-anchor="middle" fill="#fc8181" font-family="Arial, sans-serif" font-size="18" font-weight="bold">15</text>
+    <text x="265" y="55" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">constitutions depuis 1789</text>
+
+    <rect x="0" y="70" width="170" height="42" fill="#2d3748" rx="5" stroke="#4a5568" stroke-width="1"/>
+    <text x="85" y="90" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="18" font-weight="bold">104</text>
+    <text x="85" y="105" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">gouvernements (IIIe Rép.)</text>
+
+    <rect x="180" y="70" width="170" height="42" fill="#2d3748" rx="5" stroke="#4a5568" stroke-width="1"/>
+    <text x="265" y="90" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="18" font-weight="bold">28M</text>
+    <text x="265" y="105" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">habitants en 1789 (#1 Europe)</text>
+  </g>
+
+  <!-- Section 3: Timeline économique -->
+  <text x="30" y="250" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+    CROISSANCE ÉCONOMIQUE PAR PÉRIODE
+  </text>
+
+  <!-- Growth chart -->
+  <g transform="translate(30, 265)">
+    <!-- Y axis labels -->
+    <text x="-5" y="5" text-anchor="end" fill="#a0aec0" font-family="Arial, sans-serif" font-size="8">5%</text>
+    <text x="-5" y="40" text-anchor="end" fill="#a0aec0" font-family="Arial, sans-serif" font-size="8">2.5%</text>
+    <text x="-5" y="75" text-anchor="end" fill="#a0aec0" font-family="Arial, sans-serif" font-size="8">0%</text>
+
+    <!-- Grid lines -->
+    <line x1="0" y1="5" x2="350" y2="5" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="0" y1="40" x2="350" y2="40" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="0" y1="75" x2="350" y2="75" stroke="#4a5568" stroke-width="1"/>
+
+    <!-- Bars -->
+    <!-- Moyen Âge ~0.3% -->
+    <rect x="5" y="71" width="40" height="4" fill="url(#purpleGrad)" rx="1"/>
+    <text x="25" y="90" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">Moyen</text>
+    <text x="25" y="98" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">Âge</text>
+    <text x="25" y="66" text-anchor="middle" fill="#9f7aea" font-family="Arial, sans-serif" font-size="8">~0.3%</text>
+
+    <!-- Second Empire 2.4% -->
+    <rect x="55" y="42" width="40" height="33" fill="url(#blueGrad)" rx="2"/>
+    <text x="75" y="90" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">Second</text>
+    <text x="75" y="98" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">Empire</text>
+    <text x="75" y="37" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">2.4%</text>
+
+    <!-- Belle Époque ~3% -->
+    <rect x="105" y="33" width="40" height="42" fill="url(#orangeGrad)" rx="2"/>
+    <text x="125" y="90" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">Belle</text>
+    <text x="125" y="98" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">Époque</text>
+    <text x="125" y="28" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">~3%</text>
+
+    <!-- Trente Glorieuses 5.3% -->
+    <rect x="155" y="5" width="40" height="70" fill="url(#greenGrad)" rx="2"/>
+    <text x="175" y="90" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">Trente</text>
+    <text x="175" y="98" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">Glorieuses</text>
+    <text x="175" y="18" text-anchor="middle" fill="#1a202c" font-family="Arial, sans-serif" font-size="8" font-weight="bold">5.3%</text>
+
+    <!-- 1974-2007 2.2% -->
+    <rect x="205" y="44" width="40" height="31" fill="url(#orangeGrad)" rx="2"/>
+    <text x="225" y="90" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">1974-</text>
+    <text x="225" y="98" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">2007</text>
+    <text x="225" y="39" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">2.2%</text>
+
+    <!-- 2007-2024 ~0.8% -->
+    <rect x="255" y="64" width="40" height="11" fill="url(#redGrad)" rx="2"/>
+    <text x="275" y="90" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">2007-</text>
+    <text x="275" y="98" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">2024</text>
+    <text x="275" y="59" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">~0.8%</text>
+  </g>
+
+  <!-- Section 4: Le paradoxe -->
+  <g transform="translate(420, 250)">
+    <text x="0" y="0" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+      LE PARADOXE FRANÇAIS
+    </text>
+
+    <rect x="0" y="10" width="350" height="100" fill="#2d3748" rx="5" stroke="#4a5568" stroke-width="1"/>
+
+    <!-- Paradox content -->
+    <text x="175" y="30" text-anchor="middle" fill="#9f7aea" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+      Monarchie capétienne
+    </text>
+    <text x="175" y="45" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">
+      805 ans de stabilité, 1 régime
+    </text>
+
+    <text x="175" y="65" text-anchor="middle" fill="#fc8181" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+      Depuis 1789
+    </text>
+    <text x="175" y="80" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">
+      236 ans, 12 régimes, 15 constitutions
+    </text>
+
+    <text x="175" y="100" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="8" font-style="italic">
+      Stabilité ≠ Prospérité — IVe Rép. instable mais +5% croissance
+    </text>
+  </g>
+
+  <!-- Section 5: Comparaison internationale -->
+  <text x="30" y="395" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+    DURÉE MOYENNE PAR TYPE DE RÉGIME
+  </text>
+
+  <g transform="translate(30, 410)">
+    <!-- Monarchie française -->
+    <rect x="0" y="0" width="200" height="20" fill="url(#purpleGrad)" rx="2"/>
+    <text x="10" y="14" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Monarchie française</text>
+    <text x="195" y="14" text-anchor="end" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">805 ans</text>
+
+    <!-- Républiques moyennes -->
+    <rect x="0" y="25" width="30" height="20" fill="url(#greenGrad)" rx="2"/>
+    <text x="35" y="39" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">Républiques françaises (moy.)</text>
+    <text x="195" y="39" text-anchor="end" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">~25 ans</text>
+
+    <!-- Empires moyennes -->
+    <rect x="0" y="50" width="20" height="20" fill="url(#blueGrad)" rx="2"/>
+    <text x="25" y="64" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">Empires français (moy.)</text>
+    <text x="195" y="64" text-anchor="end" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">~14 ans</text>
+  </g>
+
+  <!-- Comparaison internationale -->
+  <g transform="translate(420, 395)">
+    <text x="0" y="0" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+      CONSTITUTIONS DEPUIS 1789
+    </text>
+
+    <g transform="translate(0, 15)">
+      <!-- Countries -->
+      <circle cx="15" cy="15" r="10" fill="#48bb78"/>
+      <text x="15" y="19" text-anchor="middle" fill="#1a202c" font-family="Arial, sans-serif" font-size="9" font-weight="bold">1</text>
+      <text x="32" y="19" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">USA</text>
+
+      <circle cx="85" cy="15" r="10" fill="#48bb78"/>
+      <text x="85" y="19" text-anchor="middle" fill="#1a202c" font-family="Arial, sans-serif" font-size="9" font-weight="bold">0</text>
+      <text x="102" y="19" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">UK</text>
+
+      <circle cx="155" cy="15" r="10" fill="#4299e1"/>
+      <text x="155" y="19" text-anchor="middle" fill="#1a202c" font-family="Arial, sans-serif" font-size="9" font-weight="bold">4</text>
+      <text x="172" y="19" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Allemagne</text>
+
+      <circle cx="260" cy="15" r="10" fill="#fc8181"/>
+      <text x="260" y="19" text-anchor="middle" fill="#1a202c" font-family="Arial, sans-serif" font-size="9" font-weight="bold">15</text>
+      <text x="277" y="19" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">France</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="492" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="8">
+    Sources : Conseil constitutionnel, INSEE, Claude Gauvard, Angus Maddison, Michel Winock — reveildouceur.fr
+  </text>
+</svg>
