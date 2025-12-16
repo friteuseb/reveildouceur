@@ -26,6 +26,16 @@
         <li><a href="/confidentialite.php" class="footer__link">Confidentialité</a></li>
       </ul>
     </div>
+
+    <div class="footer__newsletter">
+      <h3 class="footer__title">Newsletter</h3>
+      <p class="footer__newsletter-desc">Recevez les nouveaux articles directement dans votre boîte mail.</p>
+      <form class="footer__newsletter-form" id="newsletter-form">
+        <input type="email" name="email" placeholder="Votre email" required class="footer__newsletter-input" aria-label="Adresse email">
+        <button type="submit" class="footer__newsletter-btn">S'inscrire</button>
+      </form>
+      <p class="footer__newsletter-status" id="newsletter-status"></p>
+    </div>
   </div>
 
   <div class="container footer__bottom">

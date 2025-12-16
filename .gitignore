@@ -20,6 +20,7 @@ Thumbs.db
 
 # Configuration sensible (credentials)
 config/mail.php
+config/brevo.php
 
 # Scripts avec tokens API
 scripts/

@@ -1334,6 +1334,74 @@
   };
 
   // ========================================
+  // Newsletter
+  // ========================================
+
+  const NewsletterManager = {
+    form: null,
+    input: null,
+    button: null,
+    status: null,
+
+    init() {
+      this.form = document.getElementById('newsletter-form');
+      if (!this.form) return;
+
+      this.input = this.form.querySelector('input[type="email"]');
+      this.button = this.form.querySelector('button[type="submit"]');
+      this.status = document.getElementById('newsletter-status');
+
+      this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    },
+
+    async handleSubmit(e) {
+      e.preventDefault();
+
+      const email = this.input?.value?.trim();
+      if (!email) return;
+
+      // Désactiver le bouton pendant la requête
+      if (this.button) {
+        this.button.disabled = true;
+        this.button.textContent = 'Envoi...';
+      }
+
+      this.setStatus('', '');
+
+      try {
+        const response = await fetch('/api/newsletter.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          this.setStatus(data.message, 'success');
+          this.input.value = '';
+        } else {
+          this.setStatus(data.message || 'Une erreur est survenue.', 'error');
+        }
+      } catch (error) {
+        console.error('Erreur newsletter:', error);
+        this.setStatus('Erreur de connexion. Veuillez réessayer.', 'error');
+      } finally {
+        if (this.button) {
+          this.button.disabled = false;
+          this.button.textContent = "S'inscrire";
+        }
+      }
+    },
+
+    setStatus(message, type) {
+      if (!this.status) return;
+      this.status.textContent = message;
+      this.status.className = 'footer__newsletter-status' + (type ? ' ' + type : '');
+    }
+  };
+
+  // ========================================
   // Initialisation
   // ========================================
 
@@ -1378,6 +1446,9 @@
 
     // Initialiser les votes pour les pages article (insertion automatique)
     await VoteManager.initArticleVotes();
+
+    // Initialiser la newsletter
+    NewsletterManager.init();
   }
 
   if (document.readyState === 'loading') {
