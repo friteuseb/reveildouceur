@@ -204,22 +204,22 @@
     <text x="0" y="0" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">PROGRÈS DEPUIS 1789</text>
 
     <rect x="0" y="12" width="230" height="22" fill="#2d3748" rx="3"/>
-    <text x="8" y="27" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Espérance de vie</text>
-    <text x="115" y="27" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="9">28 ans</text>
+    <text x="8" y="27" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Esp. vie (naissance)</text>
+    <text x="115" y="27" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="9">29 ans</text>
     <text x="150" y="27" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
-    <text x="180" y="27" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">82 ans</text>
+    <text x="180" y="27" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">82 (×3)</text>
 
     <rect x="0" y="38" width="230" height="22" fill="#2d3748" rx="3"/>
-    <text x="8" y="53" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Mortalité infantile</text>
-    <text x="115" y="53" fill="#fc8181" font-family="Inter, sans-serif" font-size="9">250‰</text>
+    <text x="8" y="53" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Esp. vie (à 20 ans)</text>
+    <text x="115" y="53" fill="#ed8936" font-family="Inter, sans-serif" font-size="9">57 ans</text>
     <text x="150" y="53" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
-    <text x="180" y="53" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">3‰</text>
+    <text x="180" y="53" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">83 (×1,5)</text>
 
     <rect x="0" y="64" width="230" height="22" fill="#2d3748" rx="3"/>
-    <text x="8" y="79" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Alphabétisation</text>
-    <text x="115" y="79" fill="#ed8936" font-family="Inter, sans-serif" font-size="9">37%</text>
+    <text x="8" y="79" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Mortalité infantile</text>
+    <text x="115" y="79" fill="#fc8181" font-family="Inter, sans-serif" font-size="9">250‰</text>
     <text x="150" y="79" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
-    <text x="180" y="79" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">99%</text>
+    <text x="180" y="79" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">3‰ (÷80)</text>
   </g>
 
   <!-- BOTTOM RIGHT: Insight -->

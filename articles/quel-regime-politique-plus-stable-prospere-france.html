@@ -778,7 +778,8 @@
               <thead>
                 <tr>
                   <th>Période</th>
-                  <th>Espérance de vie</th>
+                  <th>Esp. vie (naissance)</th>
+                  <th>Esp. vie (à 20 ans)</th>
                   <th>PIB/hab. ($1990)</th>
                   <th>Alphabétisation</th>
                   <th>Mortalité infantile</th>
@@ -788,6 +789,7 @@
                 <tr>
                   <td>Moyen Âge (XIIIe s.)</td>
                   <td>~25-30 ans</td>
+                  <td class="text-warning"><strong>~50-55 ans</strong></td>
                   <td>~700 $</td>
                   <td>&lt;5%</td>
                   <td>~300‰</td>
@@ -795,6 +797,7 @@
                 <tr>
                   <td>Fin Ancien Régime (1789)</td>
                   <td>~28-30 ans</td>
+                  <td class="text-warning"><strong>~55-60 ans</strong></td>
                   <td>~1 100 $</td>
                   <td>~37%</td>
                   <td>~250‰</td>
@@ -802,6 +805,7 @@
                 <tr>
                   <td>Second Empire (1870)</td>
                   <td>~40 ans</td>
+                  <td>~58-60 ans</td>
                   <td>~1 900 $</td>
                   <td>~70%</td>
                   <td>~180‰</td>
@@ -809,6 +813,7 @@
                 <tr>
                   <td>Belle Époque (1913)</td>
                   <td>~50 ans</td>
+                  <td>~62-65 ans</td>
                   <td>~3 500 $</td>
                   <td>~95%</td>
                   <td>~120‰</td>
@@ -816,6 +821,7 @@
                 <tr>
                   <td>IVe République (1958)</td>
                   <td>~68 ans</td>
+                  <td>~71 ans</td>
                   <td>~6 500 $</td>
                   <td>~99%</td>
                   <td>~35‰</td>
@@ -823,6 +829,7 @@
                 <tr>
                   <td>Ve République (2024)</td>
                   <td class="text-success"><strong>~82 ans</strong></td>
+                  <td class="text-success"><strong>~83 ans</strong></td>
                   <td class="text-success"><strong>~38 000 $</strong></td>
                   <td>~99%</td>
                   <td class="text-success"><strong>~3‰</strong></td>
@@ -836,79 +843,108 @@
           </p>
 
           <ul>
-            <li><strong>L'espérance de vie à la naissance a triplé</strong> entre l'Ancien Régime et aujourd'hui</li>
+            <li><strong>L'espérance de vie à la naissance a triplé</strong> (27 → 82 ans), mais <strong>à 20 ans elle n'a augmenté que de 50%</strong> (55 → 83 ans)</li>
             <li><strong>Le PIB par habitant a été multiplié par 35</strong> depuis 1789 (en dollars constants)</li>
             <li><strong>La mortalité infantile divisée par 80</strong> : de 250 décès pour 1000 naissances à 3</li>
             <li><strong>L'alphabétisation universelle</strong> n'a été atteinte qu'à la Belle Époque (lois Ferry, 1881-82)</li>
           </ul>
 
           <div class="article__note">
-            <strong>Nuance importante sur l'espérance de vie :</strong> Les chiffres de 25-30 ans au Moyen Âge sont des moyennes <em>à la naissance</em>, fortement tirées vers le bas par la mortalité infantile massive (~250-300‰). Un adulte qui survivait à l'enfance pouvait espérer vivre jusqu'à <strong>50-60 ans</strong>. Le vrai progrès n'est pas tant l'allongement de la vie adulte que l'effondrement de la mortalité infantile : aujourd'hui, 99,7% des enfants atteignent l'âge adulte contre ~70% au XVIIIe siècle.
+            <strong>Pourquoi deux colonnes d'espérance de vie ?</strong> Les chiffres "à la naissance" (25-30 ans au Moyen Âge) sont des moyennes tirées vers le bas par la mortalité infantile massive (~300‰). Un adulte de 20 ans au XIIIe siècle pouvait espérer vivre encore <strong>30-35 ans</strong>, soit jusqu'à 50-55 ans au total. Aujourd'hui, à 20 ans, on peut espérer vivre encore 63 ans (83 ans total). <strong>Le gain réel pour un adulte est de ~50%</strong>, pas de 200%. Le vrai miracle moderne, c'est l'effondrement de la mortalité infantile : 99,7% des enfants atteignent l'âge adulte contre ~70% au XVIIIe siècle.
           </div>
 
           <p>
             Ces progrès ne sont pas linéaires : l'essentiel s'est produit après 1850. La monarchie capétienne était stable, mais les conditions de vie restaient précaires. Un paysan du XIIIe siècle et un paysan de 1789 vivaient de façon assez similaire. C'est la révolution industrielle, puis les Trente Glorieuses, qui ont transformé radicalement le quotidien des Français.
           </p>
 
-          <!-- Graphique inline : Évolution espérance de vie -->
+          <!-- Graphique inline : Évolution espérance de vie (2 courbes) -->
           <figure class="article__chart">
-            <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Évolution de l'espérance de vie en France">
+            <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparaison espérance de vie à la naissance vs à 20 ans">
               <defs>
-                <linearGradient id="lifeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <linearGradient id="birthGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" style="stop-color:#805ad5"/>
-                  <stop offset="50%" style="stop-color:#ed8936"/>
+                  <stop offset="100%" style="stop-color:#48bb78"/>
+                </linearGradient>
+                <linearGradient id="adultGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#ed8936"/>
                   <stop offset="100%" style="stop-color:#48bb78"/>
                 </linearGradient>
               </defs>
-              <rect width="700" height="200" fill="#1a202c" rx="8"/>
-              <text x="350" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Espérance de vie en France (en années)</text>
+              <rect width="700" height="240" fill="#1a202c" rx="8"/>
+              <text x="350" y="22" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Espérance de vie : à la naissance vs à 20 ans</text>
+              <text x="350" y="38" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Le vrai gain pour un adulte est bien moindre qu'il n'y paraît</text>
 
               <!-- Y axis -->
-              <text x="35" y="55" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">80</text>
-              <text x="35" y="95" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">50</text>
-              <text x="35" y="135" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">25</text>
-              <line x1="40" y1="50" x2="680" y2="50" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
-              <line x1="40" y1="90" x2="680" y2="90" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
-              <line x1="40" y1="130" x2="680" y2="130" stroke="#4a5568" stroke-width="1"/>
+              <text x="35" y="70" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">85</text>
+              <text x="35" y="100" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">55</text>
+              <text x="35" y="130" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">25</text>
+              <line x1="40" y1="65" x2="580" y2="65" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="40" y1="95" x2="580" y2="95" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="40" y1="125" x2="580" y2="125" stroke="#4a5568" stroke-width="1"/>
 
-              <!-- Data points and line -->
-              <polyline points="80,128 180,125 280,105 380,85 480,62 580,48 650,45" fill="none" stroke="url(#lifeGrad)" stroke-width="3"/>
-              <circle cx="80" cy="128" r="5" fill="#9f7aea"/>
-              <circle cx="180" cy="125" r="5" fill="#9f7aea"/>
-              <circle cx="280" cy="105" r="5" fill="#ed8936"/>
-              <circle cx="380" cy="85" r="5" fill="#ed8936"/>
-              <circle cx="480" cy="62" r="5" fill="#48bb78"/>
-              <circle cx="580" cy="48" r="5" fill="#48bb78"/>
-              <circle cx="650" cy="45" r="6" fill="#48bb78" stroke="#fff" stroke-width="2"/>
+              <!-- Courbe "à 20 ans" (en haut, plus stable) -->
+              <polyline points="70,97 150,93 250,87 350,82 450,72 540,67" fill="none" stroke="#ed8936" stroke-width="3" opacity="0.9"/>
+              <circle cx="70" cy="97" r="4" fill="#ed8936"/>
+              <circle cx="150" cy="93" r="4" fill="#ed8936"/>
+              <circle cx="250" cy="87" r="4" fill="#ed8936"/>
+              <circle cx="350" cy="82" r="4" fill="#ed8936"/>
+              <circle cx="450" cy="72" r="4" fill="#ed8936"/>
+              <circle cx="540" cy="67" r="5" fill="#ed8936" stroke="#fff" stroke-width="1"/>
 
-              <!-- Labels -->
-              <text x="80" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">XIIIe</text>
-              <text x="80" y="160" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~27</text>
+              <!-- Courbe "à la naissance" (en bas, montée spectaculaire) -->
+              <polyline points="70,122 150,120 250,108 350,95 450,78 540,68" fill="none" stroke="#9f7aea" stroke-width="3"/>
+              <circle cx="70" cy="122" r="4" fill="#9f7aea"/>
+              <circle cx="150" cy="120" r="4" fill="#9f7aea"/>
+              <circle cx="250" cy="108" r="4" fill="#9f7aea"/>
+              <circle cx="350" cy="95" r="4" fill="#9f7aea"/>
+              <circle cx="450" cy="78" r="4" fill="#9f7aea"/>
+              <circle cx="540" cy="68" r="5" fill="#48bb78" stroke="#fff" stroke-width="2"/>
 
-              <text x="180" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1789</text>
-              <text x="180" y="160" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~29</text>
+              <!-- Zone de convergence (les deux courbes se rejoignent) -->
+              <polygon points="450,78 540,68 540,67 450,72" fill="#48bb78" opacity="0.3"/>
 
-              <text x="280" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1870</text>
-              <text x="280" y="160" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~40</text>
+              <!-- Labels X axis -->
+              <text x="70" y="145" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">XIIIe</text>
+              <text x="150" y="145" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1789</text>
+              <text x="250" y="145" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1870</text>
+              <text x="350" y="145" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1913</text>
+              <text x="450" y="145" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1958</text>
+              <text x="540" y="145" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="8" font-weight="bold">2024</text>
 
-              <text x="380" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1913</text>
-              <text x="380" y="160" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~50</text>
+              <!-- Valeurs naissance -->
+              <text x="70" y="158" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8">27</text>
+              <text x="150" y="158" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8">29</text>
+              <text x="250" y="158" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8">40</text>
+              <text x="350" y="158" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8">50</text>
+              <text x="450" y="158" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8">68</text>
+              <text x="540" y="158" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">82</text>
 
-              <text x="480" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1958</text>
-              <text x="480" y="160" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~68</text>
+              <!-- Valeurs à 20 ans -->
+              <text x="70" y="170" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="8">52</text>
+              <text x="150" y="170" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="8">57</text>
+              <text x="250" y="170" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="8">59</text>
+              <text x="350" y="170" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="8">63</text>
+              <text x="450" y="170" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="8">71</text>
+              <text x="540" y="170" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">83</text>
 
-              <text x="580" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1980</text>
-              <text x="580" y="160" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~74</text>
+              <!-- Légende -->
+              <g transform="translate(50, 185)">
+                <rect x="0" y="0" width="12" height="12" fill="#9f7aea" rx="2"/>
+                <text x="18" y="10" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">À la naissance (×3 en 800 ans)</text>
 
-              <text x="650" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">2024</text>
-              <text x="650" y="160" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="bold">82</text>
+                <rect x="200" y="0" width="12" height="12" fill="#ed8936" rx="2"/>
+                <text x="218" y="10" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">À 20 ans (×1,6 en 800 ans)</text>
+              </g>
 
-              <!-- Annotation -->
-              <rect x="420" y="38" width="120" height="30" fill="#2d3748" rx="4" stroke="#48bb78" stroke-width="1"/>
-              <text x="480" y="52" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">×3 en 800 ans</text>
-              <text x="480" y="64" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">essentiel après 1850</text>
+              <!-- Insight box -->
+              <rect x="590" y="60" width="100" height="75" fill="#2d3748" rx="4" stroke="#ed8936" stroke-width="1"/>
+              <text x="640" y="78" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="bold">ÉCART</text>
+              <text x="640" y="93" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">XIIIe : 25 ans</text>
+              <text x="640" y="105" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">(52-27)</text>
+              <text x="640" y="120" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="8">2024 : 1 an</text>
+              <text x="640" y="132" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">(83-82)</text>
             </svg>
-            <figcaption>Espérance de vie à la naissance (tirée vers le bas par la mortalité infantile avant 1900)</figcaption>
+            <figcaption>La convergence des deux courbes montre que le vrai progrès est la chute de la mortalité infantile</figcaption>
           </figure>
 
           <h2>Les vraies "Trente Glorieuses" économiques</h2>
@@ -1115,9 +1151,9 @@
           </p>
 
           <ul>
-            <li><strong>L'espérance de vie à la naissance a triplé</strong> — mais c'est surtout la mortalité infantile qui a chuté (un adulte du XVIIIe vivait déjà jusqu'à 50-60 ans)</li>
+            <li><strong>L'espérance de vie à la naissance a triplé</strong> (27 → 82 ans), mais <strong>à 20 ans elle n'a augmenté que de 60%</strong> (52 → 83 ans)</li>
             <li><strong>Le PIB par habitant a été multiplié par 35</strong> depuis la Révolution (en dollars constants)</li>
-            <li><strong>La mortalité infantile divisée par 80</strong> : de 250‰ à 3‰ — le vrai progrès</li>
+            <li><strong>La mortalité infantile divisée par 80</strong> : de 250‰ à 3‰ — c'est le vrai miracle médical moderne</li>
             <li>Un paysan de 1789 vivait à peine mieux qu'un paysan du XIIIe siècle — c'est l'industrialisation qui a tout changé</li>
           </ul>
 
