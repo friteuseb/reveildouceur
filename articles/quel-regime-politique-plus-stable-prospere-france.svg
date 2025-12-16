@@ -30,188 +30,212 @@
   <rect width="800" height="450" fill="url(#bgGrad)"/>
 
   <!-- Title -->
-  <text x="400" y="26" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="bold">Régimes politiques français : stabilité et prospérité</text>
-  <text x="400" y="42" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="10">De 987 à nos jours — 1 000 ans d'histoire en chiffres</text>
+  <text x="400" y="26" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="bold">Régimes politiques français : 1 000 ans en chiffres</text>
+  <text x="400" y="42" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="10">De Hugues Capet (987) à la Ve République (2024)</text>
 
-  <!-- LEFT: Durée des régimes -->
+  <!-- LEFT: Timeline dynasties -->
   <g transform="translate(20, 55)">
-    <text x="0" y="0" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">DURÉE DES RÉGIMES</text>
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">DYNASTIES &amp; RÉGIMES</text>
 
-    <rect x="0" y="10" width="240" height="22" fill="url(#purpleGrad)" rx="3"/>
-    <text x="6" y="25" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="bold">Monarchie Capétienne</text>
-    <text x="234" y="25" text-anchor="end" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">805 ans</text>
+    <!-- Monarchie capétienne -->
+    <rect x="0" y="12" width="230" height="20" fill="url(#purpleGrad)" rx="3"/>
+    <text x="6" y="26" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">Capétiens directs</text>
+    <text x="224" y="26" text-anchor="end" fill="#e9d8fd" font-family="Inter, Arial, sans-serif" font-size="8">341 ans</text>
 
-    <line x1="0" y1="38" x2="240" y2="38" stroke="#ed8936" stroke-width="1" stroke-dasharray="3,2"/>
-    <text x="120" y="48" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="7">1789</text>
+    <rect x="0" y="34" width="175" height="20" fill="#6b46c1" rx="3"/>
+    <text x="6" y="48" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">Valois</text>
+    <text x="169" y="48" text-anchor="end" fill="#e9d8fd" font-family="Inter, Arial, sans-serif" font-size="8">261 ans</text>
 
-    <rect x="0" y="55" width="70" height="16" fill="url(#greenGrad)" rx="2"/>
-    <text x="4" y="66" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">IIIe Rép.</text>
-    <text x="75" y="66" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="bold">70 ans</text>
+    <rect x="0" y="56" width="135" height="20" fill="#805ad5" rx="3"/>
+    <text x="6" y="70" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">Bourbons</text>
+    <text x="129" y="70" text-anchor="end" fill="#e9d8fd" font-family="Inter, Arial, sans-serif" font-size="8">203 ans</text>
 
-    <rect x="0" y="74" width="67" height="16" fill="url(#greenGrad)" rx="2"/>
-    <text x="4" y="85" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">Ve Rép.</text>
-    <text x="72" y="85" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="bold">67 ans</text>
+    <!-- Séparateur 1789 -->
+    <line x1="0" y1="82" x2="230" y2="82" stroke="#ed8936" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="115" y="92" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="bold">1789</text>
 
-    <rect x="0" y="93" width="12" height="16" fill="url(#redGrad)" rx="2"/>
-    <text x="17" y="104" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">IVe Rép. 12 ans</text>
+    <!-- Post-1789 -->
+    <rect x="0" y="98" width="45" height="14" fill="url(#greenGrad)" rx="2"/>
+    <text x="50" y="109" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="8">IIIe Rép. 70 ans</text>
+
+    <rect x="0" y="114" width="43" height="14" fill="url(#greenGrad)" rx="2"/>
+    <text x="48" y="125" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="8">Ve Rép. 67 ans</text>
+
+    <rect x="115" y="98" width="8" height="14" fill="url(#redGrad)" rx="2"/>
+    <text x="128" y="109" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">IVe 12 ans</text>
+
+    <text x="115" y="140" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="8">+ 10 autres régimes</text>
   </g>
 
   <!-- CENTER TOP: Key Stats -->
-  <g transform="translate(280, 55)">
-    <text x="115" y="0" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">CHIFFRES CLÉS</text>
+  <g transform="translate(270, 55)">
+    <text x="100" y="0" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">CHIFFRES CLÉS</text>
 
-    <rect x="0" y="10" width="110" height="45" fill="#2d3748" rx="4" stroke="#805ad5" stroke-width="1"/>
-    <text x="55" y="30" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="bold">805</text>
-    <text x="55" y="45" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="7">ans monarchie</text>
+    <rect x="0" y="10" width="95" height="50" fill="#2d3748" rx="4" stroke="#805ad5" stroke-width="1"/>
+    <text x="47" y="32" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="bold">805</text>
+    <text x="47" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">ans monarchie</text>
 
-    <rect x="120" y="10" width="110" height="45" fill="#2d3748" rx="4" stroke="#4a5568" stroke-width="1"/>
-    <text x="175" y="30" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="bold">15</text>
-    <text x="175" y="45" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="7">constitutions</text>
+    <rect x="105" y="10" width="95" height="50" fill="#2d3748" rx="4" stroke="#fc8181" stroke-width="1"/>
+    <text x="152" y="32" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="bold">12</text>
+    <text x="152" y="50" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">régimes depuis 1789</text>
 
-    <rect x="0" y="60" width="110" height="45" fill="#2d3748" rx="4" stroke="#48bb78" stroke-width="1"/>
-    <text x="55" y="80" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="bold">5,3%</text>
-    <text x="55" y="95" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="7">croiss. max (30 Gl.)</text>
+    <rect x="0" y="65" width="95" height="50" fill="#2d3748" rx="4" stroke="#48bb78" stroke-width="1"/>
+    <text x="47" y="87" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="bold">×35</text>
+    <text x="47" y="105" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">PIB/hab depuis 1789</text>
 
-    <rect x="120" y="60" width="110" height="45" fill="#2d3748" rx="4" stroke="#4a5568" stroke-width="1"/>
-    <text x="175" y="80" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="bold">×35</text>
-    <text x="175" y="95" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="7">PIB/hab depuis 1789</text>
+    <rect x="105" y="65" width="95" height="50" fill="#2d3748" rx="4" stroke="#ed8936" stroke-width="1"/>
+    <text x="152" y="87" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="bold">×11</text>
+    <text x="152" y="105" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">population (6M→68M)</text>
   </g>
 
-  <!-- RIGHT: Indicateurs multidimensionnels -->
-  <g transform="translate(530, 55)">
-    <text x="120" y="0" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">PROGRÈS DEPUIS 1789</text>
+  <!-- RIGHT: Population évolution -->
+  <g transform="translate(500, 55)">
+    <text x="130" y="0" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">POPULATION FRANÇAISE</text>
 
-    <rect x="0" y="10" width="250" height="28" fill="#2d3748" rx="4"/>
-    <text x="10" y="28" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Espérance de vie</text>
-    <text x="130" y="28" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="9">28 ans</text>
-    <text x="175" y="28" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
-    <text x="210" y="28" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">82 ans</text>
+    <!-- Mini chart -->
+    <line x1="10" y1="100" x2="270" y2="100" stroke="#4a5568" stroke-width="1"/>
+    <polyline points="10,90 50,85 90,65 130,85 170,70 210,55 250,40" fill="none" stroke="#48bb78" stroke-width="2"/>
+    <circle cx="10" cy="90" r="3" fill="#9f7aea"/>
+    <circle cx="90" cy="65" r="3" fill="#9f7aea"/>
+    <circle cx="130" cy="85" r="3" fill="#fc8181"/>
+    <circle cx="170" cy="70" r="4" fill="#ed8936" stroke="#fff" stroke-width="1"/>
+    <circle cx="250" cy="40" r="4" fill="#48bb78" stroke="#fff" stroke-width="1"/>
 
-    <rect x="0" y="42" width="250" height="28" fill="#2d3748" rx="4"/>
-    <text x="10" y="60" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Mortalité infantile</text>
-    <text x="130" y="60" fill="#fc8181" font-family="Inter, sans-serif" font-size="9">250‰</text>
-    <text x="175" y="60" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
-    <text x="210" y="60" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">3‰</text>
+    <text x="10" y="110" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">1000</text>
+    <text x="10" y="118" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="7">6M</text>
 
-    <rect x="0" y="74" width="250" height="28" fill="#2d3748" rx="4"/>
-    <text x="10" y="92" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Alphabétisation</text>
-    <text x="130" y="92" fill="#ed8936" font-family="Inter, sans-serif" font-size="9">37%</text>
-    <text x="175" y="92" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
-    <text x="210" y="92" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">99%</text>
+    <text x="90" y="110" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">1300</text>
+    <text x="90" y="118" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="7">20M</text>
+
+    <text x="130" y="110" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="6">Peste</text>
+    <text x="130" y="118" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="7">10M</text>
+
+    <text x="170" y="110" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="6" font-weight="bold">1789</text>
+    <text x="170" y="118" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="bold">28M</text>
+
+    <text x="250" y="110" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="6" font-weight="bold">2024</text>
+    <text x="250" y="118" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">68M</text>
   </g>
 
-  <!-- MIDDLE LEFT: Croissance économique -->
-  <g transform="translate(20, 175)">
-    <text x="0" y="0" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">CROISSANCE PAR PÉRIODE</text>
+  <!-- MIDDLE: Croissance économique -->
+  <g transform="translate(20, 210)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">CROISSANCE PAR ÉPOQUE</text>
 
     <text x="0" y="22" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="7">6%</text>
     <text x="0" y="47" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="7">3%</text>
     <text x="0" y="72" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="7">0%</text>
-    <line x1="15" y1="18" x2="240" y2="18" stroke="#4a5568" stroke-width="1" stroke-dasharray="2,2"/>
-    <line x1="15" y1="43" x2="240" y2="43" stroke="#4a5568" stroke-width="1" stroke-dasharray="2,2"/>
-    <line x1="15" y1="68" x2="240" y2="68" stroke="#4a5568" stroke-width="1"/>
+    <line x1="15" y1="18" x2="230" y2="18" stroke="#4a5568" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="15" y1="43" x2="230" y2="43" stroke="#4a5568" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="15" y1="68" x2="230" y2="68" stroke="#4a5568" stroke-width="1"/>
 
-    <rect x="20" y="65" width="28" height="3" fill="url(#purpleGrad)" rx="1"/>
-    <text x="34" y="60" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="7">0,2%</text>
-    <text x="34" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">M.Â.</text>
+    <rect x="20" y="65" width="25" height="3" fill="url(#purpleGrad)" rx="1"/>
+    <text x="32" y="60" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="7">0,2%</text>
+    <text x="32" y="80" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="6">M.Â.</text>
 
-    <rect x="55" y="62" width="28" height="6" fill="url(#purpleGrad)" rx="1"/>
-    <text x="69" y="57" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="7">0,5%</text>
-    <text x="69" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">XVIIIe</text>
+    <rect x="52" y="62" width="25" height="6" fill="url(#purpleGrad)" rx="1"/>
+    <text x="64" y="57" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="7">0,5%</text>
+    <text x="64" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">XVIIIe</text>
 
-    <rect x="90" y="48" width="28" height="20" fill="url(#blueGrad)" rx="2"/>
-    <text x="104" y="43" text-anchor="middle" fill="#4299e1" font-family="Inter, Arial, sans-serif" font-size="7">2,4%</text>
-    <text x="104" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">Emp.</text>
+    <rect x="84" y="48" width="25" height="20" fill="url(#blueGrad)" rx="2"/>
+    <text x="96" y="43" text-anchor="middle" fill="#4299e1" font-family="Inter, Arial, sans-serif" font-size="7">2,4%</text>
+    <text x="96" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">Emp.</text>
 
-    <rect x="125" y="43" width="28" height="25" fill="url(#orangeGrad)" rx="2"/>
-    <text x="139" y="38" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="7">3%</text>
-    <text x="139" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">B.Ép.</text>
+    <rect x="116" y="43" width="25" height="25" fill="url(#orangeGrad)" rx="2"/>
+    <text x="128" y="38" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="7">3%</text>
+    <text x="128" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">B.Ép.</text>
 
-    <rect x="160" y="18" width="32" height="50" fill="url(#greenGrad)" rx="2"/>
-    <text x="176" y="14" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">5,3%</text>
-    <text x="176" y="80" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="6" font-weight="bold">30 Gl.</text>
+    <rect x="148" y="18" width="30" height="50" fill="url(#greenGrad)" rx="2"/>
+    <text x="163" y="14" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">5,3%</text>
+    <text x="163" y="80" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="6" font-weight="bold">30 Gl.</text>
 
-    <rect x="200" y="58" width="28" height="10" fill="url(#redGrad)" rx="2"/>
-    <text x="214" y="53" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="7">0,8%</text>
-    <text x="214" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">Auj.</text>
+    <rect x="186" y="58" width="25" height="10" fill="url(#redGrad)" rx="2"/>
+    <text x="198" y="53" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="7">0,8%</text>
+    <text x="198" y="80" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">Auj.</text>
   </g>
 
   <!-- MIDDLE RIGHT: Paradox box -->
-  <g transform="translate(280, 175)">
-    <rect x="0" y="0" width="500" height="85" fill="#2d3748" rx="5" stroke="#ed8936" stroke-width="2"/>
-    <text x="250" y="18" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="bold">LE PARADOXE FRANÇAIS</text>
+  <g transform="translate(270, 210)">
+    <rect x="0" y="0" width="510" height="85" fill="#2d3748" rx="5" stroke="#ed8936" stroke-width="2"/>
+    <text x="255" y="16" text-anchor="middle" fill="#ed8936" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="bold">LE PARADOXE FRANÇAIS</text>
 
-    <text x="85" y="38" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">Monarchie</text>
-    <text x="85" y="52" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="12">805 ans • 1 régime</text>
-    <text x="85" y="66" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">Stable mais vie précaire</text>
+    <text x="75" y="35" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">Ancien Régime</text>
+    <text x="75" y="50" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="11">805 ans • 1 régime</text>
+    <text x="75" y="65" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">Stable mais vie précaire</text>
+    <text x="75" y="78" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="7">esp. vie ~28 ans | PIB 1 100 $</text>
 
-    <line x1="175" y1="28" x2="175" y2="78" stroke="#4a5568" stroke-width="1"/>
+    <line x1="160" y1="25" x2="160" y2="80" stroke="#4a5568" stroke-width="1"/>
 
-    <text x="270" y="38" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">Depuis 1789</text>
-    <text x="270" y="52" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="12">236 ans • 12 régimes</text>
-    <text x="270" y="66" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">Instable mais prospère</text>
+    <text x="255" y="35" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">Depuis 1789</text>
+    <text x="255" y="50" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="11">236 ans • 12 régimes</text>
+    <text x="255" y="65" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">Instable mais prospère</text>
+    <text x="255" y="78" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="7">esp. vie 82 ans | PIB 38 000 $</text>
 
-    <line x1="365" y1="28" x2="365" y2="78" stroke="#4a5568" stroke-width="1"/>
+    <line x1="355" y1="25" x2="355" y2="80" stroke="#4a5568" stroke-width="1"/>
 
-    <text x="435" y="42" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="bold">Industrialisation</text>
-    <text x="435" y="56" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="9">= vraie rupture</text>
-    <text x="435" y="70" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">Pas le régime</text>
+    <text x="435" y="40" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="bold">Conclusion</text>
+    <text x="435" y="55" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="9">L'industrialisation</text>
+    <text x="435" y="68" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="9">(pas le régime)</text>
+    <text x="435" y="81" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">a tout changé</text>
   </g>
 
   <!-- BOTTOM LEFT: Constitutions -->
-  <g transform="translate(20, 280)">
+  <g transform="translate(20, 315)">
     <text x="0" y="0" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">CONSTITUTIONS DEPUIS 1789</text>
 
-    <circle cx="40" cy="35" r="16" fill="#48bb78"/>
-    <text x="40" y="40" text-anchor="middle" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="bold">1</text>
-    <text x="40" y="60" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">USA</text>
+    <circle cx="35" cy="35" r="15" fill="#48bb78"/>
+    <text x="35" y="40" text-anchor="middle" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="bold">1</text>
+    <text x="35" y="58" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">USA</text>
 
-    <circle cx="95" cy="35" r="16" fill="#48bb78"/>
-    <text x="95" y="40" text-anchor="middle" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="bold">0</text>
-    <text x="95" y="60" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">UK</text>
+    <circle cx="85" cy="35" r="15" fill="#48bb78"/>
+    <text x="85" y="40" text-anchor="middle" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="bold">0</text>
+    <text x="85" y="58" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">UK</text>
 
-    <circle cx="150" cy="35" r="16" fill="#4299e1"/>
-    <text x="150" y="40" text-anchor="middle" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="bold">4</text>
-    <text x="150" y="60" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">DE</text>
+    <circle cx="135" cy="35" r="15" fill="#4299e1"/>
+    <text x="135" y="40" text-anchor="middle" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="bold">4</text>
+    <text x="135" y="58" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">DE</text>
 
-    <circle cx="210" cy="35" r="20" fill="#fc8181" stroke="#fff" stroke-width="2"/>
-    <text x="210" y="41" text-anchor="middle" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold">15</text>
-    <text x="210" y="65" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="bold">France</text>
+    <circle cx="195" cy="35" r="20" fill="#fc8181" stroke="#fff" stroke-width="2"/>
+    <text x="195" y="41" text-anchor="middle" fill="#1a202c" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold">15</text>
+    <text x="195" y="65" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="bold">France</text>
   </g>
 
-  <!-- BOTTOM CENTER: Espérance de vie mini chart -->
-  <g transform="translate(280, 280)">
-    <text x="0" y="0" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">ESPÉRANCE DE VIE (×3 en 800 ans)</text>
+  <!-- BOTTOM CENTER: Progrès depuis 1789 -->
+  <g transform="translate(270, 315)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">PROGRÈS DEPUIS 1789</text>
 
-    <polyline points="20,55 60,53 100,42 140,32 180,22 220,15" fill="none" stroke="#48bb78" stroke-width="2"/>
-    <circle cx="20" cy="55" r="3" fill="#9f7aea"/>
-    <circle cx="60" cy="53" r="3" fill="#9f7aea"/>
-    <circle cx="100" cy="42" r="3" fill="#ed8936"/>
-    <circle cx="140" cy="32" r="3" fill="#ed8936"/>
-    <circle cx="180" cy="22" r="3" fill="#48bb78"/>
-    <circle cx="220" cy="15" r="4" fill="#48bb78" stroke="#fff" stroke-width="1"/>
+    <rect x="0" y="12" width="230" height="22" fill="#2d3748" rx="3"/>
+    <text x="8" y="27" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Espérance de vie</text>
+    <text x="115" y="27" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="9">28 ans</text>
+    <text x="150" y="27" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
+    <text x="180" y="27" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">82 ans</text>
 
-    <text x="20" y="68" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">XIIIe</text>
-    <text x="60" y="68" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">1789</text>
-    <text x="100" y="68" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">1870</text>
-    <text x="140" y="68" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">1913</text>
-    <text x="180" y="68" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="6">1958</text>
-    <text x="220" y="68" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="bold">2024</text>
+    <rect x="0" y="38" width="230" height="22" fill="#2d3748" rx="3"/>
+    <text x="8" y="53" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Mortalité infantile</text>
+    <text x="115" y="53" fill="#fc8181" font-family="Inter, sans-serif" font-size="9">250‰</text>
+    <text x="150" y="53" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
+    <text x="180" y="53" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">3‰</text>
 
-    <text x="20" y="78" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="7">27</text>
-    <text x="220" y="78" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="bold">82</text>
+    <rect x="0" y="64" width="230" height="22" fill="#2d3748" rx="3"/>
+    <text x="8" y="79" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">Alphabétisation</text>
+    <text x="115" y="79" fill="#ed8936" font-family="Inter, sans-serif" font-size="9">37%</text>
+    <text x="150" y="79" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="9">→</text>
+    <text x="180" y="79" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">99%</text>
   </g>
 
   <!-- BOTTOM RIGHT: Insight -->
-  <g transform="translate(540, 280)">
-    <rect x="0" y="0" width="240" height="75" fill="#1a202c" rx="5" stroke="#48bb78" stroke-width="1"/>
-    <text x="120" y="16" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="bold">CE QU'ON PEUT EN RETENIR</text>
-    <text x="120" y="32" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="8">Monarchie = 805 ans stables</text>
-    <text x="120" y="44" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="8">mais conditions de vie précaires</text>
-    <text x="120" y="58" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">L'industrialisation (pas le régime)</text>
-    <text x="120" y="70" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">a transformé la vie des Français</text>
+  <g transform="translate(530, 315)">
+    <rect x="0" y="0" width="250" height="95" fill="#1a202c" rx="5" stroke="#48bb78" stroke-width="1"/>
+    <text x="125" y="18" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold">CE QU'ON PEUT EN RETENIR</text>
+
+    <text x="125" y="38" text-anchor="middle" fill="#9f7aea" font-family="Inter, Arial, sans-serif" font-size="9">• Monarchie = 805 ans stables</text>
+    <text x="125" y="52" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">mais conditions de vie précaires</text>
+
+    <text x="125" y="68" text-anchor="middle" fill="#fc8181" font-family="Inter, Arial, sans-serif" font-size="9">• Républiques = instables mais</text>
+    <text x="125" y="82" text-anchor="middle" fill="#a0aec0" font-family="Inter, Arial, sans-serif" font-size="8">prospérité ×35 en 236 ans</text>
+
+    <text x="125" y="94" text-anchor="middle" fill="#48bb78" font-family="Inter, Arial, sans-serif" font-size="8">→ L'industrialisation a tout changé</text>
   </g>
 
   <!-- Footer -->
-  <text x="400" y="378" text-anchor="middle" fill="#4a5568" font-family="Inter, Arial, sans-serif" font-size="8">Sources : Conseil constitutionnel, INSEE, Maddison Project, INED — reveildouceur.fr</text>
+  <text x="400" y="432" text-anchor="middle" fill="#4a5568" font-family="Inter, Arial, sans-serif" font-size="8">Sources : Conseil constitutionnel, INSEE, Maddison Project, INED — reveildouceur.fr</text>
 </svg>

@@ -221,6 +221,95 @@
             En 1789, la France était le pays le plus peuplé d'Europe (28 millions d'habitants, contre 16 millions pour la Grande-Bretagne) et l'une des premières puissances économiques mondiales. Le XVIIIe siècle avait vu une croissance significative du commerce, de l'industrie textile et de l'agriculture.
           </p>
 
+          <!-- Graphique inline : Évolution de la population française -->
+          <figure class="article__chart">
+            <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Évolution de la population française de l'an 1000 à 2024">
+              <defs>
+                <linearGradient id="popGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                  <stop offset="0%" style="stop-color:#805ad5;stop-opacity:0.3"/>
+                  <stop offset="100%" style="stop-color:#48bb78;stop-opacity:0.8"/>
+                </linearGradient>
+                <linearGradient id="popLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#9f7aea"/>
+                  <stop offset="60%" style="stop-color:#ed8936"/>
+                  <stop offset="100%" style="stop-color:#48bb78"/>
+                </linearGradient>
+              </defs>
+              <rect width="700" height="220" fill="#1a202c" rx="8"/>
+              <text x="350" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Population française : 1 000 ans d'évolution</text>
+
+              <!-- Y axis -->
+              <text x="30" y="55" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">70M</text>
+              <text x="30" y="95" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">40M</text>
+              <text x="30" y="135" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">20M</text>
+              <text x="30" y="175" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">0</text>
+              <line x1="35" y1="50" x2="680" y2="50" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="35" y1="90" x2="680" y2="90" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="35" y1="130" x2="680" y2="130" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="35" y1="170" x2="680" y2="170" stroke="#4a5568" stroke-width="1"/>
+
+              <!-- Area fill -->
+              <polygon points="50,160 120,145 190,115 260,145 330,125 400,115 470,95 540,78 610,60 660,53 660,170 50,170" fill="url(#popGrad)" opacity="0.6"/>
+
+              <!-- Line -->
+              <polyline points="50,160 120,145 190,115 260,145 330,125 400,115 470,95 540,78 610,60 660,53" fill="none" stroke="url(#popLine)" stroke-width="3"/>
+
+              <!-- Data points -->
+              <circle cx="50" cy="160" r="4" fill="#9f7aea"/>
+              <circle cx="120" cy="145" r="4" fill="#9f7aea"/>
+              <circle cx="190" cy="115" r="5" fill="#9f7aea" stroke="#fff" stroke-width="1"/>
+              <circle cx="260" cy="145" r="4" fill="#fc8181"/>
+              <circle cx="330" cy="125" r="4" fill="#ed8936"/>
+              <circle cx="400" cy="115" r="5" fill="#ed8936" stroke="#fff" stroke-width="1"/>
+              <circle cx="470" cy="95" r="4" fill="#ed8936"/>
+              <circle cx="540" cy="78" r="4" fill="#48bb78"/>
+              <circle cx="610" cy="60" r="4" fill="#48bb78"/>
+              <circle cx="660" cy="53" r="5" fill="#48bb78" stroke="#fff" stroke-width="2"/>
+
+              <!-- Labels -->
+              <text x="50" y="188" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">1000</text>
+              <text x="50" y="198" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8">6M</text>
+
+              <text x="120" y="188" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">1200</text>
+              <text x="120" y="198" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8">12M</text>
+
+              <text x="190" y="188" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">1300</text>
+              <text x="190" y="198" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="8" font-weight="bold">20M</text>
+
+              <text x="260" y="188" text-anchor="middle" fill="#fc8181" font-family="Inter, sans-serif" font-size="7">1400</text>
+              <text x="260" y="198" text-anchor="middle" fill="#fc8181" font-family="Inter, sans-serif" font-size="8">10M</text>
+
+              <text x="330" y="188" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">1550</text>
+              <text x="330" y="198" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="8">18M</text>
+
+              <text x="400" y="188" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="7" font-weight="bold">1789</text>
+              <text x="400" y="198" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="8" font-weight="bold">28M</text>
+
+              <text x="470" y="188" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">1870</text>
+              <text x="470" y="198" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">36M</text>
+
+              <text x="540" y="188" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">1945</text>
+              <text x="540" y="198" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">40M</text>
+
+              <text x="610" y="188" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="7">1980</text>
+              <text x="610" y="198" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">54M</text>
+
+              <text x="660" y="188" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="7" font-weight="bold">2024</text>
+              <text x="660" y="198" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">68M</text>
+
+              <!-- Annotations -->
+              <rect x="240" y="40" width="80" height="25" fill="#2d3748" rx="3" stroke="#fc8181" stroke-width="1"/>
+              <text x="280" y="53" text-anchor="middle" fill="#fc8181" font-family="Inter, sans-serif" font-size="7" font-weight="bold">Peste noire</text>
+              <text x="280" y="62" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="6">-50% pop.</text>
+              <line x1="260" y1="65" x2="260" y2="140" stroke="#fc8181" stroke-width="1" stroke-dasharray="2,2"/>
+
+              <rect x="370" y="70" width="60" height="25" fill="#2d3748" rx="3" stroke="#ed8936" stroke-width="1"/>
+              <text x="400" y="83" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="7" font-weight="bold">1789</text>
+              <text x="400" y="92" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="6">1er d'Europe</text>
+            </svg>
+            <figcaption>La France était le pays le plus peuplé d'Europe en 1789 malgré la catastrophe de la Peste noire</figcaption>
+          </figure>
+
           <h3>Les limites de la monarchie absolue</h3>
 
           <p>
@@ -335,6 +424,107 @@
           <p>
             Deux régimes se détachent nettement par leur longévité : la <strong>IIIe République</strong> (70 ans) et la <strong>Ve République</strong> (67 ans et comptant). Ensemble, ils représentent plus de la moitié du temps écoulé depuis 1789.
           </p>
+
+          <!-- Graphique inline : Timeline des régimes 987-2024 -->
+          <figure class="article__chart">
+            <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chronologie des régimes politiques français de 987 à 2024">
+              <defs>
+                <linearGradient id="purpleLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#805ad5"/>
+                  <stop offset="100%" style="stop-color:#9f7aea"/>
+                </linearGradient>
+                <linearGradient id="multiColor" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#e53e3e"/>
+                  <stop offset="50%" style="stop-color:#ed8936"/>
+                  <stop offset="100%" style="stop-color:#48bb78"/>
+                </linearGradient>
+              </defs>
+              <rect width="700" height="280" fill="#1a202c" rx="8"/>
+              <text x="350" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">1 000 ans d'histoire politique française</text>
+              <text x="350" y="42" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Durée de chaque régime (échelle proportionnelle)</text>
+
+              <!-- Axe principal -->
+              <line x1="50" y1="75" x2="650" y2="75" stroke="#4a5568" stroke-width="2"/>
+              <text x="50" y="68" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">987</text>
+              <text x="410" y="68" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="bold">1789</text>
+              <text x="650" y="68" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">2024</text>
+
+              <!-- MONARCHIE (987-1792) : 805 ans sur 1037 total = 77.6% → 465px sur 600 -->
+              <rect x="50" y="85" width="465" height="35" fill="url(#purpleLine)" rx="4" opacity="0.9"/>
+              <text x="282" y="107" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="13" font-weight="bold">MONARCHIE CAPÉTIENNE</text>
+              <text x="282" y="118" text-anchor="middle" fill="#e9d8fd" font-family="Inter, sans-serif" font-size="9">987-1792 • 805 ans • 1 seul régime</text>
+
+              <!-- Sous-divisions dynastiques -->
+              <rect x="50" y="125" width="200" height="18" fill="#553c9a" rx="3"/>
+              <text x="150" y="137" text-anchor="middle" fill="#e9d8fd" font-family="Inter, sans-serif" font-size="8">Capétiens directs (341 ans)</text>
+
+              <rect x="250" y="125" width="154" height="18" fill="#6b46c1" rx="3"/>
+              <text x="327" y="137" text-anchor="middle" fill="#e9d8fd" font-family="Inter, sans-serif" font-size="8">Valois (261 ans)</text>
+
+              <rect x="404" y="125" width="111" height="18" fill="#805ad5" rx="3"/>
+              <text x="459" y="137" text-anchor="middle" fill="#e9d8fd" font-family="Inter, sans-serif" font-size="8">Bourbons (203 ans)</text>
+
+              <!-- Séparateur 1789 -->
+              <line x1="415" y1="75" x2="415" y2="148" stroke="#ed8936" stroke-width="2" stroke-dasharray="4,2"/>
+
+              <!-- POST-1789 : 236 ans = 22.4% → 135px sur 600 mais on étire pour lisibilité -->
+              <text x="520" y="95" text-anchor="middle" fill="#fc8181" font-family="Inter, sans-serif" font-size="10" font-weight="bold">Depuis 1789</text>
+              <text x="520" y="107" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">12 régimes en 236 ans</text>
+
+              <!-- Barre des régimes post-1789 (zoomée) -->
+              <rect x="50" y="155" width="600" height="8" fill="#2d3748" rx="2"/>
+              <text x="50" y="170" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1789</text>
+              <text x="650" y="170" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8" text-anchor="end">2024</text>
+
+              <!-- Régimes individuels (proportionnels sur 236 ans → 600px) -->
+              <!-- Monarchie const. 1 an = 2.5px -->
+              <rect x="50" y="178" width="3" height="12" fill="#e53e3e" rx="1"/>
+              <!-- Ire Rép 12 ans = 30px -->
+              <rect x="53" y="178" width="30" height="12" fill="#fc8181" rx="1"/>
+              <!-- Ier Empire 10 ans = 25px -->
+              <rect x="83" y="178" width="25" height="12" fill="#ed8936" rx="1"/>
+              <!-- Restauration 16 ans = 40px -->
+              <rect x="108" y="178" width="40" height="12" fill="#9f7aea" rx="1"/>
+              <!-- Monarchie Juillet 18 ans = 45px -->
+              <rect x="148" y="178" width="45" height="12" fill="#805ad5" rx="1"/>
+              <!-- IIe Rép 4 ans = 10px -->
+              <rect x="193" y="178" width="10" height="12" fill="#fc8181" rx="1"/>
+              <!-- Second Empire 18 ans = 45px -->
+              <rect x="203" y="178" width="45" height="12" fill="#ed8936" rx="1"/>
+              <!-- IIIe Rép 70 ans = 178px -->
+              <rect x="248" y="178" width="178" height="12" fill="#48bb78" rx="1"/>
+              <!-- Vichy 4 ans = 10px -->
+              <rect x="426" y="178" width="10" height="12" fill="#4a5568" rx="1"/>
+              <!-- GPRF 2 ans = 5px -->
+              <rect x="436" y="178" width="5" height="12" fill="#a0aec0" rx="1"/>
+              <!-- IVe Rép 12 ans = 30px -->
+              <rect x="441" y="178" width="30" height="12" fill="#fc8181" rx="1"/>
+              <!-- Ve Rép 67 ans = 170px -->
+              <rect x="471" y="178" width="179" height="12" fill="#48bb78" rx="1"/>
+
+              <!-- Légende -->
+              <g transform="translate(50, 205)">
+                <rect x="0" y="0" width="10" height="10" fill="#48bb78" rx="2"/>
+                <text x="14" y="9" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Républiques durables (IIIe, Ve)</text>
+
+                <rect x="150" y="0" width="10" height="10" fill="#fc8181" rx="2"/>
+                <text x="164" y="9" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Républiques instables</text>
+
+                <rect x="280" y="0" width="10" height="10" fill="#ed8936" rx="2"/>
+                <text x="294" y="9" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Empires</text>
+
+                <rect x="370" y="0" width="10" height="10" fill="#9f7aea" rx="2"/>
+                <text x="384" y="9" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">Monarchies post-1789</text>
+              </g>
+
+              <!-- Insight box -->
+              <rect x="400" y="225" width="280" height="45" fill="#2d3748" rx="4" stroke="#ed8936" stroke-width="1"/>
+              <text x="540" y="243" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="bold">CONTRASTE FRAPPANT</text>
+              <text x="540" y="257" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">805 ans → 1 régime | 236 ans → 12 régimes</text>
+              <text x="540" y="268" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">3,4× plus long avec 12× moins de changements</text>
+            </svg>
+            <figcaption>Timeline : la monarchie capétienne vs les 12 régimes post-1789</figcaption>
+          </figure>
 
           <h2>Le paradoxe de la IIIe République : instable mais durable</h2>
 
