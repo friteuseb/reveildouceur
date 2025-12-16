@@ -405,7 +405,7 @@
           <h2>Stabilité politique et prospérité : quel lien ?</h2>
 
           <p>
-            Voici le tableau qui complique tout :
+            Voici le tableau qui complique tout — cette fois en intégrant l'Ancien Régime :
           </p>
 
           <div class="article__table-container">
@@ -414,11 +414,29 @@
                 <tr>
                   <th>Période</th>
                   <th>Régime</th>
-                  <th>Croissance annuelle moyenne</th>
+                  <th>Croissance annuelle</th>
                   <th>Stabilité politique</th>
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td>987-1328</td>
+                  <td>Capétiens directs</td>
+                  <td>~0,2-0,3%</td>
+                  <td class="text-success">Très stable (341 ans)</td>
+                </tr>
+                <tr>
+                  <td>1500-1700</td>
+                  <td>Valois / Bourbons</td>
+                  <td>~0,2%</td>
+                  <td class="text-warning">Guerres de religion</td>
+                </tr>
+                <tr>
+                  <td>1700-1789</td>
+                  <td>Bourbons (Lumières)</td>
+                  <td>~0,4-0,5%</td>
+                  <td class="text-success">Stable</td>
+                </tr>
                 <tr>
                   <td>1852-1870</td>
                   <td>Second Empire</td>
@@ -428,7 +446,7 @@
                 <tr>
                   <td>1890-1914</td>
                   <td>IIIe République (Belle Époque)</td>
-                  <td>Forte</td>
+                  <td>~2-3%</td>
                   <td class="text-warning">Instabilité gouvernementale</td>
                 </tr>
                 <tr>
@@ -460,10 +478,14 @@
           </div>
 
           <p>
+            <strong>Attention aux ordres de grandeur</strong> : comparer 0,3% au Moyen Âge et 5% aux Trente Glorieuses peut sembler absurde. Mais 0,3% de croissance annuelle pendant 300 ans représente un doublement du niveau de vie — ce qui était considérable pour l'époque. La révolution industrielle a changé l'échelle des possibles.
+          </p>
+
+          <p>
             Le constat est troublant : la période de plus forte croissance économique française — les Trente Glorieuses (1946-1973, avec 5% de croissance annuelle) — a commencé sous la très instable IVe République et s'est poursuivie sous la Ve. La stabilité politique ne semble pas être la cause directe de la prospérité.
           </p>
 
-          <!-- Graphique inline : Croissance économique par période -->
+          <!-- Graphique inline : Croissance économique par période (incluant Ancien Régime) -->
           <figure class="article__chart">
             <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graphique de la croissance économique par période">
               <defs>
@@ -483,54 +505,216 @@
                   <stop offset="0%" style="stop-color:#4299e1"/>
                   <stop offset="100%" style="stop-color:#3182ce"/>
                 </linearGradient>
+                <linearGradient id="purpleG2" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#9f7aea"/>
+                  <stop offset="100%" style="stop-color:#805ad5"/>
+                </linearGradient>
               </defs>
               <rect width="700" height="220" fill="#1a202c" rx="8"/>
               <text x="350" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Croissance économique annuelle moyenne par période</text>
 
               <!-- Y axis -->
-              <text x="45" y="55" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">6%</text>
-              <text x="45" y="95" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">3%</text>
-              <text x="45" y="135" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">0%</text>
-              <line x1="50" y1="50" x2="650" y2="50" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
-              <line x1="50" y1="90" x2="650" y2="90" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
-              <line x1="50" y1="130" x2="650" y2="130" stroke="#4a5568" stroke-width="1"/>
+              <text x="35" y="55" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">6%</text>
+              <text x="35" y="95" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">3%</text>
+              <text x="35" y="135" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">0%</text>
+              <line x1="40" y1="50" x2="680" y2="50" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="40" y1="90" x2="680" y2="90" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="40" y1="130" x2="680" y2="130" stroke="#4a5568" stroke-width="1"/>
 
               <!-- Bars -->
-              <rect x="70" y="92" width="80" height="38" fill="url(#blueG2)" rx="3"/>
-              <text x="110" y="85" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="12" font-weight="bold">2,4%</text>
-              <text x="110" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Second</text>
-              <text x="110" y="167" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Empire</text>
+              <!-- Moyen Âge -->
+              <rect x="50" y="126" width="55" height="4" fill="url(#purpleG2)" rx="2"/>
+              <text x="77" y="122" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="10" font-weight="bold">0,2%</text>
+              <text x="77" y="155" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9">Moyen</text>
+              <text x="77" y="165" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9">Âge</text>
 
-              <rect x="170" y="82" width="80" height="48" fill="url(#orangeG2)" rx="3"/>
-              <text x="210" y="75" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="12" font-weight="bold">~3%</text>
-              <text x="210" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Belle</text>
-              <text x="210" y="167" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">Époque</text>
+              <!-- XVIIIe siècle -->
+              <rect x="115" y="123" width="55" height="7" fill="url(#purpleG2)" rx="2"/>
+              <text x="142" y="118" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="10" font-weight="bold">0,5%</text>
+              <text x="142" y="155" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9">XVIIIe</text>
+              <text x="142" y="165" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9">siècle</text>
 
-              <rect x="270" y="50" width="80" height="80" fill="url(#greenG2)" rx="3"/>
-              <text x="310" y="43" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="14" font-weight="bold">5,3%</text>
-              <text x="310" y="155" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="bold">Trente</text>
-              <text x="310" y="167" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="bold">Glorieuses</text>
+              <!-- Second Empire -->
+              <rect x="180" y="98" width="55" height="32" fill="url(#blueG2)" rx="3"/>
+              <text x="207" y="92" text-anchor="middle" fill="#4299e1" font-family="Inter, sans-serif" font-size="10" font-weight="bold">2,4%</text>
+              <text x="207" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Second</text>
+              <text x="207" y="165" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Empire</text>
 
-              <rect x="370" y="95" width="80" height="35" fill="url(#orangeG2)" rx="3"/>
-              <text x="410" y="88" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="12" font-weight="bold">2,2%</text>
-              <text x="410" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">1974-</text>
-              <text x="410" y="167" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">2007</text>
+              <!-- Belle Époque -->
+              <rect x="245" y="90" width="55" height="40" fill="url(#orangeG2)" rx="3"/>
+              <text x="272" y="84" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="bold">~3%</text>
+              <text x="272" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Belle</text>
+              <text x="272" y="165" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">Époque</text>
 
-              <rect x="470" y="117" width="80" height="13" fill="url(#redG2)" rx="3"/>
-              <text x="510" y="110" text-anchor="middle" fill="#fc8181" font-family="Inter, sans-serif" font-size="12" font-weight="bold">~0,8%</text>
-              <text x="510" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">2007-</text>
-              <text x="510" y="167" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">2024</text>
+              <!-- Trente Glorieuses -->
+              <rect x="310" y="50" width="65" height="80" fill="url(#greenG2)" rx="3"/>
+              <text x="342" y="44" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="12" font-weight="bold">5,3%</text>
+              <text x="342" y="155" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">Trente</text>
+              <text x="342" y="165" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">Glorieuses</text>
+
+              <!-- 1974-2007 -->
+              <rect x="385" y="100" width="55" height="30" fill="url(#orangeG2)" rx="3"/>
+              <text x="412" y="94" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="10" font-weight="bold">2,2%</text>
+              <text x="412" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">1974-</text>
+              <text x="412" y="165" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">2007</text>
+
+              <!-- 2007-2024 -->
+              <rect x="450" y="120" width="55" height="10" fill="url(#redG2)" rx="3"/>
+              <text x="477" y="115" text-anchor="middle" fill="#fc8181" font-family="Inter, sans-serif" font-size="10" font-weight="bold">0,8%</text>
+              <text x="477" y="155" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">2007-</text>
+              <text x="477" y="165" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="9">2024</text>
 
               <!-- Annotation -->
-              <rect x="560" y="60" width="130" height="50" fill="#2d3748" rx="4" stroke="#48bb78" stroke-width="1"/>
-              <text x="625" y="80" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="bold">IVe République</text>
-              <text x="625" y="95" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">Instable mais +5%</text>
-              <text x="625" y="107" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">de croissance/an</text>
+              <rect x="520" y="55" width="160" height="60" fill="#2d3748" rx="4" stroke="#ed8936" stroke-width="1"/>
+              <text x="600" y="72" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="bold">Révolution industrielle</text>
+              <text x="600" y="86" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">Croissance ×10 entre</text>
+              <text x="600" y="99" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">le XVIIIe et les 30 Gl.</text>
+              <text x="600" y="112" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">(0,5% → 5,3%)</text>
 
               <!-- Footer -->
-              <text x="350" y="200" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="9">Sources : INSEE, Maddison Project Database</text>
+              <text x="350" y="195" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="9">Sources : INSEE, Maddison Project Database</text>
             </svg>
-            <figcaption>La croissance économique n'est pas corrélée à la stabilité politique</figcaption>
+            <figcaption>La croissance économique : de 0,2% sous l'Ancien Régime à 5,3% aux Trente Glorieuses</figcaption>
+          </figure>
+
+          <h2>Mesurer la prospérité autrement : indicateurs multidimensionnels</h2>
+
+          <p>
+            La croissance économique n'est qu'un indicateur parmi d'autres. Pour vraiment comparer les régimes, regardons d'autres dimensions de la prospérité :<sup>[15][16]</sup>
+          </p>
+
+          <div class="article__table-container">
+            <table class="article__table">
+              <thead>
+                <tr>
+                  <th>Période</th>
+                  <th>Espérance de vie</th>
+                  <th>PIB/hab. ($1990)</th>
+                  <th>Alphabétisation</th>
+                  <th>Mortalité infantile</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Moyen Âge (XIIIe s.)</td>
+                  <td>~25-30 ans</td>
+                  <td>~700 $</td>
+                  <td>&lt;5%</td>
+                  <td>~300‰</td>
+                </tr>
+                <tr>
+                  <td>Fin Ancien Régime (1789)</td>
+                  <td>~28-30 ans</td>
+                  <td>~1 100 $</td>
+                  <td>~37%</td>
+                  <td>~250‰</td>
+                </tr>
+                <tr>
+                  <td>Second Empire (1870)</td>
+                  <td>~40 ans</td>
+                  <td>~1 900 $</td>
+                  <td>~70%</td>
+                  <td>~180‰</td>
+                </tr>
+                <tr>
+                  <td>Belle Époque (1913)</td>
+                  <td>~50 ans</td>
+                  <td>~3 500 $</td>
+                  <td>~95%</td>
+                  <td>~120‰</td>
+                </tr>
+                <tr>
+                  <td>IVe République (1958)</td>
+                  <td>~68 ans</td>
+                  <td>~6 500 $</td>
+                  <td>~99%</td>
+                  <td>~35‰</td>
+                </tr>
+                <tr>
+                  <td>Ve République (2024)</td>
+                  <td class="text-success"><strong>~82 ans</strong></td>
+                  <td class="text-success"><strong>~38 000 $</strong></td>
+                  <td>~99%</td>
+                  <td class="text-success"><strong>~3‰</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            <strong>Ce que ces chiffres révèlent :</strong>
+          </p>
+
+          <ul>
+            <li><strong>L'espérance de vie a triplé</strong> entre l'Ancien Régime et aujourd'hui — le progrès le plus spectaculaire</li>
+            <li><strong>Le PIB par habitant a été multiplié par 35</strong> depuis 1789 (en dollars constants)</li>
+            <li><strong>La mortalité infantile divisée par 80</strong> : de 250 décès pour 1000 naissances à 3</li>
+            <li><strong>L'alphabétisation universelle</strong> n'a été atteinte qu'à la Belle Époque (lois Ferry, 1881-82)</li>
+          </ul>
+
+          <p>
+            Ces progrès ne sont pas linéaires : l'essentiel s'est produit après 1850. La monarchie capétienne était stable, mais les conditions de vie restaient précaires. Un paysan du XIIIe siècle et un paysan de 1789 vivaient de façon assez similaire. C'est la révolution industrielle, puis les Trente Glorieuses, qui ont transformé radicalement le quotidien des Français.
+          </p>
+
+          <!-- Graphique inline : Évolution espérance de vie -->
+          <figure class="article__chart">
+            <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Évolution de l'espérance de vie en France">
+              <defs>
+                <linearGradient id="lifeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#805ad5"/>
+                  <stop offset="50%" style="stop-color:#ed8936"/>
+                  <stop offset="100%" style="stop-color:#48bb78"/>
+                </linearGradient>
+              </defs>
+              <rect width="700" height="200" fill="#1a202c" rx="8"/>
+              <text x="350" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Espérance de vie en France (en années)</text>
+
+              <!-- Y axis -->
+              <text x="35" y="55" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">80</text>
+              <text x="35" y="95" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">50</text>
+              <text x="35" y="135" text-anchor="end" fill="#a0aec0" font-family="Inter, sans-serif" font-size="10">25</text>
+              <line x1="40" y1="50" x2="680" y2="50" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="40" y1="90" x2="680" y2="90" stroke="#4a5568" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="40" y1="130" x2="680" y2="130" stroke="#4a5568" stroke-width="1"/>
+
+              <!-- Data points and line -->
+              <polyline points="80,128 180,125 280,105 380,85 480,62 580,48 650,45" fill="none" stroke="url(#lifeGrad)" stroke-width="3"/>
+              <circle cx="80" cy="128" r="5" fill="#9f7aea"/>
+              <circle cx="180" cy="125" r="5" fill="#9f7aea"/>
+              <circle cx="280" cy="105" r="5" fill="#ed8936"/>
+              <circle cx="380" cy="85" r="5" fill="#ed8936"/>
+              <circle cx="480" cy="62" r="5" fill="#48bb78"/>
+              <circle cx="580" cy="48" r="5" fill="#48bb78"/>
+              <circle cx="650" cy="45" r="6" fill="#48bb78" stroke="#fff" stroke-width="2"/>
+
+              <!-- Labels -->
+              <text x="80" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">XIIIe</text>
+              <text x="80" y="160" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~27</text>
+
+              <text x="180" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1789</text>
+              <text x="180" y="160" text-anchor="middle" fill="#9f7aea" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~29</text>
+
+              <text x="280" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1870</text>
+              <text x="280" y="160" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~40</text>
+
+              <text x="380" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1913</text>
+              <text x="380" y="160" text-anchor="middle" fill="#ed8936" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~50</text>
+
+              <text x="480" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1958</text>
+              <text x="480" y="160" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~68</text>
+
+              <text x="580" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">1980</text>
+              <text x="580" y="160" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">~74</text>
+
+              <text x="650" y="150" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">2024</text>
+              <text x="650" y="160" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="10" font-weight="bold">82</text>
+
+              <!-- Annotation -->
+              <rect x="420" y="38" width="120" height="30" fill="#2d3748" rx="4" stroke="#48bb78" stroke-width="1"/>
+              <text x="480" y="52" text-anchor="middle" fill="#48bb78" font-family="Inter, sans-serif" font-size="9" font-weight="bold">×3 en 800 ans</text>
+              <text x="480" y="64" text-anchor="middle" fill="#a0aec0" font-family="Inter, sans-serif" font-size="8">essentiel après 1850</text>
+            </svg>
+            <figcaption>L'espérance de vie a stagné pendant 800 ans de monarchie, puis a explosé avec l'industrialisation</figcaption>
           </figure>
 
           <h2>Les vraies "Trente Glorieuses" économiques</h2>
@@ -730,6 +914,17 @@
             <li>La période de plus forte croissance (Trente Glorieuses, 1946-1973) a commencé sous la très instable IVe République</li>
             <li>Le Second Empire a modernisé l'économie française, malgré (ou grâce à ?) son autoritarisme</li>
             <li>Depuis 1974, la croissance a fortement ralenti (2,2% puis moins de 1%), malgré la stabilité institutionnelle</li>
+          </ul>
+
+          <p>
+            <strong>Sur les indicateurs multidimensionnels :</strong>
+          </p>
+
+          <ul>
+            <li><strong>L'espérance de vie a triplé</strong> (de ~28 ans en 1789 à ~82 ans aujourd'hui) — l'essentiel après 1850</li>
+            <li><strong>Le PIB par habitant a été multiplié par 35</strong> depuis la Révolution (en dollars constants)</li>
+            <li><strong>La mortalité infantile divisée par 80</strong> : de 250‰ à 3‰</li>
+            <li>Un paysan de 1789 vivait à peine mieux qu'un paysan du XIIIe siècle — c'est l'industrialisation qui a tout changé</li>
           </ul>
 
           <p>
