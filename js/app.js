@@ -1014,13 +1014,19 @@
       });
 
       // Ajouter les écouteurs d'événements (délégation)
-      document.querySelector('.articles-grid__cards')?.addEventListener('click', (e) => {
-        if (e.target.closest('[data-vote]')) {
-          e.preventDefault();
-          e.stopPropagation();
-          this.handleVoteClick(e);
-        }
-      });
+      const gridContainer = document.querySelector('.articles-grid__cards');
+      if (gridContainer) {
+        gridContainer.addEventListener('click', (e) => {
+          const voteBtn = e.target.closest('[data-vote]');
+          if (voteBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+            this.handleVoteClick(e);
+          }
+        });
+      } else {
+        console.error('VoteManager: .articles-grid__cards not found');
+      }
     },
 
     // Créer le HTML du composant de vote pour les articles
