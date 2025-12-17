@@ -1007,9 +1007,12 @@
       if (cards.length === 0) return;
 
       const slugs = Array.from(cards).map(card => card.dataset.slug).filter(Boolean);
+      console.log('VoteManager: Loading votes for', slugs.length, 'articles');
       const votes = await this.loadBatchVotes(slugs);
+      console.log('VoteManager: Received votes', votes);
 
       Object.entries(votes).forEach(([slug, data]) => {
+        console.log('VoteManager: Updating', slug, data);
         this.updateAllDisplaysForSlug(slug, data);
       });
 
