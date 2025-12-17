@@ -23,8 +23,8 @@ import urllib.error
 SITE_URL = "https://reveildouceur.fr"
 SITE_NAME = "Réveil Douceur"
 LIST_ID = 7  # Newsletter Réveil Douceur
-SENDER_ID = 1  # Expéditeur par défaut (à changer après validation de contact@reveildouceur.fr)
-SENDER_EMAIL = "cyril.wolfangel@gmail.com"
+SENDER_ID = 3  # Expéditeur Réveil Douceur
+SENDER_EMAIL = "contact@reveildouceur.fr"
 SENDER_NAME = "Réveil Douceur"
 TEST_EMAIL = "cyril.wolfangel@gmail.com"
 
