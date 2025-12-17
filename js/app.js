@@ -408,8 +408,8 @@
         title: articleData.title,
         excerpt: articleData.excerpt || '',
         date: articleData.date ? new Date(articleData.date).getTime() : Date.now(),
-        thumbnail: findThumbnail('/images/illustrations/', baseName + '.png', true),
-        heroImage: findThumbnail('/images/illustrations/', baseName + '.png', false),
+        thumbnail: findThumbnail('/images/illustrations/', filename, true),
+        heroImage: findThumbnail('/images/illustrations/', filename, false),
         isRaw: false,
         category
       };
