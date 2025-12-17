@@ -86,6 +86,13 @@ ErrorDocument 404 /404.php
         Header set Cache-Control "public, max-age=3600, stale-while-revalidate=86400"
     </FilesMatch>
 
+    # API - Pas de cache (données dynamiques)
+    <FilesMatch "^(vote|newsletter|debug-votes)\.php$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
     # JSON (index des articles)
     <FilesMatch "\.json$">
         Header set Cache-Control "public, max-age=86400, stale-while-revalidate=604800"
