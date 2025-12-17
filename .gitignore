@@ -28,6 +28,7 @@ scripts/
 !scripts/optimize-images.py
 !scripts/generate-illustrations.py
 !scripts/generate-related-articles.py
+!scripts/send-newsletter.py
 .env
 
 # Python virtual environment
