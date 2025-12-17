@@ -86,11 +86,11 @@ ErrorDocument 404 /404.php
         Header set Cache-Control "public, max-age=3600, stale-while-revalidate=86400"
     </FilesMatch>
 
-    # API - Pas de cache (données dynamiques)
+    # API - Pas de cache (données dynamiques) - "always set" écrase le header PHP précédent
     <FilesMatch "^(vote|newsletter|debug-votes)\.php$">
-        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
-        Header set Pragma "no-cache"
-        Header set Expires "0"
+        Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header always set Pragma "no-cache"
+        Header always set Expires "0"
     </FilesMatch>
 
     # JSON (index des articles)
