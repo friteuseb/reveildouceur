@@ -35,6 +35,11 @@ register_shutdown_function(function() {
 
 header('Content-Type: application/json; charset=utf-8');
 
+// Désactiver le cache pour l'API (les votes doivent être en temps réel)
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
+
 // CORS dynamique (production + dev)
 $allowedOrigins = ['https://reveildouceur.fr', 'https://reveildouceur.ddev.site'];
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
