@@ -373,6 +373,17 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
 
 # Ajout d'un prompt spécifique pour un nouvel article
 # Éditer scripts/generate-illustrations.py > ARTICLE_SPECIFIC_PROMPTS
+
+# === NEWSLETTER ===
+
+# Prévisualiser l'email (génère newsletter-preview.html)
+python3 scripts/send-newsletter.py slug-article --preview
+
+# Envoyer un email de test à l'admin
+python3 scripts/send-newsletter.py slug-article --test
+
+# Envoyer la newsletter à tous les abonnés
+python3 scripts/send-newsletter.py slug-article
 ```
 
 ## Workflow complet pour un nouvel article
@@ -420,6 +431,20 @@ git add -A && git commit -m "Ajout article: [titre]" && git deploy
 
 9. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
    - `git deploy` = push + purge cache Cloudflare
+
+10. **Envoyer la newsletter aux abonnés** (optionnel)
+    ```bash
+    # Prévisualiser d'abord
+    python3 scripts/send-newsletter.py slug --preview
+
+    # Envoyer un test à l'admin
+    python3 scripts/send-newsletter.py slug --test
+
+    # Envoyer à tous les abonnés
+    python3 scripts/send-newsletter.py slug
+    ```
+    - Utilise l'API Brevo pour créer et envoyer une campagne email
+    - Le template inclut l'image, le titre, la description et un bouton vers l'article
 
 ## Précautions juridiques pour les articles sensibles
 
