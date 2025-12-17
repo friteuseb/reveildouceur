@@ -34,7 +34,15 @@ register_shutdown_function(function() {
 });
 
 header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: https://reveildouceur.fr');
+
+// CORS dynamique (production + dev)
+$allowedOrigins = ['https://reveildouceur.fr', 'https://reveildouceur.ddev.site'];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($origin, $allowedOrigins)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+} else {
+    header('Access-Control-Allow-Origin: https://reveildouceur.fr');
+}
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Access-Control-Allow-Credentials: true');
