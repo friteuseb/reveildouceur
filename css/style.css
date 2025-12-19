@@ -2649,6 +2649,12 @@ main {
 .bar-chart__bar--russia { background: linear-gradient(90deg, #e53e3e, #fc8181); }
 .bar-chart__bar--europe { background: linear-gradient(90deg, #805ad5, #b794f4); }
 .bar-chart__bar--china { background: linear-gradient(90deg, #dd6b20, #f6ad55); }
+.bar-chart__bar--france { background: linear-gradient(90deg, #e53e3e, #fc8181); }
+.bar-chart__bar--india { background: linear-gradient(90deg, #38a169, #68d391); }
+.bar-chart__bar--tunisia { background: linear-gradient(90deg, #d69e2e, #ecc94b); }
+.bar-chart__bar--morocco { background: linear-gradient(90deg, #319795, #4fd1c5); }
+.bar-chart__bar--algeria { background: linear-gradient(90deg, #48bb78, #9ae6b4); }
+.bar-chart__bar--highlight { background: linear-gradient(90deg, #e53e3e, #fc8181); box-shadow: 0 0 8px rgba(229, 62, 62, 0.4); }
 
 .bar-chart__value {
   font-size: 0.75rem;
