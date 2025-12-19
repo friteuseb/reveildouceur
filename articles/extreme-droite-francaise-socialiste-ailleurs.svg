@@ -1,0 +1,171 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="franceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e53e3e"/>
+      <stop offset="100%" style="stop-color:#c53030"/>
+    </linearGradient>
+    <linearGradient id="usaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3182ce"/>
+      <stop offset="100%" style="stop-color:#2b6cb0"/>
+    </linearGradient>
+    <linearGradient id="asiaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#dd6b20"/>
+    </linearGradient>
+    <linearGradient id="africaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGradient)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    La France vue du monde : un OVNI politique
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="58" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">
+    Prélèvements obligatoires (% du PIB) et protection sociale comparés
+  </text>
+
+  <!-- Main comparison bars -->
+  <g transform="translate(50, 85)">
+    <!-- France -->
+    <rect x="0" y="0" width="320" height="50" rx="5" fill="url(#franceGradient)" opacity="0.9"/>
+    <text x="10" y="22" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">FRANCE</text>
+    <text x="10" y="40" fill="#fed7d7" font-family="Arial, sans-serif" font-size="11">45-46% du PIB | 32% dépenses sociales</text>
+    <text x="300" y="32" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="end">1er</text>
+
+    <!-- USA -->
+    <rect x="0" y="60" width="186" height="50" rx="5" fill="url(#usaGradient)" opacity="0.9"/>
+    <text x="10" y="82" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">USA</text>
+    <text x="10" y="100" fill="#bee3f8" font-family="Arial, sans-serif" font-size="11">26% du PIB | 0 congé maternité légal</text>
+
+    <!-- Japon -->
+    <rect x="0" y="120" width="233" height="50" rx="5" fill="url(#asiaGradient)" opacity="0.9"/>
+    <text x="10" y="142" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">JAPON</text>
+    <text x="10" y="160" fill="#feebc8" font-family="Arial, sans-serif" font-size="11">33% du PIB | 10-20j congés</text>
+
+    <!-- Afrique moyenne -->
+    <rect x="0" y="180" width="113" height="50" rx="5" fill="url(#africaGradient)" opacity="0.9"/>
+    <text x="10" y="202" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">AFRIQUE</text>
+    <text x="10" y="220" fill="#c6f6d5" font-family="Arial, sans-serif" font-size="11">16% moy. | 83% informel</text>
+
+    <!-- Scale -->
+    <line x1="0" y1="245" x2="320" y2="245" stroke="#4a5568" stroke-width="1"/>
+    <text x="0" y="260" fill="#718096" font-family="Arial, sans-serif" font-size="10">0%</text>
+    <text x="160" y="260" fill="#718096" font-family="Arial, sans-serif" font-size="10">25%</text>
+    <text x="320" y="260" fill="#718096" font-family="Arial, sans-serif" font-size="10" text-anchor="end">50%</text>
+  </g>
+
+  <!-- Right panel: Key facts -->
+  <g transform="translate(420, 85)">
+    <rect x="0" y="0" width="330" height="280" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+
+    <text x="165" y="25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      Ce qui est "normal" en France...
+    </text>
+
+    <!-- Congés payés -->
+    <g transform="translate(15, 45)">
+      <circle cx="8" cy="8" r="8" fill="#48bb78"/>
+      <text x="25" y="12" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">25 jours</text>
+      <text x="85" y="12" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">congés payés + RTT</text>
+      <text x="280" y="12" fill="#fc8181" font-family="Arial, sans-serif" font-size="11" text-anchor="end">USA: 0 légal</text>
+    </g>
+
+    <!-- Congé maternité -->
+    <g transform="translate(15, 75)">
+      <circle cx="8" cy="8" r="8" fill="#48bb78"/>
+      <text x="25" y="12" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">16 sem.</text>
+      <text x="85" y="12" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">maternité à 100%</text>
+      <text x="280" y="12" fill="#fc8181" font-family="Arial, sans-serif" font-size="11" text-anchor="end">USA: 0 payé</text>
+    </g>
+
+    <!-- Couverture santé -->
+    <g transform="translate(15, 105)">
+      <circle cx="8" cy="8" r="8" fill="#48bb78"/>
+      <text x="25" y="12" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">100%</text>
+      <text x="70" y="12" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">couverture santé</text>
+      <text x="280" y="12" fill="#fc8181" font-family="Arial, sans-serif" font-size="11" text-anchor="end">Afrique: 19%</text>
+    </g>
+
+    <!-- Chômage -->
+    <g transform="translate(15, 135)">
+      <circle cx="8" cy="8" r="8" fill="#48bb78"/>
+      <text x="25" y="12" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">27 mois</text>
+      <text x="90" y="12" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">chômage max</text>
+      <text x="280" y="12" fill="#fc8181" font-family="Arial, sans-serif" font-size="11" text-anchor="end">USA: 6 mois</text>
+    </g>
+
+    <!-- Separator -->
+    <line x1="15" y1="160" x2="300" y2="160" stroke="#4a5568" stroke-width="1"/>
+
+    <!-- RN paradox -->
+    <text x="165" y="180" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="13" font-weight="bold">
+      Le paradoxe du RN
+    </text>
+
+    <text x="15" y="205" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">
+      66% de mesures économiques "de gauche"
+    </text>
+    <text x="15" y="225" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">
+      Retraite à 60 ans (Bernie Sanders: 67 ans)
+    </text>
+    <text x="15" y="245" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">
+      Nationalisation autoroutes, TVA énergie 5,5%
+    </text>
+    <text x="15" y="265" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">
+      Défense Sécu = "Medicare for All" aux USA
+    </text>
+  </g>
+
+  <!-- Bottom timeline -->
+  <g transform="translate(50, 380)">
+    <text x="0" y="0" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+      Origines historiques :
+    </text>
+
+    <g transform="translate(130, -8)">
+      <rect x="0" y="0" width="80" height="20" rx="3" fill="#4a5568"/>
+      <text x="40" y="14" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">1762 Rousseau</text>
+    </g>
+
+    <g transform="translate(220, -8)">
+      <rect x="0" y="0" width="100" height="20" rx="3" fill="#4a5568"/>
+      <text x="50" y="14" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">1789 Révolution</text>
+    </g>
+
+    <g transform="translate(330, -8)">
+      <rect x="0" y="0" width="110" height="20" rx="3" fill="#4a5568"/>
+      <text x="55" y="14" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">1936 Front Populaire</text>
+    </g>
+
+    <g transform="translate(450, -8)">
+      <rect x="0" y="0" width="70" height="20" rx="3" fill="#4a5568"/>
+      <text x="35" y="14" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">1945 CNR</text>
+    </g>
+
+    <g transform="translate(530, -8)">
+      <rect x="0" y="0" width="60" height="20" rx="3" fill="#4a5568"/>
+      <text x="30" y="14" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">1946 Sécu</text>
+    </g>
+  </g>
+
+  <!-- Footer quote -->
+  <text x="400" y="430" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="11" font-style="italic">
+    "L'extrême droite française défend des positions socialistes vues d'ailleurs"
+  </text>
+
+  <!-- Source -->
+  <text x="790" y="442" text-anchor="end" fill="#4a5568" font-family="Arial, sans-serif" font-size="9">
+    Sources : OCDE 2024, OIT, CEVIPOF | reveildouceur.fr
+  </text>
+</svg>
