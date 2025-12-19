@@ -64,16 +64,14 @@
     <rect x="480" y="15" width="90" height="30" rx="3" fill="#667eea"/>
     <text x="525" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Reconquête</text>
 
-    <!-- Zone libérale VIDE - très visible -->
-    <rect x="575" y="15" width="120" height="30" rx="3" fill="#1a202c" stroke="#e53e3e" stroke-width="2" stroke-dasharray="4,2"/>
-    <rect x="575" y="15" width="120" height="30" rx="3" fill="url(#hatchPattern)"/>
-    <!-- Croix rouge -->
-    <line x1="580" y1="18" x2="690" y2="42" stroke="#e53e3e" stroke-width="2" opacity="0.8"/>
-    <line x1="580" y1="42" x2="690" y2="18" stroke="#e53e3e" stroke-width="2" opacity="0.8"/>
-    <text x="635" y="35" text-anchor="middle" fill="#fc8181" font-family="Arial, sans-serif" font-size="9" font-weight="bold">AUCUN PARTI</text>
+    <!-- Zone libérale - marginale -->
+    <rect x="575" y="15" width="120" height="30" rx="3" fill="#1a202c" stroke="#ed8936" stroke-width="2" stroke-dasharray="4,2"/>
+    <rect x="575" y="15" width="120" height="30" rx="3" fill="url(#hatchPattern)" opacity="0.3"/>
+    <text x="635" y="28" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="8">Nouvelle Énergie</text>
+    <text x="635" y="40" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="7">(Lisnard) - marginal</text>
     <!-- Étiquette explicative -->
-    <rect x="575" y="48" width="120" height="16" rx="2" fill="#e53e3e" opacity="0.9"/>
-    <text x="635" y="59" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Zone libérale vide</text>
+    <rect x="575" y="48" width="120" height="16" rx="2" fill="#ed8936" opacity="0.9"/>
+    <text x="635" y="59" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="7" font-weight="bold">Seul parti libéral (~1%)</text>
 
     <!-- Arrow showing all France is left -->
     <path d="M 0 72 L 570 72" stroke="#48bb78" stroke-width="2" fill="none"/>
@@ -164,9 +162,9 @@
     </text>
 
     <!-- Ligne sur les libéraux mise en évidence -->
-    <rect x="10" y="86" width="320" height="18" rx="3" fill="#e53e3e" opacity="0.2"/>
-    <text x="15" y="99" fill="#fc8181" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
-      • AUCUN parti libéral majeur (35% PIB = impensable)
+    <rect x="10" y="86" width="320" height="18" rx="3" fill="#ed8936" opacity="0.2"/>
+    <text x="15" y="99" fill="#ed8936" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+      • Seul libéral : Lisnard (~1%) - 35% PIB impensable
     </text>
 
     <text x="170" y="122" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
