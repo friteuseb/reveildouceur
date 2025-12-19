@@ -16,6 +16,10 @@
       <stop offset="0%" style="stop-color:#3182ce"/>
       <stop offset="100%" style="stop-color:#2b6cb0"/>
     </linearGradient>
+    <!-- Pattern hachures pour zone vide -->
+    <pattern id="hatchPattern" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#e53e3e" stroke-width="2" opacity="0.6"/>
+    </pattern>
   </defs>
 
   <!-- Background -->
@@ -60,21 +64,27 @@
     <rect x="480" y="15" width="90" height="30" rx="3" fill="#667eea"/>
     <text x="525" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Reconquête</text>
 
-    <!-- Libéraux (petite zone) -->
-    <rect x="575" y="15" width="70" height="30" rx="3" fill="#3182ce" opacity="0.5"/>
-    <text x="610" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">Libéraux</text>
-    <text x="655" y="35" fill="#a0aec0" font-family="Arial, sans-serif" font-size="8">(?)</text>
+    <!-- Zone libérale VIDE - très visible -->
+    <rect x="575" y="15" width="120" height="30" rx="3" fill="#1a202c" stroke="#e53e3e" stroke-width="2" stroke-dasharray="4,2"/>
+    <rect x="575" y="15" width="120" height="30" rx="3" fill="url(#hatchPattern)"/>
+    <!-- Croix rouge -->
+    <line x1="580" y1="18" x2="690" y2="42" stroke="#e53e3e" stroke-width="2" opacity="0.8"/>
+    <line x1="580" y1="42" x2="690" y2="18" stroke="#e53e3e" stroke-width="2" opacity="0.8"/>
+    <text x="635" y="35" text-anchor="middle" fill="#fc8181" font-family="Arial, sans-serif" font-size="9" font-weight="bold">AUCUN PARTI</text>
+    <!-- Étiquette explicative -->
+    <rect x="575" y="48" width="120" height="16" rx="2" fill="#e53e3e" opacity="0.9"/>
+    <text x="635" y="59" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Zone libérale vide</text>
 
     <!-- Arrow showing all France is left -->
-    <path d="M 0 58 L 570 58" stroke="#48bb78" stroke-width="2" fill="none"/>
-    <polygon points="0,58 8,54 8,62" fill="#48bb78"/>
-    <text x="285" y="72" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+    <path d="M 0 72 L 570 72" stroke="#48bb78" stroke-width="2" fill="none"/>
+    <polygon points="0,72 8,68 8,76" fill="#48bb78"/>
+    <text x="285" y="86" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
       Tout ce spectre = "socialiste" vu des USA
     </text>
   </g>
 
   <!-- USA comparison -->
-  <g transform="translate(50, 160)">
+  <g transform="translate(50, 170)">
     <text x="0" y="0" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">USA (équivalent)</text>
 
     <rect x="0" y="10" width="700" height="40" rx="5" fill="#2d3748" stroke="#4a5568"/>
@@ -109,7 +119,7 @@
   </g>
 
   <!-- Key stats panel -->
-  <g transform="translate(50, 260)">
+  <g transform="translate(50, 270)">
     <rect x="0" y="0" width="340" height="130" rx="8" fill="#2d3748" stroke="#4a5568"/>
 
     <text x="170" y="20" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
@@ -136,7 +146,7 @@
   </g>
 
   <!-- Political paradox panel -->
-  <g transform="translate(410, 260)">
+  <g transform="translate(410, 270)">
     <rect x="0" y="0" width="340" height="130" rx="8" fill="#2d3748" stroke="#4a5568"/>
 
     <text x="170" y="20" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
@@ -152,11 +162,14 @@
     <text x="15" y="78" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
       • Reconquête : garde la Sécu et services publics
     </text>
-    <text x="15" y="96" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
-      • Les "libéraux" (35% PIB) sont marginaux
+
+    <!-- Ligne sur les libéraux mise en évidence -->
+    <rect x="10" y="86" width="320" height="18" rx="3" fill="#e53e3e" opacity="0.2"/>
+    <text x="15" y="99" fill="#fc8181" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+      • AUCUN parti libéral majeur (35% PIB = impensable)
     </text>
 
-    <text x="170" y="120" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+    <text x="170" y="122" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
       Débat FR = nuances de socialisme
     </text>
   </g>
