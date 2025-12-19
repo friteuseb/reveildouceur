@@ -4,29 +4,17 @@
       <stop offset="0%" style="stop-color:#1a202c"/>
       <stop offset="100%" style="stop-color:#2d3748"/>
     </linearGradient>
-    <linearGradient id="franceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="leftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#e53e3e"/>
       <stop offset="100%" style="stop-color:#c53030"/>
     </linearGradient>
-    <linearGradient id="usaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#3182ce"/>
-      <stop offset="100%" style="stop-color:#2b6cb0"/>
-    </linearGradient>
-    <linearGradient id="asiaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="centerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#ed8936"/>
       <stop offset="100%" style="stop-color:#dd6b20"/>
     </linearGradient>
-    <linearGradient id="chinaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#e53e3e"/>
-      <stop offset="100%" style="stop-color:#9b2c2c"/>
-    </linearGradient>
-    <linearGradient id="indiaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#f6ad55"/>
-      <stop offset="100%" style="stop-color:#dd6b20"/>
-    </linearGradient>
-    <linearGradient id="africaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#48bb78"/>
-      <stop offset="100%" style="stop-color:#38a169"/>
+    <linearGradient id="rightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3182ce"/>
+      <stop offset="100%" style="stop-color:#2b6cb0"/>
     </linearGradient>
   </defs>
 
@@ -34,169 +22,152 @@
   <rect width="800" height="450" fill="url(#bgGradient)"/>
 
   <!-- Title -->
-  <text x="400" y="30" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
-    La France vue du monde : un OVNI politique
+  <text x="400" y="28" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="17" font-weight="bold">
+    L'échiquier politique français vu d'ailleurs
+  </text>
+  <text x="400" y="48" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">
+    Tous "socialistes" sur le plan économique ?
   </text>
 
-  <!-- Subtitle -->
-  <text x="400" y="50" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="11">
-    Prélèvements obligatoires (% du PIB) et protection sociale comparés
-  </text>
+  <!-- French spectrum bar -->
+  <g transform="translate(50, 70)">
+    <text x="0" y="0" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">FRANCE</text>
 
-  <!-- Main comparison bars - more compact -->
-  <g transform="translate(40, 70)">
+    <!-- Full spectrum bar -->
+    <rect x="0" y="10" width="700" height="40" rx="5" fill="#2d3748" stroke="#4a5568"/>
+
+    <!-- LFI/NPA -->
+    <rect x="5" y="15" width="95" height="30" rx="3" fill="#e53e3e"/>
+    <text x="52" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">LFI/NPA</text>
+
+    <!-- PS/EELV -->
+    <rect x="105" y="15" width="95" height="30" rx="3" fill="#c53030"/>
+    <text x="152" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">PS/EELV</text>
+
+    <!-- Renaissance -->
+    <rect x="205" y="15" width="100" height="30" rx="3" fill="#ed8936"/>
+    <text x="255" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Renaissance</text>
+
+    <!-- LR -->
+    <rect x="310" y="15" width="80" height="30" rx="3" fill="#dd6b20"/>
+    <text x="350" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">LR</text>
+
+    <!-- RN -->
+    <rect x="395" y="15" width="80" height="30" rx="3" fill="#805ad5"/>
+    <text x="435" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">RN</text>
+
+    <!-- Reconquête -->
+    <rect x="480" y="15" width="90" height="30" rx="3" fill="#667eea"/>
+    <text x="525" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Reconquête</text>
+
+    <!-- Libéraux (petite zone) -->
+    <rect x="575" y="15" width="70" height="30" rx="3" fill="#3182ce" opacity="0.5"/>
+    <text x="610" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">Libéraux</text>
+    <text x="655" y="35" fill="#a0aec0" font-family="Arial, sans-serif" font-size="8">(?)</text>
+
+    <!-- Arrow showing all France is left -->
+    <path d="M 0 58 L 570 58" stroke="#48bb78" stroke-width="2" fill="none"/>
+    <polygon points="0,58 8,54 8,62" fill="#48bb78"/>
+    <text x="285" y="72" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+      Tout ce spectre = "socialiste" vu des USA
+    </text>
+  </g>
+
+  <!-- USA comparison -->
+  <g transform="translate(50, 160)">
+    <text x="0" y="0" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">USA (équivalent)</text>
+
+    <rect x="0" y="10" width="700" height="40" rx="5" fill="#2d3748" stroke="#4a5568"/>
+
+    <!-- Extreme left (Sanders) -->
+    <rect x="5" y="15" width="60" height="30" rx="3" fill="#e53e3e"/>
+    <text x="35" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Sanders</text>
+
+    <!-- Democrats -->
+    <rect x="70" y="15" width="150" height="30" rx="3" fill="#3182ce"/>
+    <text x="145" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Démocrates</text>
+
+    <!-- Center -->
+    <rect x="225" y="15" width="100" height="30" rx="3" fill="#a0aec0"/>
+    <text x="275" y="35" text-anchor="middle" fill="#2d3748" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Centre</text>
+
+    <!-- Republicans -->
+    <rect x="330" y="15" width="200" height="30" rx="3" fill="#c53030"/>
+    <text x="430" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Républicains</text>
+
+    <!-- MAGA -->
+    <rect x="535" y="15" width="160" height="30" rx="3" fill="#9b2c2c"/>
+    <text x="615" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" font-weight="bold">MAGA / Tea Party</text>
+
+    <!-- Bracket showing French parties -->
+    <line x1="5" y1="55" x2="5" y2="65" stroke="#48bb78" stroke-width="2"/>
+    <line x1="5" y1="65" x2="220" y2="65" stroke="#48bb78" stroke-width="2"/>
+    <line x1="220" y1="55" x2="220" y2="65" stroke="#48bb78" stroke-width="2"/>
+    <text x="112" y="80" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="9">
+      ← Tous les partis FR ici
+    </text>
+  </g>
+
+  <!-- Key stats panel -->
+  <g transform="translate(50, 260)">
+    <rect x="0" y="0" width="340" height="130" rx="8" fill="#2d3748" stroke="#4a5568"/>
+
+    <text x="170" y="20" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+      Prélèvements obligatoires (% PIB)
+    </text>
+
     <!-- France -->
-    <rect x="0" y="0" width="288" height="36" rx="4" fill="url(#franceGradient)" opacity="0.9"/>
-    <text x="8" y="16" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">FRANCE</text>
-    <text x="8" y="30" fill="#fed7d7" font-family="Arial, sans-serif" font-size="9">45-46% PIB | 25j congés | 100% santé</text>
-    <text x="275" y="24" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="end">1er</text>
+    <rect x="15" y="35" width="280" height="18" rx="3" fill="#e53e3e" opacity="0.8"/>
+    <text x="20" y="48" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">France 45-46%</text>
+    <text x="305" y="48" fill="#fc8181" font-family="Arial, sans-serif" font-size="9">1er mondial</text>
 
-    <!-- Japon -->
-    <rect x="0" y="42" width="210" height="36" rx="4" fill="url(#asiaGradient)" opacity="0.9"/>
-    <text x="8" y="58" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">JAPON</text>
-    <text x="8" y="72" fill="#feebc8" font-family="Arial, sans-serif" font-size="9">33% PIB | 10-20j congés | 100% santé</text>
+    <!-- OCDE -->
+    <rect x="15" y="58" width="212" height="18" rx="3" fill="#ed8936" opacity="0.8"/>
+    <text x="20" y="71" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Moy. OCDE 34%</text>
 
     <!-- USA -->
-    <rect x="0" y="84" width="166" height="36" rx="4" fill="url(#usaGradient)" opacity="0.9"/>
-    <text x="8" y="100" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">USA</text>
-    <text x="8" y="114" fill="#bee3f8" font-family="Arial, sans-serif" font-size="9">26% PIB | 0j congés | 0 maternité</text>
+    <rect x="15" y="81" width="162" height="18" rx="3" fill="#3182ce" opacity="0.8"/>
+    <text x="20" y="94" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">USA 26%</text>
 
     <!-- Chine -->
-    <rect x="0" y="126" width="140" height="36" rx="4" fill="url(#chinaGradient)" opacity="0.9"/>
-    <text x="8" y="142" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">CHINE</text>
-    <text x="8" y="156" fill="#fed7d7" font-family="Arial, sans-serif" font-size="9">~22% PIB | 285M exclus hukou</text>
-
-    <!-- Inde -->
-    <rect x="0" y="168" width="115" height="36" rx="4" fill="url(#indiaGradient)" opacity="0.9"/>
-    <text x="8" y="184" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">INDE</text>
-    <text x="8" y="198" fill="#feebc8" font-family="Arial, sans-serif" font-size="9">18% PIB | 90% informel</text>
-
-    <!-- Afrique moyenne -->
-    <rect x="0" y="210" width="102" height="36" rx="4" fill="url(#africaGradient)" opacity="0.9"/>
-    <text x="8" y="226" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">AFRIQUE</text>
-    <text x="8" y="240" fill="#c6f6d5" font-family="Arial, sans-serif" font-size="9">16% moy. | 83% informel</text>
-
-    <!-- Scale -->
-    <line x1="0" y1="258" x2="288" y2="258" stroke="#4a5568" stroke-width="1"/>
-    <text x="0" y="270" fill="#718096" font-family="Arial, sans-serif" font-size="9">0%</text>
-    <text x="144" y="270" fill="#718096" font-family="Arial, sans-serif" font-size="9">25%</text>
-    <text x="288" y="270" fill="#718096" font-family="Arial, sans-serif" font-size="9" text-anchor="end">50%</text>
+    <rect x="15" y="104" width="137" height="18" rx="3" fill="#805ad5" opacity="0.8"/>
+    <text x="20" y="117" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Chine ~22%</text>
+    <text x="165" y="117" fill="#a0aec0" font-family="Arial, sans-serif" font-size="8">"communiste"</text>
   </g>
 
-  <!-- Right panel: Key facts -->
-  <g transform="translate(380, 70)">
-    <rect x="0" y="0" width="380" height="280" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <!-- Political paradox panel -->
+  <g transform="translate(410, 260)">
+    <rect x="0" y="0" width="340" height="130" rx="8" fill="#2d3748" stroke="#4a5568"/>
 
-    <text x="190" y="22" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold">
-      Ce qui est "normal" en France...
+    <text x="170" y="20" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+      Le paradoxe français
     </text>
 
-    <!-- Congés payés -->
-    <g transform="translate(12, 40)">
-      <circle cx="6" cy="6" r="6" fill="#48bb78"/>
-      <text x="18" y="10" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">25 jours</text>
-      <text x="75" y="10" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">congés + RTT</text>
-      <text x="355" y="10" fill="#fc8181" font-family="Arial, sans-serif" font-size="10" text-anchor="end">USA/Chine: 0-5j</text>
-    </g>
-
-    <!-- Congé maternité -->
-    <g transform="translate(12, 62)">
-      <circle cx="6" cy="6" r="6" fill="#48bb78"/>
-      <text x="18" y="10" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">16 sem.</text>
-      <text x="75" y="10" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">maternité 100%</text>
-      <text x="355" y="10" fill="#fc8181" font-family="Arial, sans-serif" font-size="10" text-anchor="end">USA: 0 payé</text>
-    </g>
-
-    <!-- Couverture santé -->
-    <g transform="translate(12, 84)">
-      <circle cx="6" cy="6" r="6" fill="#48bb78"/>
-      <text x="18" y="10" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">100%</text>
-      <text x="60" y="10" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">couverture santé</text>
-      <text x="355" y="10" fill="#fc8181" font-family="Arial, sans-serif" font-size="10" text-anchor="end">Inde: 30%</text>
-    </g>
-
-    <!-- Separator 1 -->
-    <line x1="12" y1="100" x2="368" y2="100" stroke="#4a5568" stroke-width="1"/>
-
-    <!-- Paradoxes section -->
-    <text x="190" y="118" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
-      Les paradoxes mondiaux
+    <text x="15" y="42" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
+      • Aucun parti majeur ne propose moins de 40% PIB
+    </text>
+    <text x="15" y="60" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
+      • RN : retraite 60 ans, nationalisations, Sécu
+    </text>
+    <text x="15" y="78" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
+      • Reconquête : garde la Sécu et services publics
+    </text>
+    <text x="15" y="96" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
+      • Les "libéraux" (35% PIB) sont marginaux
     </text>
 
-    <!-- Chine paradox -->
-    <g transform="translate(12, 130)">
-      <rect x="0" y="0" width="175" height="55" rx="4" fill="#3d1212" opacity="0.6"/>
-      <text x="8" y="15" fill="#fc8181" font-family="Arial, sans-serif" font-size="10" font-weight="bold">CHINE "communiste"</text>
-      <text x="8" y="30" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">~22% PIB (vs 45% France)</text>
-      <text x="8" y="43" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">285M migrants sans droits</text>
-    </g>
-
-    <!-- Inde paradox -->
-    <g transform="translate(195, 130)">
-      <rect x="0" y="0" width="175" height="55" rx="4" fill="#3d2812" opacity="0.6"/>
-      <text x="8" y="15" fill="#f6ad55" font-family="Arial, sans-serif" font-size="10" font-weight="bold">INDE belles lois</text>
-      <text x="8" y="30" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">26 sem. maternité (papier)</text>
-      <text x="8" y="43" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">90% éco informelle = 0 droit</text>
-    </g>
-
-    <!-- Separator 2 -->
-    <line x1="12" y1="195" x2="368" y2="195" stroke="#4a5568" stroke-width="1"/>
-
-    <!-- RN paradox -->
-    <text x="190" y="212" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
-      Le paradoxe du RN en France
+    <text x="170" y="120" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+      Débat FR = nuances de socialisme
     </text>
-
-    <text x="12" y="230" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
-      66% de mesures économiques "de gauche" (CEVIPOF)
-    </text>
-    <text x="12" y="246" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
-      Retraite à 60 ans (Bernie Sanders: 67 ans)
-    </text>
-    <text x="12" y="262" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">
-      Nationalisation autoroutes | TVA énergie 5,5%
-    </text>
-  </g>
-
-  <!-- Bottom timeline -->
-  <g transform="translate(40, 380)">
-    <text x="0" y="0" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
-      Origines du modèle français :
-    </text>
-
-    <g transform="translate(160, -8)">
-      <rect x="0" y="0" width="70" height="18" rx="3" fill="#4a5568"/>
-      <text x="35" y="12" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">1762 Rousseau</text>
-    </g>
-
-    <g transform="translate(240, -8)">
-      <rect x="0" y="0" width="80" height="18" rx="3" fill="#4a5568"/>
-      <text x="40" y="12" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">1789 Révolution</text>
-    </g>
-
-    <g transform="translate(330, -8)">
-      <rect x="0" y="0" width="90" height="18" rx="3" fill="#4a5568"/>
-      <text x="45" y="12" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">1936 Front Pop.</text>
-    </g>
-
-    <g transform="translate(430, -8)">
-      <rect x="0" y="0" width="60" height="18" rx="3" fill="#4a5568"/>
-      <text x="30" y="12" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">1945 CNR</text>
-    </g>
-
-    <g transform="translate(500, -8)">
-      <rect x="0" y="0" width="55" height="18" rx="3" fill="#4a5568"/>
-      <text x="27" y="12" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8">1946 Sécu</text>
-    </g>
   </g>
 
   <!-- Footer quote -->
   <text x="400" y="418" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="10" font-style="italic">
-    "L'extrême droite française défend des positions socialistes vues d'ailleurs"
+    "Ce que la France appelle 'la droite' serait du centre-gauche partout ailleurs"
   </text>
 
   <!-- Source -->
   <text x="760" y="440" text-anchor="end" fill="#4a5568" font-family="Arial, sans-serif" font-size="8">
-    Sources : OCDE 2024, OIT, CEVIPOF | reveildouceur.fr
+    Sources : OCDE 2024, CEVIPOF, programmes partis | reveildouceur.fr
   </text>
 </svg>
