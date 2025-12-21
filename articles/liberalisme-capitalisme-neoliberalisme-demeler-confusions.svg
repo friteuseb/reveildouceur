@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38a169"/>
+      <stop offset="100%" style="stop-color:#48bb78"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c53030"/>
+      <stop offset="100%" style="stop-color:#e53e3e"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c05621"/>
+      <stop offset="100%" style="stop-color:#ed8936"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    Libéralisme, Capitalisme, Néolibéralisme
+  </text>
+  <text x="400" y="55" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="13">
+    Ce que ces mots signifient vraiment
+  </text>
+
+  <!-- Three columns for concepts -->
+  <!-- Column 1: Libéralisme -->
+  <rect x="30" y="75" width="230" height="145" rx="8" fill="#2d3748" stroke="#48bb78" stroke-width="2"/>
+  <text x="145" y="98" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="14" font-weight="bold">LIBÉRALISME</text>
+  <text x="145" y="115" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Philosophie politique</text>
+  <line x1="50" y1="125" x2="240" y2="125" stroke="#4a5568" stroke-width="1"/>
+  <text x="50" y="143" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Droits individuels</text>
+  <text x="50" y="158" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">État de droit</text>
+  <text x="50" y="173" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Séparation des pouvoirs</text>
+  <text x="50" y="188" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Liberté d'expression</text>
+  <text x="50" y="208" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9" font-style="italic">Locke, Montesquieu, 1789</text>
+
+  <!-- Column 2: Capitalisme -->
+  <rect x="280" y="75" width="230" height="145" rx="8" fill="#2d3748" stroke="#3182ce" stroke-width="2"/>
+  <text x="395" y="98" text-anchor="middle" fill="#3182ce" font-family="Arial, sans-serif" font-size="14" font-weight="bold">CAPITALISME</text>
+  <text x="395" y="115" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Système économique</text>
+  <line x1="300" y1="125" x2="490" y2="125" stroke="#4a5568" stroke-width="1"/>
+  <text x="300" y="143" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Propriété privée</text>
+  <text x="300" y="158" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Économie de marché</text>
+  <text x="300" y="173" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Peut être régulé ou non</text>
+  <text x="300" y="188" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Plusieurs modèles existent</text>
+  <text x="300" y="208" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9" font-style="italic">Révolution industrielle</text>
+
+  <!-- Column 3: Néolibéralisme -->
+  <rect x="530" y="75" width="240" height="145" rx="8" fill="#2d3748" stroke="#ed8936" stroke-width="2"/>
+  <text x="650" y="98" text-anchor="middle" fill="#ed8936" font-family="Arial, sans-serif" font-size="14" font-weight="bold">NÉOLIBÉRALISME</text>
+  <text x="650" y="115" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="10">Doctrine économique</text>
+  <line x1="550" y1="125" x2="750" y2="125" stroke="#4a5568" stroke-width="1"/>
+  <text x="550" y="143" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Dérégulation</text>
+  <text x="550" y="158" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Privatisations</text>
+  <text x="550" y="173" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Discipline budgétaire</text>
+  <text x="550" y="188" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Libre-échange</text>
+  <text x="550" y="208" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9" font-style="italic">Friedman, Reagan, Thatcher</text>
+
+  <!-- France section -->
+  <rect x="30" y="235" width="740" height="200" rx="8" fill="#1e2533"/>
+  <text x="400" y="258" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    ET LA FRANCE ? Le paradoxe
+  </text>
+
+  <!-- Row 1: Liberté politique (en recul) -->
+  <rect x="50" y="275" width="340" height="70" rx="6" fill="#2d3748"/>
+  <text x="70" y="295" fill="#ed8936" font-family="Arial, sans-serif" font-size="11" font-weight="bold">LIBERTÉS POLITIQUES : EN RECUL</text>
+  <text x="70" y="312" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Démocratie : 26e mondial, "défaillante" (Economist 2024)</text>
+  <text x="70" y="327" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Presse : 21e mondial (RSF 2024) - stagnante</text>
+  <text x="70" y="342" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">9 milliardaires = 90% des médias</text>
+
+  <!-- Row 1: Économie (très étatiste) -->
+  <rect x="410" y="275" width="340" height="70" rx="6" fill="#2d3748"/>
+  <text x="430" y="295" fill="#e53e3e" font-family="Arial, sans-serif" font-size="11" font-weight="bold">ÉCONOMIE : TRÈS ÉTATISTE</text>
+  <text x="430" y="312" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Prélèvements : 46% PIB (record OCDE)</text>
+  <text x="430" y="327" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Dépenses publiques : 57% PIB</text>
+  <text x="430" y="342" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">Liberté économique : 52e mondial</text>
+
+  <!-- Key stats row -->
+  <rect x="50" y="355" width="220" height="65" rx="6" fill="url(#orangeGrad)" opacity="0.9"/>
+  <text x="160" y="378" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">7,99/10</text>
+  <text x="160" y="395" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Score démocratie</text>
+  <text x="160" y="410" text-anchor="middle" fill="#1a202c" font-family="Arial, sans-serif" font-size="9">(seuil "pleine démo" : 8,00)</text>
+
+  <rect x="290" y="355" width="220" height="65" rx="6" fill="url(#redGrad)" opacity="0.9"/>
+  <text x="400" y="378" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">21e/180</text>
+  <text x="400" y="395" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Liberté de la presse</text>
+  <text x="400" y="410" text-anchor="middle" fill="#1a202c" font-family="Arial, sans-serif" font-size="9">RSF : "indicateurs stagnants"</text>
+
+  <rect x="530" y="355" width="220" height="65" rx="6" fill="#2d3748"/>
+  <text x="640" y="378" text-anchor="middle" fill="#48bb78" font-family="Arial, sans-serif" font-size="22" font-weight="bold">1789</text>
+  <text x="640" y="395" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Héritage libéral</text>
+  <text x="640" y="410" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="9">Principes vs pratique</text>
+</svg>

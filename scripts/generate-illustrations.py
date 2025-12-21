@@ -123,6 +123,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Politique comparée internationale
     "tous-socialistes-echiquier-politique-francais": "A French worker in blue overalls relaxing on a beach chair with umbrella holding a vacation calendar showing 5 weeks, while an American worker in suit looks confused and exhausted standing next to him with no chair; behind them a giant thermometer-style bar chart showing tax rates with France at top glowing warm red and USA at bottom in cold blue; Eiffel Tower in background on French side, Statue of Liberty on American side; simple clean composition, warm sunny atmosphere on French side contrasting with grey overcast on American side",
+
+    # Économie - Libéralisme et confusions
+    "liberalisme-capitalisme-neoliberalisme-demeler-confusions": "Surreal philosophical landscape with three distinct floating islands connected by bridges: first island shows Enlightenment philosophers Locke Voltaire Montesquieu around a glowing Declaration of Rights document representing political liberalism; second island shows industrial revolution factory with gears and Adam Smith figure representing economic capitalism; third island shows Reagan and Thatcher figures on Wall Street trading floor with golden bull statue representing neoliberalism; a confused French citizen at center crossroads holding a compass that spins wildly unable to choose direction; the three concepts visually distinct yet connected by thin golden threads; question marks floating in sky; warm amber tones for Enlightenment section, industrial grey for capitalism, cold neon blue for neoliberalism; conceptual clarity versus French confusion visualization",
 }
 
 def extract_article_info(html_path):
