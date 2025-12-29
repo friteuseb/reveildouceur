@@ -126,6 +126,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Économie - Libéralisme et confusions
     "liberalisme-capitalisme-neoliberalisme-demeler-confusions": "Surreal philosophical landscape with three distinct floating islands connected by bridges: first island shows Enlightenment philosophers Locke Voltaire Montesquieu around a glowing Declaration of Rights document representing political liberalism; second island shows industrial revolution factory with gears and Adam Smith figure representing economic capitalism; third island shows Reagan and Thatcher figures on Wall Street trading floor with golden bull statue representing neoliberalism; a confused French citizen at center crossroads holding a compass that spins wildly unable to choose direction; the three concepts visually distinct yet connected by thin golden threads; question marks floating in sky; warm amber tones for Enlightenment section, industrial grey for capitalism, cold neon blue for neoliberalism; conceptual clarity versus French confusion visualization",
+
+    # Cinéma et culture - Avatar et colonialisme inversé
+    "avatar-colonialisme-inverse-bon-sauvage": "Surreal scene of Western man transforming into tall blue alien Na'vi figure, half human in military gear half indigenous alien with tribal paint and braid; giant puppet strings descending from Hollywood camera in sky controlling both figures; lush alien bioluminescent forest of Pandora on right side glowing with mystical green and blue, industrial military base with smoke on left side; noble savage trope visualized as idealized Na'vi on pedestal being admired by kneeling Western figure; in background tribal indigenous people from Earth (Amazonian, Native American) shown as transparent ghostly figures being ignored; giant mirror in center reflecting distorted self-image; colonial guilt transformed into entertainment; Moebius style clean lines warm amber meeting alien blues and greens",
 }
 
 def extract_article_info(html_path):
