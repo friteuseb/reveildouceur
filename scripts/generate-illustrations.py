@@ -220,41 +220,45 @@ def generate_with_pollinations(prompt, output_path):
         return False
 
 def generate_with_gemini(prompt, output_path):
-    """Génère une image avec Google Gemini Imagen"""
+    """Génère une image avec Google Gemini Imagen 4.0 (nouveau SDK)"""
 
     if not GOOGLE_API_KEY:
         return None  # Pas de clé, on skip
 
-    # Essayer avec Imagen 3
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key={GOOGLE_API_KEY}"
-
-    payload = {
-        "instances": [{"prompt": prompt}],
-        "parameters": {
-            "sampleCount": 1,
-            "aspectRatio": "16:9",
-            "safetyFilterLevel": "block_medium_and_above"
-        }
-    }
-
     try:
-        print(f"  → Tentative avec Gemini Imagen...")
-        response = requests.post(url, json=payload, timeout=120)
+        # Importer le nouveau SDK google-genai
+        from google import genai
+        from google.genai import types
 
-        if response.status_code == 200:
-            data = response.json()
-            if "predictions" in data and data["predictions"]:
-                image_data = data["predictions"][0].get("bytesBase64Encoded")
-                if image_data:
-                    output_path.parent.mkdir(parents=True, exist_ok=True)
-                    with open(output_path, "wb") as f:
-                        f.write(base64.b64decode(image_data))
-                    print(f"  ✓ Image sauvegardée: {output_path.name}")
-                    return True
-        return None  # Pas d'erreur affichée, on essaie le fallback
+        print(f"  → Tentative avec Gemini Imagen 4.0...")
 
-    except Exception:
-        return None  # Fallback silencieux
+        # Configurer le client
+        client = genai.Client(api_key=GOOGLE_API_KEY)
+
+        # Générer l'image avec Imagen 4.0
+        response = client.models.generate_images(
+            model='imagen-4.0-generate-001',
+            prompt=prompt,
+            config=types.GenerateImagesConfig(
+                number_of_images=1,
+                aspect_ratio="16:9"
+            )
+        )
+
+        if response.generated_images:
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            response.generated_images[0].image.save(str(output_path))
+            print(f"  ✓ Image sauvegardée: {output_path.name}")
+            return True
+
+        return None  # Pas d'image générée, essayer le fallback
+
+    except ImportError:
+        print("  ⚠ SDK google-genai non installé. Installez avec: pip install google-genai")
+        return None
+    except Exception as e:
+        print(f"  ⚠ Erreur Gemini: {e}")
+        return None  # Fallback sur Pollinations
 
 def process_article(html_filename, force=False):
     """Traite un article et génère son illustration"""
