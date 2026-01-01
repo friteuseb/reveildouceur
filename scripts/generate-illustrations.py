@@ -131,6 +131,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Cinéma et culture - Avatar et colonialisme inversé
     "avatar-colonialisme-inverse-bon-sauvage": "Surreal scene of Western man transforming into tall blue alien Na'vi figure, half human in military gear half indigenous alien with tribal paint and braid; giant puppet strings descending from Hollywood camera in sky controlling both figures; lush alien bioluminescent forest of Pandora on right side glowing with mystical green and blue, industrial military base with smoke on left side; noble savage trope visualized as idealized Na'vi on pedestal being admired by kneeling Western figure; in background tribal indigenous people from Earth (Amazonian, Native American) shown as transparent ghostly figures being ignored; giant mirror in center reflecting distorted self-image; colonial guilt transformed into entertainment; Moebius style clean lines warm amber meeting alien blues and greens",
+
+    # Économie - Retraites et fraude fiscale
+    "retraites-le-vrai-trou-est-ailleurs": "Dramatic balance scale scene: on one side a tiny thimble labeled 'Deficit Retraites 6 Md' barely weighing anything; on other side a massive overflowing treasure chest labeled 'Fraude Fiscale 100 Md' with gold coins spilling out and being caught by wealthy figures in top hats; in foreground exhausted French worker pushing retirement age clock from 62 to 64 uphill like Sisyphus; in background luxury yachts and private jets flying to tax haven island with palm trees shaped like euro signs; giant magnifying glass from above examining the worker while deliberately avoiding the treasure chest; Marianne figure blindfolded holding broken scales; COR report papers floating like fallen leaves; warm amber for workers and cold gold for wealthy; social injustice and fiscal imbalance visualization",
 }
 
 def extract_article_info(html_path):

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fc8181"/>
+      <stop offset="100%" style="stop-color:#e53e3e"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#68d391"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbd38d"/>
+      <stop offset="100%" style="stop-color:#ed8936"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#90cdf4"/>
+      <stop offset="100%" style="stop-color:#4299e1"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b794f4"/>
+      <stop offset="100%" style="stop-color:#805ad5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" font-family="system-ui, sans-serif">Retraites : et si le vrai trou etait ailleurs ?</text>
+  <text x="400" y="55" text-anchor="middle" fill="#a0aec0" font-size="12" font-family="system-ui, sans-serif">Comparaison deficit retraites vs sources de financement alternatives</text>
+
+  <!-- Main comparison bar chart -->
+  <text x="50" y="90" fill="#a0aec0" font-size="11" font-family="system-ui, sans-serif">COMPARAISON DES MONTANTS (en milliards d'euros/an)</text>
+
+  <!-- Deficit retraites - Small bar -->
+  <rect x="50" y="110" width="40" height="20" rx="3" fill="url(#greenGrad)"/>
+  <text x="95" y="124" fill="#ffffff" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">6,6 Md€</text>
+  <text x="145" y="124" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">Deficit retraites 2030 (COR)</text>
+
+  <!-- Fraude fiscale - Large bar -->
+  <rect x="50" y="140" width="600" height="20" rx="3" fill="url(#redGrad)"/>
+  <text x="660" y="154" fill="#ffffff" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">80-100 Md€</text>
+  <text x="60" y="154" fill="#1a202c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Fraude fiscale estimee (Solidaires Finances Publiques)</text>
+
+  <!-- Niches fiscales -->
+  <rect x="50" y="170" width="570" height="20" rx="3" fill="url(#orangeGrad)"/>
+  <text x="630" y="184" fill="#ffffff" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">95 Md€</text>
+  <text x="60" y="184" fill="#1a202c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Niches fiscales (Budget 2025)</text>
+
+  <!-- Exonerations patronales -->
+  <rect x="50" y="200" width="462" height="20" rx="3" fill="url(#blueGrad)"/>
+  <text x="520" y="214" fill="#ffffff" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">77 Md€</text>
+  <text x="60" y="214" fill="#1a202c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Exonerations cotisations patronales</text>
+
+  <!-- Taxe milliardaires -->
+  <rect x="50" y="230" width="120" height="20" rx="3" fill="url(#purpleGrad)"/>
+  <text x="180" y="244" fill="#ffffff" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">15-25 Md€</text>
+  <text x="260" y="244" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">Taxe 2% milliardaires (Zucman)</text>
+
+  <!-- Fraude sociale -->
+  <rect x="50" y="260" width="78" height="20" rx="3" fill="#718096"/>
+  <text x="135" y="274" fill="#ffffff" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">13 Md€</text>
+  <text x="185" y="274" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">Fraude sociale totale</text>
+
+  <!-- Separator -->
+  <line x1="50" y1="300" x2="750" y2="300" stroke="#4a5568" stroke-width="1"/>
+
+  <!-- Key insight boxes -->
+  <text x="50" y="325" fill="#a0aec0" font-size="11" font-family="system-ui, sans-serif">POUR COMBLER LE DEFICIT RETRAITES, IL FAUDRAIT RECUPERER :</text>
+
+  <!-- Box 1 -->
+  <rect x="50" y="340" width="160" height="70" rx="8" fill="#2d3748" stroke="#4a5568"/>
+  <text x="130" y="365" text-anchor="middle" fill="#fc8181" font-size="28" font-weight="bold" font-family="system-ui, sans-serif">7%</text>
+  <text x="130" y="385" text-anchor="middle" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">de la fraude</text>
+  <text x="130" y="400" text-anchor="middle" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">fiscale</text>
+
+  <!-- Box 2 -->
+  <rect x="230" y="340" width="160" height="70" rx="8" fill="#2d3748" stroke="#4a5568"/>
+  <text x="310" y="365" text-anchor="middle" fill="#ed8936" font-size="28" font-weight="bold" font-family="system-ui, sans-serif">7%</text>
+  <text x="310" y="385" text-anchor="middle" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">des niches</text>
+  <text x="310" y="400" text-anchor="middle" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">fiscales</text>
+
+  <!-- Box 3 -->
+  <rect x="410" y="340" width="160" height="70" rx="8" fill="#2d3748" stroke="#4a5568"/>
+  <text x="490" y="365" text-anchor="middle" fill="#4299e1" font-size="28" font-weight="bold" font-family="system-ui, sans-serif">9%</text>
+  <text x="490" y="385" text-anchor="middle" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">des exonerations</text>
+  <text x="490" y="400" text-anchor="middle" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">patronales</text>
+
+  <!-- Box 4 -->
+  <rect x="590" y="340" width="160" height="70" rx="8" fill="#2d3748" stroke="#805ad5"/>
+  <text x="670" y="365" text-anchor="middle" fill="#b794f4" font-size="28" font-weight="bold" font-family="system-ui, sans-serif">30%</text>
+  <text x="670" y="385" text-anchor="middle" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">de la taxe</text>
+  <text x="670" y="400" text-anchor="middle" fill="#a0aec0" font-size="10" font-family="system-ui, sans-serif">milliardaires</text>
+
+  <!-- Ratio fraude -->
+  <rect x="50" y="430" width="700" height="55" rx="8" fill="#1a202c" stroke="#e53e3e"/>
+  <text x="400" y="455" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">Ratio fraude fiscale / fraude sociale :</text>
+  <text x="400" y="475" text-anchor="middle" fill="#fc8181" font-size="16" font-weight="bold" font-family="system-ui, sans-serif">Pour 1€ de fraude sociale, il y a 6 a 8€ de fraude fiscale</text>
+
+  <!-- Source -->
+  <text x="750" y="495" text-anchor="end" fill="#718096" font-size="9" font-family="system-ui, sans-serif">Sources : COR 2025, Solidaires Finances, Cour des comptes, G. Zucman</text>
+</svg>
