@@ -137,6 +137,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Technologie - RAM et oligopole mémoire
     "ram-prix-explosion-qui-profite": "Detailed close-up of a DDR5 RAM stick as the central focus, green PCB circuit board with black memory chips and golden contact pins clearly visible; the RAM stick is cracked in half with golden coins and dollar bills spilling out from the break; behind it looms a massive shadowy AI data center with glowing server racks consuming smaller RAM sticks like a hungry beast; three corporate hands in business suits reaching from above fighting over the RAM stick; price tag attached showing crossed out 100 dollars replaced by 500 dollars; small home computer user in corner looking up with empty wallet; clean technical illustration style with warm amber lighting on RAM stick contrasting with cold blue corporate shadows",
+
+    # France - Souveraineté et déclin
+    "dernieres-decisions-souveraines-france": "Majestic Marianne figure standing at crossroads of history, one path behind her glows golden with nuclear mushroom cloud transforming into power plant, Concorde and Ariane rocket soaring, TGV speeding past Eiffel Tower, all symbols of past French greatness; the other path ahead descends into fog with sold-for-sale signs on factories, OTAN stars replacing French flag stars one by one, African map crumbling away, Euro symbol crushing the Franc; she holds broken scepter in one hand and EU passport in other; 2003 date floating above like last beacon of light, then darkness after; Charles de Gaulle ghost fading in background watching with disappointment; warm amber tones for glorious past transitioning to cold grey for present decline; sovereignty lost visualization, melancholic but dignified",
 }
 
 def extract_article_info(html_path):
