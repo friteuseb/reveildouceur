@@ -134,6 +134,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # Économie - Retraites et fraude fiscale
     "retraites-le-vrai-trou-est-ailleurs": "Dramatic balance scale scene: on one side a tiny thimble labeled 'Deficit Retraites 6 Md' barely weighing anything; on other side a massive overflowing treasure chest labeled 'Fraude Fiscale 100 Md' with gold coins spilling out and being caught by wealthy figures in top hats; in foreground exhausted French worker pushing retirement age clock from 62 to 64 uphill like Sisyphus; in background luxury yachts and private jets flying to tax haven island with palm trees shaped like euro signs; giant magnifying glass from above examining the worker while deliberately avoiding the treasure chest; Marianne figure blindfolded holding broken scales; COR report papers floating like fallen leaves; warm amber for workers and cold gold for wealthy; social injustice and fiscal imbalance visualization",
+
+    # Technologie - RAM et oligopole mémoire
+    "ram-prix-explosion-qui-profite": "Detailed close-up of a DDR5 RAM stick as the central focus, green PCB circuit board with black memory chips and golden contact pins clearly visible; the RAM stick is cracked in half with golden coins and dollar bills spilling out from the break; behind it looms a massive shadowy AI data center with glowing server racks consuming smaller RAM sticks like a hungry beast; three corporate hands in business suits reaching from above fighting over the RAM stick; price tag attached showing crossed out 100 dollars replaced by 500 dollars; small home computer user in corner looking up with empty wallet; clean technical illustration style with warm amber lighting on RAM stick contrasting with cold blue corporate shadows",
 }
 
 def extract_article_info(html_path):

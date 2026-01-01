@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1419"/>
+      <stop offset="100%" style="stop-color:#1a202c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="17" font-weight="600">
+    Pourquoi les prix de la RAM explosent ?
+  </text>
+  <text x="400" y="46" text-anchor="middle" fill="#718096" font-family="Inter, sans-serif" font-size="11">
+    Les 4 explications avancees - et ce qu'on peut en penser
+  </text>
+
+  <!-- Scenario 1: Demande IA (version officielle) -->
+  <g transform="translate(25, 60)">
+    <rect x="0" y="0" width="365" height="155" rx="8" fill="#1e2a3a"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="365" height="32" rx="8" fill="#2563eb"/>
+    <rect x="0" y="24" width="365" height="8" fill="#2563eb"/>
+    <text x="12" y="21" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">1. DEMANDE IA (version officielle)</text>
+
+    <!-- Content -->
+    <text x="12" y="52" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10" font-weight="600">L'IA devore la production mondiale</text>
+
+    <circle cx="20" cy="70" r="3" fill="#60a5fa"/>
+    <text x="28" y="73" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">HBM (memoire IA) = 3x la capacite de DDR5</text>
+
+    <circle cx="20" cy="88" r="3" fill="#60a5fa"/>
+    <text x="28" y="91" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">20-40% de la production reallouee vers l'IA</text>
+
+    <circle cx="20" cy="106" r="3" fill="#60a5fa"/>
+    <text x="28" y="109" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Projet Stargate : 40% de la DRAM mondiale</text>
+
+    <!-- Verdict -->
+    <rect x="10" y="122" width="345" height="24" rx="4" fill="#1e3a5f"/>
+    <text x="20" y="138" fill="#93c5fd" font-family="Inter, sans-serif" font-size="9" font-weight="500">VERDICT : Reel et documente, mais explique-t-il +500% ?</text>
+  </g>
+
+  <!-- Scenario 2: Oligopole -->
+  <g transform="translate(410, 60)">
+    <rect x="0" y="0" width="365" height="155" rx="8" fill="#1e2a3a"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="365" height="32" rx="8" fill="#d97706"/>
+    <rect x="0" y="24" width="365" height="8" fill="#d97706"/>
+    <text x="12" y="21" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">2. OLIGOPOLE (3 acteurs = 95%)</text>
+
+    <!-- Content -->
+    <text x="12" y="52" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10" font-weight="600">Concentration extreme du marche</text>
+
+    <circle cx="20" cy="70" r="3" fill="#fbbf24"/>
+    <text x="28" y="73" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Samsung + SK Hynix + Micron = 95%</text>
+
+    <circle cx="20" cy="88" r="3" fill="#fbbf24"/>
+    <text x="28" y="91" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Arret coordonne des commandes DDR4</text>
+
+    <circle cx="20" cy="106" r="3" fill="#fbbf24"/>
+    <text x="28" y="109" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Micron abandonne le marche grand public</text>
+
+    <!-- Verdict -->
+    <rect x="10" y="122" width="345" height="24" rx="4" fill="#451a03"/>
+    <text x="20" y="138" fill="#fcd34d" font-family="Inter, sans-serif" font-size="9" font-weight="500">VERDICT : Structure de marche propice aux abus</text>
+  </g>
+
+  <!-- Scenario 3: Ententes passées -->
+  <g transform="translate(25, 225)">
+    <rect x="0" y="0" width="365" height="155" rx="8" fill="#1e2a3a"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="365" height="32" rx="8" fill="#dc2626"/>
+    <rect x="0" y="24" width="365" height="8" fill="#dc2626"/>
+    <text x="12" y="21" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">3. PRECEDENT (condamnations passees)</text>
+
+    <!-- Content -->
+    <text x="12" y="52" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10" font-weight="600">Deja condamnes pour fixation de prix</text>
+
+    <circle cx="20" cy="70" r="3" fill="#f87171"/>
+    <text x="28" y="73" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">1998-2002 : Entente prouvee, amendes record</text>
+
+    <circle cx="20" cy="88" r="3" fill="#f87171"/>
+    <text x="28" y="91" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">2018 : Nouvelle plainte (+130% en 2016-17)</text>
+
+    <circle cx="20" cy="106" r="3" fill="#f87171"/>
+    <text x="28" y="109" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Chine : "preuves massives" d'entente</text>
+
+    <!-- Verdict -->
+    <rect x="10" y="122" width="345" height="24" rx="4" fill="#450a0a"/>
+    <text x="20" y="138" fill="#fca5a5" font-family="Inter, sans-serif" font-size="9" font-weight="500">VERDICT : Antecedents prouves, vigilance requise</text>
+  </g>
+
+  <!-- Scenario 4: Anti-IA locale -->
+  <g transform="translate(410, 225)">
+    <rect x="0" y="0" width="365" height="155" rx="8" fill="#1e2a3a"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="365" height="32" rx="8" fill="#7c3aed"/>
+    <rect x="0" y="24" width="365" height="8" fill="#7c3aed"/>
+    <text x="12" y="21" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">4. EFFET ANTI-IA LOCALE (cui bono ?)</text>
+
+    <!-- Content -->
+    <text x="12" y="52" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10" font-weight="600">A qui profite la situation ?</text>
+
+    <circle cx="20" cy="70" r="3" fill="#a78bfa"/>
+    <text x="28" y="73" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">IA locale necessite 64-128 Go de RAM</text>
+
+    <circle cx="20" cy="88" r="3" fill="#a78bfa"/>
+    <text x="28" y="91" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">x4-5 sur les prix = IA locale inaccessible</text>
+
+    <circle cx="20" cy="106" r="3" fill="#a78bfa"/>
+    <text x="28" y="109" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Beneficiaires : cloud providers (MS, Google...)</text>
+
+    <!-- Verdict -->
+    <rect x="10" y="122" width="345" height="24" rx="4" fill="#2e1065"/>
+    <text x="20" y="138" fill="#c4b5fd" font-family="Inter, sans-serif" font-size="9" font-weight="500">VERDICT : Effet reel, intention non prouvee</text>
+  </g>
+
+  <!-- Footer with key stats -->
+  <rect x="25" y="390" width="750" height="50" rx="8" fill="#1e2a3a"/>
+
+  <!-- Stat 1 -->
+  <text x="95" y="412" text-anchor="middle" fill="#f87171" font-family="Inter, sans-serif" font-size="18" font-weight="700">+500%</text>
+  <text x="95" y="428" text-anchor="middle" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">hausse prix</text>
+
+  <!-- Divider -->
+  <line x1="190" y1="398" x2="190" y2="432" stroke="#374151" stroke-width="1"/>
+
+  <!-- Stat 2 -->
+  <text x="280" y="412" text-anchor="middle" fill="#fbbf24" font-family="Inter, sans-serif" font-size="18" font-weight="700">3 acteurs</text>
+  <text x="280" y="428" text-anchor="middle" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">= 95% du marche</text>
+
+  <!-- Divider -->
+  <line x1="375" y1="398" x2="375" y2="432" stroke="#374151" stroke-width="1"/>
+
+  <!-- Stat 3 -->
+  <text x="465" y="412" text-anchor="middle" fill="#60a5fa" font-family="Inter, sans-serif" font-size="18" font-weight="700">3x wafers</text>
+  <text x="465" y="428" text-anchor="middle" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">HBM vs DDR5</text>
+
+  <!-- Divider -->
+  <line x1="560" y1="398" x2="560" y2="432" stroke="#374151" stroke-width="1"/>
+
+  <!-- Stat 4 -->
+  <text x="655" y="412" text-anchor="middle" fill="#4ade80" font-family="Inter, sans-serif" font-size="18" font-weight="700">2027</text>
+  <text x="655" y="428" text-anchor="middle" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">fin de penurie ?</text>
+
+  <!-- Divider -->
+  <line x1="720" y1="398" x2="720" y2="432" stroke="#374151" stroke-width="1"/>
+
+  <!-- Source -->
+  <text x="400" y="448" text-anchor="middle" fill="#475569" font-family="Inter, sans-serif" font-size="8">
+    Sources : TrendForce, IDC, Wikipedia, Tom's Hardware | reveildouceur.fr
+  </text>
+</svg>
