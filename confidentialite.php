@@ -51,14 +51,36 @@
 
         <h2>Données collectées</h2>
         <p>
-          Ce site collecte un minimum de données, uniquement via le formulaire de contact :
+          Ce site collecte un minimum de données :
         </p>
         <ul>
-          <li>Pas de cookies de tracking</li>
-          <li>Pas d'outil d'analyse d'audience (Google Analytics, Matomo, etc.)</li>
+          <li>Pas de cookies publicitaires</li>
           <li>Pas de système de commentaires</li>
-          <li>Pas de newsletter</li>
         </ul>
+
+        <h2>Analyse d'audience (Google Analytics)</h2>
+        <p>
+          Ce site utilise <strong>Google Analytics 4</strong> pour comprendre comment les visiteurs
+          utilisent le site et améliorer son contenu.
+        </p>
+        <p>
+          Données collectées :
+        </p>
+        <ul>
+          <li>Pages visitées et durée de visite</li>
+          <li>Provenance (moteur de recherche, lien externe)</li>
+          <li>Type d'appareil, navigateur et système d'exploitation</li>
+          <li>Pays et ville de connexion (approximatif)</li>
+        </ul>
+        <p>
+          Ces données sont anonymisées et utilisées uniquement à des fins statistiques.
+          Consultez la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>.
+        </p>
+        <p>
+          <strong>Opt-out :</strong> Vous pouvez désactiver Google Analytics en installant
+          l'<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">extension de navigateur officielle</a>
+          ou en utilisant un bloqueur de trackers.
+        </p>
 
         <h2>Formulaire de contact et suggestions</h2>
         <p>
@@ -153,7 +175,7 @@
           mise à jour sera indiquée ci-dessous.
         </p>
         <p>
-          <em>Dernière mise à jour : décembre 2025</em>
+          <em>Dernière mise à jour : janvier 2026</em>
         </p>
       </div>
     </article>

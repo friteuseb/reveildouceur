@@ -3,6 +3,21 @@
  * Version 2.2 - Optimisation performances (WebP, lazy loading avancé)
  */
 
+// ========================================
+// Google Analytics
+// ========================================
+(function() {
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-R7WHFQCN8P';
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-R7WHFQCN8P');
+})();
+
 (function() {
   'use strict';
 
