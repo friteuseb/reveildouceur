@@ -24,6 +24,9 @@
 
   <!-- Config -->
   <script src="/js/config.js"></script>
+
+  <!-- Analytics -->
+  <?php include 'includes/analytics.php'; ?>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>

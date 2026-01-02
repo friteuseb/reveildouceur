@@ -4,9 +4,9 @@
  */
 
 // ========================================
-// Google Analytics
+// Google Analytics (pour pages HTML sans include PHP)
 // ========================================
-(function() {
+if (!window.gtag) {
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=G-R7WHFQCN8P';
@@ -16,7 +16,7 @@
   window.gtag = gtag;
   gtag('js', new Date());
   gtag('config', 'G-R7WHFQCN8P');
-})();
+}
 
 (function() {
   'use strict';

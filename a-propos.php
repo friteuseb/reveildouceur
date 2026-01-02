@@ -45,6 +45,9 @@
 
   <!-- Config -->
   <script src="/js/config.js"></script>
+
+  <!-- Analytics -->
+  <?php include 'includes/analytics.php'; ?>
 </head>
 <body>
   <!-- Skip Link (accessibilité) -->

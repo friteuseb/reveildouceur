@@ -166,6 +166,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['suggestion_form'])) {
 
   <!-- Config (à charger avant app.js) -->
   <script src="/js/config.js"></script>
+
+  <!-- Analytics -->
+  <?php include 'includes/analytics.php'; ?>
 </head>
 <body>
   <!-- Skip Link (accessibilité) -->
