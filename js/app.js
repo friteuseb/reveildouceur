@@ -3,6 +3,21 @@
  * Version 2.2 - Optimisation performances (WebP, lazy loading avancé)
  */
 
+// ========================================
+// Matomo Analytics (respect Do Not Track)
+// ========================================
+var _paq = window._paq = window._paq || [];
+_paq.push(['setDoNotTrack', true]); // Respect DNT browser setting
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+  var u="https://www.matomo.typo3hub.com/";
+  _paq.push(['setTrackerUrl', u+'matomo.php']);
+  _paq.push(['setSiteId', '10']);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+})();
+
 (function() {
   'use strict';
 
