@@ -140,6 +140,9 @@ ARTICLE_SPECIFIC_PROMPTS = {
 
     # France - Souveraineté et déclin
     "dernieres-decisions-souveraines-france": "Majestic Marianne figure standing at crossroads of history, one path behind her glows golden with nuclear mushroom cloud transforming into power plant, Concorde and Ariane rocket soaring, TGV speeding past Eiffel Tower, all symbols of past French greatness; the other path ahead descends into fog with sold-for-sale signs on factories, OTAN stars replacing French flag stars one by one, African map crumbling away, Euro symbol crushing the Franc; she holds broken scepter in one hand and EU passport in other; 2003 date floating above like last beacon of light, then darkness after; Charles de Gaulle ghost fading in background watching with disappointment; warm amber tones for glorious past transitioning to cold grey for present decline; sovereignty lost visualization, melancholic but dignified",
+
+    # France - Souveraineté et paradoxe Trump
+    "france-souveraine-illusion-ou-realite": "French TV studio with journalists and pundits laughing and pointing at caricature of Trump on screen while below them invisible puppet strings descend from American eagle clutching dollar sign and NATO star; the studio itself sits on tiny French map that floats helplessly in vast ocean dominated by massive USA landmass; in foreground French citizen watching TV distracted while behind them data cables flow from their home to American tech company logos (GAFAM), factory labeled Alstom being carried away by GE, and euro coins flowing into DOJ building; carousel of news headlines spinning (COVID, Ukraine, climate, bedbugs) creating smoke screen hiding the structural dependencies; Marianne figure trying to speak but microphone cord leads to Washington; warm amber TV glow contrasting with cold blue reality of dependence; comfortable illusion vs uncomfortable truth visualization",
 }
 
 def extract_article_info(html_path):
