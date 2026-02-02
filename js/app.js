@@ -407,33 +407,63 @@ if (!window.gtag) {
     return `/images/illustrations/${baseName}.png`;
   }
 
-  async function fetchArticleMetadata(filename) {
-    // Vérifier si l'article a des métadonnées inline (pour les quizz, pages externes, etc.)
-    const articleData = articlesWithCategories.find(a => a.file === filename);
+  /**
+   * Crée un objet article à partir des métadonnées de index.json
+   * Version optimisée : utilise les métadonnées pré-générées, pas de fetch HTTP
+   */
+  function createArticleFromMetadata(articleData) {
+    const filename = articleData.file;
+    const baseName = filename.replace('.html', '');
+    const category = getArticleCategory(filename);
 
-    if (articleData && articleData.title && articleData.href) {
-      // Article avec métadonnées inline - pas besoin de fetch
-      const baseName = filename.replace('.html', '');
-      const category = getArticleCategory(filename);
-
-      return {
-        filename,
-        url: articleData.href,
-        rawUrl: articleData.href,
-        title: articleData.title,
-        excerpt: articleData.excerpt || '',
-        date: articleData.date ? new Date(articleData.date).getTime() : Date.now(),
-        thumbnail: findThumbnail('/images/illustrations/', filename, true),
-        heroImage: findThumbnail('/images/illustrations/', filename, false),
-        isRaw: false,
-        category
-      };
+    // URL de l'article
+    let url;
+    if (articleData.href) {
+      // Article externe (quizz à la racine)
+      url = articleData.href;
+    } else {
+      url = CONFIG.articles.path + filename;
     }
 
-    // Article standard - fetch pour extraire les métadonnées
+    // Thumbnail : utiliser celle de index.json ou générer
+    const thumbnail = articleData.thumbnail || findThumbnail('/images/illustrations/', filename, true);
+    const heroImage = findThumbnail('/images/illustrations/', filename, false);
+
+    // Date : convertir en timestamp pour le tri
+    let dateTimestamp;
+    if (articleData.date) {
+      dateTimestamp = new Date(articleData.date).getTime();
+    } else {
+      dateTimestamp = Date.now();
+    }
+
+    return {
+      filename,
+      url,
+      rawUrl: articleData.href || CONFIG.articles.path + filename,
+      title: articleData.title || baseName.replace(/-/g, ' '),
+      excerpt: articleData.excerpt || 'Cliquez pour lire cet article...',
+      date: dateTimestamp,
+      thumbnail,
+      heroImage,
+      isRaw: false,
+      category
+    };
+  }
+
+  /**
+   * Fallback : fetch les métadonnées depuis le fichier HTML
+   * Utilisé uniquement si les métadonnées ne sont pas dans index.json
+   */
+  async function fetchArticleMetadataFallback(filename) {
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+
       const url = CONFIG.articles.path + filename;
-      const response = await fetch(url);
+      const response = await fetch(url, { signal: controller.signal });
+      clearTimeout(timeoutId);
+
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
       const htmlContent = await response.text();
@@ -442,8 +472,8 @@ if (!window.gtag) {
       const excerpt = extractExcerpt(htmlContent);
       const date = extractDate(filename, htmlContent);
       const isRaw = isRawArticle(htmlContent);
-      const thumbnail = findThumbnail(CONFIG.articles.path, filename, true); // Thumbnails pour cards
-      const heroImage = findThumbnail(CONFIG.articles.path, filename, false); // Full size pour hero
+      const thumbnail = findThumbnail(CONFIG.articles.path, filename, true);
+      const heroImage = findThumbnail(CONFIG.articles.path, filename, false);
       const category = getArticleCategory(filename);
 
       return {
@@ -462,6 +492,20 @@ if (!window.gtag) {
       console.error(`Erreur chargement ${filename}:`, error);
       return null;
     }
+  }
+
+  async function fetchArticleMetadata(filename) {
+    // Chercher les métadonnées dans index.json (pré-générées)
+    const articleData = articlesWithCategories.find(a => a.file === filename);
+
+    // Si on a les métadonnées pré-générées (title existe), pas besoin de fetch
+    if (articleData && articleData.title) {
+      return createArticleFromMetadata(articleData);
+    }
+
+    // Fallback : fetch le fichier HTML (ancien comportement)
+    console.warn(`Métadonnées manquantes pour ${filename}, fallback sur fetch`);
+    return fetchArticleMetadataFallback(filename);
   }
 
   /**
@@ -499,10 +543,34 @@ if (!window.gtag) {
     const filenames = await fetchDirectoryListing(CONFIG.articles.path);
     if (filenames.length === 0) return [];
 
-    const articlePromises = filenames.map(fetchArticleMetadata);
-    const articles = await Promise.all(articlePromises);
+    // Vérifier si on a des métadonnées pré-générées
+    const hasPregenerated = articlesWithCategories.some(a => a.title);
 
-    const validArticles = articles.filter(article => article !== null);
+    let validArticles;
+
+    if (hasPregenerated) {
+      // Mode optimisé : utiliser directement les métadonnées de index.json
+      // Pas de fetch HTTP supplémentaire !
+      console.log('Mode optimisé : métadonnées pré-générées détectées');
+      validArticles = filenames
+        .map(filename => {
+          const articleData = articlesWithCategories.find(a => a.file === filename);
+          if (articleData && articleData.title) {
+            return createArticleFromMetadata(articleData);
+          }
+          return null;
+        })
+        .filter(article => article !== null);
+    } else {
+      // Mode fallback : fetch chaque article (ancien comportement)
+      console.warn('Mode fallback : métadonnées non pré-générées, fetch requis');
+      const articlePromises = filenames.map(fetchArticleMetadata);
+      // Utiliser allSettled pour ne pas bloquer si un article échoue
+      const results = await Promise.allSettled(articlePromises);
+      validArticles = results
+        .filter(r => r.status === 'fulfilled' && r.value !== null)
+        .map(r => r.value);
+    }
 
     // Trier par date (plus récent d'abord)
     validArticles.sort((a, b) => b.date - a.date);
@@ -585,6 +653,10 @@ if (!window.gtag) {
   // Variable pour stocker le filtre actif
   let activeFilter = null;
   let allArticles = [];
+
+  // Pagination
+  const ARTICLES_PER_PAGE = 12;
+  let displayedCount = 0;
 
   function createCategoryFilters() {
     if (Object.keys(categoriesData).length === 0) return '';
@@ -730,6 +802,7 @@ if (!window.gtag) {
 
   function renderArticles(articles, container) {
     allArticles = articles;
+    displayedCount = 0;
 
     if (articles.length === 0) {
       container.innerHTML = `
@@ -742,7 +815,6 @@ if (!window.gtag) {
     }
 
     const filtersHTML = createCategoryFilters();
-    const articlesHTML = articles.map((article, index) => createArticleCard(article, index)).join('');
 
     // Note explicative sur l'ordre des articles
     const orderNoteHTML = articles.length > 3 ? `
@@ -755,15 +827,80 @@ if (!window.gtag) {
       </p>
     ` : '';
 
+    // Afficher les premiers articles (pagination)
+    const initialArticles = articles.slice(0, ARTICLES_PER_PAGE);
+    const articlesHTML = initialArticles.map((article, index) => createArticleCard(article, index)).join('');
+    displayedCount = initialArticles.length;
+
+    // Bouton "Voir plus" si nécessaire
+    const hasMore = articles.length > ARTICLES_PER_PAGE;
+    const loadMoreHTML = hasMore ? `
+      <div class="articles-grid__load-more">
+        <button class="btn btn--secondary" id="load-more-btn">
+          Voir plus d'articles
+          <span class="articles-grid__remaining">(${articles.length - displayedCount} restants)</span>
+        </button>
+      </div>
+    ` : '';
+
     container.innerHTML = `
       ${filtersHTML}
       ${orderNoteHTML}
       <div class="articles-grid__cards">
         ${articlesHTML}
       </div>
+      ${loadMoreHTML}
     `;
 
     initCategoryFilters();
+    initLoadMore(container);
+  }
+
+  function initLoadMore(container) {
+    const btn = document.getElementById('load-more-btn');
+    if (!btn) return;
+
+    btn.addEventListener('click', () => {
+      loadMoreArticles(container);
+    });
+  }
+
+  function loadMoreArticles(container) {
+    const cardsContainer = container.querySelector('.articles-grid__cards');
+    const loadMoreContainer = container.querySelector('.articles-grid__load-more');
+    if (!cardsContainer) return;
+
+    // Calculer les articles à ajouter
+    const startIndex = displayedCount;
+    const endIndex = Math.min(startIndex + ARTICLES_PER_PAGE, allArticles.length);
+
+    // Filtrer selon le filtre actif
+    let articlesToAdd = allArticles.slice(startIndex, endIndex);
+    if (activeFilter) {
+      articlesToAdd = articlesToAdd.filter(a => a.category?.id === activeFilter);
+    }
+
+    // Créer et ajouter les nouvelles cartes
+    articlesToAdd.forEach((article, i) => {
+      const cardHTML = createArticleCard(article, startIndex + i);
+      cardsContainer.insertAdjacentHTML('beforeend', cardHTML);
+    });
+
+    displayedCount = endIndex;
+
+    // Mettre à jour ou masquer le bouton
+    if (displayedCount >= allArticles.length) {
+      if (loadMoreContainer) loadMoreContainer.remove();
+    } else {
+      const remaining = allArticles.length - displayedCount;
+      const remainingSpan = loadMoreContainer?.querySelector('.articles-grid__remaining');
+      if (remainingSpan) {
+        remainingSpan.textContent = `(${remaining} restants)`;
+      }
+    }
+
+    // Initialiser les votes pour les nouvelles cartes
+    VoteManager.initCardVotes();
   }
 
   function showLoader(container) {

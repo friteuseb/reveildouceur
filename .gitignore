@@ -29,6 +29,7 @@ scripts/
 !scripts/generate-illustrations.py
 !scripts/generate-related-articles.py
 !scripts/send-newsletter.py
+!scripts/generate-index-metadata.py
 .env
 
 # Python virtual environment

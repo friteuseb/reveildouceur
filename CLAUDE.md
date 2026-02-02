@@ -366,6 +366,14 @@ python3 scripts/generate-illustrations.py --missing
 # Installer les dépendances si nécessaire
 .venv/bin/pip install sentence-transformers beautifulsoup4 numpy
 
+# === MÉTADONNÉES INDEX.JSON (Performance critique) ===
+
+# Regénérer les métadonnées pour tous les articles (OBLIGATOIRE après ajout)
+python3 scripts/generate-index-metadata.py
+
+# Mode simulation (voir ce qui serait fait sans modifier)
+python3 scripts/generate-index-metadata.py --dry-run
+
 # === DÉPLOIEMENT ===
 
 # Commit et push avec purge du cache Cloudflare
@@ -419,7 +427,12 @@ python3 scripts/send-newsletter.py slug-article
    - Injecte automatiquement la section "Sur le même thème"
    - Utilise sentence-transformers (local) ou OpenAI API (--openai)
 
-8. **Mettre à jour le sitemap** `/sitemap.xml` (OBLIGATOIRE)
+8. **Regénérer les métadonnées** : `python3 scripts/generate-index-metadata.py` (OBLIGATOIRE)
+   - Enrichit index.json avec titre, description, date, thumbnail
+   - Élimine les 70+ requêtes HTTP au chargement de la page
+   - Sans cette étape, le site charge lentement sur mobile
+
+9. **Mettre à jour le sitemap** `/sitemap.xml` (OBLIGATOIRE)
    ```xml
    <url>
      <loc>https://reveildouceur.fr/articles/slug.html</loc>
@@ -429,10 +442,10 @@ python3 scripts/send-newsletter.py slug-article
    </url>
    ```
 
-9. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
-   - `git deploy` = push + purge cache Cloudflare
+10. **Commit et deploy** : `git add -A && git commit -m "Ajout article: [titre]" && git deploy`
+    - `git deploy` = push + purge cache Cloudflare
 
-10. **Envoyer la newsletter aux abonnés** (optionnel)
+11. **Envoyer la newsletter aux abonnés** (optionnel)
     ```bash
     # Prévisualiser d'abord
     python3 scripts/send-newsletter.py slug --preview

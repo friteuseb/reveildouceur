@@ -56,275 +56,547 @@
   "articles": [
     {
       "file": "france-souveraine-illusion-ou-realite.html",
-      "category": "geopolitique"
+      "category": "geopolitique",
+      "title": "La France est-elle encore souveraine ? Ce que les chiffres disent",
+      "excerpt": "On moque Trump sur les plateaux pendant que nos décisions attendent Washington. OTAN, Cloud Act, BCE, GAFAM : les données sur notre souveraineté réelle.",
+      "date": "2026-01-23",
+      "thumbnail": "/images/illustrations/france-souveraine-illusion-ou-realite-thumb.webp"
     },
     {
       "file": "dernieres-decisions-souveraines-france.html",
-      "category": "geopolitique"
+      "category": "geopolitique",
+      "title": "Dernières décisions souveraines : quand la France a-t-elle cessé d'être grande ?",
+      "excerpt": "De la force de frappe nucléaire au refus de la guerre en Irak, quelles ont été les dernières grandes décisions qui ont renforcé la France ? Et lesquelles l'ont affaiblie ?",
+      "date": "2026-01-01",
+      "thumbnail": "/images/illustrations/dernieres-decisions-souveraines-france-thumb.webp"
     },
     {
       "file": "ram-prix-explosion-qui-profite.html",
-      "category": "technologie"
+      "category": "technologie",
+      "title": "RAM : pourquoi les prix explosent (et à qui ça profite ?)",
+      "excerpt": "Les prix de la RAM ont bondi de 500% en quelques mois. Demande IA, oligopole de 3 fabricants, condamnations passées pour entente... Décryptage d'un marché opaque.",
+      "date": "2026-01-01",
+      "thumbnail": "/images/illustrations/ram-prix-explosion-qui-profite-thumb.webp"
     },
     {
       "file": "retraites-le-vrai-trou-est-ailleurs.html",
-      "category": "economie"
+      "category": "economie",
+      "title": "Retraites : et si le vrai trou était ailleurs ?",
+      "excerpt": "12 milliards de déficit retraites vs 100 milliards de fraude fiscale : les chiffres qu'on ne met jamais en face. Ce que le COR, la Cour des comptes et les économistes disent vraiment.",
+      "date": "2026-01-01",
+      "thumbnail": "/images/illustrations/retraites-le-vrai-trou-est-ailleurs-thumb.webp"
     },
     {
       "file": "ukraine-2026-quatre-scenarios-consequences-france.html",
-      "category": "predictions"
+      "category": "predictions",
+      "title": "Ukraine 2026 : les quatre scénarios et ce que la France a à y perdre (ou gagner)",
+      "excerpt": "Fin du conflit, gel, escalade ou partition ? Les scénarios pour l'Ukraine en 2026 et leurs conséquences concrètes pour la France : défense, économie, reconstruction.",
+      "date": "2026-01-01",
+      "thumbnail": "/images/illustrations/ukraine-2026-quatre-scenarios-consequences-france-thumb.webp"
     },
     {
       "file": "avatar-colonialisme-inverse-bon-sauvage.html",
-      "category": "medias"
+      "category": "medias",
+      "title": "Avatar : critique du colonialisme ou colonialisme inversé ?",
+      "excerpt": "Les films Avatar de James Cameron critiquent-ils vraiment le colonialisme ou reproduisent-ils ses schémas mentaux ? Analyse du mythe du bon sauvage et du white savior.",
+      "date": "2025-12-29",
+      "thumbnail": "/images/illustrations/avatar-colonialisme-inverse-bon-sauvage-thumb.webp"
     },
     {
       "file": "liberalisme-capitalisme-neoliberalisme-demeler-confusions.html",
-      "category": "economie"
+      "category": "economie",
+      "title": "Libéralisme, capitalisme, néolibéralisme : démêler les confusions",
+      "excerpt": "En France, 'libéral' est devenu une insulte. Pourtant, les Français chérissent les valeurs libérales. Retour aux définitions pour comprendre ce malentendu historique.",
+      "date": "2025-12-21",
+      "thumbnail": "/images/illustrations/liberalisme-capitalisme-neoliberalisme-demeler-confusions-thumb.webp"
     },
     {
       "file": "tous-socialistes-echiquier-politique-francais.html",
-      "category": "politique"
+      "category": "politique",
+      "title": "Tous socialistes ? L'échiquier politique français vu d'ailleurs",
+      "excerpt": "La France est-elle si à droite qu'on le dit ? Comparaison internationale : tout l'échiquier politique français serait classé à gauche aux USA, en Asie ou en Afrique.",
+      "date": "2025-12-19",
+      "thumbnail": "/images/illustrations/tous-socialistes-echiquier-politique-francais-thumb.webp"
     },
     {
       "file": "chiens-descendent-tous-loup.html",
-      "category": "societe"
+      "category": "societe",
+      "title": "Les chiens descendent-ils tous du loup ? Ce que dit la génétique",
+      "excerpt": "Du chihuahua au dogue allemand, tous les chiens partagent 99,8% de leur ADN avec le loup gris. Mais l'histoire est plus complexe qu'il n'y paraît.",
+      "date": "2025-12-16",
+      "thumbnail": "/images/illustrations/chiens-descendent-tous-loup-thumb.webp"
     },
     {
       "file": "quel-regime-politique-plus-stable-prospere-france.html",
-      "category": "histoire"
+      "category": "histoire",
+      "title": "Quel régime politique a été le plus stable et prospère en France ?",
+      "excerpt": "De la monarchie capétienne (805 ans) aux 12 régimes post-1789 : quel régime a réellement apporté stabilité et prospérité à la France ? Analyse historique complète.",
+      "date": "2025-12-16",
+      "thumbnail": "/images/illustrations/quel-regime-politique-plus-stable-prospere-france-thumb.webp"
     },
     {
       "file": "vaccins-arnm-grippe-ce-que-dit-la-science.html",
-      "category": "sante"
+      "category": "sante",
+      "title": "Vaccins ARNm contre la grippe : ce que dit vraiment la science",
+      "excerpt": "Moderna, Pfizer : les vaccins ARNm contre la grippe arrivent. Que disent les études cliniques peer-reviewed sur leur efficacité et sécurité ? Analyse factuelle.",
+      "date": "2025-12-15",
+      "thumbnail": "/images/illustrations/vaccins-arnm-grippe-ce-que-dit-la-science-thumb.webp"
     },
     {
       "file": "methane-bovin-faut-il-reduire-cheptel.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "Méthane bovin : faut-il vraiment réduire le cheptel français ?",
+      "excerpt": "La Cour des comptes recommande de réduire le cheptel bovin français. Mais les chiffres racontent-ils toute l'histoire ? Prairies, souveraineté alimentaire, cycle du carbone : l'analyse complète.",
+      "date": "2025-12-14",
+      "thumbnail": "/images/illustrations/methane-bovin-faut-il-reduire-cheptel-thumb.webp"
     },
     {
       "file": "controle-agriculture-ce-que-dit-lhistoire.html",
-      "category": "politique"
+      "category": "politique",
+      "title": "Quand l'État contrôle l'agriculture : ce que dit l'histoire",
+      "excerpt": "De l'URSS à la Chine de Mao, du Zimbabwe au Venezuela : que se passe-t-il historiquement quand un État augmente son contrôle sur la paysannerie ? Et la France aujourd'hui ?",
+      "date": "2025-12-11",
+      "thumbnail": "/images/illustrations/controle-agriculture-ce-que-dit-lhistoire-thumb.webp"
     },
     {
       "file": "monde-moderne-redescente-pyramide-maslow.html",
-      "category": "psychologie"
+      "category": "psychologie",
+      "title": "Le monde moderne nous fait-il redescendre dans la pyramide de Maslow ?",
+      "excerpt": "Sécurité précaire, solitude connectée, quête de sens impossible : et si la modernité fragilisait nos besoins fondamentaux tout en promettant de les combler ?",
+      "date": "2025-12-11",
+      "thumbnail": "/images/illustrations/monde-moderne-redescente-pyramide-maslow-thumb.webp"
     },
     {
       "file": "victime-ou-vainqueur-rapport-reussite.html",
-      "category": "psychologie"
+      "category": "psychologie",
+      "title": "Victime ou vainqueur : ce que révèlent les chiffres sur notre rapport à la réussite",
+      "excerpt": "Pourquoi les Français sont-ils les plus pessimistes au monde sur l'avenir ? Analyse des cultures de la dignité, de l'honneur et de la victimisation à travers les données internationales.",
+      "date": "2025-12-10",
+      "thumbnail": "/images/illustrations/victime-ou-vainqueur-rapport-reussite-thumb.webp"
     },
     {
       "file": "vegetarisme-veganisme-sauve-t-il-vraiment-des-animaux.html",
-      "category": "sante"
+      "category": "sante",
+      "title": "Le végétarisme sauve-t-il vraiment des animaux ? Ce que disent les études",
+      "excerpt": "Devenir végétarien ou vegan permet-il réellement de sauver des animaux ? Analyse des études scientifiques, des paradoxes et des nuances de cette question complexe.",
+      "date": "2025-12-10",
+      "thumbnail": "/images/illustrations/vegetarisme-veganisme-sauve-t-il-vraiment-des-animaux-thumb.webp"
     },
     {
       "file": "la-magie-existe-t-elle-vraiment.html",
-      "category": "societe"
+      "category": "societe",
+      "title": "La magie existe-t-elle vraiment ? Les mécanismes d'influence invisibles",
+      "excerpt": "Parfums, mots, symboles, récits : la science révèle des mécanismes d'influence invisibles qui ressemblent étrangement à de la magie. Enquête fascinante.",
+      "date": "2025-12-10",
+      "thumbnail": "/images/illustrations/la-magie-existe-t-elle-vraiment-thumb.webp"
     },
     {
       "file": "le-bon-moment-pour-avoir-des-enfants.html",
-      "category": "societe"
+      "category": "societe",
+      "title": "Le \"bon moment\" pour avoir des enfants existe-t-il ?",
+      "excerpt": "On attend d'être prêt, stable, épanoui. Mais la biologie n'attend pas. Enquête sur le report de la parentalité et ses conséquences.",
+      "date": "2025-12-10",
+      "thumbnail": "/images/illustrations/le-bon-moment-pour-avoir-des-enfants-thumb.webp"
     },
     {
       "file": "egalite-femmes-hommes-paradoxe-liberte.html",
-      "category": "relations"
+      "category": "relations",
+      "title": "Égalité femmes-hommes : et si plus de liberté menait à plus de différences ?",
+      "excerpt": "Dans les pays les plus égalitaires, les femmes choisissent moins les métiers STEM. Le paradoxe de l'égalité de genre, expliqué par les données.",
+      "date": "2025-12-10",
+      "thumbnail": "/images/illustrations/egalite-femmes-hommes-paradoxe-liberte-thumb.webp"
     },
     {
       "file": "pourquoi-on-narrive-plus-a-etre-en-couple.html",
-      "category": "relations"
+      "category": "relations",
+      "title": "Pourquoi on n'arrive plus à être en couple : ce que disent les données",
+      "excerpt": "45% de divorces, célibat en hausse, mise en couple retardée : pourquoi les relations durables sont-elles devenues si difficiles ? Analyse des facteurs économiques, technologiques et sociologiques.",
+      "date": "2025-12-09",
+      "thumbnail": "/images/illustrations/pourquoi-on-narrive-plus-a-etre-en-couple-thumb.webp"
     },
     {
       "file": "societe-moderne-fabrique-mal-etre.html",
-      "category": "psychologie"
+      "category": "psychologie",
+      "title": "Pourquoi la société moderne fabrique du mal-être : le piège des deux extrêmes",
+      "excerpt": "Anxiété, dépression, solitude, incapacité à fonder une famille : et si le système combinait le pire du libéralisme et le pire de l'État-providence ? Ce que disent les données.",
+      "date": "2025-12-09",
+      "thumbnail": "/images/illustrations/societe-moderne-fabrique-mal-etre-thumb.webp"
     },
     {
       "file": "jumeau-numerique-terre-simuler-avenir.html",
-      "category": "predictions"
+      "category": "predictions",
+      "title": "Jumeau numérique de la Terre : peut-on simuler l'avenir ?",
+      "excerpt": "Destination Earth, Earth-2 de Nvidia : des projets ambitieux pour créer un double digital de notre planète. Mais peut-on vraiment prédire l'avenir ? Les limites du chaos.",
+      "date": "2025-12-07",
+      "thumbnail": "/images/illustrations/jumeau-numerique-terre-simuler-avenir-thumb.webp"
     },
     {
       "file": "ecole-francaise-comparaison-internationale.html",
-      "category": "societe"
+      "category": "societe",
+      "title": "L'école française : que disent vraiment les comparaisons internationales ?",
+      "excerpt": "PISA 2022, dépenses, salaires, heures de cours : la France dépense plus et fait plus d'heures que la moyenne, mais obtient des résultats moyens. Pourquoi ?",
+      "date": "2025-12-07",
+      "thumbnail": "/images/illustrations/ecole-francaise-comparaison-internationale-thumb.webp"
     },
     {
       "file": "petrole-energie-fossile-limitee-vraiment.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "Le pétrole est-il vraiment une énergie fossile limitée ?",
+      "excerpt": "Théorie biogénique vs abiotique, prédictions de peak oil ratées, réserves qui augmentent : que disent vraiment les données sur l'origine et les limites du pétrole ?",
+      "date": "2025-12-07",
+      "thumbnail": "/images/illustrations/petrole-energie-fossile-limitee-vraiment-thumb.webp"
     },
     {
       "file": "temps-difficiles-hommes-forts-le-cycle-qui-nexiste-peut-etre-pas.html",
-      "category": "histoire"
+      "category": "histoire",
+      "title": "Temps difficiles, hommes forts : le cycle qui n'existe peut-être pas",
+      "excerpt": "La citation virale sur les 'temps difficiles qui créent des hommes forts' vient d'un roman de 2016, pas de l'Antiquité. Que disent vraiment l'histoire et la science sur ce prétendu cycle ?",
+      "date": "2025-12-06",
+      "thumbnail": "/images/illustrations/temps-difficiles-hommes-forts-le-cycle-qui-nexiste-peut-etre-pas-thumb.webp"
     },
     {
       "file": "quand-le-cinema-nous-dit-la-verite.html",
-      "category": "medias"
+      "category": "medias",
+      "title": "Quand le cinéma nous dit la vérité : ces films qui ont tout prédit",
+      "excerpt": "Matrix, They Live, Network, Wag the Dog... Quand les réalisateurs utilisent la fiction pour dire ce que le journalisme ne peut pas. Messages confirmés, sources vérifiables.",
+      "date": "2025-12-06",
+      "thumbnail": "/images/illustrations/quand-le-cinema-nous-dit-la-verite-thumb.webp"
     },
     {
       "file": "quete-de-sens-spiritualite-sante-mentale.html",
-      "category": "psychologie"
+      "category": "psychologie",
+      "title": "Quête de sens : ce que la science dit sur spiritualité et santé mentale",
+      "excerpt": "Antidépresseurs en hausse, pratique religieuse en baisse : coïncidence ou lien ? Ce que les études scientifiques révèlent sur spiritualité, quête de sens et bien-être psychologique.",
+      "date": "2025-12-04",
+      "thumbnail": "/images/illustrations/quete-de-sens-spiritualite-sante-mentale-thumb.webp"
     },
     {
       "file": "autoritarisme-gauche-droite-meme-combat.html",
-      "category": "politique"
+      "category": "politique",
+      "title": "Autoritarisme : gauche et droite, même combat ?",
+      "excerpt": "L'autoritarisme existe-t-il des deux côtés du spectre politique ? Ce que disent les études académiques, les données historiques, et pourquoi l'asymétrie de traitement médiatique.",
+      "date": "2025-12-04",
+      "thumbnail": "/images/illustrations/autoritarisme-gauche-droite-meme-combat-thumb.webp"
     },
     {
       "file": "pouvoir-des-narratifs-comment-les-histoires-faconnent-le-monde.html",
-      "category": "medias"
+      "category": "medias",
+      "title": "Le pouvoir des narratifs : comment les histoires qu'on nous raconte façonnent le monde",
+      "excerpt": "Des armes de destruction massive en Irak aux couveuses du Koweït : comment les narratifs médiatiques construisent notre réalité, déclenchent des guerres et orientent les sociétés. Études, mécanismes psychologiques et exemples documentés.",
+      "date": "2025-12-03",
+      "thumbnail": "/images/illustrations/pouvoir-des-narratifs-comment-les-histoires-faconnent-le-monde-thumb.webp"
     },
     {
       "file": "origines-de-lhomme-ce-que-dit-la-genetique.html",
-      "category": "histoire"
+      "category": "histoire",
+      "title": "Origines de l'homme : ce que la génétique nous apprend vraiment",
+      "excerpt": "Néandertal, Dénisovien, Homo sapiens : que reste-t-il de nos ancêtres dans notre ADN ? Les données scientifiques, sans idéologie, population par population.",
+      "date": "2025-12-01",
+      "thumbnail": "/images/illustrations/origines-de-lhomme-ce-que-dit-la-genetique-thumb.webp"
     },
     {
       "file": "racailles-en-haut-vs-en-bas-qui-nuit-le-plus.html",
-      "category": "politique"
+      "category": "politique",
+      "title": "Racailles d'en haut vs racailles d'en bas : qui nuit le plus ?",
+      "excerpt": "Délinquance de rue vs délinquance en col blanc : comparaison chiffrée du pouvoir de nuisance. Coûts économiques, humains et démocratiques.",
+      "date": "2025-11-28",
+      "thumbnail": "/images/illustrations/racailles-en-haut-vs-en-bas-qui-nuit-le-plus-thumb.webp"
     },
     {
       "file": "france-liberte-expression-ce-que-disent-les-chiffres.html",
-      "category": "politique"
+      "category": "politique",
+      "title": "Liberté d'expression en France : ce que disent les chiffres",
+      "excerpt": "La France était le pays qui demandait le plus de suppressions de contenu sur Twitter. Où en est-on vraiment en matière de liberté d'expression ? Comparaisons internationales et données factuelles.",
+      "date": "2025-11-28",
+      "thumbnail": "/images/illustrations/france-liberte-expression-ce-que-disent-les-chiffres-thumb.webp"
     },
     {
       "file": "vrai-cout-securite-sociale-comparaison-mondiale.html",
-      "category": "economie"
+      "category": "economie",
+      "title": "Le vrai coût de votre protection sociale : et si vous pouviez choisir ?",
+      "excerpt": "Combien payez-vous vraiment pour la Sécu ? Comparaison avec les USA, la Suisse, l'Allemagne et les assurances internationales. Les chiffres que personne ne vous montre.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/vrai-cout-securite-sociale-comparaison-mondiale-thumb.webp"
     },
     {
       "file": "voiture-electrique-bilan-carbone-reel.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "Voiture électrique : le vrai bilan carbone",
+      "excerpt": "Fabrication des batteries, mix électrique, cycle de vie complet : la voiture électrique est-elle vraiment écologique ? Les chiffres de l'ADEME.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/voiture-electrique-bilan-carbone-reel-thumb.webp"
     },
     {
       "file": "verdissement-terre-co2-plantes.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "Le verdissement de la Terre : quand le CO2 nourrit les plantes",
+      "excerpt": "La Terre devient plus verte grâce au CO2. C'est ce que montrent les satellites de la NASA. Mais cette bonne nouvelle a ses limites.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/verdissement-terre-co2-plantes-thumb.webp"
     },
     {
       "file": "ukraine-interets-economiques-chaque-camp.html",
-      "category": "geopolitique"
+      "category": "geopolitique",
+      "title": "Ukraine : les intérêts économiques de chaque camp",
+      "excerpt": "Gaz, céréales, reconstruction, minerais : au-delà du conflit géopolitique, quels sont les enjeux économiques de la guerre en Ukraine ?",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/ukraine-interets-economiques-chaque-camp-thumb.webp"
     },
     {
       "file": "systeme-sante-francais-equation-impossible.html",
-      "category": "sante"
+      "category": "sante",
+      "title": "Notre système de santé peut-il tenir 10 ans ?",
+      "excerpt": "Coûts des soins, déficit abyssal, vieillissement : les chiffres qui posent question sur la viabilité du système de santé français. Et si la prévention était la vraie solution ?",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/systeme-sante-francais-equation-impossible-thumb.webp"
     },
     {
       "file": "qui-desinforme-vraiment-chiffres.html",
-      "category": "medias"
+      "category": "medias",
+      "title": "Qui désinforme vraiment ? Les chiffres de la confiance",
+      "excerpt": "Médias, influenceurs, politiques : qui propage la désinformation ? Ce que disent les études Reuters et Ipsos sur la confiance des Français.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/qui-desinforme-vraiment-chiffres-thumb.webp"
     },
     {
       "file": "paradoxe-bonheur-feminin-etudes.html",
-      "category": "relations"
+      "category": "relations",
+      "title": "Le paradoxe du bonheur féminin : ce que disent 50 ans d'études",
+      "excerpt": "Depuis 50 ans, les droits des femmes progressent. Mais les études montrent une baisse du bien-être féminin. Que se passe-t-il vraiment ?",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/paradoxe-bonheur-feminin-etudes-thumb.webp"
     },
     {
       "file": "nucleaire-francais-danger-ou-solution.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "Nucléaire français : danger ou solution climatique ?",
+      "excerpt": "Le nucléaire est-il dangereux ou essentiel pour le climat ? Ce que disent le GIEC, l'ADEME et les comparaisons internationales.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/nucleaire-francais-danger-ou-solution-thumb.webp"
     },
     {
       "file": "geoingenierie-le-dossier-complet.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "Géoingénierie : le dossier complet",
+      "excerpt": "Modification climatique : entre rapports officiels, programmes documentés et théories non prouvées. Ce que les gouvernements admettent, les expériences réelles, et comment distinguer le vrai du faux.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/geoingenierie-le-dossier-complet-thumb.webp"
     },
     {
       "file": "fraude-fiscale-vs-sociale-vrais-chiffres.html",
-      "category": "economie"
+      "category": "economie",
+      "title": "Fraude fiscale vs fraude sociale : les vrais chiffres",
+      "excerpt": "80-100 milliards de fraude fiscale contre 13 milliards de fraude sociale. Pourtant, de laquelle parle-t-on le plus ? Les chiffres officiels.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/fraude-fiscale-vs-sociale-vrais-chiffres-thumb.webp"
     },
     {
       "file": "france-usa-souverainete-a-geometrie-variable.html",
-      "category": "geopolitique"
+      "category": "geopolitique",
+      "title": "France-USA : une souveraineté à géométrie variable",
+      "excerpt": "Alstom, BNP Paribas, écoutes NSA, extraterritorialité du droit américain : les faits documentés sur la relation France-États-Unis.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/france-usa-souverainete-a-geometrie-variable-thumb.webp"
     },
     {
       "file": "france-quel-niveau-de-socialisme.html",
-      "category": "economie"
+      "category": "economie",
+      "title": "France : quel niveau de socialisme ? Les chiffres parlent",
+      "excerpt": "Prélèvements obligatoires, dépenses publiques, comparaisons internationales : où se situe vraiment la France sur l'échelle économique ? Les données officielles.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/france-quel-niveau-de-socialisme-thumb.webp"
     },
     {
       "file": "fact-checkers-le-dossier-complet.html",
-      "category": "medias"
+      "category": "medias",
+      "title": "Fact-checkers : le dossier complet",
+      "excerpt": "Qui finance les vérificateurs d'information ? Quelles sont leurs erreurs documentées ? Et qui vérifie les vérificateurs ? Analyse factuelle du fact-checking.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/fact-checkers-le-dossier-complet-thumb.webp"
     },
     {
       "file": "co2-a-travers-les-ages-geologiques.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "CO2 à travers les âges : ce que disent 800 000 ans de données",
+      "excerpt": "Des carottes glaciaires aux données géologiques : comment le CO2 a varié sur des millions d'années. Les chiffres bruts, sans alarmisme ni déni.",
+      "date": "2025-11-27",
+      "thumbnail": "/images/illustrations/co2-a-travers-les-ages-geologiques-thumb.webp"
     },
     {
       "file": "votre-salaire-vaut-combien-en-vrai.html",
-      "category": "economie"
+      "category": "economie",
+      "title": "Votre salaire de 2000€ vaut combien en vrai ?",
+      "excerpt": "Pourquoi votre pouvoir d'achat diminue malgré les hausses de salaire ? Décryptage de l'inflation réelle, de la création monétaire et de ses effets concrets.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/votre-salaire-vaut-combien-en-vrai-thumb.webp"
     },
     {
       "file": "violences-conjugales-ce-que-disent-les-chiffres.html",
-      "category": "relations"
+      "category": "relations",
+      "title": "Violences conjugales : ce que disent (vraiment) les chiffres mondiaux",
+      "excerpt": "L'OMS et l'ONU publient des données sur les violences conjugales par région. Que révèlent ces statistiques ? Analyse factuelle d'un sujet sensible.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/violences-conjugales-ce-que-disent-les-chiffres-thumb.webp"
     },
     {
       "file": "violence-psychologique-suicide-masculin-le-tabou.html",
-      "category": "relations"
+      "category": "relations",
+      "title": "Violence psychologique et suicide masculin : le tabou qu'on n'ose pas nommer",
+      "excerpt": "Les hommes représentent 75% des suicides en France. Parmi les facteurs : les violences psychologiques subies dans le couple, un sujet encore tabou. Analyse des données.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/violence-psychologique-suicide-masculin-le-tabou-thumb.webp"
     },
     {
       "file": "salvador-france-faible-avec-les-loups.html",
-      "category": "geopolitique"
+      "category": "geopolitique",
+      "title": "Salvador vs France : faible avec les loups, fort avec les brebis ?",
+      "excerpt": "Le Salvador a réduit ses homicides de 70% en 2 ans. Pendant ce temps, la France voit sa criminalité augmenter. Deux approches, deux résultats. Analyse factuelle.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/salvador-france-faible-avec-les-loups-thumb.webp"
     },
     {
       "file": "qui-possede-votre-journal-prefere.html",
-      "category": "medias"
+      "category": "medias",
+      "title": "Qui possède votre journal préféré ?",
+      "excerpt": "9 milliardaires possèdent 90% des médias français. Découvrez qui sont les propriétaires de vos sources d'information et ce que cela implique.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/qui-possede-votre-journal-prefere-thumb.webp"
     },
     {
       "file": "qui-pollue-vraiment-le-classement.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "Qui pollue vraiment ? Le classement qui change selon comment on compte",
+      "excerpt": "Chine, USA, Europe... Le classement des pollueurs change du tout au tout selon qu'on compte par pays, par habitant, ou historiquement. Analyse complète.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/qui-pollue-vraiment-le-classement-thumb.webp"
     },
     {
       "file": "pourquoi-vous-ne-pouvez-pas-lacher-votre-telephone.html",
-      "category": "technologie"
+      "category": "technologie",
+      "title": "Pourquoi ne pouvez-vous pas lâcher votre téléphone ?",
+      "excerpt": "Découvrez comment votre smartphone est conçu pour créer une dépendance. Dark patterns, scroll infini, notifications : les techniques révélées par d'ex-ingénieurs.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/pourquoi-vous-ne-pouvez-pas-lacher-votre-telephone-thumb.webp"
     },
     {
       "file": "ia-consommation-eau-data-centers.html",
-      "category": "technologie"
+      "category": "technologie",
+      "title": "L'IA boit-elle vraiment des millions de litres d'eau ?",
+      "excerpt": "Les data centers IA consommeraient 158 piscines olympiques d'eau par jour. Mais grâce au cycle de l'eau, la consommation nette serait bien inférieure. Décryptage.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/ia-consommation-eau-data-centers-thumb.webp"
     },
     {
       "file": "hommes-sensibles-ce-que-disent-les-etudes.html",
-      "category": "relations"
+      "category": "relations",
+      "title": "\"Soyez plus sensibles\" : ce que les études révèlent sur l'attractivité masculine",
+      "excerpt": "On encourage les hommes à montrer leurs émotions. Mais les études sur l'attractivité disent-elles la même chose ? Analyse de la recherche en psychologie.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/hommes-sensibles-ce-que-disent-les-etudes-thumb.webp"
     },
     {
       "file": "faire-confiance-aveuglement-quels-risques.html",
-      "category": "psychologie"
+      "category": "psychologie",
+      "title": "Faire confiance aveuglément : quels risques pour votre vie ?",
+      "excerpt": "Que se passe-t-il quand on fait confiance aux institutions sans questionner ? Analyse des conséquences concrètes sur les décisions de vie.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/faire-confiance-aveuglement-quels-risques-thumb.webp"
     },
     {
       "file": "europe-seule-a-sauver-la-planete.html",
-      "category": "environnement"
+      "category": "environnement",
+      "title": "Pourquoi l'Europe semble-t-elle seule à vouloir \"sauver la planète\" ?",
+      "excerpt": "L'Europe représente 8% des émissions mondiales mais impose les normes les plus strictes. Pendant ce temps, que font les autres ? Analyse des politiques climatiques mondiales.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/europe-seule-a-sauver-la-planete-thumb.webp"
     },
     {
       "file": "dictatures-democraties-comparons-vraiment.html",
-      "category": "geopolitique"
+      "category": "geopolitique",
+      "title": "\"Dictatures\" vs \"Démocraties\" : et si on comparait vraiment ?",
+      "excerpt": "Chine, Russie, France : une comparaison factuelle et sourcée des libertés civiles. Ce que disent vraiment l'ONU, Amnesty, et les indices internationaux.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/dictatures-democraties-comparons-vraiment-thumb.webp"
     },
     {
       "file": "demographie-europeenne-le-sujet-tabou.html",
-      "category": "societe"
+      "category": "societe",
+      "title": "Démographie européenne : pourquoi ce sujet est-il tabou ?",
+      "excerpt": "L'Europe vieillit et se dépeuple. Les chiffres sont là, les projections aussi. Pourtant, en parler reste compliqué. Pourquoi ?",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/demographie-europeenne-le-sujet-tabou-thumb.webp"
     },
     {
       "file": "covid-ce-quon-disait-vs-ce-quon-sait.html",
-      "category": "sante"
+      "category": "sante",
+      "title": "COVID : ce qu'on nous disait vs ce qu'on sait maintenant",
+      "excerpt": "Masques, origine du virus, transmission... Retour factuel sur les déclarations officielles et leur évolution. Sans jugement, juste la chronologie.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/covid-ce-quon-disait-vs-ce-quon-sait-thumb.webp"
     },
     {
       "file": "ce-que-les-hommes-disent-vouloir-vs-realite.html",
-      "category": "relations"
+      "category": "relations",
+      "title": "\"Je veux une femme naturelle et indépendante\" : ce que les données révèlent",
+      "excerpt": "Les hommes disent préférer les femmes naturelles, intelligentes et indépendantes. Mais que montrent leurs comportements réels ? Analyse des études.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/ce-que-les-hommes-disent-vouloir-vs-realite-thumb.webp"
     },
     {
       "file": "bio-supermarche-vs-maraicher-local.html",
-      "category": "sante"
+      "category": "sante",
+      "title": "Le bio du supermarché vs celui du maraîcher : j'ai comparé",
+      "excerpt": "Bio importé ou local conventionnel ? J'ai comparé le bilan carbone, la fraîcheur et l'impact économique. Les résultats vont vous surprendre.",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/bio-supermarche-vs-maraicher-local-thumb.webp"
     },
     {
       "file": "apres-la-redpill-ce-que-personne-ne-vous-dit.html",
-      "category": "psychologie"
+      "category": "psychologie",
+      "title": "Après la \"redpill\" : ce que personne ne vous dit",
+      "excerpt": "Questionner le discours dominant a des bénéfices. Mais aussi des coûts : isolement, anxiété, rabbit holes. Comment trouver l'équilibre ?",
+      "date": "2025-11-26",
+      "thumbnail": "/images/illustrations/apres-la-redpill-ce-que-personne-ne-vous-dit-thumb.webp"
     },
     {
       "file": "textes-religieux-paix-violence-analyse-academique.html",
-      "category": "histoire"
+      "category": "histoire",
+      "title": "Textes religieux et violence : ce que dit la recherche académique",
+      "excerpt": "Bible, Coran, Bhagavad-Gita : comment les universitaires analysent-ils les thèmes de paix et violence dans les textes sacrés ? Une approche méthodologique.",
+      "date": "2025-11-25",
+      "thumbnail": "/images/illustrations/textes-religieux-paix-violence-analyse-academique-thumb.webp"
     },
     {
       "file": "politiques-immigration-analyse-comparative.html",
-      "category": "geopolitique"
+      "category": "geopolitique",
+      "title": "Politiques d'immigration : ce que disent les données comparatives",
+      "excerpt": "Quels pays accueillent le plus de migrants ? Comment mesurent-ils l'intégration ? Analyse comparative basée sur les données de l'OCDE, l'ONU et les études académiques.",
+      "date": "2025-11-25",
+      "thumbnail": "/images/illustrations/politiques-immigration-analyse-comparative-thumb.webp"
     },
     {
       "file": "pesticides-ce-que-revelent-les-etudes.html",
-      "category": "sante"
+      "category": "sante",
+      "title": "Pesticides : ce que révèlent les études scientifiques",
+      "excerpt": "Glyphosate, néonicotinoïdes, SDHI... Que disent vraiment les études sur les pesticides ? Analyse des publications scientifiques avec sources vérifiables.",
+      "date": "2025-11-25",
+      "thumbnail": "/images/illustrations/pesticides-ce-que-revelent-les-etudes-thumb.webp"
     },
     {
       "file": "creation-monetaire-comment-nait-largent.html",
-      "category": "economie"
+      "category": "economie",
+      "title": "Création monétaire : comment naît l'argent que vous utilisez",
+      "excerpt": "D'où vient l'argent ? Qui le crée et comment ? Découvrez les mécanismes de la création monétaire expliqués simplement, avec des sources officielles.",
+      "date": "2025-11-25",
+      "thumbnail": "/images/illustrations/creation-monetaire-comment-nait-largent-thumb.webp"
     },
     {
       "file": "additifs-alimentaires-ce-que-dit-la-science.html",
-      "category": "sante"
+      "category": "sante",
+      "title": "Additifs alimentaires : ce que dit vraiment la science",
+      "excerpt": "Découvrez ce que les études scientifiques révèlent sur les additifs alimentaires. Une analyse factuelle des E171, E621, E950 et autres, avec sources vérifiables.",
+      "date": "2025-11-25",
+      "thumbnail": "/images/illustrations/additifs-alimentaires-ce-que-dit-la-science-thumb.webp"
     },
     {
       "file": "miroir-pensee.html",
