@@ -47,6 +47,7 @@ ARTICLE_SPECIFIC_PROMPTS = {
     "qui-possede-votre-journal-prefere": "Nine billionaire figures as puppet masters holding strings attached to TV screens and newspapers, golden thrones arranged in circle, media empire visualization",
     "fact-checkers-le-dossier-complet": "Giant magnifying glass examining tiny fact-checkers who are themselves being examined by another magnifying glass, infinite recursion, who watches the watchmen",
     "qui-desinforme-vraiment-chiffres": "Two opposing megaphones facing each other, one labeled mainstream one labeled alternative, sound waves colliding and distorting in the middle, truth lost in noise",
+    "epstein-files-france-silence-mediatique": "Giant pile of declassified documents and folders with TOP SECRET stamps, French tricolor flag draped over part of them hiding content, mainstream TV cameras pointed away from the pile toward empty podium, Twitter bird logo illuminating the hidden documents with spotlight, Eiffel Tower and Statue of Liberty in background representing France-USA connection, journalists with blindfolds walking past, lone citizen on smartphone discovering truth, contrast between official silence and social media revelation",
 
     # Technologie (éviter les "circuits imprimés")
     "ia-consommation-eau-data-centers": "Massive data center servers submerged in blue water, water droplets evaporating into clouds, desert landscape with dried riverbed nearby, thirsty machines",

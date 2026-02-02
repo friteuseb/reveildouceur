@@ -55,6 +55,14 @@
   },
   "articles": [
     {
+      "file": "epstein-files-france-silence-mediatique.html",
+      "category": "medias",
+      "title": "Epstein Files : ce que les médias français ne vous montrent pas",
+      "excerpt": "3,5 millions de pages déclassifiées, des personnalités françaises citées 200+ fois, et pourtant un silence assourdissant. Analyse factuelle de la couverture médiatique française sur l'affaire Epstein.",
+      "date": "2026-02-02",
+      "thumbnail": "/images/illustrations/epstein-files-france-silence-mediatique-thumb.webp"
+    },
+    {
       "file": "france-souveraine-illusion-ou-realite.html",
       "category": "geopolitique",
       "title": "La France est-elle encore souveraine ? Ce que les chiffres disent",
